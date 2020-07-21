@@ -1,4 +1,6 @@
 ///@param direction,inertia
+//移動の実行
+
 var _direction = argument0;
 var _inertia = argument1;//慣性がついてるかどうか
 var _speed = argument2;

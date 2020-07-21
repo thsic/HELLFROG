@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "70b85825-f19f-404f-91d2-4dbc36c8de8a",
+            "Value": {
+                "id": "bc255df9-370f-4bfc-a6a6-5cc4a1d2c21c",
+                "resourcePath": "scripts\\player_knockback_decay\\player_knockback_decay.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7200e703-d5aa-4d19-ada8-2b742ee7851f",
             "Value": {
                 "id": "a9f138fb-a847-4d8e-a933-e8ccc4317c48",
@@ -660,6 +668,7 @@
         "7fa5e12a-cd67-4c62-b88e-54440b0e540c",
         "3b08a4ad-fdc8-4b02-9678-80402fb3c433",
         "38eacf91-02f7-4b21-b644-5a27ccd4690a",
+        "70b85825-f19f-404f-91d2-4dbc36c8de8a",
         "c517b22c-c1bc-4e98-b81a-0b8217d94fde",
         "fda14958-5518-4a45-a293-df4a19f3d66d"
     ],
