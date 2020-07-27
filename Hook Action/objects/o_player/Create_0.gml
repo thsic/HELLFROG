@@ -14,5 +14,5 @@ debug_draw_inertiaspd = 0;
 debug_draw_movespd = 0;
 debug_draw_synspd = 0;
 inertia_direction = 0;
-debug_finally_point_x = 0;
-debug_finally_point_y = 0;
+debug_intermediate_point_x = 0;
+debug_intermediate_point_y = 0;

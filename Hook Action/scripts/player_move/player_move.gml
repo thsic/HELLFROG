@@ -10,6 +10,12 @@ var _finally_direction = 0;
 var _finally_speed = 0;
 var _cant_move_time = ds_grid_get(global.ds_player_knockback, eSGK_type.cursed_gun, eSGK_param.CantActionTime);
 
+//デバッグ用------------
+debug_intermediate_point_x = lengthdir_x(inertia_speed, inertia_direction);
+debug_intermediate_point_y = lengthdir_y(inertia_speed, inertia_direction);
+//---------------------
+
+
 if(inertia_enable == true){//慣性中なら速度の合成
 	if(_key_direction != -1 and knockback_time >= _cant_move_time){//キーが押されていて慣性がある
 		_finally_speed = player_move_speed_synthesis(_player_speed, _key_direction, inertia_speed, inertia_direction);

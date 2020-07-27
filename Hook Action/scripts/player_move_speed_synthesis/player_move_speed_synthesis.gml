@@ -24,15 +24,24 @@ var _corrected_distance = _move_speed*_inertia_for_move_power;//慣性に対し�
 var _finally_point_x = _inertia_point_x + lengthdir_x(_corrected_distance, _corrected_direction);
 var _finally_point_y = _inertia_point_y + lengthdir_y(_corrected_distance, _corrected_direction);
 
-debug_finally_point_x = _finally_point_x;
-debug_finally_point_y = _finally_point_y;
+
+
+//inertia_pointとmove_pointの中間の座標を求める
+var _inertia_to_intermediate_distance = point_distance(_inertia_point_x, _inertia_point_y, _move_point_x, _move_point_y);
+_inertia_to_intermediate_distance /= 2;
+var _intermediate_point_x = _inertia_point_x + lengthdir_x(_inertia_to_intermediate_distance, _corrected_direction);
+var _intermediate_point_y = _inertia_point_y + lengthdir_y(_inertia_to_intermediate_distance, _corrected_direction);
+//プレイヤーの位置から中間の座標までの距離を計算
+var _player_to_intermediate_distance = point_distance(0, 0, _intermediate_point_x, _intermediate_point_y);
 
 //計算した座標から距離を求める
-var _finally_distance = point_distance(0, 0, _finally_point_x, _finally_point_y);
+//var _finally_distance = point_distance(0, 0, _finally_point_x, _finally_point_y);
 
+debug_intermediate_point_x = _intermediate_point_x;
+debug_intermediate_point_y = _intermediate_point_y;
 
-if(_finally_distance < _move_speed){//finally_pointが半径move_speedの円の中にあるか確認
-	var _finally_speed = _finally_distance//なんとなく名前を変える
+if(_player_to_intermediate_distance < _move_speed){//finally_pointが半径move_speedの円の中にあるか確認
+	var _finally_speed = point_distance(0, 0, _finally_point_x, _finally_point_y);
 	sdm("finnally")
 	return _finally_speed
 }
