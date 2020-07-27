@@ -247,6 +247,14 @@
             }
         },
         {
+            "Key": "5f7e2ab4-c6a6-40a3-826c-f63cee8c2845",
+            "Value": {
+                "id": "da67506d-29cd-4f10-9c75-a17f244ca1cd",
+                "resourcePath": "objects\\o_debugMgr\\o_debugMgr.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "66e9ef80-8b3d-4fec-9070-2d04e81548d4",
             "Value": {
                 "id": "d236b6e9-747c-488e-b6dc-fc1c9a2e428c",
@@ -266,7 +274,7 @@
             "Key": "70b85825-f19f-404f-91d2-4dbc36c8de8a",
             "Value": {
                 "id": "bc255df9-370f-4bfc-a6a6-5cc4a1d2c21c",
-                "resourcePath": "scripts\\player_knockback_decay\\player_knockback_decay.yy",
+                "resourcePath": "scripts\\player_inertia_decay\\player_inertia_decay.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -535,6 +543,14 @@
             }
         },
         {
+            "Key": "cba82a72-58fa-425d-ac6d-86cb21d4bb41",
+            "Value": {
+                "id": "7e9295e4-7c84-47f6-b9a1-b18ffdf35446",
+                "resourcePath": "scripts\\remaining_knockback_time_calculation\\remaining_knockback_time_calculation.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "fd144ed0-26f6-480a-89db-4ebc2cb64992",
@@ -669,6 +685,7 @@
         "3b08a4ad-fdc8-4b02-9678-80402fb3c433",
         "38eacf91-02f7-4b21-b644-5a27ccd4690a",
         "70b85825-f19f-404f-91d2-4dbc36c8de8a",
+        "cba82a72-58fa-425d-ac6d-86cb21d4bb41",
         "c517b22c-c1bc-4e98-b81a-0b8217d94fde",
         "fda14958-5518-4a45-a293-df4a19f3d66d"
     ],

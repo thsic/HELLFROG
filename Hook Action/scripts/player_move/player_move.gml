@@ -6,30 +6,49 @@ if(_key_direction = -1){
 	var _player_speed = 0;
 }
 
+var _finally_direction = 0;
+var _finally_speed = 0;
+var _cant_move_time = ds_grid_get(global.ds_player_knockback, eSGK_type.cursed_gun, eSGK_param.CantActionTime);
 
-if(inertia_enable == true){
-	//ノックバック中なら速度の合成
-	player_knockback_decay(_key_direction);
-	var _synthesized_speed = player_move_speed_synthesis(_player_speed, _key_direction, inertia_speed, inertia_direction, inertia_power);
-	var _synthesized_direction = player_move_direction_synthesis(_player_speed, _key_direction, inertia_speed, inertia_direction, inertia_power, _synthesized_speed);
-	/*inertia_direction = _synthesized_direction;
-	inertia_speed = _synthesized_speed;*/
+if(inertia_enable == true){//慣性中なら速度の合成
+	if(_key_direction != -1 and knockback_time >= _cant_move_time){//キーが押されていて慣性がある
+		_finally_speed = player_move_speed_synthesis(_player_speed, _key_direction, inertia_speed, inertia_direction);
+		_finally_direction = player_move_direction_synthesis(_player_speed, _key_direction, inertia_speed, inertia_direction);
+		//sdm("inertia + move")
+	}
+	else{//キーが押されていない
+		_finally_speed = inertia_speed;
+		_finally_direction = inertia_direction;
+		//sdm("inertia")
+	}
+	//慣性へ代入
+	inertia_direction = _finally_direction;
+	inertia_speed = _finally_speed;
+	player_inertia_decay();
+	
+
 }
-else{
-	//ノックバック中じゃないなら速度の合成をしない
-	var _synthesized_speed = _player_speed;
-	var _synthesized_direction = _key_direction;
+else{//ノックバック中じゃないなら速度の合成をしない
+	if(_key_direction != -1){//キー押されてる
+		_finally_direction = _key_direction;
+		_finally_speed = _player_speed;
+		//sdm("keymove")
+	}
+	else{//押されてない
+		_finally_direction = player_direction;
+		_finally_speed = 0;
+		//sdm("stop")
+	}
+	
 }
 
 
-draw_synspd = _synthesized_speed;
-draw_movespd = _player_speed;
-draw_inertiaspd = inertia_speed;
-draw_direction = _synthesized_direction;
+
+debug_draw_synspd = _finally_speed;
+debug_draw_movespd = _player_speed;
+debug_draw_direction = _finally_direction;
 
 
-player_move_execution(_synthesized_direction, false, _synthesized_speed);//移動の実行
-
-//慣性へ代入
+player_move_execution(_finally_direction, false, _finally_speed);//移動の実行
 
 
