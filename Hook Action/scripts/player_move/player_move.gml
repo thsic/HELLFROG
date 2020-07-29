@@ -15,6 +15,10 @@ debug_intermediate_point_x = lengthdir_x(inertia_speed, inertia_direction);
 debug_intermediate_point_y = lengthdir_y(inertia_speed, inertia_direction);
 //---------------------
 
+var knockback_opposite_key = player_get_knockback_opposite_direction_key();
+if(keyboard_check_pressed(knockback_opposite_key)){
+	inertia_enable = false;
+}
 
 if(inertia_enable == true){//慣性中なら速度の合成
 	if(_key_direction != -1 and knockback_time >= _cant_move_time){//キーが押されていて慣性がある
@@ -49,11 +53,11 @@ else{//ノックバック中じゃないなら速度の合成をしない
 }
 
 
-
+//debug---------------
 debug_draw_synspd = _finally_speed;
 debug_draw_movespd = _player_speed;
 debug_draw_direction = _finally_direction;
-
+//--------------------
 
 player_move_execution(_finally_direction, false, _finally_speed);//移動の実行
 

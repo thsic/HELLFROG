@@ -266,7 +266,7 @@
             "Key": "687e5024-658c-4f3c-91bb-3f6657ddf3bc",
             "Value": {
                 "id": "4adf27b0-62f3-4838-828b-c580dbc51fd2",
-                "resourcePath": "scripts\\player_\\player_.yy",
+                "resourcePath": "scripts\\player_get_knockback_opposite_direction_key\\player_get_knockback_opposite_direction_key.yy",
                 "resourceType": "GMScript"
             }
         },
