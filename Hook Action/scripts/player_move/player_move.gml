@@ -15,21 +15,34 @@ debug_intermediate_point_x = lengthdir_x(inertia_speed, inertia_direction);
 debug_intermediate_point_y = lengthdir_y(inertia_speed, inertia_direction);
 //---------------------
 
-var knockback_opposite_key = player_get_knockback_opposite_direction_key();
-if(keyboard_check_pressed(knockback_opposite_key)){
-	inertia_enable = false;
-}
+
+//if(check_knockback_opposite_key == true){//慣性中に
+	//inertia_enable = false;
+//}
 
 if(inertia_enable == true){//慣性中なら速度の合成
-	if(_key_direction != -1 and knockback_time >= _cant_move_time){//キーが押されていて慣性がある
-		_finally_speed = player_move_speed_synthesis(_player_speed, _key_direction, inertia_speed, inertia_direction);
-		_finally_direction = player_move_direction_synthesis(_player_speed, _key_direction, inertia_speed, inertia_direction);
-		//sdm("inertia + move")
+	
+	//キーが押されていて、ノックバックしてから一定時間以上経っている or ノックバックと逆方向のキーが押されている
+	var _synthesis_enable = false;
+	if(_key_direction != -1){
+		var _opposite_key_check = keyboard_check(player_get_knockback_opposite_direction_key())
+		if(knockback_time >= _cant_move_time or _opposite_key_check){
+			_synthesis_enable = true
+		}
+	}
+	
+	//-------------------------
+	
+	var _pressed_opposite_key = knockback_opposite_key_check_pressed()//ノックバックと逆方向のキーが押されてから一定フレーム以内かどうか
+	
+	if(_synthesis_enable){
+		//速度と方角合成
+		_finally_speed = player_move_speed_synthesis(_player_speed, _key_direction, inertia_speed, inertia_direction, _pressed_opposite_key);
+		_finally_direction = player_move_direction_synthesis(_player_speed, _key_direction, inertia_speed, inertia_direction, _pressed_opposite_key);
 	}
 	else{//キーが押されていない
 		_finally_speed = inertia_speed;
 		_finally_direction = inertia_direction;
-		//sdm("inertia")
 	}
 	//慣性へ代入
 	inertia_direction = _finally_direction;

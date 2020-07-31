@@ -1,12 +1,17 @@
-///@param movespeed,movedirection,inertiaspeed,inertiadirection,inertiapower
+///@param movespeed,movedirection,inertiaspeed,inertiadirection,inertiapower,pressedOppoKey
 //慣性の方角と速度をいい感じにキー入力に合わせていく感じ
 
 var _move_speed = argument0;
 var _move_direction = argument1;
 var _inertia_speed = argument2;
 var _inertia_direction = argument3;
+var _opposite_key_pressed = argument4;
 
 var _inertia_for_move_power = ds_grid_get(global.ds_player_knockback, eSGK_type.cursed_gun, eSGK_param.InertiaForMovePower);
+if(_opposite_key_pressed == true){
+	_inertia_for_move_power *= 2//ボタンが押されてから数フレームの間はキー入力の慣性補正を倍にする
+}
+
 
 //移動方向と速さを座標に変換
 var _move_point_x = lengthdir_x(_move_speed, _move_direction);

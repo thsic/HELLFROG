@@ -351,6 +351,14 @@
             }
         },
         {
+            "Key": "91802bff-94f4-431d-85c1-d5c466b50be4",
+            "Value": {
+                "id": "6c424d71-c2d9-4a7a-89e3-ad7c89e9cc28",
+                "resourcePath": "scripts\\key_check_pressed_within_certain_frame\\key_check_pressed_within_certain_frame.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "92e34729-f1eb-4e19-97f8-a571a48101d7",
             "Value": {
                 "id": "2df645d5-da92-4394-a8e4-21eb2acc3f8c",
@@ -647,6 +655,14 @@
             }
         },
         {
+            "Key": "f204dde5-cab7-4dbd-a3aa-82475d72a94b",
+            "Value": {
+                "id": "b500d1d1-3f8b-4d3f-8ae4-cb1367e8a32f",
+                "resourcePath": "scripts\\last_key_pushed_frame\\last_key_pushed_frame.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "02d1cb79-1eff-4ad3-989a-a157655cb9bc",
@@ -659,6 +675,14 @@
             "Value": {
                 "id": "586c030c-109f-45a4-b4a1-60d5b1dd7fe6",
                 "resourcePath": "scripts\\set_default_keyconfig\\set_default_keyconfig.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fc3f9687-ed77-4ebd-89e0-fc67a9cf5783",
+            "Value": {
+                "id": "0241207d-140f-4fc0-8f79-0aad59c6c41c",
+                "resourcePath": "scripts\\knockback_opposite_key_check_pressed\\knockback_opposite_key_check_pressed.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -695,6 +719,9 @@
         "70b85825-f19f-404f-91d2-4dbc36c8de8a",
         "cba82a72-58fa-425d-ac6d-86cb21d4bb41",
         "687e5024-658c-4f3c-91bb-3f6657ddf3bc",
+        "f204dde5-cab7-4dbd-a3aa-82475d72a94b",
+        "91802bff-94f4-431d-85c1-d5c466b50be4",
+        "fc3f9687-ed77-4ebd-89e0-fc67a9cf5783",
         "c517b22c-c1bc-4e98-b81a-0b8217d94fde",
         "fda14958-5518-4a45-a293-df4a19f3d66d"
     ],

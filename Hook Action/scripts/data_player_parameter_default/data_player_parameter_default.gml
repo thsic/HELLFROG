@@ -3,5 +3,5 @@
 data_set_player_bullet(ePB_color.BulletRed, 20, 20, 0.3, 0.92, 6, 50, 3);
 data_set_player_bullet(ePB_color.BulletYellow, 17, 13, 0.3, 0.9, 70, 20, 10);
 
-data_set_shotgun_knockback(eSGK_type.cursed_gun, 9, 0.03, 0.96, 1, 0.2);
+data_set_shotgun_knockback(eSGK_type.cursed_gun, 9, 0.04, 0.95, 7, 0.15);
 

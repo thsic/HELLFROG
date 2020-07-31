@@ -1,4 +1,4 @@
-///@param type,spd,decayFixedValue,decayPer,cantActionTime
+///@param type,spd,decayFixedValue,decayPer,cantActionTime,inertiaForMovePower
 //プレイヤーの弾
 var _shotgun_type = argument0;//ショットガンタイプ
 var _speed = argument1;//ノックバック距離

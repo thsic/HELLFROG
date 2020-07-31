@@ -2,4 +2,5 @@
 global.ds_player_bullet = ds_grid_create(2, 10);
 global.ds_player_knockback = ds_grid_create(2, 10);
 
+global.ds_keyboard_last_pressed_frame = ds_grid_create(1, 10);
 
