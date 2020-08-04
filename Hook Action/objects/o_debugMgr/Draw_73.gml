@@ -7,4 +7,5 @@ if(debug_draw_movement){
 		draw_circle(pl.x, pl.y, 3*15, true);
 	}
 }
+draw_circle(pl.debug_wall_corner_point_x, pl.debug_wall_corner_point_y, 3, false);
 draw_set_color(c_white);
