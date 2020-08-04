@@ -8,7 +8,7 @@ var _color = argument4;
 var _time = argument5;
 
 with(instance_create_layer(0, 0, "Effects", o_debugEffect)){
-	type = eDebEffectType.Line;
+	type = eDebEffectType.Circle;
 	x1 = _x;
 	y1 = _y;
 	size = _size;

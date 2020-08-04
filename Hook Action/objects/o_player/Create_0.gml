@@ -26,5 +26,3 @@ debug_draw_synspd = 0;
 inertia_direction = 0;
 debug_intermediate_point_x = 0;
 debug_intermediate_point_y = 0;
-debug_wall_corner_point_x = 0
-debug_wall_corner_point_y = 0
