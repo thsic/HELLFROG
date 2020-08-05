@@ -65,19 +65,26 @@ break
 case hookState.GrabWall:
 	hook_point_x = hook_point_x_default+lengthdir_x(hook_length, hook_direction);
 	hook_point_y = hook_point_y_default+lengthdir_y(hook_length, hook_direction);
-	if(can_hookshot == true){
-		hook_state = hookState.Idle;
-	}
+	hook_state = hookState.Shrink;
 break
 case hookState.GrabEnemy:
 	hook_point_x = hook_point_x_default+lengthdir_x(hook_length, hook_direction);
 	hook_point_y = hook_point_y_default+lengthdir_y(hook_length, hook_direction);
-	if(can_hookshot == true){
-		hook_state = hookState.Idle;
-	}
+	hook_state = hookState.Shrink;
+
 break
 case hookState.Shrink:
-
+	hook_direction = point_direction(x, y, hook_point_x, hook_point_y);
+	
+	//フックボタンが離されたらフック離す
+	if(mouse_check_button(global.hook_button) == false){
+		hook_state = hookState.Idle;
+	}
+	var _shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeed);
+	//フックの位置とプレイヤーの位置が近いとフック離す
+	if(point_distance(x, y, hook_point_x, hook_point_y) < _shrink_speed){
+		hook_state = hookState.Idle;
+	}
 break
 }
 

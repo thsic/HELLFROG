@@ -65,7 +65,11 @@ else{//ノックバック中じゃないなら速度の合成をしない
 	
 }
 
-
+if(hook_state = hookState.Shrink){
+	//フックで移動中はすべての慣性とキー入力を無視する
+	_finally_direction = hook_direction;
+	_finally_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeed);
+}
 //debug---------------
 debug_draw_synspd = _finally_speed;
 debug_draw_movespd = _player_speed;
