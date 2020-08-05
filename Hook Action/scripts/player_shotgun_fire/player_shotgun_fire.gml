@@ -56,5 +56,7 @@ for(var i=0; i<_bullet_amount; i++){
 #endregion
 
 if(can_knockback){
-	player_do_knockback_start();
+	//switch(now_shotgun){
+	player_start_knockback(eK_type.cursed_gun);
+	//}
 }

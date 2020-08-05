@@ -7,7 +7,7 @@ var _inertia_speed = argument2;
 var _inertia_direction = argument3;
 var _opposite_key_pressed = argument4;
 
-var _inertia_for_move_power = ds_grid_get(global.ds_player_knockback, eSGK_type.cursed_gun, eSGK_param.InertiaForMovePower);
+var _inertia_for_move_power = ds_grid_get(global.ds_player_knockback, now_knockback_type, eK_param.InertiaForMovePower);
 if(_opposite_key_pressed == true){
 	_inertia_for_move_power *= 2
 }

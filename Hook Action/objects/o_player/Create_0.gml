@@ -10,7 +10,8 @@ knockback_time_limit = 0;
 knockback_speed = 0;
 
 now_hook = eHK_type.normal_hook;
-now_shotgun = eSGK_type.cursed_gun;
+now_shotgun = eK_type.cursed_gun;
+now_knockback_type = noone;
 
 hookshot_cooldown = 0;
 hook_state = hookState.Idle;

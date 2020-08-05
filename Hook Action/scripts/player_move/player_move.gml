@@ -8,7 +8,7 @@ if(_key_direction = -1){
 
 var _finally_direction = 0;
 var _finally_speed = 0;
-var _cant_move_time = ds_grid_get(global.ds_player_knockback, eSGK_type.cursed_gun, eSGK_param.CantActionTime);
+var _cant_move_time = ds_grid_get(global.ds_player_knockback, now_knockback_type, eK_param.CantActionTime);
 
 //デバッグ用------------
 debug_intermediate_point_x = lengthdir_x(inertia_speed, inertia_direction);
@@ -68,8 +68,15 @@ else{//ノックバック中じゃないなら速度の合成をしない
 if(hook_state = hookState.Shrink){
 	//フックで移動中はすべての慣性とキー入力を無視する
 	_finally_direction = hook_direction;
-	_finally_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeed);
+	
+	//加速度
+	shrink_speed += ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkAcceleration);
+	if(shrink_speed > ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedMax)){
+		shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedMax)
+	}
+	_finally_speed = shrink_speed;
 }
+
 //debug---------------
 debug_draw_synspd = _finally_speed;
 debug_draw_movespd = _player_speed;

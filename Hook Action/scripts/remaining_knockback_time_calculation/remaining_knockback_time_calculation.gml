@@ -2,8 +2,8 @@
 //あと何フレームで(停止状態で)慣性の効果が切れるか計算する
 
 var _inertia_speed_test_default = argument0;
-var _decay_value = ds_grid_get(global.ds_player_knockback, eSGK_type.cursed_gun, eSGK_param.decay_fixed_value);
-var _decay_per = ds_grid_get(global.ds_player_knockback, eSGK_type.cursed_gun, eSGK_param.decay_per);
+var _decay_value = ds_grid_get(global.ds_player_knockback, now_knockback_type, eK_param.decay_fixed_value);
+var _decay_per = ds_grid_get(global.ds_player_knockback, now_knockback_type, eK_param.decay_per);
 var _inertia_speed_test = _inertia_speed_test_default;
 
 var result = 10000;

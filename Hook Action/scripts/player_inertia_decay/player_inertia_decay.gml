@@ -2,8 +2,8 @@
 
 var _inertia_default_speed = inertia_speed;
 
-var _decay_value = ds_grid_get(global.ds_player_knockback, eSGK_type.cursed_gun, eSGK_param.decay_fixed_value);
-var _decay_per = ds_grid_get(global.ds_player_knockback, eSGK_type.cursed_gun, eSGK_param.decay_per);
+var _decay_value = ds_grid_get(global.ds_player_knockback, now_knockback_type, eK_param.decay_fixed_value);
+var _decay_per = ds_grid_get(global.ds_player_knockback, now_knockback_type, eK_param.decay_per);
 
 
 var _inertia_speed = _inertia_default_speed;

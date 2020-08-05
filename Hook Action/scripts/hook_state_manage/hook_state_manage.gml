@@ -47,7 +47,7 @@ case hookState.Shooting:
 		hook_length += _hook_speed;
 		hook_point_x = hook_point_x_default+lengthdir_x(hook_length, hook_direction);
 		hook_point_y = hook_point_y_default+lengthdir_y(hook_length, hook_direction);
-		var _hook_range = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.Range)
+		var _hook_range = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.Range);
 		if(hook_length > _hook_range){
 			//フックが射程の限界まで達した
 			
@@ -65,11 +65,13 @@ break
 case hookState.GrabWall:
 	hook_point_x = hook_point_x_default+lengthdir_x(hook_length, hook_direction);
 	hook_point_y = hook_point_y_default+lengthdir_y(hook_length, hook_direction);
+	shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedDefault);
 	hook_state = hookState.Shrink;
 break
 case hookState.GrabEnemy:
 	hook_point_x = hook_point_x_default+lengthdir_x(hook_length, hook_direction);
 	hook_point_y = hook_point_y_default+lengthdir_y(hook_length, hook_direction);
+	shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedDefault);
 	hook_state = hookState.Shrink;
 
 break
@@ -79,11 +81,13 @@ case hookState.Shrink:
 	//フックボタンが離されたらフック離す
 	if(mouse_check_button(global.hook_button) == false){
 		hook_state = hookState.Idle;
+		player_start_knockback(eK_type.hook);//小さいノックバックもする
 	}
-	var _shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeed);
+	var _shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedMax);
 	//フックの位置とプレイヤーの位置が近いとフック離す
-	if(point_distance(x, y, hook_point_x, hook_point_y) < _shrink_speed){
+	if(point_distance(x, y, hook_point_x, hook_point_y) < _shrink_speed*1.5){
 		hook_state = hookState.Idle;
+		player_start_knockback(eK_type.hook_small);//フックを離すよりさらに小さいノックバックする
 	}
 break
 }
