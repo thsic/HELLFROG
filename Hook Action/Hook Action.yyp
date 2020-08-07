@@ -63,6 +63,14 @@
             }
         },
         {
+            "Key": "16df556e-b962-49d7-9a7b-ba1d2ebfff54",
+            "Value": {
+                "id": "0504013e-0ba0-4163-bcdd-0df026c5c138",
+                "resourcePath": "scripts\\fire_straight_ammo\\fire_straight_ammo.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1852a97f-5b98-475d-a44d-f1c22032080a",
             "Value": {
                 "id": "d323e5c0-b7fb-4396-9796-6f92303fe3e9",
@@ -444,6 +452,14 @@
                 "id": "40f112a4-c9e6-43bb-8270-f00f8a9f85e4",
                 "resourcePath": "options\\ios\\options_ios.yy",
                 "resourceType": "GMiOSOptions"
+            }
+        },
+        {
+            "Key": "870dfdb6-1598-4b93-8569-bd28059d59db",
+            "Value": {
+                "id": "addf2394-8ac7-4032-8459-da2502704818",
+                "resourcePath": "scripts\\fire_spread_ammo\\fire_spread_ammo.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -925,6 +941,8 @@
         "56cddd2e-52a4-4a7a-a5f4-47c1a71b6158",
         "f93b088e-2ea8-49cb-a48e-dc7d966f6beb",
         "1efd35b7-9ce7-4199-8ae0-c4724c4db757",
+        "16df556e-b962-49d7-9a7b-ba1d2ebfff54",
+        "870dfdb6-1598-4b93-8569-bd28059d59db",
         "2b03b7b6-150c-414a-a4b5-f1eb266d2a88",
         "c517b22c-c1bc-4e98-b81a-0b8217d94fde",
         "fda14958-5518-4a45-a293-df4a19f3d66d",

@@ -18,6 +18,7 @@ gun_charge_level = noone;
 gun_charge_enable = false;
 gun_charge_time = 0;
 gun_max_charge_time = 0;
+gun_cooldown = 0;
 
 hookshot_cooldown = 0;
 hook_state = hookState.Idle;
