@@ -1,13 +1,13 @@
 //ショットガン発射時の処理
 
 #region 赤い弾
-var _bullet_speed_max = ds_grid_get(global.ds_player_bullet, ePB_color.BulletRed, ePB_param.MaxSpeed);
-var _bullet_speed_min = ds_grid_get(global.ds_player_bullet, ePB_color.BulletRed, ePB_param.MinSpeed);
-var _bullet_diffusivity = ds_grid_get(global.ds_player_bullet, ePB_color.BulletRed, ePB_param.Diffusivity);
-var _bullet_damage = ds_grid_get(global.ds_player_bullet, ePB_color.BulletRed, ePB_param.Damage);
-var _bullet_speed_mag = ds_grid_get(global.ds_player_bullet, ePB_color.BulletRed, ePB_param.MagSpeed);
-var _bullet_speed_atte = ds_grid_get(global.ds_player_bullet, ePB_color.BulletRed, ePB_param.AtteSpeed);
-var _bullet_amount = ds_grid_get(global.ds_player_bullet, ePB_color.BulletRed, ePB_param.Amount);
+var _bullet_speed_max = ds_grid_get(global.ds_player_bullet, ePB_type.BulletRed, ePB_param.MaxSpeed);
+var _bullet_speed_min = ds_grid_get(global.ds_player_bullet, ePB_type.BulletRed, ePB_param.MinSpeed);
+var _bullet_diffusivity = ds_grid_get(global.ds_player_bullet, ePB_type.BulletRed, ePB_param.Diffusivity);
+var _bullet_damage = ds_grid_get(global.ds_player_bullet, ePB_type.BulletRed, ePB_param.Damage);
+var _bullet_speed_mag = ds_grid_get(global.ds_player_bullet, ePB_type.BulletRed, ePB_param.MagSpeed);
+var _bullet_speed_atte = ds_grid_get(global.ds_player_bullet, ePB_type.BulletRed, ePB_param.AtteSpeed);
+var _bullet_amount = ds_grid_get(global.ds_player_bullet, ePB_type.BulletRed, ePB_param.Amount);
 
 //ここらへんに追加の処理いれて
 
@@ -30,13 +30,13 @@ for(var i=0; i<_bullet_amount; i++){
 
 #region 黄色
 
-var _bullet_speed_max = ds_grid_get(global.ds_player_bullet, ePB_color.BulletYellow, ePB_param.MaxSpeed);
-var _bullet_speed_min = ds_grid_get(global.ds_player_bullet, ePB_color.BulletYellow, ePB_param.MinSpeed);
-var _bullet_diffusivity = ds_grid_get(global.ds_player_bullet, ePB_color.BulletYellow, ePB_param.Diffusivity);
-var _bullet_damage = ds_grid_get(global.ds_player_bullet, ePB_color.BulletYellow, ePB_param.Damage);
-var _bullet_speed_mag = ds_grid_get(global.ds_player_bullet, ePB_color.BulletYellow, ePB_param.MagSpeed);
-var _bullet_speed_atte = ds_grid_get(global.ds_player_bullet, ePB_color.BulletYellow, ePB_param.AtteSpeed);
-var _bullet_amount = ds_grid_get(global.ds_player_bullet, ePB_color.BulletYellow, ePB_param.Amount);
+var _bullet_speed_max = ds_grid_get(global.ds_player_bullet, ePB_type.BulletYellow, ePB_param.MaxSpeed);
+var _bullet_speed_min = ds_grid_get(global.ds_player_bullet, ePB_type.BulletYellow, ePB_param.MinSpeed);
+var _bullet_diffusivity = ds_grid_get(global.ds_player_bullet, ePB_type.BulletYellow, ePB_param.Diffusivity);
+var _bullet_damage = ds_grid_get(global.ds_player_bullet, ePB_type.BulletYellow, ePB_param.Damage);
+var _bullet_speed_mag = ds_grid_get(global.ds_player_bullet, ePB_type.BulletYellow, ePB_param.MagSpeed);
+var _bullet_speed_atte = ds_grid_get(global.ds_player_bullet, ePB_type.BulletYellow, ePB_param.AtteSpeed);
+var _bullet_amount = ds_grid_get(global.ds_player_bullet, ePB_type.BulletYellow, ePB_param.Amount);
 
 //ここらへんに追加の処理いれて
 
@@ -57,6 +57,6 @@ for(var i=0; i<_bullet_amount; i++){
 
 if(can_knockback){
 	//switch(now_shotgun){
-	player_start_knockback(eK_type.cursed_gun);
+	player_start_knockback(eK_type.CursedGun);
 	//}
 }

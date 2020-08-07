@@ -9,6 +9,9 @@ break
 case eDebEffectType.Variable:
 	draw_text(x1, y1, variable);
 break
+case eDebEffectType.Rectangle:
+	draw_rectangle(x1, y1, x2, y2, outline);
+break
 default:
 	instance_destroy();
 break
@@ -21,5 +24,6 @@ enum eDebEffectType{
 	Line,
 	Circle,
 	Variable,
+	Rectangle,
 	
 }

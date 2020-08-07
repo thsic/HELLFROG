@@ -34,13 +34,24 @@ case hookState.Shooting:
 	
 	//敵への当たり判定
 	var _grab_enemy_id = hook_check_within_enemy(_hook_speed, _collision_size_for_enemy);
+	//敵にフックがあたった
 	if(_grab_enemy_id != noone){
-		hook_state = hookState.GrabEnemy;
-		//敵を掴んだときは敵の方角にフックが吸い付く
-		hook_direction = point_direction(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y);
-		hook_length = point_distance(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y) - _grab_enemy_id.collision_size_for_hook;
 		
+		//敵の方向がフックの方向とずれすぎていない場合敵を掴む
+		var _grab_enemy_direction = point_direction(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y);
+		if(abs(angle_difference(hook_direction, _grab_enemy_direction)) < 90){
+			
+			//敵を掴んだときは敵の方角にフックが吸い付く
+			hook_direction = point_direction(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y);
+			hook_length = point_distance(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y) - _grab_enemy_id.collision_size_for_hook;
+			hook_state = hookState.GrabEnemy;
+		}
+		else{
+			//敵の方向とフックの方向が逆なのであたってなかったことにする
+			_grab_enemy_id = noone;
+		}
 	}
+
 	
 	if(_wall_collision_check == noone and _grab_enemy_id == noone){
 		//何にも衝突しなかった
@@ -81,13 +92,13 @@ case hookState.Shrink:
 	//フックボタンが離されたらフック離す
 	if(mouse_check_button(global.hook_button) == false){
 		hook_state = hookState.Idle;
-		player_start_knockback(eK_type.hook);//小さいノックバックもする
+		player_start_knockback(eK_type.Hook);//小さいノックバックもする
 	}
 	var _shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedMax);
 	//フックの位置とプレイヤーの位置が近いとフック離す
 	if(point_distance(x, y, hook_point_x, hook_point_y) < _shrink_speed*1.5){
 		hook_state = hookState.Idle;
-		player_start_knockback(eK_type.hook_small);//フックを離すよりさらに小さいノックバックする
+		player_start_knockback(eK_type.HookSmall);//フックを離すよりさらに小さいノックバックする
 	}
 break
 }

@@ -7,7 +7,7 @@ var _attenuation_speed = argument3;//1fで減衰するスピード
 var _magnification_speed = argument4;//1fごとにこの値だけ乗算される
 var _diffusivity = argument5;//拡散度
 var _damage = argument6;//弾ダメージ
-var _amount = argument7;
+var _amount = argument7;//一度に発射される数
 
 ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.MaxSpeed, _maxspeed);
 ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.MinSpeed, _minspeed);
@@ -18,9 +18,11 @@ ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.Damage, _damage);
 ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.Amount, _amount);
 
 
-enum ePB_color{
+enum ePB_type{
+	Empty,
 	BulletRed,
 	BulletYellow,
+	
 }
 
 enum ePB_param{

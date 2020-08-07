@@ -6,7 +6,7 @@ inertia_enable = true;
 knockback_time = 0;
 
 //フックでのノックバックの場合はノックバック方向をプレイヤーの方向と同じ方向にノックバック
-if(_knockback_type != eK_type.hook and _knockback_type != eK_type.hook_small){
+if(_knockback_type != eK_type.Hook and _knockback_type != eK_type.HookSmall){
 	knockback_direction = player_direction-180;
 }
 else{//フックの場合

@@ -8,7 +8,9 @@ if(_key_direction = -1){
 
 var _finally_direction = 0;
 var _finally_speed = 0;
-var _cant_move_time = ds_grid_get(global.ds_player_knockback, now_knockback_type, eK_param.CantActionTime);
+if(now_knockback_type != noone){
+	var _cant_move_time = ds_grid_get(global.ds_player_knockback, now_knockback_type, eK_param.CantActionTime);
+}
 
 //デバッグ用------------
 debug_intermediate_point_x = lengthdir_x(inertia_speed, inertia_direction);

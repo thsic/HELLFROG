@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "1efd35b7-9ce7-4199-8ae0-c4724c4db757",
+            "Value": {
+                "id": "9f07b87b-37f3-4a42-a5db-e39df0ca9372",
+                "resourcePath": "scripts\\gun_charging\\gun_charging.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1f00e6d7-814a-432a-aff3-5bcf9e133e4f",
             "Value": {
                 "id": "48c4c567-e20f-4d95-8c69-b432e1786e7d",
@@ -175,6 +183,14 @@
             }
         },
         {
+            "Key": "39ccd671-6d2c-45b6-8447-707cba409d22",
+            "Value": {
+                "id": "d566d24e-4461-43f1-95e6-ff92a3109d81",
+                "resourcePath": "views\\39ccd671-6d2c-45b6-8447-707cba409d22.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "3b08a4ad-fdc8-4b02-9678-80402fb3c433",
             "Value": {
                 "id": "de262a5f-28e8-4a5c-b9d6-d85be0c9f91c",
@@ -188,6 +204,14 @@
                 "id": "c1744a8c-ec20-4541-8732-2712ce5cbdd6",
                 "resourcePath": "views\\3d685737-2ca7-48d5-baf3-a74353a1b7d1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3f7ec129-be3f-450d-a1f1-9d2ba88f2243",
+            "Value": {
+                "id": "64712f09-8a9a-4fae-b8b7-7e01535b626a",
+                "resourcePath": "scripts\\debug_draw_rectnagle\\debug_draw_rectnagle.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -663,6 +687,14 @@
             }
         },
         {
+            "Key": "c3b36cb3-50b6-4bfe-a49f-84d9082b4020",
+            "Value": {
+                "id": "d92cd634-17d5-4413-a0fe-f35374e972b6",
+                "resourcePath": "scripts\\data_set_player_gun\\data_set_player_gun.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c4664138-461d-4861-a8ac-369a618b3300",
             "Value": {
                 "id": "4b6bd4dd-fbc5-4e77-95a6-3c07ec4de619",
@@ -823,6 +855,14 @@
             }
         },
         {
+            "Key": "f93b088e-2ea8-49cb-a48e-dc7d966f6beb",
+            "Value": {
+                "id": "019e0983-709f-4313-8709-c8f2017e4bef",
+                "resourcePath": "scripts\\gun_charge_start\\gun_charge_start.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fc3f9687-ed77-4ebd-89e0-fc67a9cf5783",
             "Value": {
                 "id": "0241207d-140f-4fc0-8f79-0aad59c6c41c",
@@ -863,11 +903,11 @@
         "ab4c2125-2b7d-4f29-91db-89f136b7f1bd",
         "4964993c-6b1c-4a04-8641-f603d2349d48",
         "f26afc6a-a062-43e1-8356-d30aa97116c6",
+        "c3b36cb3-50b6-4bfe-a49f-84d9082b4020",
         "ab3dbe19-9487-4576-b435-843f270ea7f5",
         "f1f4c5c9-74c4-4bbc-9d3c-ee80c6543ead",
         "401e37a0-dc7a-452c-9139-0e7c64dcadf8",
         "a3d9abf2-31a2-4a63-be2d-1021bbe48555",
-        "56cddd2e-52a4-4a7a-a5f4-47c1a71b6158",
         "54f42385-8b83-48ac-a8c9-c68fc7fc69c6",
         "f204dde5-cab7-4dbd-a3aa-82475d72a94b",
         "91802bff-94f4-431d-85c1-d5c466b50be4",
@@ -882,11 +922,15 @@
         "d8880ad1-e419-4df9-aebd-6f1a28cee468",
         "b5b09384-fa7d-42a7-bacc-d9035498b545",
         "adb3b762-7e07-49c3-8c2a-50be3486247f",
+        "56cddd2e-52a4-4a7a-a5f4-47c1a71b6158",
+        "f93b088e-2ea8-49cb-a48e-dc7d966f6beb",
+        "1efd35b7-9ce7-4199-8ae0-c4724c4db757",
         "2b03b7b6-150c-414a-a4b5-f1eb266d2a88",
         "c517b22c-c1bc-4e98-b81a-0b8217d94fde",
         "fda14958-5518-4a45-a293-df4a19f3d66d",
         "f45495bb-c1d5-4fd3-8f09-e0cd49291a48",
         "65d2773c-a43a-457a-ba83-b852e538dbbc",
+        "3f7ec129-be3f-450d-a1f1-9d2ba88f2243",
         "2a930aaa-f121-4580-8d72-6cb958f08563"
     ],
     "tutorial": ""

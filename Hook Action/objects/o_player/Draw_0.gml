@@ -1,5 +1,9 @@
 draw_self();
 
+if(debug_mode or DEBUGMODE){
+	draw_sprite(s_playerCollisionMask, 0, x, y);
+}
+
 //フック描画
 //if(hook_state = hookState.Shooting){
 switch(hook_state){

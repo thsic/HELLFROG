@@ -15,10 +15,10 @@ ds_grid_set(global.ds_player_knockback, _knockback_type, eK_param.InertiaForMove
 
 
 enum eK_type{
-	cursed_gun,
-	tutorial_gun,
-	hook,
-	hook_small
+	CursedGun,
+	TutorialGun,
+	Hook,
+	HookSmall
 }
 
 enum eK_param{

@@ -1,7 +1,6 @@
 player_direction = point_direction(x, y, mouse_x, mouse_y);
 
 can_knockback = true;
-knockback_start = false;
 inertia_enable = false;
 knockback_time = false;
 knockback_power = 0;
@@ -9,9 +8,16 @@ inertia_speed = 0;
 knockback_time_limit = 0;
 knockback_speed = 0;
 
+//現在の装備など
 now_hook = eHK_type.normal_hook;
-now_shotgun = eK_type.cursed_gun;
+now_shotgun = eG_type.CursedGun;
 now_knockback_type = noone;
+
+//銃関連
+gun_charge_level = noone;
+gun_charge_enable = false;
+gun_charge_time = 0;
+gun_max_charge_time = 0;
 
 hookshot_cooldown = 0;
 hook_state = hookState.Idle;
