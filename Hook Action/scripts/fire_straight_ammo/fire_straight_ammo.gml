@@ -34,6 +34,7 @@ if(_bullet_amount > 1){
 		with(instance_create_layer(x, y, "PlayerBullet", o_playerBulletRed)){
 			speed = _bullet_speed;
 			direction = _bullet_direction;
+			bullet_type = _bullet_type;
 			damage = _bullet_damage;
 			speed_attenuation = _bullet_speed_atte;
 			bullet_speed_mag = _bullet_speed_mag;
@@ -47,6 +48,7 @@ else if(_bullet_amount = 1){
 	with(instance_create_layer(x, y, "PlayerBullet", o_playerBulletRed)){
 		speed = _bullet_speed;
 		direction = _bullet_direction;
+		bullet_type = _bullet_type;
 		damage = _bullet_damage;
 		speed_attenuation = _bullet_speed_atte;
 		bullet_speed_mag = _bullet_speed_mag;

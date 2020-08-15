@@ -30,6 +30,7 @@ for(var i=0; i<_bullet_amount; i++){
 		
 		speed = _bullet_speed;
 		direction = _bullet_direction;
+		bullet_type = _bullet_type;
 		damage = _bullet_damage;
 		speed_attenuation = _bullet_speed_atte;
 		bullet_speed_mag = _bullet_speed_mag;

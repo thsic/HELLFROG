@@ -1,4 +1,4 @@
-///@param type,maxspd,minspd,attespd,magspd,diff,dmg,amount,script
+///@param type,maxspd,minspd,attespd,magspd,diff,dmg,amount,script,Kpower
 //プレイヤーの弾
 var _bullet_type = argument0;//弾タイプ
 var _maxspeed = argument1;//初期スピード最大値
@@ -9,6 +9,7 @@ var _diffusivity = argument5;//拡散度
 var _damage = argument6;//弾ダメージ
 var _amount = argument7;//一度に発射される数
 var _script = argument8;//弾の発射に使用するスクリプト
+var _knockback_power = argument9;//ノックバックさせる力
 
 ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.MaxSpeed, _maxspeed);
 ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.MinSpeed, _minspeed);
@@ -18,6 +19,8 @@ ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.Diffusivity, _diffu
 ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.Damage, _damage);
 ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.Amount, _amount);
 ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.Script, _script);
+ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.KnockbackPower, _knockback_power);
+
 
 enum ePB_type{
 	Empty,
@@ -35,4 +38,6 @@ enum ePB_param{
 	Damage,
 	Amount,
 	Script,
+	KnockbackPower,
+	
 }

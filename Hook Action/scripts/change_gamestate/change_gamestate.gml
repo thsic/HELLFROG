@@ -1,9 +1,9 @@
 ///@param gamestate
 //ステートの変更
-var state = argument0;
+var _state = argument0;
 
-if(state_priority_comparison(state) == true){
-	switch(state){
+if(state_priority_comparison(_state) == true){
+	switch(_state){
 	case gamestate.stagestart:
 		global.nextstate = gamestate.stagestart;
 	break

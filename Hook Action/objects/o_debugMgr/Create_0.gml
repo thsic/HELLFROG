@@ -3,4 +3,4 @@ if(!debug_mode and !DEBUGMODE){
 }
 
 pl = o_player;
-debug_draw_movement = true;
+debug_draw_movement = false;

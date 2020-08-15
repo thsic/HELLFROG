@@ -1,33 +1,36 @@
 ///@param state
 //ステートが同時に変更されたときどちらを優先するか処理、ほぼ使われない
-//ステージ開始 > ステージクリア > ゲームオーバー > ポーズ > メニュー > メイン
+// Dead > Knockback > Charging > Aim > Fire > Move > Idle
 
 var _state = argument0;
 var _state_priority_1 = 0;
 var _state_priority_2 = 0;
 var _changeable = true;
 
-if(global.nextstate != noone){
-	sdm("ステートの変更が競合しました");
+if(next_state != noone){
+	sdm("敵のステートの変更が競合しました");
 	
 	switch(_state){
-	case gamestate.stagestart:
+	case EnemyState.Dead:
 		_state_priority_1 = 100;
 	break
-	case gamestate.stageclear:
-		_state_priority_1 = 95;
+	case EnemyState.Knockback:
+		_state_priority_1 = 90;
 	break
-	case gamestate.gameover:
-		_state_priority_1 = 80;
-	break
-	case gamestate.pause:
+	case EnemyState.Charging:
 		_state_priority_1 = 60;
 	break
-	case gamestate.menu:
+	case EnemyState.Aim:
 		_state_priority_1 = 50;
 	break
-	case gamestate.main:
-		_state_priority_1 = 30;
+	case EnemyState.Fire:
+		_state_priority_1 = 40;
+	break
+	case EnemyState.Move:
+		_state_priority_1 = 25;
+	break
+	case EnemyState.Idle:
+		_state_priority_1 = 10;
 	break
 	default:
 		sdm("Error! state_priority_comparison");
@@ -35,24 +38,27 @@ if(global.nextstate != noone){
 	break
 	}
 	
-	switch(global.nextstate){
-	case gamestate.stagestart:
+	switch(next_state){
+	case EnemyState.Dead:
 		_state_priority_2 = 100;
 	break
-	case gamestate.stageclear:
-		_state_priority_2 = 95;
+	case EnemyState.Knockback:
+		_state_priority_2 = 90;
 	break
-	case gamestate.gameover:
-		_state_priority_2 = 80;
-	break
-	case gamestate.pause:
+	case EnemyState.Charging:
 		_state_priority_2 = 60;
 	break
-	case gamestate.menu:
+	case EnemyState.Aim:
 		_state_priority_2 = 50;
 	break
-	case gamestate.main:
-		_state_priority_2 = 30;
+	case EnemyState.Fire:
+		_state_priority_2 = 40;
+	break
+	case EnemyState.Move:
+		_state_priority_2 = 25;
+	break
+	case EnemyState.Idle:
+		_state_priority_2 = 10;
 	break
 	default:
 		sdm("Error! state_priority_comparison");
