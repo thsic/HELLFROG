@@ -30,28 +30,18 @@ if(_bullet_amount > 1){
 		var _bullet_direction_interval = _bullet_diffusivity/(_bullet_amount-1);//間隔測定
 		var _bullet_direction_1st = -_bullet_diffusivity/2 + player_direction;//基準になる角度
 		var _bullet_direction = _bullet_direction_1st + i * _bullet_direction_interval//基準になる角度から間隔をあける
-	
-		with(instance_create_layer(x, y, "PlayerBullet", o_playerBulletRed)){
-			speed = _bullet_speed;
-			direction = _bullet_direction;
-			bullet_type = _bullet_type;
-			damage = _bullet_damage;
-			speed_attenuation = _bullet_speed_atte;
-			bullet_speed_mag = _bullet_speed_mag;
-		}
+		
+		var _knockback_direction = player_direction//angle_difference(_bullet_direction, player_direction);
+		
+		create_bullet(_bullet_speed, _bullet_direction, _bullet_type, _bullet_damage, _bullet_speed_atte, _bullet_speed_mag, _knockback_direction, false, o_playerBulletRed);
 	}
 }
 else if(_bullet_amount = 1){
 	//弾の数が1の場合は上のやつじゃ動かないので別の処理
 	var _bullet_speed = irandom_range(_bullet_speed_max, _bullet_speed_min);//速度決定
 	var _bullet_direction = player_direction;
-	with(instance_create_layer(x, y, "PlayerBullet", o_playerBulletRed)){
-		speed = _bullet_speed;
-		direction = _bullet_direction;
-		bullet_type = _bullet_type;
-		damage = _bullet_damage;
-		speed_attenuation = _bullet_speed_atte;
-		bullet_speed_mag = _bullet_speed_mag;
-	}
+	var _knockback_direction = player_direction;
 	
+	create_bullet(_bullet_speed, _bullet_direction, _bullet_type, _bullet_damage, _bullet_speed_atte, _bullet_speed_mag, _knockback_direction, false, o_playerBulletRed);
+
 }

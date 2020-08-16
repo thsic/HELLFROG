@@ -20,6 +20,9 @@ if(_collided == false){
 	
 	collided_enemy[_number] = other;
 	var _knockback_speed = ds_grid_get(global.ds_player_bullet, bullet_type, ePB_param.KnockbackPower);
-	enemy_knockback_start(other, _knockback_speed, direction);
+	enemy_knockback_start(other, _knockback_speed, knockback_direction_for_enemy);
+	if(collision_destroy == true){
+		instance_destroy()
+	}
 }
 

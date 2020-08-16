@@ -20,8 +20,6 @@ with(_enemy_id){
 	else{
 		//ノックバック中に追加のノックバックが発生した時
 		knockback_speed += _knockback_speed/2;
-		knockback_direction = angle_difference(knockback_direction, _knockback_direction);
+		knockback_direction = angle_mean(knockback_direction, _knockback_direction);
 	}
-	
-	
 }

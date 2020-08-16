@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "1ed33e56-d9a3-4af8-98d7-7c5758d79e45",
+            "Value": {
+                "id": "5ef75e2d-965c-4500-b7ef-5339fbd8a28a",
+                "resourcePath": "scripts\\angle_mean\\angle_mean.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1efd35b7-9ce7-4199-8ae0-c4724c4db757",
             "Value": {
                 "id": "9f07b87b-37f3-4a42-a5db-e39df0ca9372",
@@ -335,6 +343,14 @@
             }
         },
         {
+            "Key": "51125a62-6b36-4777-8102-b4ac29c69f7a",
+            "Value": {
+                "id": "e4e15049-e0cb-4c6e-af1e-d8d99845bb64",
+                "resourcePath": "scripts\\create_bullet\\create_bullet.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "54f42385-8b83-48ac-a8c9-c68fc7fc69c6",
             "Value": {
                 "id": "f3b78fe7-793c-434e-884e-58511f436c08",
@@ -395,6 +411,14 @@
             "Value": {
                 "id": "6399e4a1-f98c-42e4-b62b-efc551122ed7",
                 "resourcePath": "scripts\\square_collision_check_within_object\\square_collision_check_within_object.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "65b53814-67dc-4fc2-8d48-6eab4598e9d0",
+            "Value": {
+                "id": "a1422fc4-d443-4584-83bf-b81707da770d",
+                "resourcePath": "scripts\\debug_draw_angle\\debug_draw_angle.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -663,6 +687,14 @@
             }
         },
         {
+            "Key": "ac761b00-731c-46a3-9234-117f4d99a1f7",
+            "Value": {
+                "id": "c6069f0e-f680-4e5f-a85e-77c7810ac4c8",
+                "resourcePath": "scripts\\enemy_move_execution\\enemy_move_execution.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ad1a3b97-51f4-4606-acb0-72a41c4a135d",
             "Value": {
                 "id": "1ac2d7ee-3e11-4c8b-9381-2002e689d78f",
@@ -772,6 +804,14 @@
                 "id": "e86045ca-fe93-4d2c-8226-98a824b6ed2b",
                 "resourcePath": "rooms\\r_test\\r_test.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "c2079ecb-7c10-47f8-a01e-1e97b9aba7f8",
+            "Value": {
+                "id": "6ab1e361-5665-4e6a-8869-9ec189396bd9",
+                "resourcePath": "scripts\\enemies_collision\\enemies_collision.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1039,19 +1079,24 @@
         "1efd35b7-9ce7-4199-8ae0-c4724c4db757",
         "16df556e-b962-49d7-9a7b-ba1d2ebfff54",
         "870dfdb6-1598-4b93-8569-bd28059d59db",
+        "51125a62-6b36-4777-8102-b4ac29c69f7a",
         "2b03b7b6-150c-414a-a4b5-f1eb266d2a88",
         "be4bd3c5-b472-4b17-afaf-066b7198040b",
-        "fda14958-5518-4a45-a293-df4a19f3d66d",
-        "f45495bb-c1d5-4fd3-8f09-e0cd49291a48",
-        "65d2773c-a43a-457a-ba83-b852e538dbbc",
-        "3f7ec129-be3f-450d-a1f1-9d2ba88f2243",
-        "2a930aaa-f121-4580-8d72-6cb958f08563",
-        "c517b22c-c1bc-4e98-b81a-0b8217d94fde",
         "faf7539e-7a9f-4c8a-8a21-11e279eb8f73",
         "1c180efe-6113-4174-8b03-fbad0274d0e8",
         "b5d69d61-82db-4fc9-a17d-f18449384d67",
         "b864b714-e9d1-4853-bb1b-ae7870dc3353",
-        "22a13655-1e6b-440f-90e5-395e4480df8f"
+        "22a13655-1e6b-440f-90e5-395e4480df8f",
+        "ac761b00-731c-46a3-9234-117f4d99a1f7",
+        "c2079ecb-7c10-47f8-a01e-1e97b9aba7f8",
+        "fda14958-5518-4a45-a293-df4a19f3d66d",
+        "1ed33e56-d9a3-4af8-98d7-7c5758d79e45",
+        "f45495bb-c1d5-4fd3-8f09-e0cd49291a48",
+        "65b53814-67dc-4fc2-8d48-6eab4598e9d0",
+        "65d2773c-a43a-457a-ba83-b852e538dbbc",
+        "3f7ec129-be3f-450d-a1f1-9d2ba88f2243",
+        "2a930aaa-f121-4580-8d72-6cb958f08563",
+        "c517b22c-c1bc-4e98-b81a-0b8217d94fde"
     ],
     "tutorial": ""
 }

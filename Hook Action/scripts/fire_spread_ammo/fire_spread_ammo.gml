@@ -25,14 +25,7 @@ break
 for(var i=0; i<_bullet_amount; i++){
 	var _bullet_speed = irandom_range(_bullet_speed_max, _bullet_speed_min);//速度決定
 	var _bullet_direction = irandom_range(-_bullet_diffusivity/2, _bullet_diffusivity/2)+player_direction;//角度決定
-
-	with(instance_create_layer(x, y, "PlayerBullet", o_playerBulletYellow)){
-		
-		speed = _bullet_speed;
-		direction = _bullet_direction;
-		bullet_type = _bullet_type;
-		damage = _bullet_damage;
-		speed_attenuation = _bullet_speed_atte;
-		bullet_speed_mag = _bullet_speed_mag;
-	}
+	var _knockback_direction = player_direction//angle_difference(_bullet_direction, player_direction);
+	
+	create_bullet(_bullet_speed, _bullet_direction, _bullet_type, _bullet_damage, _bullet_speed_atte, _bullet_speed_mag, _knockback_direction, true, o_playerBulletYellow);
 }

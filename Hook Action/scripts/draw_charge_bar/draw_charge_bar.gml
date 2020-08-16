@@ -37,7 +37,6 @@ draw_rectangle(_base_point_x, _base_point_y, _base_point_x+_bar_width, _base_poi
 draw_set_color(_bar_color_edge);
 //draw_rectangle(_base_point_x, _base_point_y, _base_point_x+_bar_width, _base_point_y+_bar_height, true);
 
-sdm(_charge_percent);
 
 for(var i=0; i<_charge_max_count; i++){
 	var _temp_x = _bar_x[i] - _one_bar_width;//左上
