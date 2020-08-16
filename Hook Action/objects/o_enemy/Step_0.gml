@@ -11,9 +11,6 @@ else{
 if(knockback_enable == true){
 	enemy_knockbacking();
 }
-else{
-	h_speed = 0;
-	v_speed = 0;
-}
+enemies_collision();
 
 enemy_move_execution();
