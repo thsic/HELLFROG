@@ -9,6 +9,7 @@ switch(hook_state){
 case hookState.Shooting:
 case hookState.GrabWall:
 case hookState.GrabEnemy:
+case hookState.Shrink:
 	draw_set_color(c_green);
 	draw_line(x, y, hook_point_x, hook_point_y);
 }

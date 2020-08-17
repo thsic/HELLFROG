@@ -17,9 +17,11 @@ for(var _number=0; _number<30; _number++){
 	
 }
 if(_collided == false){
-	
+	//衝突時の処理
 	collided_enemy[_number] = other;
 	var _knockback_speed = ds_grid_get(global.ds_player_bullet, bullet_type, ePB_param.KnockbackPower);
+	var _bullet_damage = ds_grid_get(global.ds_player_bullet, bullet_type, ePB_param.Damage);
+	damage_to_enemy(other, _bullet_damage);
 	enemy_knockback_start(other, _knockback_speed, knockback_direction_for_enemy);
 	if(collision_destroy == true){
 		instance_destroy()

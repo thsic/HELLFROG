@@ -1,4 +1,3 @@
-///@param
 //移動の実行
 
 var _vspeed = v_speed;

@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "0bbc0fc4-3085-4957-bf8e-bd6e2a80ada3",
+            "Value": {
+                "id": "8aca72b9-6d81-4dcb-ae9b-0d62ee7e0eff",
+                "resourcePath": "scripts\\draw_bar\\draw_bar.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "0cf5dd45-586b-4814-9453-82009551b1f5",
             "Value": {
                 "id": "078c68fb-f398-4c08-b642-b4303d8f55e3",
@@ -287,6 +295,14 @@
             }
         },
         {
+            "Key": "46835ff5-75b7-41a3-9417-fba3cc4bea9f",
+            "Value": {
+                "id": "aa674b95-4250-4922-b5b4-a051bcef6e41",
+                "resourcePath": "scripts\\enemy_dead_check\\enemy_dead_check.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4964993c-6b1c-4a04-8641-f603d2349d48",
             "Value": {
                 "id": "dc7f9440-9431-47bb-896e-2df802c2d41d",
@@ -460,6 +476,14 @@
                 "id": "b3be2b0e-ac75-4b23-870f-be92d78a4914",
                 "resourcePath": "objects\\o_debugEffect\\o_debugEffect.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6b2ee99e-ea37-48b9-b1a5-9c9554199a62",
+            "Value": {
+                "id": "e8c42646-f143-46d2-a675-353799eb439d",
+                "resourcePath": "scripts\\damage_to_enemy\\damage_to_enemy.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1082,6 +1106,7 @@
         "51125a62-6b36-4777-8102-b4ac29c69f7a",
         "2b03b7b6-150c-414a-a4b5-f1eb266d2a88",
         "be4bd3c5-b472-4b17-afaf-066b7198040b",
+        "6b2ee99e-ea37-48b9-b1a5-9c9554199a62",
         "faf7539e-7a9f-4c8a-8a21-11e279eb8f73",
         "1c180efe-6113-4174-8b03-fbad0274d0e8",
         "b5d69d61-82db-4fc9-a17d-f18449384d67",
@@ -1089,6 +1114,8 @@
         "22a13655-1e6b-440f-90e5-395e4480df8f",
         "ac761b00-731c-46a3-9234-117f4d99a1f7",
         "c2079ecb-7c10-47f8-a01e-1e97b9aba7f8",
+        "46835ff5-75b7-41a3-9417-fba3cc4bea9f",
+        "0bbc0fc4-3085-4957-bf8e-bd6e2a80ada3",
         "fda14958-5518-4a45-a293-df4a19f3d66d",
         "1ed33e56-d9a3-4af8-98d7-7c5758d79e45",
         "f45495bb-c1d5-4fd3-8f09-e0cd49291a48",

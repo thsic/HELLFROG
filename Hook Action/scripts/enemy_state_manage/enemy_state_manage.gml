@@ -20,7 +20,7 @@ case EnemyState.Fire:
 
 break
 case EnemyState.Dead:
-
+	instance_destroy();
 break
 }
 

@@ -5,7 +5,7 @@ var _enemy_number = instance_number(o_enemy);
 var _repulsive_force = 0.5;//反発力
 var _hspeed_temp = 0;
 var _vspeed_temp = 0;
-sdm(_enemy_number)
+
 for(var i=0; i<_enemy_number; i++){
 	var _target_id = instance_find(o_enemy, i);
 	
@@ -37,8 +37,8 @@ for(var i=0; i<_enemy_number; i++){
 }
 
 //軽いほど衝突の影響が多くなる
-/*_hspeed_temp /= weight;
-_vspeed_temp /= weight;*/
-debug_draw_line(x, y, x+_hspeed_temp, y+_vspeed_temp, c_green, 3);
+_hspeed_temp /= weight;
+_vspeed_temp /= weight;
+
 h_speed += _hspeed_temp;
 v_speed += _vspeed_temp;
