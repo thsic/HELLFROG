@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "gun",
-    "path": "folders/Scripts/PLAYER/gun.yy",
+    "path": "folders/Notes/Scripts/PLAYER/gun.yy",
   },
   "resourceVersion": "1.0",
   "name": "create_bullet",

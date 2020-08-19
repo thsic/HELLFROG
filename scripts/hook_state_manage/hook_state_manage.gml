@@ -46,6 +46,11 @@ function hook_state_manage() {
 				hook_direction = point_direction(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y);
 				hook_length = point_distance(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y) - _grab_enemy_id.collision_size_for_hook;
 				hook_state = hookState.GrabEnemy;
+				
+				var _knockback_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.KnockbackForEnemyPower);
+				var _damage = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.Damage);
+				enemy_knockback_start(_grab_enemy_id, _knockback_speed, hook_direction)//敵をノックバックさせる
+				damage_to_enemy(_grab_enemy_id, _damage);//敵にダメージを与える
 			}
 			else{
 				//敵の方向とフックの方向が逆なのであたってなかったことにする
@@ -85,6 +90,7 @@ function hook_state_manage() {
 		hook_point_x = hook_point_x_default+lengthdir_x(hook_length, hook_direction);
 		hook_point_y = hook_point_y_default+lengthdir_y(hook_length, hook_direction);
 		shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedDefault);
+		
 		hook_state = hookState.Shrink;
 
 	break

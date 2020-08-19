@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "SYSTEM",
-    "path": "folders/Scripts/SYSTEM.yy",
+    "path": "folders/Notes/Scripts/SYSTEM.yy",
   },
   "resourceVersion": "1.0",
   "name": "number_check_within_range",

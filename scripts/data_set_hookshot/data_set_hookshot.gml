@@ -1,5 +1,5 @@
-///@param eHKtype,range,cd,shootspd,shrinkspdMax,ShrinkSpdDef,coSize4enemy,coSize4wall,shrinkAcce
-function data_set_hookshot(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8) {
+///@param eHKtype,range,cd,shootspd,shrinkspdMax,ShrinkSpdDef,coSize4enemy,coSize4wall,shrinkAcce,damage,KBforEnemyPower
+function data_set_hookshot(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8, argument9, argument10) {
 	//プレイヤーの弾
 	var _hook_type = argument0;//フックタイプ
 	var _range = argument1;//射程
@@ -10,6 +10,8 @@ function data_set_hookshot(argument0, argument1, argument2, argument3, argument4
 	var _collision_size_for_enemy = argument6//敵に対しての当たり判定
 	var _collision_size_for_wall = argument7//壁に対しての当たり判定、ロープが伸び切った瞬間にしか使われない
 	var _shrink_acceleration = argument8//巻き取りの加速度
+	var _damage = argument9;
+	var _knockback_for_enemy_power = argument10;
 
 	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.Range, _range);
 	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.Cooldown, _cooldown);
@@ -19,7 +21,8 @@ function data_set_hookshot(argument0, argument1, argument2, argument3, argument4
 	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.CollisionSizeForEnemy, _collision_size_for_enemy);
 	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.CollisionSizeForWall, _collision_size_for_wall);
 	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.ShrinkAcceleration, _shrink_acceleration);
-
+	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.Damage, _damage);
+	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.KnockbackForEnemyPower, _knockback_for_enemy_power);
 
 	enum eHK_type{
 		normal_hook,
@@ -34,6 +37,8 @@ function data_set_hookshot(argument0, argument1, argument2, argument3, argument4
 		CollisionSizeForEnemy,
 		CollisionSizeForWall,
 		ShrinkAcceleration,
+		Damage,
+		KnockbackForEnemyPower,
 	}
 
 

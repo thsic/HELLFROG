@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "hook",
-    "path": "folders/Scripts/PLAYER/hook.yy",
+    "path": "folders/Notes/Scripts/PLAYER/hook.yy",
   },
   "resourceVersion": "1.0",
   "name": "hook_check_within_enemy",
