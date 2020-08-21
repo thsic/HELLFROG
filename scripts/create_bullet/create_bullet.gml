@@ -11,7 +11,7 @@ function create_bullet(argument0, argument1, argument2, argument3, argument4, ar
 	var _collision_destroy = argument7;
 	var _instance_number = argument8;
 
-	with(instance_create_layer(x, y, "PlayerBullet", _instance_number)){
+	with(instance_create_layer(x, y, "PlayerBullets", _instance_number)){
 		speed = _bullet_speed;
 		direction = _bullet_direction;
 		bullet_type = _bullet_type;

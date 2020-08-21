@@ -38,17 +38,8 @@ function player_move_direction_synthesis(argument0, argument1, argument2, argume
 	var _player_to_intermediate_distance = point_distance(0, 0, _intermediate_point_x, _intermediate_point_y);
 
 	//計算した座標から距離を求める
-	//var _finally_distance = point_distance(0, 0, _finally_point_x, _finally_point_y);
-	//中間座標までの距離とmove_speedでどっちが高いか比べる
-	if(_player_to_intermediate_distance < _move_speed){//finally_pointが半径move_speedの円の中にあるか確認
-		var _finally_direction = point_direction(0, 0, _finally_point_x, _finally_point_y);
-		return _finally_direction
-	}
-	else{//慣性にそれなりの速度があって、慣性とキー入力の方角が近いということなので慣性の値を変えずに進む
-		//慣性の速度が速いのにその方向にキー入力していたら減速するようになって悲しいので
-		return _inertia_direction
-	}
-
+	var _finally_direction = point_direction(0, 0, _finally_point_x, _finally_point_y);
+	return _finally_direction
 
 	/*movespeed,movedirection,inertiaspeed,inertiadirection,inertiapower,stntspeed
 

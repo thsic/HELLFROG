@@ -1,4 +1,6 @@
 /// @description Change State
 
-state = next_state;
+if(next_state != noone){
+	state = next_state;
+}
 next_state = noone;

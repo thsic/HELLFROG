@@ -15,7 +15,7 @@ function enemy_state_priority_comparison(argument0) {
 		case EnemyState.Dead:
 			_state_priority_1 = 100;
 		break
-		case EnemyState.Knockback:
+		case EnemyState.Stun:
 			_state_priority_1 = 90;
 		break
 		case EnemyState.Charging:
@@ -27,7 +27,7 @@ function enemy_state_priority_comparison(argument0) {
 		case EnemyState.Fire:
 			_state_priority_1 = 40;
 		break
-		case EnemyState.Move:
+		case EnemyState.Approach:
 			_state_priority_1 = 25;
 		break
 		case EnemyState.Idle:
@@ -43,7 +43,7 @@ function enemy_state_priority_comparison(argument0) {
 		case EnemyState.Dead:
 			_state_priority_2 = 100;
 		break
-		case EnemyState.Knockback:
+		case EnemyState.Stun:
 			_state_priority_2 = 90;
 		break
 		case EnemyState.Charging:
@@ -55,7 +55,7 @@ function enemy_state_priority_comparison(argument0) {
 		case EnemyState.Fire:
 			_state_priority_2 = 40;
 		break
-		case EnemyState.Move:
+		case EnemyState.Approach:
 			_state_priority_2 = 25;
 		break
 		case EnemyState.Idle:

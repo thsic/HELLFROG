@@ -19,7 +19,7 @@ function player_shotgun_fire() {
 		var _bullet_direction_1st = -_bullet_diffusivity/2 + player_direction;//基準になる角度
 		var _bullet_direction = _bullet_direction_1st + i * _bullet_direction_interval//基準になる角度から間隔をあける
 	
-		with(instance_create_layer(x, y, "PlayerBullet", o_playerBulletRed)){
+		with(instance_create_layer(x, y, "PlayerBullets", o_playerBulletRed)){
 			speed = _bullet_speed;
 			direction = _bullet_direction;
 			damage = _bullet_damage;
@@ -45,7 +45,7 @@ function player_shotgun_fire() {
 		var _bullet_speed = irandom_range(_bullet_speed_max, _bullet_speed_min);//速度決定
 		var _bullet_direction = irandom_range(-_bullet_diffusivity/2, _bullet_diffusivity/2)+player_direction;//角度決定
 
-		with(instance_create_layer(x, y, "PlayerBullet", o_playerBulletYellow)){
+		with(instance_create_layer(x, y, "PlayerBullets", o_playerBulletYellow)){
 		
 			speed = _bullet_speed;
 			direction = _bullet_direction;

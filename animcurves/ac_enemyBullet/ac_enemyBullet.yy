@@ -1,8 +1,9 @@
 {
-  "function": 0,
+  "function": 1,
   "channels": [
     {"colour":4282401023,"visible":true,"points":[
-        {"x":0.0,"y":0.0,},
+        {"x":0.0,"y":1.0,},
+        {"x":0.799610853,"y":0.7190704,},
         {"x":1.0,"y":0.0,},
       ],"controlPoints":[
         {"x":0.42,"y":0.0,},
@@ -14,7 +15,7 @@
     "path": "folders/Animation Curves.yy",
   },
   "resourceVersion": "1.1",
-  "name": "AnimationCurve1",
+  "name": "ac_enemyBullet",
   "tags": [],
   "resourceType": "GMAnimCurve",
 }

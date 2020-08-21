@@ -10,8 +10,8 @@ function enemy_change_state(argument0) {
 		case EnemyState.Dead:
 			next_state = EnemyState.Dead;
 		break
-		case EnemyState.Knockback:
-			next_state = EnemyState.Knockback;
+		case EnemyState.Stun:
+			next_state = EnemyState.Stun;
 		break
 		case EnemyState.Charging:
 			next_state = EnemyState.Charging;
@@ -22,8 +22,8 @@ function enemy_change_state(argument0) {
 		case EnemyState.Fire:
 			next_state = EnemyState.Fire;
 		break
-		case EnemyState.Move:
-			next_state = EnemyState.Move;
+		case EnemyState.Approach:
+			next_state = EnemyState.Approach;
 		break
 		case EnemyState.Idle:
 			next_state = EnemyState.Idle;
@@ -37,4 +37,13 @@ function enemy_change_state(argument0) {
 
 
 
+}
+enum EnemyState{
+	Idle,
+	Stun,
+	Charging,
+	Aim,
+	Fire,
+	Dead,
+	Approach,
 }

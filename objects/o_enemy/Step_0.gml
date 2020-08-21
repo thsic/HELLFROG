@@ -13,8 +13,8 @@ if(knockback_enable == true){
 }
 enemies_collision();
 
-enemy_move_execution();//移動
-
 enemy_dead_check();
 
 enemy_state_manage();//ステート管理
+
+enemy_move_execution();//移動
