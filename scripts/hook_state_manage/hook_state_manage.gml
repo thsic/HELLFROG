@@ -49,8 +49,9 @@ function hook_state_manage() {
 				
 				var _knockback_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.KnockbackForEnemyPower);
 				var _damage = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.Damage);
+				var _stun_damage = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.StunDamage);
 				enemy_knockback_start(_grab_enemy_id, _knockback_speed, hook_direction)//敵をノックバックさせる
-				damage_to_enemy(_grab_enemy_id, _damage);//敵にダメージを与える
+				damage_to_enemy(_grab_enemy_id, _damage, _stun_damage);//敵にダメージを与える
 			}
 			else{
 				//敵の方向とフックの方向が逆なのであたってなかったことにする

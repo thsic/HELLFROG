@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "inertia",
-    "path": "folders/Scripts/PLAYER/inertia.yy",
+    "name": "PLAYER",
+    "path": "folders/Scripts/PLAYER.yy",
   },
   "resourceVersion": "1.0",
-  "name": "player_inertia_decay",
+  "name": "stun_to_enemy",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -21,7 +21,8 @@ if(_collided == false){
 	collided_enemy[_number] = other;
 	var _knockback_speed = ds_grid_get(global.ds_player_bullet, bullet_type, ePB_param.KnockbackPower);
 	var _bullet_damage = ds_grid_get(global.ds_player_bullet, bullet_type, ePB_param.Damage);
-	damage_to_enemy(other, _bullet_damage);
+	var _stun_damage = ds_grid_get(global.ds_player_bullet, bullet_type, ePB_param.StunDamage);
+	damage_to_enemy(other, _bullet_damage, _stun_damage);
 	enemy_knockback_start(other, _knockback_speed, knockback_direction_for_enemy);
 	if(collision_destroy == true){
 		instance_destroy()

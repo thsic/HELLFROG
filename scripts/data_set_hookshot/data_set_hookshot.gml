@@ -1,5 +1,5 @@
 ///@param eHKtype,range,cd,shootspd,shrinkspdMax,ShrinkSpdDef,coSize4enemy,coSize4wall,shrinkAcce,damage,KBforEnemyPower
-function data_set_hookshot(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8, argument9, argument10) {
+function data_set_hookshot(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8, argument9, argument10, argument11) {
 	//プレイヤーの弾
 	var _hook_type = argument0;//フックタイプ
 	var _range = argument1;//射程
@@ -12,6 +12,7 @@ function data_set_hookshot(argument0, argument1, argument2, argument3, argument4
 	var _shrink_acceleration = argument8//巻き取りの加速度
 	var _damage = argument9;
 	var _knockback_for_enemy_power = argument10;
+	var _stun_damage = argument11;//スタン値
 
 	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.Range, _range);
 	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.Cooldown, _cooldown);
@@ -23,6 +24,7 @@ function data_set_hookshot(argument0, argument1, argument2, argument3, argument4
 	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.ShrinkAcceleration, _shrink_acceleration);
 	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.Damage, _damage);
 	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.KnockbackForEnemyPower, _knockback_for_enemy_power);
+	ds_grid_set(global.ds_player_hook, _hook_type, eHK_param.StunDamage, _stun_damage);
 
 	enum eHK_type{
 		normal_hook,
@@ -39,6 +41,7 @@ function data_set_hookshot(argument0, argument1, argument2, argument3, argument4
 		ShrinkAcceleration,
 		Damage,
 		KnockbackForEnemyPower,
+		StunDamage,
 	}
 
 

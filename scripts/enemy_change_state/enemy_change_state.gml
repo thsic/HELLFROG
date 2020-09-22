@@ -28,6 +28,12 @@ function enemy_change_state(argument0) {
 		case EnemyState.Idle:
 			next_state = EnemyState.Idle;
 		break
+		case EnemyState.Movement:
+			next_state = EnemyState.Movement;
+		break
+		case EnemyState.WaitForMovement:
+			next_state = EnemyState.WaitForMovement;
+		break
 		default:
 			sdm("Error! enemy_change_EnemyState")
 		break
@@ -46,4 +52,6 @@ enum EnemyState{
 	Fire,
 	Dead,
 	Approach,
+	Movement,
+	WaitForMovement,
 }

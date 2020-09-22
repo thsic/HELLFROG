@@ -5,12 +5,16 @@ function enemy_state_manage() {
 	case EnemyState.Idle:
 		//ランダムウォークなどする
 		var _distance_for_player = point_distance(x, y, o_player.x, o_player.y);
-		var _see_player = !collision_line(x, y,　o_player.x,o_player.y, o_wall, false,true);
-		if(_distance_for_player < view_range and _see_player){
+		var _see_player = collision_line(x, y, o_player.x, o_player.y, o_wall, false, true);
+		enemy_movement_manage(false, 1);//ランダムウォーク
+		if(_distance_for_player < view_range and _see_player == noone){
 			//視界範囲内にプレイヤーがいてかつ、プレイヤーとの間に壁が無い
 			rigor_time = rigor_after_find_player_default;
 			enemy_change_state(EnemyState.Approach);
 		}
+	break
+	case EnemyState.Movement:
+		enemy_movement();
 	break
 	case EnemyState.Approach:
 		if(rigor_time >= 0){
@@ -18,12 +22,9 @@ function enemy_state_manage() {
 			rigor_time--;
 		}
 		else{
-			//プレイヤーに近づく
 			var _player_x = o_player.x;
 			var _player_y = o_player.y;
-			var _direction_for_player = point_direction(x, y, _player_x, _player_y);
-			h_speed += lengthdir_x(move_speed, _direction_for_player);
-			v_speed += lengthdir_y(move_speed, _direction_for_player);
+			enemy_movement_manage(true, 2);
 			
 			//プレイヤーが武器の射程内にいるなら武器のチャージ開始
 			var _distance_for_player = point_distance(x, y, o_player.x, o_player.y);
@@ -44,7 +45,11 @@ function enemy_state_manage() {
 		
 	break
 	case EnemyState.Stun:
-		
+		stun_time--
+		if(stun_time < 0){
+			stun_resistance = stun_resistance_default;
+			enemy_change_state(EnemyState.Idle);
+		}
 	break
 	case EnemyState.Charging:
 		//武器のチャージ中
@@ -70,14 +75,17 @@ function enemy_state_manage() {
 		var _player_x = o_player.x;
 		var _player_y = o_player.y;
 		var _bullet_direction = point_direction(x, y, _player_x, _player_y,);
-		e_bullet_create_normal(o_enemyBulletTest, 5, _bullet_direction, 20, ac_enemyBullet);
+		e_bullet_create_normal(o_enemyBulletTest, 2, _bullet_direction, 80, ac_enemyBullet, id);
 		
 		var _distance_for_player = point_distance(x, y, _player_x, _player_y);
 		//武器使用後のステート設定
 		if(_distance_for_player < weapon_range){
-			//プレイヤーが射程内ならもう一回武器使う
+			/*//プレイヤーが射程内ならもう一回武器使う
 			weapon_charge_time = weapon_charge_time_default;
-			enemy_change_state(EnemyState.Charging);
+			enemy_change_state(EnemyState.Charging);*/
+			
+			//プレイヤーが射程内ならランダム移動を挟む
+			enemy_change_state(EnemyState.WaitForMovement);
 		}
 		else{
 			if(_distance_for_player < view_range){
@@ -91,11 +99,19 @@ function enemy_state_manage() {
 		}
 		
 	break
+	case EnemyState.WaitForMovement:
+		enemy_movement_manage(false, 3);
+		
+	break
 	case EnemyState.Dead:
 		instance_destroy();
 	break
 	}
-
+	
+	//例外としてスタン耐性が0以下になると強制的にスタンステートになる
+	if(stun_resistance <= 0 and state != EnemyState.Stun){
+		enemy_stun_start();
+	}
 	
 
 

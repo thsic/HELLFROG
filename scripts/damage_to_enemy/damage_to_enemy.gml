@@ -1,10 +1,9 @@
-///@param enemy_id,damage
-function damage_to_enemy(argument0, argument1) {
+function damage_to_enemy(_enemy_id, _damage, _stun_damage) {
 	//敵にダメージをあたえる
 
-	var _enemy_id = argument0;
-	var _damage = argument1;
-
+	//スタンダメージ与える
+	stun_to_enemy(_enemy_id, _stun_damage);
+	
 	with(_enemy_id){
 		hp -= _damage;
 		enemy_dead_check();

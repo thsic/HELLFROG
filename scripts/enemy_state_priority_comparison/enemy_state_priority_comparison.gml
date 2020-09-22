@@ -18,6 +18,12 @@ function enemy_state_priority_comparison(argument0) {
 		case EnemyState.Stun:
 			_state_priority_1 = 90;
 		break
+		case EnemyState.Movement:
+			_state_priority_1 = 80;
+		break
+		case EnemyState.WaitForMovement:
+			_state_priority_1 = 70;
+		break
 		case EnemyState.Charging:
 			_state_priority_1 = 60;
 		break
@@ -45,6 +51,12 @@ function enemy_state_priority_comparison(argument0) {
 		break
 		case EnemyState.Stun:
 			_state_priority_2 = 90;
+		break
+		case EnemyState.Movement:
+			_state_priority_2 = 80;
+		break
+		case EnemyState.WaitForMovement:
+			_state_priority_2 = 70;
 		break
 		case EnemyState.Charging:
 			_state_priority_2 = 60;

@@ -1,5 +1,5 @@
 ///@param type,maxspd,minspd,attespd,magspd,diff,dmg,amount,script,Kpower
-function data_set_player_bullet(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8, argument9) {
+function data_set_player_bullet(argument0, argument1, argument2, argument3, argument4, argument5, argument6, argument7, argument8, argument9, argument10) {
 	//プレイヤーの弾
 	var _bullet_type = argument0;//弾タイプ
 	var _maxspeed = argument1;//初期スピード最大値
@@ -11,6 +11,7 @@ function data_set_player_bullet(argument0, argument1, argument2, argument3, argu
 	var _amount = argument7;//一度に発射される数
 	var _script = argument8;//弾の発射に使用するスクリプト
 	var _knockback_power = argument9;//ノックバックさせる力
+	var _stun_damage = argument10;//スタン値
 
 	ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.MaxSpeed, _maxspeed);
 	ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.MinSpeed, _minspeed);
@@ -21,7 +22,8 @@ function data_set_player_bullet(argument0, argument1, argument2, argument3, argu
 	ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.Amount, _amount);
 	ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.Script, _script);
 	ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.KnockbackPower, _knockback_power);
-
+	ds_grid_set(global.ds_player_bullet, _bullet_type, ePB_param.StunDamage, _stun_damage);
+	
 
 	enum ePB_type{
 		Empty,
@@ -40,6 +42,7 @@ function data_set_player_bullet(argument0, argument1, argument2, argument3, argu
 		Amount,
 		Script,
 		KnockbackPower,
+		StunDamage,
 	
 	}
 
