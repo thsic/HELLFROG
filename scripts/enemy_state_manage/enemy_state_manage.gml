@@ -100,7 +100,7 @@ function enemy_state_manage() {
 		
 	break
 	case EnemyState.WaitForMovement:
-		enemy_movement_manage(false, 3);
+		enemy_movement_manage(false, 6);
 		
 	break
 	case EnemyState.Dead:
@@ -112,7 +112,7 @@ function enemy_state_manage() {
 	if(stun_resistance <= 0 and state != EnemyState.Stun){
 		enemy_stun_start();
 	}
-	
+	sdm(stun_resistance)
 
 
 }
