@@ -55,8 +55,17 @@ function enemy_state_manage() {
 		//武器のチャージ中
 		weapon_charge_time--;
 		if(weapon_charge_time <= 0){
+			
+			//エイム時の特殊動作
+			if(aim_script != noone){
+				script_execute(aim_script);
+			}
+			
 			aim_time = aim_time_default;
 			enemy_change_state(EnemyState.Aim);
+			fire_direction = point_direction(x, y, o_player.x, o_player.y);//攻撃の方向決める
+			
+			
 		}
 		var _see_player = !collision_line(x, y, o_player.x, o_player.y, o_wall, false,true);
 		if(_see_player == false){
@@ -74,8 +83,7 @@ function enemy_state_manage() {
 	case EnemyState.Fire:
 		var _player_x = o_player.x;
 		var _player_y = o_player.y;
-		var _bullet_direction = point_direction(x, y, _player_x, _player_y,);
-		e_bullet_create_normal(o_enemyBulletTest, 2, _bullet_direction, 80, ac_enemyBullet, id);
+		script_execute(fire_script)
 		
 		var _distance_for_player = point_distance(x, y, _player_x, _player_y);
 		//武器使用後のステート設定
@@ -112,7 +120,6 @@ function enemy_state_manage() {
 	if(stun_resistance <= 0 and state != EnemyState.Stun){
 		enemy_stun_start();
 	}
-	sdm(stun_resistance)
 
 
 }

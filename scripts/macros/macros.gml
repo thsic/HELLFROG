@@ -9,6 +9,6 @@ function macros() {
 
 #macro OPPOSITEKEY_POWER_FOR_INERTIA 5
 
-
+#macro SCRIPT_ASSASSIN_BRINK enemy_assassin_brink
 
 }
