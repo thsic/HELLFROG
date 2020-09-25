@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_assassin_effect",
-    "path": "sprites/s_assassin_effect/s_assassin_effect.yy",
+    "name": "s_assassinEffect",
+    "path": "sprites/s_assassinEffect/s_assassinEffect.yy",
   },
   "solid": false,
   "visible": true,

@@ -83,7 +83,7 @@ function enemy_state_manage() {
 	case EnemyState.Fire:
 		var _player_x = o_player.x;
 		var _player_y = o_player.y;
-		script_execute(fire_script)
+		script_execute(fire_script);
 		
 		var _distance_for_player = point_distance(x, y, _player_x, _player_y);
 		//武器使用後のステート設定
