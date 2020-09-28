@@ -8,6 +8,7 @@ if(life_time <= 0){
 
 if(beforebeam_drawtime <= 0){
 	beam_enable = true;
+	afterbeam_drawtime--;
 }
 else{
 	beforebeam_drawtime--;

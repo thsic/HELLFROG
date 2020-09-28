@@ -10,7 +10,9 @@ function e_bullet_create_beam(_object_number, _beforebeam_drawtime, _afterbeam_d
 		direction = _bullet_direction;
 		length = _length;
 		beforebeam_drawtime = _beforebeam_drawtime;
+		beforebeam_drawtime_default = _beforebeam_drawtime;
 		afterbeam_drawtime = _afterbeam_drawtime;
+		afterbeam_drawtime_default = _afterbeam_drawtime;
 		life_time = _beforebeam_drawtime + _afterbeam_drawtime;
 		life_time_default = life_time;
 		enemy_id = _enemy_id;
