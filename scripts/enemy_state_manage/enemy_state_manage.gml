@@ -81,31 +81,39 @@ function enemy_state_manage() {
 		}
 	break
 	case EnemyState.Fire:
-		var _player_x = o_player.x;
-		var _player_y = o_player.y;
+		
 		script_execute(fire_script);
 		
-		var _distance_for_player = point_distance(x, y, _player_x, _player_y);
-		//武器使用後のステート設定
-		if(_distance_for_player < weapon_range){
-			/*//プレイヤーが射程内ならもう一回武器使う
-			weapon_charge_time = weapon_charge_time_default;
-			enemy_change_state(EnemyState.Charging);*/
+		afterfire_time = afterfire_time_default;
+		enemy_change_state(EnemyState.AfterFire);
+		
+	break
+	case EnemyState.AfterFire:
+		afterfire_time--;
+		if(afterfire_time <= 0){
+			//武器使用後のステート設定
+			var _player_x = o_player.x;
+			var _player_y = o_player.y;
+			var _distance_for_player = point_distance(x, y, _player_x, _player_y);
+			if(_distance_for_player < weapon_range){
+				/*//プレイヤーが射程内ならもう一回武器使う
+				weapon_charge_time = weapon_charge_time_default;
+				enemy_change_state(EnemyState.Charging);*/
 			
-			//プレイヤーが射程内ならランダム移動を挟む
-			enemy_change_state(EnemyState.WaitForMovement);
-		}
-		else{
-			if(_distance_for_player < view_range){
-				//視界内なら移動
-				enemy_change_state(EnemyState.Approach);
+				//プレイヤーが射程内ならランダム移動を挟む
+				enemy_change_state(EnemyState.WaitForMovement);
 			}
 			else{
-				//視界外ならidle
-				enemy_change_state(EnemyState.Idle);
+				if(_distance_for_player < view_range){
+					//視界内なら移動
+					enemy_change_state(EnemyState.Approach);
+				}
+				else{
+					//視界外ならidle
+					enemy_change_state(EnemyState.Idle);
+				}
 			}
 		}
-		
 	break
 	case EnemyState.WaitForMovement:
 		enemy_movement_manage(false, 6);

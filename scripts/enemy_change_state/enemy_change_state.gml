@@ -34,14 +34,14 @@ function enemy_change_state(argument0) {
 		case EnemyState.WaitForMovement:
 			next_state = EnemyState.WaitForMovement;
 		break
+		case EnemyState.AfterFire:
+			next_state = EnemyState.AfterFire;
+		break
 		default:
 			sdm("Error! enemy_change_EnemyState")
 		break
 		}
 	}
-
-
-
 
 }
 enum EnemyState{
@@ -54,4 +54,5 @@ enum EnemyState{
 	Approach,
 	Movement,
 	WaitForMovement,
+	AfterFire,
 }

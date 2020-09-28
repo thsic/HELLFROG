@@ -1,13 +1,6 @@
-///@param x,y,len,dir,objId
-function collision_length_check(argument0, argument1, argument2, argument3, argument4) {
+function collision_length_check(_x, _y, _length, _direction, _target_object) {
 	//どれぐらいの長さでobjにあたっているか計算
 	//2分の1を続けていって求める
-
-	var _x = argument0;
-	var _y = argument1;
-	var _length = argument2;
-	var _direction = argument3;
-	var _target_object = argument4;
 
 	var _loop_limit = 8;
 	var _center_point_length = _length/2;//中間までのながさ　

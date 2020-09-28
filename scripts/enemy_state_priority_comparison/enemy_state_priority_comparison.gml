@@ -21,6 +21,9 @@ function enemy_state_priority_comparison(argument0) {
 		case EnemyState.Movement:
 			_state_priority_1 = 80;
 		break
+		case EnemyState.AfterFire:
+			_state_priority_1 = 75;
+		break
 		case EnemyState.WaitForMovement:
 			_state_priority_1 = 70;
 		break
@@ -54,6 +57,9 @@ function enemy_state_priority_comparison(argument0) {
 		break
 		case EnemyState.Movement:
 			_state_priority_2 = 80;
+		break
+		case EnemyState.AfterFire:
+			_state_priority_2 = 75;
 		break
 		case EnemyState.WaitForMovement:
 			_state_priority_2 = 70;

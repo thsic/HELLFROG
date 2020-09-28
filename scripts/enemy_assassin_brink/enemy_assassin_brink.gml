@@ -37,7 +37,7 @@ function enemy_assassin_brink(){
 	}
 	else{
 		//ワープ先が壁だとワープしない、やり直す
-		enemy_change_state(EnemyState.Charging);
+		enemy_change_state(EnemyState.WaitForMovement);
 		weapon_charge_time = weapon_charge_time_default;
 	}
 }
