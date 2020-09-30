@@ -60,7 +60,7 @@ function player_shotgun_fire() {
 	var _bullet_type_1 = ds_grid_get(global.ds_player_gun, now_shotgun, eG_param.BulletType1);
 	var _bullet_type_2 = ds_grid_get(global.ds_player_gun, now_shotgun, eG_param.BulletType2);
 	var _bullet_type_3 = ds_grid_get(global.ds_player_gun, now_shotgun, eG_param.BulletType3);
-
+	
 	for(var i=0; i<3; i++){
 		switch(i){
 		case 0:
@@ -85,5 +85,6 @@ function player_shotgun_fire() {
 		player_start_knockback(_knockback_type);
 	}
 
-
+	//クールダウンセット
+	gun_set_cooldown(ds_grid_get(global.ds_player_gun, now_shotgun, eG_param.Cooldown));
 }

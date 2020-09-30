@@ -6,7 +6,7 @@
     "path": "folders/Scripts/PLAYER/gun.yy",
   },
   "resourceVersion": "1.0",
-  "name": "damage_to_enemy",
+  "name": "gun_set_cooldown",
   "tags": [],
   "resourceType": "GMScript",
 }
