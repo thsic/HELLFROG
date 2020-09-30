@@ -43,7 +43,7 @@ function enemy_assassin_brink(){
 			
 		}
 		else{
-			//16回判定して全部だめだった場合　ほぼ無い 一応バグ防止
+			//16回判定して全部だめだった場合　一応バグ防止
 			enemy_change_state(EnemyState.WaitForMovement);
 			weapon_charge_time = weapon_charge_time_default;
 			_warp_possible = false;
