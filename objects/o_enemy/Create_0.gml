@@ -14,3 +14,4 @@ movement_cooldown = 0;
 
 stun_time = 0;
 stun_resistance = stun_resistance_default;
+fire_direction = 0;

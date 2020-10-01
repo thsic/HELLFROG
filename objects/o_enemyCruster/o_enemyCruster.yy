@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_testEnemy",
-    "path": "sprites/s_testEnemy/s_testEnemy.yy",
+    "name": "s_enemyCruster",
+    "path": "sprites/s_enemyCruster/s_enemyCruster.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,13 +25,15 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"fire_script","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"enemy_fire_cluster_bullet","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "group1",
     "path": "folders/Objects/enemy/group1.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_enemyTest",
+  "name": "o_enemyCruster",
   "tags": [],
   "resourceType": "GMObject",
 }

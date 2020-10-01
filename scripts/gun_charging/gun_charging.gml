@@ -25,7 +25,7 @@ function gun_charging() {
 		gun_charge_level = 0;
 
 	}
-	sdm(gun_charge_time)
+
 	/*if(mouse_check_button(global.shotgun_button) <= 1){
 		//ショットガンボタン押されている
 		gun_charge_time++;

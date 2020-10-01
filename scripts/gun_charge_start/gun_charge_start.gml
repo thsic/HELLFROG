@@ -7,6 +7,4 @@ function gun_charge_start() {
 	//gun_cooldown = ds_grid_get(global.ds_player_gun, now_shotgun, eG_param.Cooldown);
 
 
-
-
 }

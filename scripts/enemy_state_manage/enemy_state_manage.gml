@@ -41,6 +41,7 @@ function enemy_state_manage() {
 				//プレイヤーが見えなくなった
 				enemy_change_state(EnemyState.Idle);
 			}
+			
 		}
 		
 	break
@@ -86,7 +87,6 @@ function enemy_state_manage() {
 		
 		afterfire_time = afterfire_time_default;
 		enemy_change_state(EnemyState.AfterFire);
-		
 	break
 	case EnemyState.AfterFire:
 		afterfire_time--;
@@ -116,6 +116,9 @@ function enemy_state_manage() {
 		}
 	break
 	case EnemyState.WaitForMovement:
+		if(homing_player == true){
+			enemy_change_state(EnemyState.Idle);
+		}
 		enemy_movement_manage(false, 6);
 		
 	break
@@ -129,5 +132,20 @@ function enemy_state_manage() {
 		enemy_stun_start();
 	}
 
-
+	switch(state){
+	case EnemyState.Approach:
+	case EnemyState.Charging:
+	case EnemyState.Aim:
+	case EnemyState.Fire:
+	case EnemyState.AfterFire:
+	case EnemyState.Idle:
+	case EnemyState.WaitForMovement:
+		if(homing_player == true){
+			enemy_homing_player();//ホーミングプレイヤーの場合は常に移動
+		}
+		break;
+	}
 }
+
+
+
