@@ -19,6 +19,8 @@ if(follow != noone){
 var _vm = matrix_build_lookat(x, y, -10, x, y, 0, 0, 1, 0);
 camera_set_view_mat(camera, _vm);
 
-//カーソルにはゆっくり
-x += (xTo - x) / 4;
-y += (yTo - y) / 4;
+if(global.gamestate != gamestate.menu){
+	//カーソルにはゆっくり メニューが表示されてる時は動かない
+	x += (xTo - x) / 4;
+	y += (yTo - y) / 4;
+}

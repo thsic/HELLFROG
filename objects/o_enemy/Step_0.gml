@@ -15,6 +15,8 @@ enemies_collision();
 
 enemy_dead_check();
 
-enemy_state_manage();//ステート管理
+if(global.gamestop == false){
+	enemy_state_manage();//ステート管理
 
-enemy_move_execution();//移動
+	enemy_move_execution();//移動
+}

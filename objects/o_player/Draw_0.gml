@@ -1,3 +1,4 @@
+
 draw_self();
 
 if(debug_mode or DEBUGMODE){

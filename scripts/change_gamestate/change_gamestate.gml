@@ -23,6 +23,9 @@ function change_gamestate(argument0) {
 		case gamestate.stageclear:
 			global.nextstate = gamestate.stageclear;
 		break
+		case gamestate.lagging:
+			global.nextstate = gamestate.lagging;
+		break
 		default:
 			sdm("Error! change_gamestate")
 		break
@@ -30,4 +33,13 @@ function change_gamestate(argument0) {
 	}
 
 
+}
+enum gamestate{
+	stagestart,
+	main,
+	pause,
+	menu,
+	gameover,
+	stageclear,
+	lagging,
 }
