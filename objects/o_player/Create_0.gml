@@ -27,6 +27,9 @@ hook_point_x = x;
 hook_point_y = y;
 hook_length = 0;
 
+//描画
+look_direction = LookDirection.Right;
+
 //test
 debug_draw_inertiaspd = 0;
 debug_draw_movespd = 0;
@@ -34,3 +37,8 @@ debug_draw_synspd = 0;
 inertia_direction = 0;
 debug_intermediate_point_x = 0;
 debug_intermediate_point_y = 0;
+
+enum LookDirection{
+	Right,
+	Left,
+}
