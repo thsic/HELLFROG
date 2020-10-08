@@ -61,14 +61,15 @@ function hook_state_manage() {
 
 	
 		if(_wall_collision_check == noone and _grab_enemy_id == noone){
-			//何にも衝突しなかった
+			//このフレームでは何にも衝突しなかった
 			hook_length += _hook_speed;
 			hook_point_x = hook_point_x_default+lengthdir_x(hook_length, hook_direction);
 			hook_point_y = hook_point_y_default+lengthdir_y(hook_length, hook_direction);
-			var _hook_range = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.Range);
-			if(hook_length > _hook_range){
-				//フックが射程の限界まで達した
 			
+			var _hook_range = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.Range);
+			var _distance_for_hook = point_distance(x, y, hook_point_x, hook_point_y);
+			if(hook_length > _hook_range and _hook_range < _distance_for_hook){
+				//フックが射程の限界まで達した かつ プレイヤーとフックの距離が遠い
 				var _stick_wall_success = hook_stick_near_wall()//近くの壁に吸い付く処理を入れる
 				if(_stick_wall_success == true){
 					hook_state = hookState.GrabWall;//すいついた

@@ -10,7 +10,7 @@ function data_player_parameter_default() {
 	data_set_knockback(eK_type.Hook, 6, 0.05, 0.93, 3, 0.18);
 	data_set_knockback(eK_type.HookSmall, 2, 0.04, 0.95, 0, 0.25);
 
-	data_set_hookshot(eHK_type.normal_hook, 90, 30, 1, 5, 1, 16, 24, 1, 10, 2, 200);
+	data_set_hookshot(eHK_type.normal_hook, 90, 30, 7, 5, 1, 16, 24, 1, 10, 2, 200);
 
 
 }
