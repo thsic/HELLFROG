@@ -4,7 +4,9 @@ global.gamestop = false;
 switch(global.gamestate){
 #region stagestart
 case gamestate.stagestart:
-
+	now_hp_type = ePHP_type.normal_hp;
+	global.player_hp = ds_grid_get(global.ds_player_hp, now_hp_type, ePHP_param.MaxHp);
+	
 change_gamestate(gamestate.main);
 #endregion
 #region main

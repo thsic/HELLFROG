@@ -12,5 +12,5 @@ function data_player_parameter_default() {
 
 	data_set_hookshot(eHK_type.normal_hook, 90, 30, 7, 5, 1, 16, 24, 1, 10, 2, 200);
 
-
+	data_set_player_hp(ePHP_type.normal_hp, 100, 30, 10, 7.5, 5, 1);
 }
