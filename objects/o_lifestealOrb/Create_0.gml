@@ -1,0 +1,1 @@
+magnet_time = 0;

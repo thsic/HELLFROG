@@ -1,0 +1,12 @@
+{
+  "isDnD": false,
+  "isCompatibility": false,
+  "parent": {
+    "name": "HP",
+    "path": "folders/Scripts/PLAYER/HP.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "create_lifesteal_orb",
+  "tags": [],
+  "resourceType": "GMScript",
+}
