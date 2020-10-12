@@ -27,6 +27,11 @@ hook_point_x = x;
 hook_point_y = y;
 hook_length = 0;
 
+//その他
+invincible_time = 0;
+invincible_enable = false;
+invincible_time_default = 0
+
 //描画
 look_direction = LookDirection.Right;
 

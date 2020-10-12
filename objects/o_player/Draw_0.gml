@@ -80,6 +80,21 @@ case hookState.Shrink:
 var _sprite = s_player;
 var _sprite_width = sprite_get_width(_sprite);
 
+//無敵時間なら透明に
+if(invincible_enable){
+	var _transparency_time = invincible_time_default/5;
+	if(_transparency_time >= invincible_time){
+		var _alpha = 0.9;//無敵時間切れる直前は透明度が下がる
+	}
+	else{
+		var _alpha = 0.3;
+	}
+}
+else{
+	var _alpha = 1;
+}
+
+//左右向く
 if(mouse_x < x){
 	look_direction = LookDirection.Left;
 }
@@ -89,11 +104,11 @@ else{
 
 switch(look_direction){
 case LookDirection.Right:
-	draw_sprite_ext(_sprite, 0, x, y, 1, 1, 0, c_white, 1);
+	draw_sprite_ext(_sprite, 0, x, y, 1, 1, 0, c_white, _alpha);
 break
 case LookDirection.Left:
 	
-	draw_sprite_ext(_sprite, 0, x, y, -1, 1, 0, c_white, 1);
+	draw_sprite_ext(_sprite, 0, x, y, -1, 1, 0, c_white, _alpha);
 break
 }
 
@@ -103,10 +118,10 @@ break
 var _gun_sprite = s_cursedGun;
 switch(look_direction){
 case LookDirection.Right:
-	draw_sprite_ext(_gun_sprite, 0, x, y+2, 1, 1, player_direction, c_white, 1);
+	draw_sprite_ext(_gun_sprite, 0, x, y+2, 1, 1, player_direction, c_white, _alpha);
 break
 case LookDirection.Left:
-	draw_sprite_ext(_gun_sprite, 0, x, y+2, -1, 1, player_direction-180, c_white, 1);
+	draw_sprite_ext(_gun_sprite, 0, x, y+2, -1, 1, player_direction-180, c_white, _alpha);
 break
 }
 #endregion

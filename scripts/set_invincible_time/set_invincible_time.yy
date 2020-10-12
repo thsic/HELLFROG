@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "useful function",
-    "path": "folders/Scripts/useful function.yy",
+    "name": "PLAYER",
+    "path": "folders/Scripts/PLAYER.yy",
   },
   "resourceVersion": "1.0",
-  "name": "number_check_within_range",
+  "name": "set_invincible_time",
   "tags": [],
   "resourceType": "GMScript",
 }

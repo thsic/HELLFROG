@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4954dbe1-bc37-4a27-a14d-b9083da9a6e2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Hook Action GM2.3",
-    "path": "Hook Action GM2.3.yyp",
+    "name": "player",
+    "path": "folders/Sprites/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_lifestealOrb",

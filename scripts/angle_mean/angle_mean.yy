@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "easing function",
-    "path": "folders/Scripts/easing function.yy",
+    "name": "useful function",
+    "path": "folders/Scripts/useful function.yy",
   },
   "resourceVersion": "1.0",
   "name": "angle_mean",

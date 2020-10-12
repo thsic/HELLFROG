@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "useful function",
-    "path": "folders/Scripts/useful function.yy",
+    "name": "data",
+    "path": "folders/Scripts/data.yy",
   },
   "resourceVersion": "1.0",
-  "name": "number_check_within_range",
+  "name": "data_set_player_other",
   "tags": [],
   "resourceType": "GMScript",
 }

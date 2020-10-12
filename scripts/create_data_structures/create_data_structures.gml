@@ -5,6 +5,7 @@ function create_data_structures() {
 	global.ds_player_hook = ds_grid_create(2, 15);
 	global.ds_player_gun = ds_grid_create(2, 15);
 	global.ds_player_hp = ds_grid_create(2, 15);
+	global.ds_player_other = ds_grid_create(2, 15);
 
 	global.ds_keyboard_last_pressed_frame = ds_grid_create(1, 10);
 	

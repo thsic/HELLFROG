@@ -5,4 +5,7 @@ function damage_to_player(_damage, _knockback){
 	if(is_gameover() == true){
 		gameover_script();
 	}
+	else{
+		set_invincible_time(ds_grid_get(global.ds_player_other, ePO_type.normal, ePO_param.InvincibleTime));
+	}
 }

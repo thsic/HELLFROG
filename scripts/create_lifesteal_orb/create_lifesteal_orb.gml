@@ -22,7 +22,6 @@ function create_lifesteal_orb(){
 	var _base_direction = random(360);
 	var _angle_size = clamp(360 / _orb_quantity, _min_angle_size, 360);
 	
-	debug_draw_variable(x, y, _after_heal_hp, c_green, 60);
 	//オーブ生成
 	//いい感じにバラけるようにかつランダムに
 	for(var i=0; i<_orb_quantity; i++){

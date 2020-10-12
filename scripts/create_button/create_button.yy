@@ -6,7 +6,7 @@
     "path": "folders/Scripts/useful function.yy",
   },
   "resourceVersion": "1.0",
-  "name": "number_check_within_range",
+  "name": "create_button",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -1,4 +1,14 @@
-if(instance_exists(o_player)){
+
+
+
+
+
+
+
+
+
+
+/*if(instance_exists(o_player)){
 	if(debug_draw_movement){
 		draw_line(pl.x, pl.y, pl.x+lengthdir_x(pl.debug_draw_synspd*15, pl.debug_draw_direction), pl.y+lengthdir_y(pl.debug_draw_synspd*15, pl.debug_draw_direction));
 		if(pl.inertia_enable){

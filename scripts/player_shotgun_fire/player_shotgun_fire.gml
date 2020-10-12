@@ -87,4 +87,6 @@ function player_shotgun_fire() {
 
 	//クールダウンセット
 	gun_set_cooldown(ds_grid_get(global.ds_player_gun, now_shotgun, eG_param.Cooldown));
+	//無敵時間
+	set_invincible_time(ds_grid_get(global.ds_player_other, ePO_type.normal, ePO_param.GunInvTime));
 }

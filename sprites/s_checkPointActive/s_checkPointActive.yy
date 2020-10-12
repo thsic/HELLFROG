@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"27193435-9926-403d-8423-6c57a22799d1","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Hook Action GM2.3",
-    "path": "Hook Action GM2.3.yyp",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_checkPointActive",

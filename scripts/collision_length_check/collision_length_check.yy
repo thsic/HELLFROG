@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "SYSTEM",
-    "path": "folders/Scripts/SYSTEM.yy",
+    "name": "useful function",
+    "path": "folders/Scripts/useful function.yy",
   },
   "resourceVersion": "1.0",
   "name": "collision_length_check",
