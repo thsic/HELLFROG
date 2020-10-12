@@ -9,9 +9,11 @@ function create_data_structures() {
 
 	global.ds_keyboard_last_pressed_frame = ds_grid_create(1, 10);
 	
+	global.ds_button = ds_list_create();
 	
-	for(var i=0; i<9; i++){//初期値を100で埋め立て
-		ds_grid_set(global.ds_keyboard_last_pressed_frame, 0, i, 100);
+	for(var i=0; i<9; i++){
+		ds_grid_set(global.ds_keyboard_last_pressed_frame, 0, i, 100);//初期値を100で埋め立て
+		ds_list_set(global.ds_button, i, noone);
 	}
 
 
