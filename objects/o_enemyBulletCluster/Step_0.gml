@@ -13,7 +13,7 @@ if(global.gamestop == false){
 			for(var i=0; i<cluster_amount; i++){
 				var _cluster_direction = irandom_range(cluster_direction_min, cluster_direction_max)+direction;
 				var _bullet_speed = random_range(_bullet_speed_base-10, _bullet_speed_base+10);
-				e_bullet_create_normal(o_enemyBulletNormal, 20, _cluster_direction, _bullet_speed, ac_enemyBullet, enemy_id);
+				e_bullet_create_normal(o_enemyBulletNormal, 20, _cluster_direction, _bullet_speed, ac_enemyBullet, enemy_id, damage);
 			}
 		}
 		instance_destroy();

@@ -2,5 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function gameover_script(){
 	global.gamestate = gamestate.gameover;
+	global.player_hp = ds_grid_get(global.ds_player_hp, ePHP_type.normal_hp, ePHP_param.MaxHp);
 	return_to_checkpoint();
 }

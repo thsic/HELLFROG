@@ -72,6 +72,7 @@
         "GMObject",
         "GMRoom",
       ],"resourceVersion":"1.0","name":"weight","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":1,"value":"30","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"fire_damage","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"250","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"view_range","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"100","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"weapon_range","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"30","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"rigor_after_find_player_default","tags":[],"resourceType":"GMObjectProperty",},

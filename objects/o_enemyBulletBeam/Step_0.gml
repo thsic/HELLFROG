@@ -9,8 +9,16 @@ if(global.gamestop == false){
 	if(beforebeam_drawtime <= 0){
 		beam_enable = true;
 		afterbeam_drawtime--;
+		//ビーム当たり判定
+		var _x2 = lengthdir_x(length, direction) + x;
+		var _y2 = lengthdir_y(length, direction) + y;
+		if(collision_line(x, y, _x2, _y2, o_player, false, true) and damage_enable){
+			damage_to_player(damage, 0);
+			damage_enable = false;
+		}
 	}
 	else{
+		beam_enable = false;
 		beforebeam_drawtime--;
 	}
 

@@ -6,6 +6,7 @@ switch(global.gamestate){
 case gamestate.stagestart:
 	now_hp_type = ePHP_type.normal_hp;
 	global.player_hp = ds_grid_get(global.ds_player_hp, now_hp_type, ePHP_param.MaxHp);
+	set_respawn_point(o_player.x, o_player.y);
 	
 change_gamestate(gamestate.main);
 #endregion
@@ -32,6 +33,9 @@ case gamestate.lagging:
 		lagging_game();
 	}
 	
+break
+case gamestate.gameover:
+	change_gamestate(gamestate.main);
 break
 
 }

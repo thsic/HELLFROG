@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function e_bullet_create_beam(_object_number, _beforebeam_drawtime, _afterbeam_drawtime, _bullet_direction, _enemy_id, _start_length, _range){
+function e_bullet_create_beam(_object_number, _beforebeam_drawtime, _afterbeam_drawtime, _bullet_direction, _enemy_id, _start_length, _range, _damage){
 	var _x = lengthdir_x(_start_length, _bullet_direction)+x;
 	var _y = lengthdir_y(_start_length, _bullet_direction)+y;
 	
@@ -16,5 +16,6 @@ function e_bullet_create_beam(_object_number, _beforebeam_drawtime, _afterbeam_d
 		life_time = _beforebeam_drawtime + _afterbeam_drawtime;
 		life_time_default = life_time;
 		enemy_id = _enemy_id;
+		damage = _damage;
 	}
 }
