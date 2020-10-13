@@ -1,6 +1,6 @@
 //spriteはnooneでもok width/heightは-1でもok 
 //button_numberを介してボタンの情報を取得するかんじ
-function create_button(_sprite, _x, _y, _w, _h, _def_state, _type, _link, _center, _layer, _color){
+function create_button(_sprite, _x, _y, _w, _h, _def_state, _text, _type, _link, _center, _layer, _color){
 	var _map_x = convert_window_coordinate_x(_x);
 	var _map_y = convert_window_coordinate_y(_y);
 	if(!_center){
@@ -35,6 +35,7 @@ function create_button(_sprite, _x, _y, _w, _h, _def_state, _type, _link, _cente
 		b_type = _type;
 		link = _link;
 		state = _def_state;
+		text = _text;
 	}
 	enum ButtonType{
 		DebugWindow,

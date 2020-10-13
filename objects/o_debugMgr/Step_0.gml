@@ -5,10 +5,17 @@ if(keyboard_check_pressed(ord("R"))){
 if(keyboard_check_pressed(ord("L"))){
 	if(!debug_window){
 		debug_window = true;
-		invincible_button = create_button(noone, 4, 4, 60, 20, global.debug_invincible_mode, ButtonType.DebugWindow, false, false, "UI", c_green);
+		if(global.debug_invincible_mode){
+			var _button_default_state = 2;
+		}
+		else{
+			var _button_default_state = 0;
+		}
+		invincible_button = create_button(noone, 4, 4, 60, 20, _button_default_state, "muteki", ButtonType.DebugWindow, false, false, "UI", c_green);
 	}
 	else{
 		debug_window = false;
+		change_button_state(ButtonType.DebugWindow, ButtonState.Destroy);
 	}
 }
 if(debug_window){
@@ -28,6 +35,7 @@ if(debug_window){
 			global.debug_invincible_mode = true;
 		break
 		}
+		sdm(invincible_button)
 	}
 	if(global.debug_invincible_mode){
 		set_invincible_time(5);

@@ -5,7 +5,8 @@ function change_button_state(_type, _state){
 	for(var i=0; i<_num; i++){
 		var _id = instance_find(o_button, i);
 		if(_id.b_type == _type){
-			state = _state;
+			_id.state = _state;
+			
 		}
 	}
 }

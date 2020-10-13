@@ -1,23 +1,24 @@
 //画面座標をマップ座標に変換
-/*x = convert_window_coordinate_x(window_x);
-y = convert_window_coordinate_y(window_y);*/
+x = convert_window_coordinate_x(window_x);
+y = convert_window_coordinate_y(window_y);
 
 if(center){
-	var _button_x1 = x-width/2;
-	var _button_y1 = y-height/2;
-	var _button_x2 = x+width/2;
-	var _button_y2 = y+height/2;
+	var _button_x1_window = window_x-width/2;
+	var _button_y1_window = window_y-height/2;
+	var _button_x2_window = window_x+width/2;
+	var _button_y2_window = window_y+height/2;
 }
 else{
-	var _button_x1 = x;
-	var _button_y1 = y;
-	var _button_x2 = x+width;
-	var _button_y2 = y+height;	
+	var _button_x1_window = window_x;
+	var _button_y1_window = window_y;
+	var _button_x2_window = window_x+width;
+	var _button_y2_window = window_y+height;	
 }
+
 
 var _mouse_x = window_mouse_get_x()/global.window_magnification;
 var _mouse_y = window_mouse_get_y()/global.window_magnification;
-if(is_in_range(_button_x1, _button_x2, _mouse_x) and is_in_range(_button_y1, _button_y2 ,_mouse_y)){
+if(is_in_range(_button_x1_window, _button_x2_window, _mouse_x) and is_in_range(_button_y1_window, _button_y2_window ,_mouse_y)){
 	//マウスカーソルがボタンに重なっている
 	if(state = ButtonState.Released){
 		state = ButtonState.OnMouse;

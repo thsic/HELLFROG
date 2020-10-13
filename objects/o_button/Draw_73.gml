@@ -20,6 +20,7 @@ if(sprite != noone){
 }
 else{
 	var amount = 0;
+	var _alpha = 0.7;
 	switch(state){
 	case ButtonState.Released:
 		amount = 0;
@@ -33,7 +34,11 @@ else{
 	}
 	var _color = merge_color(button_color, c_white, amount)
 	draw_set_color(_color);
-	draw_rectangle(x, y, width, height, false);
+	draw_set_alpha(_alpha);
+	draw_set_halign(fa_middle);
+	draw_set_valign(fa_middle);
+	draw_rectangle(x, y, x+width, y+height, false);
+	draw_set_color(c_white);
+	draw_text(x+width/2, y+height/2, text);
 	draw_set_default();
-
 }
