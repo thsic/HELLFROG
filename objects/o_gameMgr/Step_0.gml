@@ -12,7 +12,17 @@ change_gamestate(gamestate.main);
 #endregion
 #region main
 case gamestate.main:
-
+	if(cursed_damage_enable == true){
+		player_cursed_damage();
+	}
+	if(stop_cursed_damage_time > 0){
+		stop_cursed_damage_time--;
+		cursed_damage_enable = false;
+	}
+	else{
+		cursed_damage_enable = true;
+	}
+	
 break
 #endregion
 

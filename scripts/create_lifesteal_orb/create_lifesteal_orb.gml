@@ -1,7 +1,7 @@
 
 function create_lifesteal_orb(){
 	var _now_hp = global.player_hp
-	var _max_hp = ds_grid_get(global.ds_player_hp, ePHP_type.normal_hp, ePHP_param.MaxHp);
+	var _max_hp = ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.MaxHp);
 	var _hp_ratio = _now_hp/_max_hp;
 	
 	var _anim_curve = animcurve_get_channel(ac_lifestealQuantity, 0);

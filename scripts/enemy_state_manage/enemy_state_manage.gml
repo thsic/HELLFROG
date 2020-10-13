@@ -123,8 +123,8 @@ function enemy_state_manage() {
 		
 	break
 	case EnemyState.Dead:
-		create_lifesteal_orb()
-		instance_destroy();
+		enemy_dead(id, true);
+		
 	break
 	}
 	

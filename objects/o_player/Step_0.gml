@@ -6,4 +6,5 @@ if(global.gamestop == false){
 	player_gun_manage()
 
 	player_do_knockback();
+	
 }

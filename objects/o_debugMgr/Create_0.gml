@@ -4,8 +4,10 @@ if(!debug_mode and !DEBUGMODE){
 
 pl = o_player;
 debug_draw_movement = false;
-invincible_button = noone;
 debug_window = false;
 
-global.debug_invincible_mode = false;
+invincible_button = noone;
+stop_curse_button = noone;
 
+global.debug_invincible_mode = false;
+global.debug_stop_curse_mode = false;

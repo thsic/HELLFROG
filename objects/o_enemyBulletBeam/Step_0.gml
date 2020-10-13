@@ -13,7 +13,7 @@ if(global.gamestop == false){
 		var _x2 = lengthdir_x(length, direction) + x;
 		var _y2 = lengthdir_y(length, direction) + y;
 		if(collision_line(x, y, _x2, _y2, o_player, false, true) and damage_enable and o_player.invincible_enable == false){
-			damage_to_player(damage, 0);
+			damage_to_player(damage, 1);
 			damage_enable = false;
 		}
 	}

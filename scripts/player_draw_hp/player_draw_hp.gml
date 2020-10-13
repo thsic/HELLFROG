@@ -19,9 +19,10 @@ function player_draw_hp(){
 	draw_set_color(_bar_color);
 	draw_rectangle(_x, _y, _x+_bar_width, _y+_height, false);
 	
+	//HPは整数で表示される
 	draw_set_halign(fa_middle);
 	draw_set_color(_text_color);
-	var _hp_text = string(global.player_hp) + "/" + string(_max_hp);
+	var _hp_text = string(ceil(global.player_hp)) + "/" + string(ceil(_max_hp));
 	draw_text(_x+_width/2, _y-4, _hp_text);
 	draw_set_default();
 }
