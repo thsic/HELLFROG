@@ -8,6 +8,7 @@ else{
 	on_screen = false;
 }
 
+
 if(knockback_enable == true){
 	enemy_knockbacking();
 }

@@ -60,6 +60,25 @@ function player_move_execution(argument0, argument1, argument2) {
 	    move_contact_solid(dir, abs(_hspeed)); // 壁にぴったりくっつける
 	    _hspeed = 0;
 	}
+	//斜めの当たり判定(これがないと壁にはまる)
+	if(place_free(x+_hspeed, y+_vspeed) == false) {
+	    var dir = point_direction(0, 0, _hspeed, _vspeed);
+		var _diagonal_speed = point_distance(0, 0, _hspeed, _vspeed);
+	    move_contact_solid(dir, _diagonal_speed); // 壁にぴったりくっつける
+		
+		
+		if(place_free(x+sign(_hspeed), y) and place_free(x, y+sign(_vspeed))){
+			//完全に斜めにくっついた場合(あんまりない)は_vspeed を+1する
+			_vspeed = sign(_vspeed);
+		}
+		else{
+			_vspeed = 0;
+		}
+		
+	    _hspeed = 0;
+		
+		
+	}
 
 	x += _hspeed;//壁に当たらなかった
 	y += _vspeed;
