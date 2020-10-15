@@ -1,6 +1,5 @@
 //画面座標をマップ座標に変換
-x = convert_window_coordinate_x(window_x);
-y = convert_window_coordinate_y(window_y);
+
 
 if(center){
 	var _button_x1_window = window_x-width/2;

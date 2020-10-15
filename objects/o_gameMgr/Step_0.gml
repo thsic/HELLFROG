@@ -8,7 +8,8 @@ case gamestate.stagestart:
 	global.player_hp = ds_grid_get(global.ds_player_hp, now_hp_type, ePHP_param.MaxHp);
 	set_respawn_point(o_player.x, o_player.y);
 	
-change_gamestate(gamestate.main);
+	
+	change_gamestate(gamestate.main);
 #endregion
 #region main
 case gamestate.main:
