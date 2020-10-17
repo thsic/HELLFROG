@@ -83,7 +83,9 @@ function enemy_state_manage() {
 	break
 	case EnemyState.Fire:
 		
-		script_execute(fire_script);
+		if(fire_script != noone){
+			script_execute(fire_script);
+		}
 		
 		afterfire_time = afterfire_time_default;
 		enemy_change_state(EnemyState.AfterFire);

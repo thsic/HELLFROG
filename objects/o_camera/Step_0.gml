@@ -31,4 +31,3 @@ global.camera_width = _cw;
 global.camera_height = _ch;
 global.camera_x = x+_cw/2;
 global.camera_y = y+_ch/2
-sdm(_cw)

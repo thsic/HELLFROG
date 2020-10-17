@@ -34,9 +34,8 @@ function hook_check_within_enemy(argument0, argument1) {
 			}
 		}
 	}
-	if(_collision_enemy_id != noone){
-		sdm(_collision_enemy_id)
-	}
+	
+	
 	return _collision_enemy_id
 
 
