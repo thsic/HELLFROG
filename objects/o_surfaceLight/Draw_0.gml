@@ -11,7 +11,7 @@ if(!surface_exists(surface_id)){
 	surface_id = surface_create(_cw+_oversize*2, _ch+_oversize*2);
 	
 	surface_set_target(surface_id);
-	draw_clear_alpha(c_black, 0.6);
+	draw_clear_alpha(c_black, 0.1);
 	
 	surface_reset_target();
 }
@@ -20,14 +20,15 @@ if(!surface_exists(surface_id)){
 
 surface_set_target(surface_id);
 //黒リセット
-draw_clear_alpha(c_black, 0.6);
+draw_clear_alpha(c_black, 0.1);
 
 gpu_set_blendmode(bm_subtract);
-draw_primitive_begin(pr_trianglefan);
-draw_vertex(plx-_cx+_oversize, ply-_cy+_oversize);
+var _light_tex = sprite_get_texture(s_lightCircle, 0);
+draw_primitive_begin_texture(pr_trianglefan, _light_tex);
+draw_vertex_texture(plx-_cx+_oversize, ply-_cy+_oversize, 0.5, 0.5);
 
-for(var i=0; i<vertices_number+1; i++){
-	draw_vertex(vert_x[i]-_cx+_oversize, vert_y[i]-_cy+_oversize);
+for(var i=0; i<vertices_number; i++){
+	draw_vertex_texture(vert_x[i]-_cx+_oversize, vert_y[i]-_cy+_oversize, x_tex[i], y_tex[i]);
 }
 
 draw_primitive_end();

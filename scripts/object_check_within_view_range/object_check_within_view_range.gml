@@ -2,8 +2,8 @@
 function object_check_within_view_range(_camera_id, _target_object) {
 	//オブジェクトがview内にあるかどうかチェック
 	
-	var _camera_width = camera_get_view_width(_camera_id);
-	var _camera_height = camera_get_view_height(_camera_id);
+	var _camera_width = global.camera_width;
+	var _camera_height = global.camera_height;
 	var _camera_x = o_camera.x-_camera_width/2;
 	var _camera_y = o_camera.y-_camera_height/2;
 	

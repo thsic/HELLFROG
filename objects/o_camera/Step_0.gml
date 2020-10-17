@@ -24,3 +24,11 @@ if(global.gamestate != gamestate.menu){
 	x += (xTo - x) / 4;
 	y += (yTo - y) / 4;
 }
+
+var _cw = camera_w;
+var _ch = camera_h;
+global.camera_width = _cw;
+global.camera_height = _ch;
+global.camera_x = x+_cw/2;
+global.camera_y = y+_ch/2
+sdm(_cw)
