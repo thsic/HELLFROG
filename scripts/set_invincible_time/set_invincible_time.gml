@@ -4,5 +4,6 @@ function set_invincible_time(_time){
 	if(o_player.invincible_time < _time){
 		o_player.invincible_time = _time;
 		o_player.invincible_time_default = _time;
+		o_player.invincible_enable = true;
 	}
 }

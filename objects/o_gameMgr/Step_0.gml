@@ -46,6 +46,9 @@ case gamestate.lagging:
 	
 break
 case gamestate.gameover:
+	
+	global.player_hp = ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.MaxHp);
+	return_to_checkpoint();
 	change_gamestate(gamestate.main);
 break
 
