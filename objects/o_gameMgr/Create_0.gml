@@ -24,3 +24,9 @@ mouse_y_prev = display_mouse_get_y();
 
 //ゲームオーバー
 gameover_effect_time = -1;
+
+enum EnemyDefaultPosition{
+	ObjectIndex,
+	XPosition,
+	YPosition,
+}
