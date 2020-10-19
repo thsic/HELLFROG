@@ -46,10 +46,19 @@ case gamestate.lagging:
 	
 break
 case gamestate.gameover:
+	gameover_effect_time--;
 	
-	global.player_hp = ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.MaxHp);
-	return_to_checkpoint();
-	change_gamestate(gamestate.main);
+	if(gameover_effect_time <= 0){
+		reset_stage();
+		return_to_checkpoint();
+		change_gamestate(gamestate.main);
+		global.gamestop = true;
+		if(layer_sequence_exists("Flont", gameover_sequence_element)){
+			layer_sequence_destroy(gameover_sequence_element);
+		}
+		
+	}
+	
 break
 
 }

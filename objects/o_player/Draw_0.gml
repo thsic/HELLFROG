@@ -102,13 +102,31 @@ else{
 	look_direction = LookDirection.Right;
 }
 
+if(global.gamestate != gamestate.gameover){
+	//通常時
+	var _sprite_y = y;
+	var _sprite_dir = 0;
+}
+else{
+	//ゲームオーバー時
+	var _gameover_time_ratio = 1-gameover_knockup_time/gameover_knockup_time_default;
+	var _gameover_anim_curve = animcurve_get_channel(ac_gameoverKnockup, 0);
+	var _knockup_height = animcurve_channel_evaluate(_gameover_anim_curve, _gameover_time_ratio);
+	var _sprite_y = y+_knockup_height;
+	var _sprite_dir = 90;
+	
+	//常に仰向けになる
+	look_direction = LookDirection.Right;
+}
+
+
+
 switch(look_direction){
 case LookDirection.Right:
-	draw_sprite_ext(_sprite, 0, x, y, 1, 1, 0, c_white, _alpha);
+	draw_sprite_ext(_sprite, 0, x, _sprite_y, 1, 1, _sprite_dir, c_white, _alpha);
 break
 case LookDirection.Left:
-	
-	draw_sprite_ext(_sprite, 0, x, y, -1, 1, 0, c_white, _alpha);
+	draw_sprite_ext(_sprite, 0, x, _sprite_y, -1, 1, _sprite_dir, c_white, _alpha);
 break
 }
 
@@ -118,10 +136,10 @@ break
 var _gun_sprite = s_cursedGun;
 switch(look_direction){
 case LookDirection.Right:
-	draw_sprite_ext(_gun_sprite, 0, x, y+2, 1, 1, player_direction, c_white, _alpha);
+	draw_sprite_ext(_gun_sprite, 0, x, _sprite_y+2, 1, 1, player_direction+_sprite_dir, c_white, _alpha);
 break
 case LookDirection.Left:
-	draw_sprite_ext(_gun_sprite, 0, x, y+2, -1, 1, player_direction-180, c_white, _alpha);
+	draw_sprite_ext(_gun_sprite, 0, x, _sprite_y+2, -1, 1, player_direction-180+_sprite_dir, c_white, _alpha);
 break
 }
 #endregion

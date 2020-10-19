@@ -21,3 +21,6 @@ stop_cursed_damage_time = 0;
 
 mouse_x_prev = display_mouse_get_x();
 mouse_y_prev = display_mouse_get_y();
+
+//ゲームオーバー
+gameover_effect_time = -1;

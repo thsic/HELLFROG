@@ -1,1 +1,5 @@
-player_draw_hp()
+player_draw_hp();
+
+if(global.gamestate == gamestate.gameover){
+	
+}

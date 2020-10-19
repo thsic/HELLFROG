@@ -36,5 +36,5 @@ function player_cursed_damage(){
 	}
 	var _damage = _damage_per_second/60;
 	
-	damage_to_player(_damage, 0);
+	damage_to_player(_damage, 0, o_player.player_direction+180);
 }

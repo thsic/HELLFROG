@@ -8,3 +8,6 @@ if(global.gamestop == false){
 	player_do_knockback();
 	
 }
+if(global.gamestate == gamestate.gameover){
+	player_gameover_knockback(1.2);
+}

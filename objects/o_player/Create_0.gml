@@ -34,6 +34,8 @@ invincible_time_default = 0
 
 //描画
 look_direction = LookDirection.Right;
+gameover_knockback_direction = 0;//ゲームオーバー時のノックバック方向
+gameover_knockup_time = 0;
 
 //test
 debug_draw_inertiaspd = 0;
