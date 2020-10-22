@@ -43,8 +43,6 @@ case Menustate.CloseStart://閉じ始める 1f
 	closemenu_sequence_element = layer_sequence_create("UI", _x, _y, sq_closeMenu);
 	layer_sequence_play(closemenu_sequence_element);
 	state = Menustate.CloseSequence;
-	//lagging_start(10, ac_lagProbability);
-	
 	
 break
 case Menustate.CloseSequence://閉じるシーケンス描画中

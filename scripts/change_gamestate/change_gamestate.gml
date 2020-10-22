@@ -2,7 +2,14 @@
 function change_gamestate(argument0) {
 	//ステートの変更
 	var _state = argument0;
-
+	//ラグがあるなら消す ラグがある時にメニューとかひらくとラグが発生しっぱなしのため
+	if(o_gameMgr.lag_time > 0 or room_speed != 60){
+		o_gameMgr.lag_time = 0;
+		room_speed = 60
+		lag_enable = false;
+	}
+	
+	
 	if(state_priority_comparison(_state) == true){
 		switch(_state){
 		case gamestate.stagestart:
@@ -23,9 +30,6 @@ function change_gamestate(argument0) {
 		case gamestate.stageclear:
 			global.nextstate = gamestate.stageclear;
 		break
-		case gamestate.lagging:
-			global.nextstate = gamestate.lagging;
-		break
 		case gamestate.waitforkeyinput:
 			global.nextstate = gamestate.waitforkeyinput;
 		break
@@ -44,6 +48,5 @@ enum gamestate{
 	menu,
 	gameover,
 	stageclear,
-	lagging,
 	waitforkeyinput,
 }

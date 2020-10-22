@@ -11,5 +11,4 @@ function player_gun_manage(){
 	if(gun_charge_enable == true){
 		gun_charging();
 	}
-
 }

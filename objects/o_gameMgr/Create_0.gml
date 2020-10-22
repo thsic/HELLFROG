@@ -15,6 +15,7 @@ global.gamestop = false;
 lag_time = 0;
 lag_time_default = 0;
 lag_curve = noone;
+lag_enable = false;
 
 cursed_damage_enable = true;
 stop_cursed_damage_time = 0;
@@ -24,6 +25,7 @@ mouse_y_prev = display_mouse_get_y();
 
 //ゲームオーバー
 gameover_effect_time = -1;
+gameover_sequence_element = noone;
 
 enum EnemyDefaultPosition{
 	ObjectIndex,

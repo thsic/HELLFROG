@@ -9,4 +9,5 @@ if(global.nextstate != noone){
 if(global.gamestate == gamestate.gameover){
 	layer_sequence_x(gameover_sequence_element, o_camera.x);
 	layer_sequence_y(gameover_sequence_element, o_camera.y);
+	
 }

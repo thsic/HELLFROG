@@ -8,7 +8,12 @@ function gun_charging() {
 	
 	if(mouse_check_button_pressed(global.shotgun_button) == false){
 		//ショットガンボタン押されていない
-		gun_charge_time++;
+		
+		//銃のチャージが最大値以下だと銃をチャージする
+		if(gun_charge_time < _gun_charge_time_each_level * _gun_charge_max_count){
+			gun_charge_time++;
+		}
+		
 		var _charge_level = 0;
 		for(var i=0; i<_gun_charge_max_count; i++){
 			if(gun_charge_time > _gun_charge_time_each_level*(i+1)){

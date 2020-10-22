@@ -1,5 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
 if(global.gamestop == false){
 	life_time--;
 	if(life_time <= 0){
@@ -13,10 +11,8 @@ if(global.gamestop == false){
 		var _x2 = lengthdir_x(length, direction) + x;
 		var _y2 = lengthdir_y(length, direction) + y;
 		if(collision_line(x, y, _x2, _y2, o_player, false, true) and damage_enable and o_player.invincible_enable == false){
-			if(global.gamestate != gamestate.gameover){
-				damage_to_player(damage, 1, direction);
-				damage_enable = false;
-			}
+			damage_to_player(damage, 1, direction);
+			damage_enable = false;
 		}
 	}
 	else{
