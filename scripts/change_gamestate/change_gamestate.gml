@@ -26,6 +26,9 @@ function change_gamestate(argument0) {
 		case gamestate.lagging:
 			global.nextstate = gamestate.lagging;
 		break
+		case gamestate.waitforkeyinput:
+			global.nextstate = gamestate.waitforkeyinput;
+		break
 		default:
 			sdm("Error! change_gamestate")
 		break
@@ -42,4 +45,5 @@ enum gamestate{
 	gameover,
 	stageclear,
 	lagging,
+	waitforkeyinput,
 }

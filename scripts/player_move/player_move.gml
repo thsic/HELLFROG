@@ -86,7 +86,7 @@ function player_move() {
 	debug_draw_direction = _finally_direction;
 	//--------------------
 
-	player_move_execution(_finally_direction, false, _finally_speed);//移動の実行
+	player_move_execution(_finally_direction, inertia_enable, _finally_speed);//移動の実行
 
 
 

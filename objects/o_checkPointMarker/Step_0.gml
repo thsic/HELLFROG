@@ -5,7 +5,7 @@ var _x2 = _checkpoint_width_half+x;
 var _y1 = y-_checkpoint_height_half;
 var _y2 = _checkpoint_height_half+y;
 
-if(is_in_place(_x1, _y1, _x2, _y2, o_player.id) == true){
+if(is_in_place(_x1, _y1, _x2, _y2, o_player.x, o_player.y) == true){
 	//hp回復とかいれる
 	debug_draw_rectnagle(_x1, _y1, _x2, _y2, true, c_green, 1)
 	//

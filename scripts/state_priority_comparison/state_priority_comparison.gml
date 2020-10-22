@@ -9,7 +9,7 @@ function state_priority_comparison(argument0) {
 	var _changeable = true;
 
 	if(global.nextstate != noone){
-		sdm("ステートの変更が競合しました");
+		sdm("ゲームステートの変更が競合しました");
 	
 		switch(_state){
 		case gamestate.stagestart:
@@ -17,6 +17,9 @@ function state_priority_comparison(argument0) {
 		break
 		case gamestate.stageclear:
 			_state_priority_1 = 95;
+		break
+		case gamestate.waitforkeyinput:
+			_state_priority_1 = 90;
 		break
 		case gamestate.gameover:
 			_state_priority_1 = 80;
@@ -45,6 +48,9 @@ function state_priority_comparison(argument0) {
 		break
 		case gamestate.stageclear:
 			_state_priority_2 = 95;
+		break
+		case gamestate.waitforkeyinput:
+			_state_priority_2 = 90;
 		break
 		case gamestate.gameover:
 			_state_priority_2 = 80;

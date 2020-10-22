@@ -15,7 +15,8 @@ function player_move_execution(argument0, argument1, argument2) {
 
 	var _collision_width = sprite_get_width(s_playerCollisionMask);
 	var _collision_height = sprite_get_height(s_playerCollisionMask);
-
+	
+	#region 壁当たり判定
 	//壁とくっついているときに進行方向の斜め左右方向のどちらかに空間があればそっちにスライドする
 	if(place_free(x+_hspeed, y) == false) {
 	
@@ -79,7 +80,102 @@ function player_move_execution(argument0, argument1, argument2) {
 		
 		
 	}
+	#endregion
+	
+	#region 穴当たり判定
+	/*
+	var _hole_number = instance_number(o_hole);
+	var _px = o_player.x;
+	var _py = o_player.y;
+	var _hole_id, _ht, _hb, _hl, _hr, _nht, _nhb, _nhl, _nhr;
+	var _on_hole_now_id = noone;
+	var _on_hole_next_frame_id = noone;
+	var _arm_len = 32;
+	
+	//今穴の上に居るかどうかと次フレームで穴に落ちるかどうか判定
+	for(var i=0;i<_hole_number; i++){
+		_hole_id = instance_find(o_hole, i);
+		_hl = _hole_id.bbox_left;
+		_ht = _hole_id.bbox_top;
+		_hr = _hole_id.bbox_right;
+		_hb = _hole_id.bbox_bottom;
+		
+		if(is_in_place(_hl, _ht, _hr, _hb, _px, _py)){
+			_on_hole_now_id = _hole_id;
+		}
+		if(is_in_place(_hl, _ht, _hr, _hb, _px+_hspeed, _py+_vspeed)){
+			_on_hole_next_frame_id = _hole_id;
+		}
+		
+	}
+	
+	if(_on_hole_now_id != noone){
+		_hl = _on_hole_now_id.bbox_left;
+		_ht = _on_hole_now_id.bbox_top;
+		_hr = _on_hole_now_id.bbox_right;
+		_hb = _on_hole_now_id.bbox_bottom;
+	}
+	if(_on_hole_next_frame_id != noone){
+		_nhl = _on_hole_next_frame_id.bbox_left;
+		_nht = _on_hole_next_frame_id.bbox_top;
+		_nhr = _on_hole_next_frame_id.bbox_right;
+		_nhb = _on_hole_next_frame_id.bbox_bottom;
+	}
+	
+	if(_on_hole_now_id == noone and _on_hole_next_frame_id != noone and !_inertia){
+		//今は穴に落ちてないけど次フレームで落ちることになる + 慣性がない 穴に落ちないようにする
+		if(_px <= _nhl){
+			_hspeed = _nhl - _px - 1;
+		}
+		if(_nhr <= _px){
+			_hspeed = _nhr - _px + 1;
+		}
+		if(_py <= _nht){
+			_vspeed = _nht - _py - 1;
+		}
+		if(_nhb <= _py){
+			_vspeed = _nhb - _py + 1;
+		}
+		
+		
+	}
+	
+	if(_on_hole_now_id != noone and !_inertia){
+		//慣性がない状態で穴の上に居ると停止
+		_hspeed = 0;
+		_vspeed = 0;
+		debug_draw_rectnagle(_hl, _ht, _hr, _hb, true, c_green, 1);
+	}
+	*/
+	/*var _near_ground = !is_in_place(_hl+_arm_len, _ht-_arm_len, _hr+_arm_len, _hb+_arm_len, _px, _py);
+	if(_on_hole_now_id != noone and !_inertia and _on_hole_next_frame_id != noone and _near_ground){
+		//穴の上に居る + 慣性が働いていない + 次フレームで穴から出ない + 崖に近い所
+		var _base_direction = _direction+180;
+		var _add_angle = 0;
+		var _decision_number = 4;
+		var _test_dir, _test_x, _test_y, _on_hole, _on_wall;
+		var _warp_dir = noone;
+		
+		for(var i=0; i<_decision_number; i++){
+			_add_angle = 180/_decision_number+i;
+			_test_dir = _base_direction + _add_angle;
+			
+			_test_x = lengthdir_x(_arm_len, _test_dir)+_px;
+			_test_y = lengthdir_y(_arm_len, _test_dir)+_py;
+			
+			_on_hole = is_in_place(_hl, _ht, _hr, _hb, _px+_test_x, _py+_test_y);
+			_on_wall = place_meeting(_px+_test_x, _py+_test_y, o_wall);
+			
+			if(!_on_hole and !_on_wall){
+				//地面にいる+壁に衝突しない
+				
+				
+			}
+		}
+	}*/
 
+	#endregion
+	
 	x += _hspeed;//壁に当たらなかった
 	y += _vspeed;
 

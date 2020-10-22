@@ -10,6 +10,7 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 			if(_invinsible_time_ratio > 0){
 				var _invinsible_time = ds_grid_get(global.ds_player_other, ePO_type.normal, ePO_param.InvincibleTime) * _invinsible_time_ratio;
 				set_invincible_time(_invinsible_time);
+				lagging_start(30, ac_lagRatio)
 			}
 		}
 	}
