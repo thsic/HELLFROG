@@ -24,33 +24,66 @@ case gamestate.stagestart:
 	
 	change_gamestate(gamestate.waitforkeyinput);
 break
+
 case gamestate.waitforkeyinput:
 	global.gamestop = true;
 	
-	//銃のチャージを最大にする
-	var _charge_count = ds_grid_get(global.ds_player_gun, o_player.now_shotgun, eG_param.ChargeCount);
-	var _charge_time = ds_grid_get(global.ds_player_gun, o_player.now_shotgun, eG_param.ChargeTime);
-	o_player.gun_charge_time = _charge_count * _charge_time;
 	
-	//ラグがあるなら消す
-	if(lag_enable or room_speed != 60){
-		room_speed = 60;
-		lag_enable = false;
-		lag_time = 0;
+	if(respawn_time > 0){
+		//リスポーンシーケンスが表示されている時間
+		respawn_time--;
+		
+		//ゲームオーバーシーケンスはこのタイミングで消す
+		if(layer_sequence_exists("Flont", gameover_sequence_element)){
+			layer_sequence_destroy(gameover_sequence_element);
+		}
 	}
+	else if(respawn_time != -1){
+		//リスポーンシーケンス表示終わり
+		if(layer_sequence_exists("Flont", respawn_sequence_element)){
+			layer_sequence_destroy(respawn_sequence_element);
+		}
+		
+		//銃のチャージを最大にする
+		var _charge_count = ds_grid_get(global.ds_player_gun, o_player.now_shotgun, eG_param.ChargeCount);
+		var _charge_time = ds_grid_get(global.ds_player_gun, o_player.now_shotgun, eG_param.ChargeTime);
+		o_player.gun_charge_time = _charge_count * _charge_time;
 	
-	var _up		= keyboard_check(global.up_key);
-	var _down	= keyboard_check(global.down_key);
-	var _left	= keyboard_check(global.left_key);
-	var _right	= keyboard_check(global.right_key);
-	var _shotgun = mouse_check_button(global.shotgun_button);
-	var _hook = mouse_check_button(global.hook_button);
+		//ラグがあるなら消す
+		if(lag_enable or room_speed != 60){
+			room_speed = 60;
+			lag_enable = false;
+			lag_time = 0;
+		}
 	
-	//なにかキーが押されたらゲーム開始
-	if(_up or _down or _left or _right or _shotgun or _hook){
-		change_gamestate(gamestate.main)
+		var _up		= keyboard_check(global.up_key);
+		var _down	= keyboard_check(global.down_key);
+		var _left	= keyboard_check(global.left_key);
+		var _right	= keyboard_check(global.right_key);
+		var _shotgun = mouse_check_button(global.shotgun_button);
+		var _hook = mouse_check_button(global.hook_button);
+	
+		//なにかキーが押されたらゲーム開始
+		if(_up or _down or _left or _right or _shotgun or _hook){
+			change_gamestate(gamestate.main)
+		}
+	}
+	if(respawn_time = -1){
+		//リスポーン直後
+		var _sequence_x = o_camera.x;
+		var _sequence_y = o_camera.y;
+		
+		respawn_time = 20;
+		if(!layer_sequence_exists("Flont", respawn_sequence_element)){
+			respawn_sequence_element = layer_sequence_create("Flont", _sequence_x, _sequence_y, sq_respawn);
+			//layer_sequence_speedscale(o_gameMgr.respawn_sequence_element, 0.5);
+			layer_sequence_play(respawn_sequence_element);
+			
+		}
+		
 	}
 break
+
 #endregion
 #region main
 case gamestate.main:
@@ -81,10 +114,11 @@ break
 case gamestate.pause:
 	global.gamestop = true;
 break
+
 case gamestate.menu:
 	global.gamestop = true;
 break
-break
+
 case gamestate.gameover:
 	gameover_effect_time--;
 	global.gamestop = true;
@@ -92,11 +126,7 @@ case gamestate.gameover:
 		reset_stage();
 		return_to_checkpoint();
 		change_gamestate(gamestate.waitforkeyinput);
-		
-		if(layer_sequence_exists("Flont", gameover_sequence_element)){
-			layer_sequence_destroy(gameover_sequence_element);
-		}
-		
+		//ゲームオーバーシーケンスを消す処理はリスポーン後
 	}
 	
 break

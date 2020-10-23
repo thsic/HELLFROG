@@ -8,6 +8,7 @@ function gameover_script(_gameover_knockback_dir){
 		o_player.gameover_knockback_direction = _gameover_knockback_dir;
 		o_gameMgr.gameover_effect_time_default = _gameover_effect_time;
 		o_gameMgr.gameover_effect_time = _gameover_effect_time;
+		
 		o_player.gameover_knockup_time = _gameover_knockup_time;
 		o_player.gameover_knockup_time_default = _gameover_knockup_time
 	

@@ -27,6 +27,10 @@ mouse_y_prev = display_mouse_get_y();
 gameover_effect_time = -1;
 gameover_sequence_element = noone;
 
+//リスポーン
+respawn_time = 0;
+respawn_sequence_element = noone;
+
 enum EnemyDefaultPosition{
 	ObjectIndex,
 	XPosition,

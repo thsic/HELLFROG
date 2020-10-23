@@ -31,4 +31,6 @@ function reset_stage(){
 		_enemy_y = ds_grid_get(ds_enemy_default_position, EnemyDefaultPosition.YPosition, i);
 		instance_create_layer(_enemy_x, _enemy_y, "Enemies", _enemy_index);
 	}
+	
+	respawn_time = -1;
 }

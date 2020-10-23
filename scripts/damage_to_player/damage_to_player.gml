@@ -4,7 +4,6 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 	if(global.gamestate != gamestate.gameover){
 		global.player_hp -= _damage;
 		if(is_gameover() == true){
-			
 			gameover_script(_gameover_knockback_dir);
 		}
 		else{
@@ -13,6 +12,11 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 				set_invincible_time(_invinsible_time);
 				lagging_start(30, ac_lagRatio);
 			}
+		}
+		
+		if(global.player_hp < 0){
+			//プレイヤーのhpが0より低い場合0にする
+			global.player_hp = 0
 		}
 	}
 }

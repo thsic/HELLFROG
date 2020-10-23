@@ -29,3 +29,13 @@ if(_player_distance < _player_size){
 	player_heal_hp(heal_point);
 	instance_destroy();
 }
+
+
+if(life_time > 0){
+	life_time--;
+}
+else{
+	//90fオーブが吸収されなかった場合強制的に吸収
+	player_heal_hp(heal_point);
+	instance_destroy()
+}
