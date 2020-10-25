@@ -1,5 +1,5 @@
 //if(live_call()) return live_result;
-if(global.gamestop == false or global.gamestate == gamestate.waitforkeyinput){
+if(global.gamestop == false or global.playerstop == false){
 	hook_state_manage();
 	player_move();
 	player_param_manage();

@@ -1,5 +1,6 @@
 
 global.gamestop = false;
+global.playerstop = false;
 
 switch(global.gamestate){
 #region stagestart
@@ -27,6 +28,7 @@ break
 
 case gamestate.waitforkeyinput:
 	global.gamestop = true;
+	global.playerstop = false;
 	
 	
 	if(respawn_time > 0){
@@ -65,7 +67,7 @@ case gamestate.waitforkeyinput:
 	
 		//なにかキーが押されたらゲーム開始
 		if(_up or _down or _left or _right or _shotgun or _hook){
-			change_gamestate(gamestate.main)
+			change_gamestate(gamestate.main);
 		}
 	}
 	if(respawn_time = -1){
@@ -113,15 +115,23 @@ break
 
 case gamestate.pause:
 	global.gamestop = true;
+	global.playerstop = true;
 break
 
 case gamestate.menu:
 	global.gamestop = true;
+	global.playerstop = true;
+break
+
+case gamestate.incheckpointbarrier:
+	global.gamestop = true;
+	global.playerstop = false;
 break
 
 case gamestate.gameover:
 	gameover_effect_time--;
 	global.gamestop = true;
+	global.playerstop = true;
 	if(gameover_effect_time <= 0){
 		reset_stage();
 		return_to_checkpoint();

@@ -7,9 +7,11 @@ global.nextstate = noone;
 
 instance_create_layer(0, 0, "Instances", o_menuMgr);
 instance_create_layer(0, 0, "UI", o_uiMgr);
+instance_create_layer(0, 0, "UI", o_shaderMgr);
 //instance_create_layer(0, 0, "Shaders", o_surfaceLight);
 
 global.gamestop = false;
+global.playerstop = false;
 
 //ラグ関連
 lag_time = 0;

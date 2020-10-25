@@ -30,6 +30,9 @@ function state_priority_comparison(argument0) {
 		case gamestate.menu:
 			_state_priority_1 = 50;
 		break
+		case gamestate.incheckpointbarrier:
+			_state_priority_1 = 40;
+		break
 		case gamestate.main:
 			_state_priority_1 = 30;
 		break
@@ -57,6 +60,9 @@ function state_priority_comparison(argument0) {
 		break
 		case gamestate.menu:
 			_state_priority_2 = 50;
+		break
+		case gamestate.incheckpointbarrier:
+			_state_priority_2 = 40;
 		break
 		case gamestate.main:
 			_state_priority_2 = 30;

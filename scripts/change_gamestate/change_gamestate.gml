@@ -11,7 +11,8 @@ function change_gamestate(argument0) {
 	
 	
 	if(state_priority_comparison(_state) == true){
-		switch(_state){
+		global.nextstate = _state;
+		/*switch(_state){
 		case gamestate.stagestart:
 			global.nextstate = gamestate.stagestart;
 		break
@@ -33,10 +34,13 @@ function change_gamestate(argument0) {
 		case gamestate.waitforkeyinput:
 			global.nextstate = gamestate.waitforkeyinput;
 		break
+		case gamestate.incheckpointbarrier:
+			global.nextstate = gamestate.waitforkeyinput;
+		break
 		default:
 			sdm("Error! change_gamestate")
 		break
-		}
+		}*/
 	}
 
 
@@ -49,4 +53,5 @@ enum gamestate{
 	gameover,
 	stageclear,
 	waitforkeyinput,
+	incheckpointbarrier,
 }

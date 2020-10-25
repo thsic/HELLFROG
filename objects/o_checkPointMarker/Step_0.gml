@@ -4,6 +4,8 @@ var _x1 = x-_checkpoint_width_half;
 var _x2 = _checkpoint_width_half+x;
 var _y1 = y-_checkpoint_height_half;
 var _y2 = _checkpoint_height_half+y;
+var _px = o_player.x;
+var _py = o_player.y;
 
 if(is_in_place(_x1, _y1, _x2, _y2, o_player.x, o_player.y) == true){
 	//hp回復とかいれる
@@ -35,5 +37,20 @@ if(checkpoint_active == true){
 		else{
 			subimage = 0;
 		}
+	}
+}
+
+switch(global.gamestate){
+	case gamestate.main:
+	case gamestate.incheckpointbarrier:
+	
+	var _distance_for_player = point_distance(x, y, _px, _py);
+	var _in_barrier = false;
+	if(_distance_for_player < barrier_size){
+		_in_barrier = true;
+		change_gamestate(gamestate.incheckpointbarrier);
+	}
+	else{
+		change_gamestate(gamestate.main);
 	}
 }
