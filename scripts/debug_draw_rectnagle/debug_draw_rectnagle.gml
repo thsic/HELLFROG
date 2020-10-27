@@ -9,7 +9,7 @@ function debug_draw_rectnagle(argument0, argument1, argument2, argument3, argume
 	var _color = argument5;
 	var _time = argument6;
 
-	with(instance_create_layer(0, 0, "Effects", o_debugEffect)){
+	with(instance_create_layer(0, 0, "DebugEffects", o_debugEffect)){
 		type = eDebEffectType.Rectangle;
 		x1 = _x;
 		y1 = _y;

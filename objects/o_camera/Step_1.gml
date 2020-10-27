@@ -1,8 +1,13 @@
 //カーソルにはややゆっくり追従するけどプレイヤーにはぴったりついてくカメラ
 
 if(follow != noone){
-	var _view_direction = point_direction(follow.x, follow.y, mouse_x, mouse_y);//照準向いている方向
-	var _view_distance = point_distance(follow.x, follow.y, mouse_x, mouse_y)//中心からどれだけ離れているか
+	var _fx = follow.x - camera_get_view_x(view_camera[0]);
+	var _fy = follow.y - camera_get_view_y(view_camera[0]);
+	var _mx = global.mx;
+	var _my = global.my;
+	
+	var _view_direction = point_direction(_fx, _fy, _mx, _my);//照準向いている方向
+	var _view_distance = point_distance(_fx, _fy, _mx, _my)//中心からどれだけ離れているか
 	var _collection_x = lengthdir_x(_view_distance/6, _view_direction);
 	var _collection_y = lengthdir_y(_view_distance/6, _view_direction);
 	xTo = follow.x + _collection_x;

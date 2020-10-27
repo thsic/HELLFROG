@@ -7,7 +7,7 @@ function debug_draw_variable(argument0, argument1, argument2, argument3, argumen
 	var _color = argument3;
 	var _time = argument4;
 
-	with(instance_create_layer(0, 0, "Effects", o_debugEffect)){
+	with(instance_create_layer(0, 0, "DebugEffects", o_debugEffect)){
 		type = eDebEffectType.Variable;
 		x1 = _x;
 		y1 = _y;

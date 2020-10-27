@@ -1,4 +1,4 @@
-player_direction = point_direction(x, y, mouse_x, mouse_y);
+player_direction = 0;//point_direction(x, y, mouse_x, mouse_y);
 
 can_knockback = true;
 inertia_enable = false;

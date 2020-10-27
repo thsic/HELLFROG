@@ -14,7 +14,10 @@ function hook_state_manage() {
 			hook_point_x_default = x;
 			hook_point_y_default = y;
 			hook_length = 0;
-			hook_direction = point_direction(x, y, mouse_x, mouse_y);
+			
+			var _px = x - camera_get_view_x(view_camera[0]);
+			var _py = y - camera_get_view_y(view_camera[0]);
+			hook_direction = point_direction(_px, _py, global.mx, global.my);
 		}
 	break
 	case hookState.Cooldown:

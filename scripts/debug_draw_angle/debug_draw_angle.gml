@@ -11,7 +11,7 @@ function debug_draw_angle(argument0, argument1, argument2, argument3, argument4,
 	var _x2 = _x1 + lengthdir_x(_length, _direction);
 	var _y2 = _y1 + lengthdir_y(_length, _direction);
 
-	with(instance_create_layer(0, 0, "Effects", o_debugEffect)){
+	with(instance_create_layer(0, 0, "DebugEffects", o_debugEffect)){
 		type = eDebEffectType.Line;
 		x1 = _x1;
 		y1 = _y1;
