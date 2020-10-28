@@ -1,6 +1,9 @@
 last_key_pushed_frame();
-if(global.gamestate == gamestate.main){
-	mouse_within_window();
+switch(global.gamestate){
+case gamestate.main:
+case gamestate.incheckpointbarrier:
+	mouse_within_window();//マウスを範囲内に
+break;
 }
 mouse_x_prev = display_mouse_get_x();
 mouse_y_prev = display_mouse_get_y();

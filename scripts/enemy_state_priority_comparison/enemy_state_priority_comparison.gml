@@ -9,7 +9,6 @@ function enemy_state_priority_comparison(argument0) {
 	var _changeable = true;
 
 	if(next_state != noone){
-		sdm("敵のステートの変更が競合しました");
 	
 		switch(_state){
 		case EnemyState.Dead:

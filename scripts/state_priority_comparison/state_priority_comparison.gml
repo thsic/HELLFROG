@@ -8,8 +8,8 @@ function state_priority_comparison(argument0) {
 	var _state_priority_2 = 0;
 	var _changeable = true;
 
-	if(global.nextstate != noone){
-		sdm("ゲームステートの変更が競合しました");
+	if(global.nextstate != noone and _state != global.nextstate){
+		
 	
 		switch(_state){
 		case gamestate.stagestart:
@@ -75,7 +75,12 @@ function state_priority_comparison(argument0) {
 	
 		//比較 1が今から変更しようとしているやつ 2がnextstateにあったやつ
 		if(_state_priority_1 < _state_priority_2){
+			//元のほうがプライオリティが高いので変更をやめる
 			_changeable = false;
+			sdm("ゲームステート"+string(global.nextstate)+"と"+string(_state)+"の変更が競合し、ステート"+string(global.nextstate)+"が優先されました")
+		}
+		else{
+			sdm("ゲームステート"+string(global.nextstate)+"と"+string(_state)+"の変更が競合し、ステート"+string(_state)+"が優先されました");
 		}
 	}
 	return _changeable

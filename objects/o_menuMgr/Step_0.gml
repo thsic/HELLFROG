@@ -5,9 +5,15 @@ var _y = o_camera.y;
 switch(state){
 case Menustate.Closing://メニューが完全に閉じている
 
-	if(keyboard_check_pressed(global.menu_key)) and global.gamestate == gamestate.main{
-		change_gamestate(gamestate.menu);
-		state = Menustate.OpenStart;
+	if(keyboard_check_pressed(global.menu_key)){
+		switch(global.gamestate){
+		case gamestate.main:
+		case gamestate.incheckpointbarrier:
+			after_menu_gamestate = global.gamestate;
+			change_gamestate(gamestate.menu);
+			state = Menustate.OpenStart;
+		break
+		}
 	}
 	
 break

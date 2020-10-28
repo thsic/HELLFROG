@@ -5,7 +5,7 @@
     "path": "folders/Shaders.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Shader2",
+  "name": "sh_gray",
   "tags": [],
   "resourceType": "GMShader",
 }
