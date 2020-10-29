@@ -15,7 +15,10 @@ if(global.gamestate = gamestate.incheckpointbarrier){
 	surface_copy_part(gray_surf_copy, _cpx, _cpy, gray_surface, _cpx, _cpy, _cp_barrier_size, _cp_barrier_size);
 	
 	if(surface_exists(gray_surface)){
-		shader_set(sh_gray);
+		//描画
+		shader_set(sh_decrementSaturation);
+		shader_saturation = 0.6;//チェックポイントに居るときの彩度倍率
+		shader_set_uniform_f(uni_saturation, shader_saturation);
 		draw_surface(gray_surface, 0, 0);
 		shader_reset();
 		draw_surface(gray_surf_copy, 0, 0);
@@ -23,7 +26,15 @@ if(global.gamestate = gamestate.incheckpointbarrier){
 
 }
 else{
+	var _max_hp = ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.MaxHp)
+	var _hp_ratio = global.player_hp/_max_hp;
+	var _saturation_anim_curve = animcurve_get_channel(ac_saturationShaderHpRatio, 0);
+	shader_saturation = animcurve_channel_evaluate(_saturation_anim_curve, _hp_ratio);
+	
+	shader_set(sh_decrementSaturation);
+	shader_set_uniform_f(uni_saturation, shader_saturation);
 	draw_surface(gray_surface, 0, 0);
+	shader_reset();
 }
 
 

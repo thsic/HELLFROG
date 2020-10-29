@@ -20,6 +20,19 @@ function enemy_move_execution() {
 	    _hspeed = 0;
 		_hspeed /= _collision_wall_speed_magnification;
 	}
+	
+	//チェックポイントマーカー内には入れない
+	var _nearest_cm = instance_nearest(x, y, o_checkPointMarker);
+	var _cmb_size = _nearest_cm.barrier_size;
+	var _cmx = _nearest_cm.x - _cmb_size/2;
+	var _cmy = _nearest_cm.y - _cmb_size/2;
+	
+	if(is_in_place(_cmx, _cmy, _cmx+_cmb_size, _cmy+_cmb_size, x+_hspeed, y+_vspeed)){
+		_hspeed = 0;
+		_vspeed = 0;
+		
+	}
+	
 
 	x += _hspeed;
 	y += _vspeed;

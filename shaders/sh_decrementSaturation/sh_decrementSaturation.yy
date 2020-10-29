@@ -5,7 +5,7 @@
     "path": "folders/Shaders.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sh_gray",
+  "name": "sh_decrementSaturation",
   "tags": [],
   "resourceType": "GMShader",
 }

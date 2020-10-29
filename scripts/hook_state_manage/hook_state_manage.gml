@@ -54,7 +54,7 @@ function hook_state_manage() {
 				hook_state = hookState.GrabEnemy;
 				
 				//掴んだ敵がフックポールじゃない場合はノックバックとダメージ与える
-				if(_grab_enemy_id.object_index == o_hookPole){
+				if(_grab_enemy_id.object_index != o_hookPole){
 					var _knockback_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.KnockbackForEnemyPower);
 					var _damage = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.Damage);
 					var _stun_damage = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.StunDamage);
