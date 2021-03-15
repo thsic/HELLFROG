@@ -7,7 +7,7 @@ function macros() {
 #macro WINDOW_SIZE_MAGNIFICATION 2//画面サイズ　倍率
 #macro PLAYER_SPEED_DEFAULT 2
 
-#macro OPPOSITEKEY_POWER_FOR_INERTIA 5
+#macro OPPOSITEKEY_POWER_FOR_INERTIA 10
 
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_brink
 

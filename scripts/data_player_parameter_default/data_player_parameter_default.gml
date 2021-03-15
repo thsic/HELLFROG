@@ -12,6 +12,6 @@ function data_player_parameter_default() {
 
 	data_set_hookshot(eHK_type.normal_hook, 90, 30, 7, 5, 1, 16, 24, 1, 10, 2, 200);
 
-	data_set_player_hp(ePHP_type.normal_hp, 100, 30, 10, 7.5, 4, 1.7, 45);
+	data_set_player_hp(ePHP_type.normal_hp, 100, 30, 20, 12, 6, 2, 45);//lifestealRatioは現在いじっても意味ない
 	data_set_player_other(ePO_type.normal, 70, 5, 0);
 }

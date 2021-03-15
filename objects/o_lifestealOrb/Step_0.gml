@@ -26,7 +26,7 @@ if(_player_size < speed){//プレイヤーの大きさがspeedよりも小さい
 
 //プレイヤーがオーブを吸収
 if(_player_distance < _player_size){
-	player_heal_hp(heal_point);
+	player_heal_hp(heal_point, 3);
 	instance_destroy();
 }
 
@@ -36,6 +36,6 @@ if(life_time > 0){
 }
 else{
 	//90fオーブが吸収されなかった場合強制的に吸収
-	player_heal_hp(heal_point);
+	player_heal_hp(heal_point, 3);
 	instance_destroy()
 }

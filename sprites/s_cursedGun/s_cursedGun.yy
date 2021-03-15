@@ -7,7 +7,7 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 1,
+  "bbox_left": 3,
   "bbox_right": 13,
   "bbox_top": 4,
   "bbox_bottom": 10,
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cb8a8748-6a2c-4de7-abfd-2b9a087b508f","path":"sprites/s_cursedGun/s_cursedGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cb8a8748-6a2c-4de7-abfd-2b9a087b508f","path":"sprites/s_cursedGun/s_cursedGun.yy",},"LayerId":{"name":"1122d5ac-f704-4030-b881-16402fc93fb9","path":"sprites/s_cursedGun/s_cursedGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_cursedGun","path":"sprites/s_cursedGun/s_cursedGun.yy",},"resourceVersion":"1.0","name":"cb8a8748-6a2c-4de7-abfd-2b9a087b508f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c83590dc-6267-4f1e-ae46-0f717e573191","path":"sprites/s_cursedGun/s_cursedGun.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c83590dc-6267-4f1e-ae46-0f717e573191","path":"sprites/s_cursedGun/s_cursedGun.yy",},"LayerId":{"name":"83f080cb-5610-49b5-84ef-59c59a2943e8","path":"sprites/s_cursedGun/s_cursedGun.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_cursedGun","path":"sprites/s_cursedGun/s_cursedGun.yy",},"resourceVersion":"1.0","name":"c83590dc-6267-4f1e-ae46-0f717e573191","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_cursedGun","path":"sprites/s_cursedGun/s_cursedGun.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"288a201c-01bb-4830-9091-ab8942189692","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cb8a8748-6a2c-4de7-abfd-2b9a087b508f","path":"sprites/s_cursedGun/s_cursedGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9e240fd8-cd0c-4f0b-9164-e61ba83d72af","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c83590dc-6267-4f1e-ae46-0f717e573191","path":"sprites/s_cursedGun/s_cursedGun.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1122d5ac-f704-4030-b881-16402fc93fb9","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"83f080cb-5610-49b5-84ef-59c59a2943e8","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
     "name": "player",

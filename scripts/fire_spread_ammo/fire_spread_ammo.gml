@@ -15,12 +15,12 @@ function fire_spread_ammo(argument0) {
 	case 0:
 		//弾の数を半減させる、切り捨て
 		_bullet_amount = floor(_bullet_amount/2);
-		_bullet_speed_max *= 0.66;
-		_bullet_speed_min *= 0.66;
+		_bullet_speed_max *= 0.5;
+		_bullet_speed_min *= 0.5;
 	break
 	case 1:
-		_bullet_speed_max *= 0.92;
-		_bullet_speed_min *= 0.92;
+		_bullet_speed_max *= 0.9;
+		_bullet_speed_min *= 0.9;
 	break
 	}
 

@@ -19,6 +19,19 @@ function player_param_manage() {
 		invincible_time_default = 0;
 	}
 		
+	//subimage ライフスティール時
+	/*if(subimage != 0){
+		if(lifesteal_anim_time = 0){
+			subimage++;
+			lifesteal_anim_time = 5;
+			if(subimage = 4){
+				subimage = 0;
+			}
+		}
+		else{
+			lifesteal_anim_time--;
+		}
+	}*/
 	
 
 	

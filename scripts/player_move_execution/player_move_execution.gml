@@ -16,7 +16,7 @@ function player_move_execution(argument0, argument1, argument2) {
 	var _collision_width = sprite_get_width(s_playerCollisionMask);
 	var _collision_height = sprite_get_height(s_playerCollisionMask);
 	
-	#region 壁当たり判定
+	#region 壁
 	//壁とくっついているときに進行方向の斜め左右方向のどちらかに空間があればそっちにスライドする
 	if(place_free(x+_hspeed, y) == false) {
 	

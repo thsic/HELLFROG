@@ -124,10 +124,10 @@ else{
 
 switch(look_direction){
 case LookDirection.Right:
-	draw_sprite_ext(_sprite, 0, x, _sprite_y, 1, 1, _sprite_dir, c_white, _alpha);
+	draw_sprite_ext(_sprite, subimage, x, _sprite_y, 1, 1, _sprite_dir, c_white, _alpha);
 break
 case LookDirection.Left:
-	draw_sprite_ext(_sprite, 0, x, _sprite_y, -1, 1, _sprite_dir, c_white, _alpha);
+	draw_sprite_ext(_sprite, subimage, x, _sprite_y, -1, 1, _sprite_dir, c_white, _alpha);
 break
 }
 
@@ -147,6 +147,6 @@ break
 
 
 if(gun_charge_enable == true){
-	draw_charge_bar();
+	
 }
 draw_set_color(c_white);

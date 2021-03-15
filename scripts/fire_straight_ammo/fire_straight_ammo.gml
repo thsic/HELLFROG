@@ -13,9 +13,11 @@ function fire_straight_ammo(argument0) {
 
 	switch(gun_charge_level){
 	case 0:
-		//弾の数を半減させる、切り捨て
-	
-		_bullet_amount = floor(_bullet_amount/2);
+		
+		//弾を出さない
+		//(もとの処理は弾の数を半減させる、切り捨て)
+		_bullet_amount = 0
+		//_bullet_amount = floor(_bullet_amount/2);
 		_bullet_speed_max *= 0.66;
 		_bullet_speed_min *= 0.66;
 	break
