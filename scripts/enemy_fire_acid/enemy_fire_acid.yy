@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "enemy",
-    "path": "folders/Scripts/enemy.yy",
+    "name": "EnemyBullet",
+    "path": "folders/Scripts/enemy/EnemyBullet.yy",
   },
   "resourceVersion": "1.0",
-  "name": "e_bullet_create_cluster",
+  "name": "enemy_fire_acid",
   "tags": [],
   "resourceType": "GMScript",
 }

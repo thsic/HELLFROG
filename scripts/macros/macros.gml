@@ -9,6 +9,11 @@ function macros() {
 
 #macro OPPOSITEKEY_POWER_FOR_INERTIA 10
 
+//敵
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_brink
+
+//エフェクト
+#macro SLOW_TIME_LIMIT 180
+
 
 }
