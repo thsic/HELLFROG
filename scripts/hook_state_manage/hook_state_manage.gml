@@ -45,8 +45,13 @@ function hook_state_manage() {
 			var _grab_enemy_direction = point_direction(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y);
 			if(abs(angle_difference(hook_direction, _grab_enemy_direction)) < 90){
 			
-				if(_grab_enemy_id.object_index == o_hookPole){
-					var _hookpole = true;
+				if(_grab_enemy_id.object_index == o_hookPole
+				and _grab_enemy_id.state == EnemyState.Aim){
+					//隠し要素で口が閉じている時にフックを当てるとhp回復
+					repeat(3){
+						create_lifesteal_orb(_grab_enemy_id.x, _grab_enemy_id.y, false);
+					}
+					
 				}
 				//敵を掴んだときは敵の方角にフックが吸い付く
 				hook_direction = point_direction(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y);
@@ -115,7 +120,7 @@ function hook_state_manage() {
 		}
 		var _shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedMax);
 		//フックの位置とプレイヤーの位置が近いとフック離す
-		if(point_distance(x, y, hook_point_x, hook_point_y) < _shrink_speed*1.5){
+		if(point_distance(x, y, hook_point_x, hook_point_y) < _shrink_speed*2){
 			hook_state = hookState.Idle;
 			player_start_knockback(eK_type.HookSmall);//フックを離すよりさらに小さいノックバックする
 		}

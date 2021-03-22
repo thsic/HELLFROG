@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_enemyCruster",
-    "path": "sprites/s_enemyCruster/s_enemyCruster.yy",
+    "name": "s_enemyTrentWalk",
+    "path": "sprites/s_enemyTrentWalk/s_enemyTrentWalk.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,6 +27,9 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"fire_script","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"enemy_fire_cluster_bullet","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"walk_sprite","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"s_enemyTrentWalk","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"chargeing_sprite","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"s_enemyTrentCharging","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"attack_sprite","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"s_enemyTrentAttack","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "group1",

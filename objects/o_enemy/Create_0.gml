@@ -15,3 +15,10 @@ movement_cooldown = 0;
 stun_time = 0;
 stun_resistance = stun_resistance_default;
 fire_direction = 0;
+
+sprite_rightward = true;
+
+lifetime = 0;
+
+//ビームにのみ関係
+beam_enabled = false

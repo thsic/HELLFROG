@@ -45,4 +45,4 @@ var _py = o_player.y-camera_get_view_y(o_camera.camera);
 draw_circle(_px, _py, 20, false);*/
 
 
-draw_circle(o_camera.x-_cx, o_camera.y-_cy, 10, true);
+//draw_circle(o_camera.x-_cx, o_camera.y-_cy, 10, true);

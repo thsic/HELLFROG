@@ -1,5 +1,5 @@
 
-function create_lifesteal_orb(){
+function create_lifesteal_orb(_x, _y, _increase_orb_quantity){
 	var _now_hp = global.player_hp
 	var _max_hp = ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.MaxHp);
 	var _hp_ratio = _now_hp/_max_hp;
@@ -18,7 +18,12 @@ function create_lifesteal_orb(){
 	var _speed_min = 0.5;
 	var _min_angle_size = 45;
 	
-	var _orb_quantity = ceil(_heal_point/_orb_heal_point);
+	if(_increase_orb_quantity){
+		var _orb_quantity = ceil(_heal_point/_orb_heal_point);
+	}
+	else{
+		var _orb_quantity = 1;
+	}
 	var _base_direction = random(360);
 	var _angle_size = clamp(360 / _orb_quantity, _min_angle_size, 360);
 	
@@ -29,7 +34,7 @@ function create_lifesteal_orb(){
 		var _direction = random_range(_base_direction+_angle_size/2, _base_direction-_angle_size/2);
 		var _speed = random_range(_speed_max, _speed_min);
 		
-		with(instance_create_layer(x, y, "Effects", o_lifestealOrb)){
+		with(instance_create_layer(_x, _y, "Effects", o_lifestealOrb)){
 			diffusion_speed = _speed;
 			diffusion_direction = _direction;
 			heal_point = _orb_heal_point;

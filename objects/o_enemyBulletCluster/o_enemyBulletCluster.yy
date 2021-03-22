@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_enemyBulletTest",
-    "path": "sprites/s_enemyBulletTest/s_enemyBulletTest.yy",
+    "name": "s_trentSeed",
+    "path": "sprites/s_trentSeed/s_trentSeed.yy",
   },
   "solid": false,
   "visible": true,

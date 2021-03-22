@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"41d1b29d-abf1-4e49-81aa-2d5f411b0c59","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Hook Action GM2.3",
-    "path": "Hook Action GM2.3.yyp",
+    "name": "system",
+    "path": "folders/Sprites/system.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_lightCircle",

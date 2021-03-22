@@ -3,12 +3,21 @@
 if(global.gamestop == false){
 	life_time--;
 	if(life_time <= 0){
+		if(instance_exists(enemy_id)){
+			enemy_id.beam_enabled = false;//攻撃発射終わったと本体に知らせる
+		}
 		instance_destroy();
 	}
 
 	if(beforebeam_drawtime <= 0){
+		if(afterbeam_drawtime = afterbeam_drawtime_default
+		and instance_exists(enemy_id)){
+			enemy_id.beam_enabled = true;//攻撃を発射したと本体に知らせる
+		}
+		
 		beam_enable = true;
 		afterbeam_drawtime--;
+		
 		//ビーム当たり判定
 		var _x2 = lengthdir_x(length, direction) + x;
 		var _y2 = lengthdir_y(length, direction) + y;
@@ -18,6 +27,8 @@ if(global.gamestop == false){
 				damage_enable = false;
 			}
 		}
+		
+		
 	}
 	else{
 		beam_enable = false;
@@ -27,8 +38,10 @@ if(global.gamestop == false){
 	//弾強制消滅フラグ
 	if(erasure_start == true and erasure_enable == false){
 		erasure_enable = true;
+		enemy_id.beam_enabled = false;
 	}
 	if(erasure_enable == true){
+		
 		erasure_time--;
 		speed = 0;
 		if(erasure_time < 0){

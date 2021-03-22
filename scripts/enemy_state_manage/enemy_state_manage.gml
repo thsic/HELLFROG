@@ -46,7 +46,7 @@ function enemy_state_manage() {
 		
 	break
 	case EnemyState.Stun:
-		stun_time--
+		stun_time--;
 		if(stun_time < 0){
 			stun_resistance = stun_resistance_default;
 			enemy_change_state(EnemyState.Idle);
@@ -65,7 +65,6 @@ function enemy_state_manage() {
 			aim_time = aim_time_default;
 			enemy_change_state(EnemyState.Aim);
 			fire_direction = point_direction(x, y, o_player.x, o_player.y);//攻撃の方向決める
-			
 			
 		}
 		var _see_player = !collision_line(x, y, o_player.x, o_player.y, o_wall, false,true);
@@ -97,6 +96,7 @@ function enemy_state_manage() {
 			var _player_x = o_player.x;
 			var _player_y = o_player.y;
 			var _distance_for_player = point_distance(x, y, _player_x, _player_y);
+			
 			if(_distance_for_player < weapon_range){
 				/*//プレイヤーが射程内ならもう一回武器使う
 				weapon_charge_time = weapon_charge_time_default;

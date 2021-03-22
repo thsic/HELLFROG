@@ -4,7 +4,7 @@ function enemy_dead(_id, _do_dead_script){
 	//死亡時処理 強制的に殺すこともできる
 	if(_do_dead_script){
 		stop_cursed_damage(ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.KillStopCurseTime));
-		create_lifesteal_orb()
+		create_lifesteal_orb(x, y, true);
 	}
 	
 	instance_destroy(_id);

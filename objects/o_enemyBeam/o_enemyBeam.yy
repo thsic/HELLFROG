@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_enemyBeam",
-    "path": "sprites/s_enemyBeam/s_enemyBeam.yy",
+    "name": "s_enemyBeamWalk",
+    "path": "sprites/s_enemyBeamWalk/s_enemyBeamWalk.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,6 +27,10 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"fire_script","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"enemy_fire_beam","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"walk_sprite","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"s_enemyBeamWalk","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"chargeing_sprite","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"s_enemyBeamCharging","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"attack_sprite","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"s_enemyBeamAttack","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"afterfire_time_default","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"55","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "group1",

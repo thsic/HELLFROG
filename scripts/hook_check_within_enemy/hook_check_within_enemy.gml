@@ -8,7 +8,7 @@ function hook_check_within_enemy(argument0, argument1) {
 	var _collision_enemy_id = noone;
 	var _distance_for_collision_enemy = 10000;
 	var _distance_for_collision_nearest_enemy = 10000;
-
+	
 	//全敵を対象にして調べる
 	for(var i=0; i<_enemy_number; i++){
 		var _enemy_id = instance_find(o_enemy, i);
@@ -17,7 +17,7 @@ function hook_check_within_enemy(argument0, argument1) {
 			var _collision_size = _hook_collision_size + _enemy_id.collision_size_for_hook;
 			var _collision_enemy = false;
 			var _distance_for_enemy = point_distance(hook_point_x, hook_point_y, _enemy_id.x, _enemy_id.y)
-			if(_distance_for_enemy < _hook_speed*2){//敵がフックの近くにいるかチェック　余裕をもって2倍にしておく
+			if(_distance_for_enemy < _hook_speed*2 or _distance_for_enemy < _collision_size){//敵がフックの近くにいるかチェック　余裕をもって2倍にしておく
 				//敵が範囲内にいるかどうかチェック
 			
 				_collision_enemy = square_collision_check_within_object(hook_point_x, hook_point_y, _collision_size, _hook_speed, hook_direction, _enemy_id);

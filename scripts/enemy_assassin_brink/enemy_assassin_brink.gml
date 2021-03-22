@@ -70,7 +70,7 @@ function enemy_assassin_brink(){
 			//エフェクト長さと生存時間決める
 			var _effect_length = irandom_range(48, 64);
 			var _effect_lifetime = irandom_range(4, 7);
-			var _brink_color = make_color_rgb(120, 80, 120);
+			var _brink_color = make_color_rgb(200, 20, 20);
 			
 			effect_create_brink(_effect_x, _effect_y, _direction, _effect_lifetime, _effect_length, _brink_color);
 		}
