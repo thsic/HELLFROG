@@ -1,4 +1,4 @@
-function player_move() {
+function player_move(){
 	//移動関連
 
 	var _key_direction = player_move_direction_acquisition()//押してるキーからの移動方向取得 キーが押されていないと-1が出力される
@@ -57,6 +57,9 @@ function player_move() {
 	else{//ノックバック中じゃないなら速度の合成をしない
 		if(_key_direction != -1){//キー押されてる
 			_finally_direction = _key_direction;
+			if(global.slow_enable){
+				_player_speed *= 0.25;
+			}
 			_finally_speed = _player_speed;
 			//sdm("keymove")
 		}
@@ -87,9 +90,5 @@ function player_move() {
 	//--------------------
 
 	player_move_execution(_finally_direction, inertia_enable, _finally_speed);//移動の実行
-
-
-
-
 
 }

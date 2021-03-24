@@ -36,6 +36,9 @@ gameover_sequence_element = noone;
 respawn_time = 0;
 respawn_sequence_element = noone;
 
+//エフェクト
+global.slow_enable = false;
+
 enum EnemyDefaultPosition{
 	ObjectIndex,
 	XPosition,

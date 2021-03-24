@@ -39,6 +39,10 @@ gameover_knockup_time = 0;
 subimage = 0;
 lifesteal_anim_time = 5;
 
+//エフェクト
+on_slow_field_time = 0;
+player_slow_time = 0;
+
 //test
 debug_draw_inertiaspd = 0;
 debug_draw_movespd = 0;

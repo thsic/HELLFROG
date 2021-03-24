@@ -14,6 +14,6 @@ function macros() {
 
 //エフェクト
 #macro SLOW_TIME_LIMIT 180
-
+#macro GAIN_SLOW_TIME_PER_FRAME 5
 
 }

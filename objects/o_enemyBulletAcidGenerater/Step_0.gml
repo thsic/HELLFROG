@@ -18,7 +18,7 @@ if(global.gamestop == false){
 			var _acid_dir = direction
 			var _surf_id = acid_surf;
 			var _acid_lifetime = acid_lifetime;
-			with(instance_create_layer(x, y+8, "MapObject", o_enemyBulletAcid)){
+			with(instance_create_layer(x, y, "MapObject", o_enemyBulletAcid)){
 				direction = _acid_dir;
 				surf = _surf_id;
 				life_time = _acid_lifetime;
