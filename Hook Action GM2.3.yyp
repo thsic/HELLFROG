@@ -135,6 +135,7 @@
     {"id":{"name":"create_bullet","path":"scripts/create_bullet/create_bullet.yy",},"order":5,},
     {"id":{"name":"lagging_game","path":"scripts/lagging_game/lagging_game.yy",},"order":10,},
     {"id":{"name":"o_menuMgr","path":"objects/o_menuMgr/o_menuMgr.yy",},"order":6,},
+    {"id":{"name":"s_stun","path":"sprites/s_stun/s_stun.yy",},"order":5,},
     {"id":{"name":"s_mapTile1","path":"sprites/s_mapTile1/s_mapTile1.yy",},"order":10,},
     {"id":{"name":"player_start_knockback","path":"scripts/player_start_knockback/player_start_knockback.yy",},"order":4,},
     {"id":{"name":"create_lifesteal_orb","path":"scripts/create_lifesteal_orb/create_lifesteal_orb.yy",},"order":4,},

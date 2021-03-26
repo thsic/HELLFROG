@@ -10,7 +10,7 @@ if(global.gamestop == false){
 		instance_destroy();
 	}
 
-	//弾強制消滅フラグ
+	//弾強制消滅フラグ 本体がスタンしたときなど
 	if(erasure_start == true and erasure_enable == false){
 		erasure_enable = true;
 	}

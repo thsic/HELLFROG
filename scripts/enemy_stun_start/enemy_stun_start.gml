@@ -3,5 +3,7 @@
 function enemy_stun_start(){
 	enemy_change_state(EnemyState.Stun);
 	stun_time = stun_time_default;
-	enemy_bullet_erasure(id);
+	if(stun_bullet_erasure){
+		enemy_bullet_erasure(id);
+	}
 }

@@ -103,10 +103,25 @@ if(object_index = o_enemyBeam){
 }
 #endregion
 
+if(state == EnemyState.Stun){
+	//スタンスプライト描画
+	var _spr_h = sprite_get_height(_sprite);
+	var _stun_imagespeed = 4;
+	var _t = life_time mod (_stun_imagespeed * sprite_get_number(s_stun));
+	var _subimage = _t / _stun_imagespeed;
+	draw_sprite_ext(s_stun, _subimage, x, y-_spr_h/2-12, 1, 1, 0, c_white, 1);
+	
+	//スタン時はスプライトが灰色に
+	shader_set(sh_decrementSaturation);
+	var _uniform = shader_get_uniform(sh_decrementSaturation, "saturation")
+	shader_set_uniform_f(_uniform, 0.3);
+}
+
+
 //スプライトのどのsubimageを描画するか決める
 var _subimage_num = sprite_get_number(_sprite);
 
-var _t = lifetime mod (_subimage_num*_image_speed);
+var _t = life_time mod (_subimage_num*_image_speed);
 var _subimage = _t/_image_speed; 
 
 if(sprite_rightward){
@@ -116,4 +131,6 @@ else{
 	draw_sprite_ext(_sprite, _subimage, x, y, 1, 1, 0, _color, 1);
 }
 
-
+if(state == EnemyState.Stun){
+	shader_reset();
+}

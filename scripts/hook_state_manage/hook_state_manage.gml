@@ -41,9 +41,21 @@ function hook_state_manage() {
 		//敵にフックがあたった
 		if(_grab_enemy_id != noone){
 		
+			
+			if(_grab_enemy_id.object_index == o_hookPole){
+				//掴んだ敵がポールで、プレイヤーとポールが近い場合掴まない
+				var _dis_for_pole = point_distance(o_player.x, o_player.y, _grab_enemy_id.x, _grab_enemy_id.y);
+				
+			}
+			else{
+				//掴んだ敵がポールではない
+				var _dis_for_pole = 100;
+			}
+			
 			//敵の方向がフックの方向とずれすぎていない場合敵を掴む
 			var _grab_enemy_direction = point_direction(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y);
-			if(abs(angle_difference(hook_direction, _grab_enemy_direction)) < 90){
+			if(abs(angle_difference(hook_direction, _grab_enemy_direction)) < 90
+			and _dis_for_pole >= 42){
 			
 				if(_grab_enemy_id.object_index == o_hookPole
 				and _grab_enemy_id.state == EnemyState.Aim){
@@ -65,6 +77,9 @@ function hook_state_manage() {
 					var _stun_damage = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.StunDamage);
 					enemy_knockback_start(_grab_enemy_id, _knockback_speed, hook_direction)//敵をノックバックさせる
 					damage_to_enemy(_grab_enemy_id, _damage, _stun_damage);//敵にダメージを与える
+				}
+				else{
+					
 				}
 			}
 			else{

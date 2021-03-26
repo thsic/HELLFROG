@@ -18,7 +18,7 @@ fire_direction = 0;
 
 sprite_rightward = true;
 
-lifetime = 0;
+life_time = 0;
 
 //ビームにのみ関係
 beam_enabled = false

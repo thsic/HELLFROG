@@ -39,3 +39,24 @@ else{
 	player_heal_hp(heal_point, 3);
 	instance_destroy()
 }
+
+//オーブの軌道？みたいなエフェクト
+var i = effect_number-1;
+repeat(effect_number){
+	if(i <= 0){
+		//値の代入
+		effect_x[i] = x;
+		effect_y[i] = y;
+		effect_dir[i] = direction;
+		
+	}
+	else{
+		//値を一個ずらす
+		effect_x[i] = effect_x[i-1];
+		effect_y[i] = effect_y[i-1];
+		effect_dir[i] = effect_dir[i-1];
+		
+	}
+	i--;
+}
+
