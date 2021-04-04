@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"13b670d0-0b04-4e36-85fb-93e64f9a2122","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "map",
+    "path": "folders/Sprites/map.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_mapTile1",

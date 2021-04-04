@@ -67,9 +67,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b1c90903-aca3-48a2-bfe6-d1fbce6f7091","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "map",
+    "path": "folders/Sprites/map.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_checkPointPassive",

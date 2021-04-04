@@ -1,6 +1,7 @@
 //カーソルにはややゆっくり追従するけどプレイヤーにはぴったりついてくカメラ
 
 if(follow != noone){
+
 	var _fx = follow.x - camera_get_view_x(view_camera[0]);
 	var _fy = follow.y - camera_get_view_y(view_camera[0]);
 	var _mx = global.mx;
@@ -8,8 +9,23 @@ if(follow != noone){
 	
 	var _view_direction = point_direction(_fx, _fy, _mx, _my);//照準向いている方向
 	var _view_distance = point_distance(_fx, _fy, _mx, _my)//中心からどれだけ離れているか
-	var _collection_x = lengthdir_x(_view_distance/6, _view_direction);
-	var _collection_y = lengthdir_y(_view_distance/6, _view_direction);
+	
+	if(camera_lock){
+		//カメラロック中は部屋外にカメラが行きにくくなる
+		var _lock_pos_camera_x = lock_pos_x - camera_get_view_x(view_camera[0]);
+		var _lock_pos_camera_y = lock_pos_y - camera_get_view_y(view_camera[0]);
+		
+		var _dir_for_lock_pos = point_direction(_fx, _fy, _lock_pos_camera_x, _lock_pos_camera_y);
+		var _strength = angle_difference(_view_direction, _dir_for_lock_pos);
+		_strength = 1 - abs(_strength) / 180;
+	}
+	else{
+		var _strength = 1;
+	}
+	
+	
+	var _collection_x = lengthdir_x(_view_distance/6*_strength, _view_direction);
+	var _collection_y = lengthdir_y(_view_distance/6*_strength, _view_direction);
 	xTo = follow.x + _collection_x;
 	yTo = follow.y + _collection_y;
 	

@@ -75,9 +75,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"7b1b494a-b284-4b1e-b004-ce7d5b826848","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "enemy",
+    "path": "folders/Sprites/enemy.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_testEnemy",

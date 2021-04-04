@@ -36,6 +36,12 @@ global.camera_height = _ch;
 global.camera_x = x+_cw/2;
 global.camera_y = y+_ch/2
 
+
+//カメラのロック
+camera_lock = false;
+lock_pos_x = 0;
+lock_pos_y = 0;
+
 /*
 var vm = matrix_build_lookat(x, y, -10, x, y, 0, 0, 1, 0);
 var pm = matrix_build_projection_ortho(GAMESCREEN_WSIZE, GAMESCREEN_HSIZE, 1, 10000);

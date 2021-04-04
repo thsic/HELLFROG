@@ -8,9 +8,10 @@ global.my = window_mouse_get_y() / global.window_magnification;
 global.gamestate = gamestate.stagestart;
 global.nextstate = noone;
 
-instance_create_layer(0, 0, "Instances", o_menuMgr);
+instance_create_layer(0, 0, "GameObjects", o_menuMgr);
 instance_create_layer(0, 0, "UI", o_uiMgr);
 instance_create_layer(0, 0, "UI", o_shaderMgr);
+instance_create_layer(0, 0, "GameObjects", o_lockMgr);
 //instance_create_layer(0, 0, "Shaders", o_surfaceLight);
 
 global.gamestop = false;
