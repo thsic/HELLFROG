@@ -1,6 +1,9 @@
 
 //hpゲージ描画
-draw_bar(hp, max_hp, x, y-sprite_height/2-4, 20, 0, c_gray, c_red, true);
+if(state != EnemyState.WaitForSpawn){//スポーン待ちのときは透明
+	draw_bar(hp, max_hp, x, y-sprite_height/2-4, 20, 0, c_gray, c_red, true);
+}
+
 
 //スプライトの方向決め
 switch(state){
@@ -34,6 +37,7 @@ case EnemyState.Aim:
 var _sprite = sprite_index;
 var _color = c_white;
 var _image_speed = 10;
+var _alpha = 1;
 
 //描画
 switch(state){
@@ -62,6 +66,15 @@ switch(state){
 			_sprite = walk_sprite;
 			_color = c_gray;
 		}
+	break
+	case EnemyState.Invincible:
+		if(walk_sprite != noone){
+			_sprite = walk_sprite;
+			_alpha = 0.5;
+		}
+	break
+	case EnemyState.WaitForSpawn://スポーン待ちの時は透明
+		_alpha = 0;
 	break
 }
 
@@ -125,10 +138,10 @@ var _t = life_time mod (_subimage_num*_image_speed);
 var _subimage = _t/_image_speed; 
 
 if(sprite_rightward){
-	draw_sprite_ext(_sprite, _subimage, x, y, -1, 1, 0, _color, 1);
+	draw_sprite_ext(_sprite, _subimage, x, y, -1, 1, 0, _color, _alpha);
 }
 else{
-	draw_sprite_ext(_sprite, _subimage, x, y, 1, 1, 0, _color, 1);
+	draw_sprite_ext(_sprite, _subimage, x, y, 1, 1, 0, _color, _alpha);
 }
 
 if(state == EnemyState.Stun){

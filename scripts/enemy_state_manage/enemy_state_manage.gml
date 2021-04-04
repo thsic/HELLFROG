@@ -128,6 +128,22 @@ function enemy_state_manage() {
 		enemy_dead(id, true);
 		
 	break
+	case EnemyState.WaitForSpawn://スポーン待ち
+		invincible_enable = true;
+		if(lock_spawn_time <= 0){
+			enemy_change_state(EnemyState.Invincible);
+			invincible_time = 30;
+		}
+	break
+	case EnemyState.Invincible://無敵
+		invincible_enable = true;
+		if(invincible_time <= 0){
+			enemy_change_state(EnemyState.Idle);
+		}
+		else{
+			invincible_time--;
+		}
+	break
 	}
 	
 	//例外としてスタン耐性が0以下になると強制的にスタンステートになる

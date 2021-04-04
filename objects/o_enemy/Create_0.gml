@@ -1,5 +1,11 @@
 next_state = noone;
-state = EnemyState.Idle;
+//初期ステート
+if(lock_spawn_time = -1){
+	state = EnemyState.Idle;//通常
+}
+else{
+	state = EnemyState.WaitForSpawn;//ロック中に出現する敵
+}
 knockback_enable = false;
 h_speed = 0;
 v_speed = 0;
@@ -19,6 +25,9 @@ fire_direction = 0;
 sprite_rightward = true;
 
 life_time = 0;
+
+invincible_time = 0;
+invincible_enable = false;
 
 //ビームにのみ関係
 beam_enabled = false

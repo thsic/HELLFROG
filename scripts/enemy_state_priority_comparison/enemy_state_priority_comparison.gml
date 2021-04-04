@@ -14,8 +14,14 @@ function enemy_state_priority_comparison(argument0) {
 		case EnemyState.Dead:
 			_state_priority_1 = 100;
 		break
-		case EnemyState.Stun:
+		case EnemyState.WaitForSpawn:
+			_state_priority_1 = 95;
+		break
+		case EnemyState.Invincible:
 			_state_priority_1 = 90;
+		break
+		case EnemyState.Stun:
+			_state_priority_1 = 85;
 		break
 		case EnemyState.Movement:
 			_state_priority_1 = 80;
@@ -51,8 +57,14 @@ function enemy_state_priority_comparison(argument0) {
 		case EnemyState.Dead:
 			_state_priority_2 = 100;
 		break
-		case EnemyState.Stun:
+		case EnemyState.WaitForSpawn:
+			_state_priority_2 = 95;
+		break
+		case EnemyState.Invincible:
 			_state_priority_2 = 90;
+		break
+		case EnemyState.Stun:
+			_state_priority_2 = 85;
 		break
 		case EnemyState.Movement:
 			_state_priority_2 = 80;

@@ -13,5 +13,5 @@ function enemy_movement(){
 		movement_enable = false;
 		movement_cooldown = movement_cooldown_default;
 		enemy_change_state(EnemyState.Idle);
-	}
+	} 
 }

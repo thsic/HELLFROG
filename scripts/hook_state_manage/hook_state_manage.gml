@@ -55,7 +55,8 @@ function hook_state_manage() {
 			//敵の方向がフックの方向とずれすぎていない場合敵を掴む
 			var _grab_enemy_direction = point_direction(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y);
 			if(abs(angle_difference(hook_direction, _grab_enemy_direction)) < 90
-			and _dis_for_pole >= 24){
+			and _dis_for_pole >= 24
+			and _grab_enemy_id.invincible_enable == false){//無敵の敵も掴まない
 			
 				if(_grab_enemy_id.object_index == o_hookPole
 				and _grab_enemy_id.state == EnemyState.Aim){

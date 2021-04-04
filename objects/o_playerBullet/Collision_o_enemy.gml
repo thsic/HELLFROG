@@ -1,5 +1,7 @@
 
-if(other.object_index != o_hookPole and global.gamestate != gamestate.incheckpointbarrier){//フックポールには当たらない
+if(other.object_index != o_hookPole //フックポールには当たらない
+and global.gamestate != gamestate.incheckpointbarrier
+and other.invincible_enable == false){//無敵の敵にも当たらない
 	
 	var _collided = false;
 	//衝突した敵idの中からいま当たった敵を探す

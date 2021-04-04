@@ -6,7 +6,8 @@ function enemy_change_state(argument0) {
 
 	//ステートの競合が発生していないかチェック
 	if(enemy_state_priority_comparison(_state) == true){
-		switch(_state){
+		next_state = _state;
+		/*switch(_state){
 		case EnemyState.Dead:
 			next_state = EnemyState.Dead;
 		break
@@ -40,7 +41,7 @@ function enemy_change_state(argument0) {
 		default:
 			sdm("Error! enemy_change_EnemyState")
 		break
-		}
+		}*/
 	}
 
 }
@@ -55,4 +56,6 @@ enum EnemyState{
 	Movement,
 	WaitForMovement,
 	AfterFire,
+	WaitForSpawn,
+	Invincible,
 }
