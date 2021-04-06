@@ -48,7 +48,7 @@ function enemy_state_priority_comparison(argument0) {
 			_state_priority_1 = 10;
 		break
 		default:
-			sdm("Error! state_priority_comparison");
+			debug_message("Error! state_priority_comparison");
 			_state_priority_1 = 0;
 		break
 		}
@@ -91,7 +91,7 @@ function enemy_state_priority_comparison(argument0) {
 			_state_priority_2 = 10;
 		break
 		default:
-			sdm("Error! state_priority_comparison");
+			debug_message("Error! state_priority_comparison");
 			_state_priority_2 = 0;
 		break
 		}

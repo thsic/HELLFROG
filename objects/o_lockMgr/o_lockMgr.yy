@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "system",
-    "path": "folders/Objects/system.yy",
+    "name": "manage",
+    "path": "folders/Objects/manage.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_lockMgr",

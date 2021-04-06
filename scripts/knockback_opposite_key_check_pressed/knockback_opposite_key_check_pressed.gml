@@ -19,7 +19,7 @@ function knockback_opposite_key_check_pressed() {
 		var _number = eKLPF.right;
 	break
 	default:
-		sdm("Error! knockback_opposite_key_check_pressed");
+		debug_message("Error! knockback_opposite_key_check_pressed");
 		var _number = noone;
 	break
 	}

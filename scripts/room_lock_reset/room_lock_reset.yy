@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "camera",
-    "path": "folders/Scripts/SYSTEM/camera.yy",
+    "name": "map",
+    "path": "folders/Scripts/map.yy",
   },
   "resourceVersion": "1.0",
-  "name": "camera_anlock",
+  "name": "room_lock_reset",
   "tags": [],
   "resourceType": "GMScript",
 }

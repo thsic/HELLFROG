@@ -66,6 +66,6 @@ case Menustate.CloseSequence://閉じるシーケンス描画中
 	
 break
 default:
-sdm("Error! o_menuMgr")
+debug_message("Error! o_menuMgr")
 break
 }

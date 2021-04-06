@@ -4,7 +4,7 @@
     "path": "sprites/s_testWall/s_testWall.yy",
   },
   "solid": true,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

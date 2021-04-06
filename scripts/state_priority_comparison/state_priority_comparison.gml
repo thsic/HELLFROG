@@ -37,7 +37,7 @@ function state_priority_comparison(argument0) {
 			_state_priority_1 = 30;
 		break
 		default:
-			sdm("Error! state_priority_comparison");
+			debug_message("Error! state_priority_comparison");
 			_state_priority_1 = 0;
 		break
 		}
@@ -68,7 +68,7 @@ function state_priority_comparison(argument0) {
 			_state_priority_2 = 30;
 		break
 		default:
-			sdm("Error! state_priority_comparison");
+			debug_message("Error! state_priority_comparison");
 			_state_priority_2 = 0;
 		break
 		}
@@ -77,10 +77,10 @@ function state_priority_comparison(argument0) {
 		if(_state_priority_1 < _state_priority_2){
 			//元のほうがプライオリティが高いので変更をやめる
 			_changeable = false;
-			sdm("ゲームステート"+string(global.nextstate)+"と"+string(_state)+"の変更が競合し、ステート"+string(global.nextstate)+"が優先されました")
+			debug_message("ゲームステート"+string(global.nextstate)+"と"+string(_state)+"の変更が競合し、ステート"+string(global.nextstate)+"が優先されました")
 		}
 		else{
-			sdm("ゲームステート"+string(global.nextstate)+"と"+string(_state)+"の変更が競合し、ステート"+string(_state)+"が優先されました");
+			debug_message("ゲームステート"+string(global.nextstate)+"と"+string(_state)+"の変更が競合し、ステート"+string(_state)+"が優先されました");
 		}
 	}
 	return _changeable

@@ -44,4 +44,6 @@ enum EnemyDefaultPosition{
 	ObjectIndex,
 	XPosition,
 	YPosition,
+	LockNumber,
+	LockSpawnTime,
 }

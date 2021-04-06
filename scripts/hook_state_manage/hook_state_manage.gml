@@ -45,18 +45,21 @@ function hook_state_manage() {
 			if(_grab_enemy_id.object_index == o_hookPole){
 				//掴んだ敵がポールで、プレイヤーとポールが近い場合掴まない
 				var _dis_for_pole = point_distance(o_player.x, o_player.y, _grab_enemy_id.x, _grab_enemy_id.y);
-				
+				var _enemy_invincible = false;
 			}
 			else{
 				//掴んだ敵がポールではない
 				var _dis_for_pole = 100;
+				var _enemy_invincible = _grab_enemy_id.invincible_enable;
 			}
 			
+			
 			//敵の方向がフックの方向とずれすぎていない場合敵を掴む
+			
 			var _grab_enemy_direction = point_direction(hook_point_x_default, hook_point_y_default, _grab_enemy_id.x, _grab_enemy_id.y);
 			if(abs(angle_difference(hook_direction, _grab_enemy_direction)) < 90
 			and _dis_for_pole >= 24
-			and _grab_enemy_id.invincible_enable == false){//無敵の敵も掴まない
+			and !_enemy_invincible){//無敵の敵も掴まない
 			
 				if(_grab_enemy_id.object_index == o_hookPole
 				and _grab_enemy_id.state == EnemyState.Aim){

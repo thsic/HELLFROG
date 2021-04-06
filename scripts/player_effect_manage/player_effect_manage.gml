@@ -41,7 +41,6 @@ function player_effect_manage(){
 		//スローフィールドに触れていた時間が5f以内ならフィールドから出てからのスローは発生しない
 		if(on_slow_field_time > 5){
 			player_slow_time += on_slow_field_time*GAIN_SLOW_TIME_PER_FRAME;
-			sdm(player_slow_time)
 			player_slow_time = clamp(player_slow_time, 0, SLOW_TIME_LIMIT);//スロータイムの上限設定
 		}
 		
