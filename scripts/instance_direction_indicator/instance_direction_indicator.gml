@@ -36,7 +36,10 @@ function instance_direction_indicator(_object_type, _color){
 			_ins_x = _ins_id.x;
 			_ins_y = _ins_id.y;
 			_distance_for_instance = point_distance(_px, _py, _ins_x, _ins_y);
-			if(detect_length > _distance_for_instance and !_ins_id.on_screen and _ins_id.object_index != o_hookPole){
+			if(detect_length > _distance_for_instance 
+			and !_ins_id.on_screen 
+			and _ins_id.object_index != o_hookPole
+			and _ins_id.state != EnemyState.WaitForSpawn){
 				//一定距離内にいる画面に写ってない敵をds_indicatorにいれる hookpoleは敵として判定しない
 				_direction_for_instance = point_direction(_px, _py, _ins_x, _ins_y);
 				ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Id, _detect_number, _ins_id);

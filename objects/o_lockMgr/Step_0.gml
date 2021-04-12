@@ -1,9 +1,8 @@
 
 function room_lock_start(_lock_num){
 	//ロックする
-	lock_list_data[| _lock_num] = 1;
-	
-	//ロックマーカーを探す
+	lock_list_data[| _lock_num] = lock_state.Locking;
+	//ロックマーカーを探してカメラを固定
 	var _lock_marker_num = instance_number(o_lockMarker);
 	var _marker_find = false;
 	var _marker_duplication = false;
@@ -35,6 +34,7 @@ function room_lock_start(_lock_num){
 	//ドアロック
 	door_lock_manage(true, _lock_num, false);
 	
+	
 }
 
 //ルームロック中の処理
@@ -46,7 +46,7 @@ var _alive_lock_room_enemy_number = 0;
 var _in_lock_room_enemy_number = 0;
 
 for(var i=0; i<_list_size; i++){
-	if(lock_list_data[| i] == 1){
+	if(lock_list_data[| i] == lock_state.Locking){
 		var _enemy_num = instance_number(o_enemy);
 		for(var j=0; j<_enemy_num; j++){
 			var _id = instance_find(o_enemy, j);
@@ -66,8 +66,8 @@ for(var i=0; i<_list_size; i++){
 if(_in_lock_room_enemy_number == 0 and global.gamestate == gamestate.main){
 	//ロックルーム内の敵が全員死んでいる場合ロックを解除する
 	for(var i=0; i<_list_size; i++){
-		if(lock_list_data[| i] == 1){
-			lock_list_data[| i] = 2;
+		if(lock_list_data[| i] == lock_state.Locking){
+			lock_list_data[| i] = lock_state.TempCleared;
 			camera_unlock();
 			door_lock_manage(false, i, false);//どあ　ロック解除
 		}
@@ -85,11 +85,10 @@ for(var i=0; i<_locker_num; i++){
 	var _id = instance_find(o_roomLocker, i);
 	debug_draw_rectnagle(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, true, c_white, 3);
 	if(is_in_place(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, _px, _py)){
-		
+		var _lock_num = _id.lock_number;
 		//ドアロックされていない & ロックする床踏んだらロックする
-		if(lock_list_data[| i] == 0){
-			
-			var _lock_num = _id.lock_number;
+		if(lock_list_data[| _lock_num] == lock_state.NotReached){
+			//
 			room_lock_start(_lock_num);
 			break;
 			
@@ -112,7 +111,7 @@ if(_alive_lock_room_enemy_number = 0){//居ない時は4倍の速度
 }
 
 for(var i=0; i<_list_size; i++){
-	if(lock_list_data[| i] == 1){
+	if(lock_list_data[| i] == lock_state.Locking){
 		//ロック中の部屋の処理
 		
 		//スポーンしていない敵のスポーン時間を進める
@@ -128,7 +127,15 @@ for(var i=0; i<_list_size; i++){
 	}
 }
 
-
+//チェックポイントにたどり着いたらクリアした部屋を真・クリア状態にする
+if(global.gamestate == gamestate.incheckpointbarrier){
+	var _list_size = ds_list_size(lock_list_data);
+	for(var i=0; i<_list_size; i++){
+		if(lock_list_data[| i] == lock_state.TempCleared){
+			lock_list_data[| i] = lock_state.Cleared;
+		}
+	}
+}
 
 
 //これが増加するほど敵が早く湧く　毎フレーム初期値に戻る

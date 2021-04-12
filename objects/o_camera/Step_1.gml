@@ -41,6 +41,22 @@ if(follow != noone){
 //var _vm = matrix_build_lookat(x, y, -10, x, y, 0, 0, 1, 0);
 //camera_set_view_mat(camera, _vm);
 
+//画面振動
+if(screen_shake_time > 0){
+	screen_shake_time--;
+	
+	var _channel = animcurve_get_channel(ac_screenShake, 0);
+	var _power = animcurve_channel_evaluate(_channel, 1-screen_shake_time/screen_shake_time_base);
+	_power *= screen_shake_power;
+	
+	var _shake_x = lengthdir_x(_power, screen_shake_direction);
+	var _shake_y = lengthdir_y(_power, screen_shake_direction);
+	
+	x += _shake_x;
+	y += _shake_y;
+	
+}
+
 
 var _camx = x-camera_get_view_width(camera)/2;
 var _camy = y-camera_get_view_height(camera)/2;

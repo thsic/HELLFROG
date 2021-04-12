@@ -7,6 +7,7 @@ function draw_instance_direction_indicator(){
 	var _detect_length_min = global.camera_width/2;
 	var _center_x = global.camera_width/2;
 	var _center_y = global.camera_height/2;
+	
 	var _scale, _arrow_x, _arrow_y;
 	
 	for(var i=0; i<_ds_height; i++){

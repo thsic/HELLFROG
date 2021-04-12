@@ -9,11 +9,13 @@ case hookState.Shrink:
 	//先端から描画していく(そうしないとワイヤーの進んでる感がでない)
 	draw_set_color(c_white);
 	
+	var mouth_pos_y = y - 3;
+	
 	var _wire_sprite = s_hookWire;
-	var _wire_radius = random_range(1.1, 1.3);//ワイヤーの半径
+	var _wire_radius = random_range(3, 3);//ワイヤーの半径
 	var _sprite_width = sprite_get_width(_wire_sprite);
-	var _hook_length = point_distance(x, y, hook_point_x, hook_point_y);
-	var _hook_point_direction = point_direction(hook_point_x, hook_point_y, x, y);
+	var _hook_length = point_distance(x, mouth_pos_y, hook_point_x, hook_point_y);
+	var _hook_point_direction = point_direction(hook_point_x, hook_point_y, x, mouth_pos_y);
 	var _loop_amount = _hook_length/_sprite_width/2-1;
 	var _tex = sprite_get_texture(_wire_sprite, 0);
 	
@@ -53,9 +55,9 @@ case hookState.Shrink:
 	_downside_y -= _leng_dir_y;
 	
 	var _upside_tip_x = lengthdir_x(_wire_radius, _hook_point_direction+90)+x;
-	var _upside_tip_y = lengthdir_y(_wire_radius, _hook_point_direction+90)+y;
+	var _upside_tip_y = lengthdir_y(_wire_radius, _hook_point_direction+90)+mouth_pos_y;
 	var _downside_tip_x = lengthdir_x(_wire_radius, _hook_point_direction-90)+x;
-	var _downside_tip_y = lengthdir_y(_wire_radius, _hook_point_direction-90)+y;
+	var _downside_tip_y = lengthdir_y(_wire_radius, _hook_point_direction-90)+mouth_pos_y;
 	
 	//この辺の処理よくわからん なんかうまくいった
 	var _tip_length = point_distance(_upside_x, _upside_y, _upside_tip_x, _upside_tip_y);
@@ -78,6 +80,43 @@ case hookState.Shrink:
 
 //通常時 歩行
 var _sprite = s_player;
+var _sprite_body_walk = s_playerWalk;
+var _sprite_body_stand = s_playerStand;
+var _sprite_face_normal = s_playerFace;
+var _sprite_face_hooking = s_playerFace2;
+var 
+var _face_up = false;
+
+
+//体スプライト
+if(walk_time > 0){
+	//歩きスプライト
+	var _sprite_body = _sprite_body_walk;
+	var _frame_time = 5;
+	var _t = walk_time mod (_frame_time*sprite_get_number(_sprite_body));
+	var _body_subimage = floor(_t/_frame_time);
+	
+	//subimageが0のときだけ顔を上げる
+	if(_body_subimage == 0){
+		_face_up = true;
+	}
+	
+}
+else{
+	//立ち
+	var _sprite_body = _sprite_body_stand;
+	var _body_subimage = 0
+}
+
+//顔スプライト
+if(hook_state == hookState.Idle){
+	//通常時
+	var _sprite_face = _sprite_face_normal;
+}
+else{
+	var _sprite_face = _sprite_face_hooking;
+}
+
 var _sprite_width = sprite_get_width(_sprite);
 
 //無敵時間なら透明に
@@ -120,14 +159,23 @@ else{
 	look_direction = LookDirection.Right;
 }
 
-
+var _face_y = _sprite_y;
+if(_face_up){
+	//顔を1ドットだけ上げる
+	var _face_y = _sprite_y-1;
+}
 
 switch(look_direction){
 case LookDirection.Right:
-	draw_sprite_ext(_sprite, subimage, x, _sprite_y, 1, 1, _sprite_dir, c_white, _alpha);
+	//draw_sprite_ext(_sprite, subimage, x, _sprite_y, 1, 1, _sprite_dir, c_white, _alpha);
+	draw_sprite_ext(_sprite_face, 0, x, _face_y, 1, 1, _sprite_dir, c_white, _alpha);
+	draw_sprite_ext(_sprite_body, _body_subimage, x, _sprite_y, 1, 1, _sprite_dir, c_white, _alpha);
+	
 break
 case LookDirection.Left:
-	draw_sprite_ext(_sprite, subimage, x, _sprite_y, -1, 1, _sprite_dir, c_white, _alpha);
+	//draw_sprite_ext(_sprite, subimage, x, _sprite_y, -1, 1, _sprite_dir, c_white, _alpha);
+	draw_sprite_ext(_sprite_face, 0, x, _face_y, -1, 1, _sprite_dir, c_white, _alpha);
+	draw_sprite_ext(_sprite_body, _body_subimage, x, _sprite_y, -1, 1, _sprite_dir, c_white, _alpha);
 break
 }
 

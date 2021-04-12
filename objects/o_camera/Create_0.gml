@@ -42,6 +42,12 @@ camera_lock = false;
 lock_pos_x = 0;
 lock_pos_y = 0;
 
+//画面振動
+screen_shake_power = 0;
+screen_shake_time = 0;
+screen_shake_time_base = 0;
+screen_shake_direction = 0;
+
 /*
 var vm = matrix_build_lookat(x, y, -10, x, y, 0, 0, 1, 0);
 var pm = matrix_build_projection_ortho(GAMESCREEN_WSIZE, GAMESCREEN_HSIZE, 1, 10000);

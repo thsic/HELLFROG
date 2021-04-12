@@ -9,6 +9,8 @@ function player_move(){
 
 	var _finally_direction = 0;
 	var _finally_speed = 0;
+	var _walking = false;
+	
 	if(now_knockback_type != noone){
 		var _cant_move_time = ds_grid_get(global.ds_player_knockback, now_knockback_type, eK_param.CantActionTime);
 	}
@@ -61,6 +63,7 @@ function player_move(){
 				_player_speed *= 0.25;
 			}
 			_finally_speed = _player_speed;
+			_walking = true;
 			//sdm("keymove")
 		}
 		else{//押されてない
@@ -82,7 +85,15 @@ function player_move(){
 		}
 		_finally_speed = shrink_speed;
 	}
-
+	
+	//あるき続けているとwalk_timeが上昇
+	if(_walking){
+		walk_time++
+	}
+	else{
+		walk_time = 0;
+	}
+	
 	//debug---------------
 	debug_draw_synspd = _finally_speed;
 	debug_draw_movespd = _player_speed;

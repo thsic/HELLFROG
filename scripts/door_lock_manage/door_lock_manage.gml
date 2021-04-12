@@ -1,3 +1,4 @@
+
 //
 function door_lock_manage(_lock, _lock_num, _door_reset){
 	//ドアのロック

@@ -5,9 +5,10 @@ function room_lock_reset(){
 		with(o_lockMgr){
 			var _list_size = ds_list_size(lock_list_data);
 			for(var i=0; i<_list_size; i++){
-				//閉じている部屋を開ける ------(嘘)クリアした部屋は開けない(嘘)
-				if(lock_list_data[| i] == 1){
-					lock_list_data[| i] = 0;
+				//閉じている部屋を開ける クリアした部屋は開けない チェックポイントに到達できてない場合はあける
+				if(lock_list_data[| i] == lock_state.Locking
+				or lock_list_data[| i] == lock_state.TempCleared){
+					lock_list_data[| i] = lock_state.NotReached;
 					door_lock_manage(false, i, true);
 				}
 				
