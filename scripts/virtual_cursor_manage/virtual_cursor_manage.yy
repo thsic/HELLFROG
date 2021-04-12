@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "GMLive",
-    "path": "folders/Extensions/GMLive.yy",
+    "name": "SYSTEM",
+    "path": "folders/Scripts/SYSTEM.yy",
   },
   "resourceVersion": "1.0",
-  "name": "GMLive",
+  "name": "virtual_cursor_manage",
   "tags": [],
   "resourceType": "GMScript",
 }

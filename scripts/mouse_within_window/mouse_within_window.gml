@@ -49,5 +49,10 @@ function mouse_within_window(){
 	sdm(_modefy_enable)*/
 	var _modefy_mouse_x = clamp(_mouse_x, _win_x+64, _win_x+_win_w-64);
 	var _modefy_mouse_y = clamp(_mouse_y, _win_y+64, _win_y+_win_h-64);
-	display_mouse_set(_modefy_mouse_x, _modefy_mouse_y);
+	
+	//display_mouse_set(_modefy_mouse_x, _modefy_mouse_y);
+	
+	global.win_vmouse_x = clamp(global.win_vmouse_x, 0, _win_w);
+	global.win_vmouse_y = clamp(global.win_vmouse_y, 0, _win_h);
+	
 }

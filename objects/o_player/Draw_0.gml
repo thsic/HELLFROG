@@ -135,7 +135,7 @@ else{
 
 //左右向く
 var _px = x - camera_get_view_x(view_camera[0]);
-if(global.mx < _px){
+if(global.vmouse_x < _px){
 	look_direction = LookDirection.Left;
 }
 else{

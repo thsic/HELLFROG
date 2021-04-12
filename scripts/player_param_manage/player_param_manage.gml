@@ -4,8 +4,8 @@ function player_param_manage() {
 	//プレイヤー座標を画面座標に変換して向いている方角計算
 	var _x = x - camera_get_view_x(view_camera[0]);
 	var _y = y - camera_get_view_y(view_camera[0]);
-	var _mx = window_mouse_get_x()/global.window_magnification;
-	var _my = window_mouse_get_y()/global.window_magnification;
+	var _mx = global.vmouse_x;
+	var _my = global.vmouse_y;
 	
 	player_direction = point_direction(_x, _y, _mx, _my);
 	can_knockback = true;

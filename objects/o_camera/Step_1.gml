@@ -4,8 +4,8 @@ if(follow != noone){
 
 	var _fx = follow.x - camera_get_view_x(view_camera[0]);
 	var _fy = follow.y - camera_get_view_y(view_camera[0]);
-	var _mx = global.mx;
-	var _my = global.my;
+	var _mx = global.vmouse_x;
+	var _my = global.vmouse_y;
 	
 	var _view_direction = point_direction(_fx, _fy, _mx, _my);//照準向いている方向
 	var _view_distance = point_distance(_fx, _fy, _mx, _my)//中心からどれだけ離れているか
