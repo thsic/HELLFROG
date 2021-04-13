@@ -161,6 +161,7 @@
     {"id":{"name":"s_playerStand","path":"sprites/s_playerStand/s_playerStand.yy",},"order":4,},
     {"id":{"name":"draw_charge_bar","path":"scripts/draw_charge_bar/draw_charge_bar.yy",},"order":4,},
     {"id":{"name":"enemy_set_movement","path":"scripts/enemy_set_movement/enemy_set_movement.yy",},"order":12,},
+    {"id":{"name":"sq_reload","path":"sequences/sq_reload/sq_reload.yy",},"order":0,},
     {"id":{"name":"damage_to_enemy","path":"scripts/damage_to_enemy/damage_to_enemy.yy",},"order":6,},
     {"id":{"name":"s_enemyTrentAttack","path":"sprites/s_enemyTrentAttack/s_enemyTrentAttack.yy",},"order":2,},
     {"id":{"name":"enemy_movement_manage","path":"scripts/enemy_movement_manage/enemy_movement_manage.yy",},"order":14,},
@@ -316,6 +317,7 @@
     {"folderPath":"folders/Sprites/enemy/acid.yy","order":5,"resourceVersion":"1.0","name":"acid","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/SYSTEM/camera.yy","order":19,"resourceVersion":"1.0","name":"camera","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/map.yy","order":11,"resourceVersion":"1.0","name":"map","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sequences/reload.yy","order":5,"resourceVersion":"1.0","name":"reload","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

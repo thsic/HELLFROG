@@ -33,6 +33,16 @@ function enemy_move_execution() {
 		
 	}
 	
+	//ドアにも入れない
+	var _n_door = instance_nearest(x, y, o_door);
+	var _wall_size = 16;
+	
+	if(is_in_place(_n_door.x-_wall_size, _n_door.y-_wall_size, _n_door.x+_wall_size, _n_door.y+_wall_size, 
+	x+_hspeed, y+_vspeed)){
+		_hspeed = 0;
+		_vspeed = 0;
+	}
+	
 
 	x += _hspeed;
 	y += _vspeed;

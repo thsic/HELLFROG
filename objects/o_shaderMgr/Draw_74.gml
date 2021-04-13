@@ -17,7 +17,7 @@ if(global.gamestate = gamestate.incheckpointbarrier){
 	if(surface_exists(gray_surface)){
 		//描画
 		shader_set(sh_decrementSaturation);
-		shader_saturation = 0.6;//チェックポイントに居るときの彩度倍率
+		shader_saturation = 0.0;//チェックポイントに居るときの彩度倍率
 		shader_set_uniform_f(uni_saturation, shader_saturation);
 		draw_surface(gray_surface, 0, 0);
 		shader_reset();

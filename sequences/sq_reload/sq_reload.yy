@@ -1,0 +1,66 @@
+{
+  "spriteId": null,
+  "timeUnits": 1,
+  "playback": 0,
+  "playbackSpeed": 60.0,
+  "playbackSpeedType": 0,
+  "autoRecord": true,
+  "volume": 1.0,
+  "length": 30.0,
+  "events": {
+    "Keyframes": [],
+    "resourceVersion": "1.0",
+    "resourceType": "KeyframeStore<MessageEventKeyframe>",
+  },
+  "moments": {
+    "Keyframes": [],
+    "resourceVersion": "1.0",
+    "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+  },
+  "tracks": [
+    {"keyframes":{"Keyframes":[
+          {"id":"de860ff0-0a05-49e8-832f-476f777e3efa","Key":0.0,"Length":30.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"s_cursedGun","path":"sprites/s_cursedGun/s_cursedGun.yy",},"resourceVersion":"1.0","resourceType":"AssetSpriteKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<AssetSpriteKeyframe>",},
+        ],"resourceVersion":"1.0","resourceType":"KeyframeStore<AssetSpriteKeyframe>",},"trackColour":4294068465,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[
+        {"keyframes":{"Keyframes":[
+              {"id":"af264123-1f69-48ec-a299-bb988007aa63","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":true,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+            ],"resourceVersion":"1.0","resourceType":"KeyframeStore<RealKeyframe>",},"trackColour":4294068465,"inheritsTrackColour":true,"builtinName":16,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":true,"resourceVersion":"1.0","name":"origin","tags":[],"resourceType":"GMRealTrack",},
+        {"keyframes":{"Keyframes":[
+              {"id":"2ae318d1-d36c-4b46-a7f1-99cac5f13ecb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":0.25112915,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":null,"RealValue":0.4779358,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+            ],"resourceVersion":"1.0","resourceType":"KeyframeStore<RealKeyframe>",},"trackColour":4294068465,"inheritsTrackColour":true,"builtinName":14,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"position","tags":[],"resourceType":"GMRealTrack",},
+        {"keyframes":{"Keyframes":[
+              {"id":"dd36a6b2-854f-4f7a-9202-60b2d86290a6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":0.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+              {"id":"cdf7a10b-0e16-4572-b79b-f156f5f2f30e","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":133.983978,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+              {"id":"b167b61a-f55f-46b9-bd44-c84d4e8c6611","Key":16.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":255.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+              {"id":"2148e52b-156e-49d3-9bc9-de1cd11a71f4","Key":24.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":405.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+              {"id":"92a410b0-a893-4ba0-9874-d4b6dec7e23b","Key":26.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":420.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+              {"id":"47f26172-76b0-4ed0-a512-e65500c67446","Key":28.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":405.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+              {"id":"2e912606-eaf0-4108-afd1-00b782a56c9e","Key":29.9999,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":360.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+            ],"resourceVersion":"1.0","resourceType":"KeyframeStore<RealKeyframe>",},"trackColour":4294068465,"inheritsTrackColour":true,"builtinName":8,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"rotation","tags":[],"resourceType":"GMRealTrack",},
+        {"keyframes":{"Keyframes":[
+              {"id":"3a0f6829-68d8-4fcb-896a-b5c50c120e75","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":true,"Channels":{"0":{"EmbeddedAnimCurve":null,"RealValue":1.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},"1":{"EmbeddedAnimCurve":null,"RealValue":1.0,"AnimCurveId":null,"resourceVersion":"1.0","resourceType":"RealKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<RealKeyframe>",},
+            ],"resourceVersion":"1.0","resourceType":"KeyframeStore<RealKeyframe>",},"trackColour":4294068465,"inheritsTrackColour":true,"builtinName":15,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":true,"resourceVersion":"1.0","name":"scale","tags":[],"resourceType":"GMRealTrack",},
+      ],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","name":"s_cursedGun","tags":[],"resourceType":"GMGraphicTrack",},
+  ],
+  "visibleRange": null,
+  "lockOrigin": false,
+  "showBackdrop": true,
+  "showBackdropImage": false,
+  "backdropImagePath": "",
+  "backdropImageOpacity": 0.5,
+  "backdropWidth": 1366,
+  "backdropHeight": 768,
+  "backdropXOffset": 0.0,
+  "backdropYOffset": 0.0,
+  "xorigin": 0,
+  "yorigin": 0,
+  "eventToFunction": {},
+  "eventStubScript": null,
+  "parent": {
+    "name": "reload",
+    "path": "folders/Sequences/reload.yy",
+  },
+  "resourceVersion": "1.3",
+  "name": "sq_reload",
+  "tags": [],
+  "resourceType": "GMSequence",
+}
