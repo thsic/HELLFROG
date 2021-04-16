@@ -21,3 +21,9 @@ if(global.gamestate == gamestate.incheckpointbarrier){
 		instance_destroy()
 	}
 }
+
+var _id = instance_nearest(x, y, o_normalWall);
+if(is_in_place(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, x, y)){
+	instance_destroy();
+}
+

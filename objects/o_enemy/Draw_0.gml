@@ -128,6 +128,7 @@ if(state == EnemyState.Stun){
 	shader_set(sh_decrementSaturation);
 	var _uniform = shader_get_uniform(sh_decrementSaturation, "saturation")
 	shader_set_uniform_f(_uniform, 0.3);
+	sdm("stun!")
 }
 
 
@@ -137,13 +138,16 @@ var _subimage_num = sprite_get_number(_sprite);
 var _t = life_time mod (_subimage_num*_image_speed);
 var _subimage = _t/_image_speed; 
 
+//ダメージくらったとき光る
+shader_set(sh_changeValue);
+var _flash_ratio = sign(damage_flash_time);
+shader_set_uniform_f(uni_add, _flash_ratio);
+
 if(sprite_rightward){
 	draw_sprite_ext(_sprite, _subimage, x, y, -1, 1, 0, _color, _alpha);
 }
 else{
 	draw_sprite_ext(_sprite, _subimage, x, y, 1, 1, 0, _color, _alpha);
 }
+shader_reset();
 
-if(state == EnemyState.Stun){
-	shader_reset();
-}

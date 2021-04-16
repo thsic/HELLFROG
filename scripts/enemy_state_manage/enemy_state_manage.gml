@@ -6,9 +6,14 @@ function enemy_state_manage() {
 		//ランダムウォークなどする
 		var _distance_for_player = point_distance(x, y, o_player.x, o_player.y);
 		var _see_player = collision_line(x, y, o_player.x, o_player.y, o_wall, false, true);
-		enemy_movement_manage(false, 1);//ランダムウォーク
-		if(_distance_for_player < view_range and _see_player == noone){
-			//視界範囲内にプレイヤーがいてかつ、プレイヤーとの間に壁が無い
+		var _collision_door = collision_line(x, y, o_player.x, o_player.y, o_door, false, true);
+		if(!idle_mode){
+			enemy_movement_manage(false, 1);//ランダムウォーク
+		}
+		if(_distance_for_player < view_range 
+		and _see_player == noone 
+		and _collision_door == noone){
+			//視界範囲内にプレイヤーがいてかつ、プレイヤーとの間に壁とドアが無い
 			rigor_time = rigor_after_find_player_default;
 			enemy_change_state(EnemyState.Approach);
 		}
@@ -163,6 +168,15 @@ function enemy_state_manage() {
 			enemy_homing_player();//ホーミングプレイヤーの場合は常に移動
 		}
 		break;
+	}
+	
+	var _distance_for_player = point_distance(o_player.x, o_player.y, x, y);
+	if(_distance_for_player > 350){
+		//プレイヤーとすごく離れていたら放置
+		idle_mode = true;
+	}
+	else{
+		idle_mode = false;
 	}
 }
 

@@ -9,7 +9,7 @@ function player_heal_hp(_heal_point, _effect_number){
 	
 	//ライフスティール時のプレイヤーのグラ変化
 	o_player.subimage = 1;
-	var _color = $0000ff;
+	var _color = 2059287;
 	var _part_system = part_system_create()
 	var _part = part_type_create();
 	part_type_sprite(_part, s_lightEffect, false, false, false);

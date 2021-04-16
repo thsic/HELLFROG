@@ -9,5 +9,5 @@ for(var i=0; i<effect_number; i++){
 	effect_dir[i] = _dir;
 }
 
-
+orb_speed = 0;
 

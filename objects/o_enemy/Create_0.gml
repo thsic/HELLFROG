@@ -29,5 +29,11 @@ life_time = 0;
 invincible_time = 0;
 invincible_enable = false;
 
+idle_mode = false;
+
+damage_flash_time = 0;
+uni_add = shader_get_uniform(sh_changeValue, "add");
+
+
 //ビームにのみ関係
 beam_enabled = false

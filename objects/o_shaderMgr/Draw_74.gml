@@ -26,15 +26,17 @@ if(global.gamestate = gamestate.incheckpointbarrier){
 
 }
 else{
+	//hpが低下すると徐々に灰色に
 	var _max_hp = ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.MaxHp)
 	var _hp_ratio = global.player_hp/_max_hp;
+	
 	var _saturation_anim_curve = animcurve_get_channel(ac_saturationShaderHpRatio, 0);
 	shader_saturation = animcurve_channel_evaluate(_saturation_anim_curve, _hp_ratio);
 	
-	shader_set(sh_decrementSaturation);
-	shader_set_uniform_f(uni_saturation, shader_saturation);
+	//shader_set(sh_decrementSaturation);
+	//shader_set_uniform_f(uni_saturation, shader_saturation);
 	draw_surface(gray_surface, 0, 0);
-	shader_reset();
+	//shader_reset();
 }
 
 

@@ -2,7 +2,7 @@
 if(door_lock){
 	if(!wall_enable){//見えない壁を2つ生成
 		for(var i=0; i<2; i++){
-			wall_id[i] = instance_create_layer(x, y-16*i, "Walls", o_testWall);
+			wall_id[i] = instance_create_layer(x, y-16*i, "Walls", o_bulletThroughWall);
 		}
 		wall_enable = true;
 	}

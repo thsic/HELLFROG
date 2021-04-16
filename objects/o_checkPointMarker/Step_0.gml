@@ -14,10 +14,21 @@ var _py = o_player.y;
 //一番プレイヤーに近いマーカーの範囲内にプレイヤーが入っているかどうか
 if(instance_nearest(o_player.x, o_player.y, o_checkPointMarker) == id){
 	
-	if(is_in_place(_x3, _y3, _x4, _y4, _px, _py) and global.gamestate == gamestate.main){
-		//ゲームステートがmainでチェックポイントに近づいていたらステートかえる
-		change_gamestate(gamestate.incheckpointbarrier);
+	if(is_in_place(_x3, _y3, _x4, _y4, _px, _py)){
+		if(global.gamestate == gamestate.main
+		and player_revived == false){
+			//ゲームステートがmainでチェックポイントに近づいていたらステートかえる
+			change_gamestate(gamestate.incheckpointbarrier);
+		}
+		else if(global.gamestate == gamestate.waitforkeyinput){
+			player_revived = true;//プレイヤーの復活直後
+		}
 	}
+	else{
+		player_revived = false;
+	}
+		
+	
 	if(global.gamestate == gamestate.incheckpointbarrier){
 		//hp回復とかいれる
 		if(heal_cooldown = 0){

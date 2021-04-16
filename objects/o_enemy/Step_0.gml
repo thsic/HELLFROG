@@ -1,6 +1,6 @@
 h_speed = 0;
 v_speed = 0;
-life_time++;
+
 
 if(object_check_within_view_range(0, id)){
 	on_screen = true;
@@ -20,6 +20,12 @@ enemy_dead_check();
 
 if(global.gamestop == false){
 	invincible_enable = false;
+	life_time++;
+	if(damage_flash_time > 0){
+		damage_flash_time--;
+	}
+	
+	
 	enemy_state_manage();//ステート管理
 
 	enemy_move_execution();//移動
