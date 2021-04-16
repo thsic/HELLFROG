@@ -1,9 +1,4 @@
-///@param enemyId,Speed,direction
-function enemy_knockback_start(argument0, argument1, argument2) {
-
-	var _enemy_id = argument0;
-	var _knockback_speed = argument1;
-	var _knockback_direction = argument2;
+function enemy_knockback_start(_enemy_id, _knockback_speed, _knockback_direction) {
 
 	with(_enemy_id){
 		if(!invincible_enable){

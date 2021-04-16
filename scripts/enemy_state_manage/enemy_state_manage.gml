@@ -170,14 +170,6 @@ function enemy_state_manage() {
 		break;
 	}
 	
-	var _distance_for_player = point_distance(o_player.x, o_player.y, x, y);
-	if(_distance_for_player > 350){
-		//プレイヤーとすごく離れていたら放置
-		idle_mode = true;
-	}
-	else{
-		idle_mode = false;
-	}
 }
 
 

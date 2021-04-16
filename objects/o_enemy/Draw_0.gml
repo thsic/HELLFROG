@@ -128,7 +128,6 @@ if(state == EnemyState.Stun){
 	shader_set(sh_decrementSaturation);
 	var _uniform = shader_get_uniform(sh_decrementSaturation, "saturation")
 	shader_set_uniform_f(_uniform, 0.3);
-	sdm("stun!")
 }
 
 

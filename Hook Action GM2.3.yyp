@@ -183,6 +183,7 @@
     {"id":{"name":"enemy_knockbacking","path":"scripts/enemy_knockbacking/enemy_knockbacking.yy",},"order":7,},
     {"id":{"name":"enemy_move_execution","path":"scripts/enemy_move_execution/enemy_move_execution.yy",},"order":8,},
     {"id":{"name":"enemies_collision","path":"scripts/enemies_collision/enemies_collision.yy",},"order":9,},
+    {"id":{"name":"enemy_param_manage","path":"scripts/enemy_param_manage/enemy_param_manage.yy",},"order":19,},
     {"id":{"name":"s_hookPole","path":"sprites/s_hookPole/s_hookPole.yy",},"order":6,},
     {"id":{"name":"enemy_dead_check","path":"scripts/enemy_dead_check/enemy_dead_check.yy",},"order":10,},
     {"id":{"name":"camera_lock_position","path":"scripts/camera_lock_position/camera_lock_position.yy",},"order":0,},

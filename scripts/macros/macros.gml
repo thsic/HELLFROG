@@ -18,5 +18,5 @@ function macros() {
 #macro SLOW_TIME_LIMIT 180
 #macro GAIN_SLOW_TIME_PER_FRAME 5
 #macro ENEMY_DAMAGED_FLASH_TIME 7
-
+#macro ENEMY_HITSTOP_TIME 5
 }

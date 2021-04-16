@@ -1,10 +1,24 @@
 if(global.playerstop == false){
-	bullet_speed -= speed_attenuation;
-	bullet_speed *= bullet_speed_mag;
-	if(bullet_speed < 0){
-		instance_destroy();
+	//ヒットストップ
+	if(hitstop_time >= 0){
+		//ヒットストップ中は弾の速度が減衰しない
+		speed = 0;
+		if(hitstop_time == 0
+		and collision_destroy){
+			instance_destroy();
+		}
+		hitstop_time--;
 	}
-	speed = bullet_speed;
+	else{
+		bullet_speed -= speed_attenuation;
+		bullet_speed *= bullet_speed_mag;
+		if(bullet_speed < 0){
+			instance_destroy();
+		}
+		speed = bullet_speed;
+	}
+	
+	
 }
 else{
 	speed = 0;
@@ -26,4 +40,6 @@ var _id = instance_nearest(x, y, o_normalWall);
 if(is_in_place(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, x, y)){
 	instance_destroy();
 }
+
+
 
