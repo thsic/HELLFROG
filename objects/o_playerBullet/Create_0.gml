@@ -1,4 +1,4 @@
-for(var i=0; i<30; i++){
+for(var i=0; i<10; i++){
 	collided_enemy[i] = 0;
 }
 

@@ -1,6 +1,5 @@
 //
 function enemy_param_manage(){
-	invincible_enable = false;
 	life_time++;
 	if(damage_flash_time > 0){
 		damage_flash_time--;

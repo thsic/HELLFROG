@@ -13,7 +13,7 @@
   "bbox_bottom": 15,
   "HTile": false,
   "VTile": false,
-  "For3D": false,
+  "For3D": true,
   "width": 16,
   "height": 16,
   "textureGroupId": {
@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"73c4ca99-5f31-4cf1-98c4-bd58b5bdc57e","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "assasin",
     "path": "folders/Sprites/enemy/assasin.yy",

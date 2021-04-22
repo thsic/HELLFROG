@@ -1,6 +1,6 @@
 function enemy_state_manage() {
 	//敵のステート管理
-	debug_draw_variable(x, y, state, c_white, 1);
+	debug_draw_variable(x, y, invincible_enable, c_white, 1);
 	switch(state){
 	case EnemyState.Idle:
 		//ランダムウォークなどする
@@ -17,11 +17,14 @@ function enemy_state_manage() {
 			rigor_time = rigor_after_find_player_default;
 			enemy_change_state(EnemyState.Approach);
 		}
+		invincible_enable = false;
 	break
 	case EnemyState.Movement:
+		invincible_enable = false;
 		enemy_movement();
 	break
 	case EnemyState.Approach:
+		invincible_enable = false;
 		if(rigor_time >= 0){
 			//発見時の硬直
 			rigor_time--;
@@ -52,6 +55,7 @@ function enemy_state_manage() {
 	break
 	case EnemyState.Stun:
 		stun_time--;
+		invincible_enable = false;
 		if(stun_time < 0){
 			stun_resistance = stun_resistance_default;
 			enemy_change_state(EnemyState.Idle);
@@ -59,6 +63,7 @@ function enemy_state_manage() {
 	break
 	case EnemyState.Charging:
 		//武器のチャージ中
+		invincible_enable = false;
 		weapon_charge_time--;
 		if(weapon_charge_time <= 0){
 			
@@ -80,13 +85,14 @@ function enemy_state_manage() {
 	break
 	case EnemyState.Aim:
 		//エイム中
+		invincible_enable = false;
 		aim_time--;
 		if(aim_time <= 0){
 			enemy_change_state(EnemyState.Fire);
 		}
 	break
 	case EnemyState.Fire:
-		
+		invincible_enable = false;
 		if(fire_script != noone){
 			script_execute(fire_script);
 		}
@@ -95,6 +101,7 @@ function enemy_state_manage() {
 		enemy_change_state(EnemyState.AfterFire);
 	break
 	case EnemyState.AfterFire:
+		invincible_enable = false;
 		afterfire_time--;
 		if(afterfire_time <= 0){
 			//武器使用後のステート設定
@@ -123,6 +130,7 @@ function enemy_state_manage() {
 		}
 	break
 	case EnemyState.WaitForMovement:
+		invincible_enable = false;
 		if(homing_player == true){
 			enemy_change_state(EnemyState.Idle);
 		}
@@ -138,6 +146,7 @@ function enemy_state_manage() {
 		if(lock_spawn_time <= 0){
 			enemy_change_state(EnemyState.Invincible);
 			invincible_time = 30;
+			
 		}
 	break
 	case EnemyState.Invincible://無敵

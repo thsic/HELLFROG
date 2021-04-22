@@ -32,7 +32,7 @@ invincible_enable = false;
 idle_mode = false;
 
 damage_flash_time = 0;
-uni_add = shader_get_uniform(sh_changeValue, "add");
+uni_add = shader_get_uniform(sh_enemy, "addValue");
 hitstop_time = -1;
 
 //ビームにのみ関係

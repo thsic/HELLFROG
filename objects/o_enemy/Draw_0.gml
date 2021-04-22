@@ -116,6 +116,9 @@ if(object_index = o_enemyBeam){
 }
 #endregion
 
+//シェーダーセット
+
+
 if(state == EnemyState.Stun){
 	//スタンスプライト描画
 	var _spr_h = sprite_get_height(_sprite);
@@ -124,13 +127,15 @@ if(state == EnemyState.Stun){
 	var _subimage = _t / _stun_imagespeed;
 	draw_sprite_ext(s_stun, _subimage, x, y-_spr_h/2-12, 1, 1, 0, c_white, 1);
 	
+	
+	
 	//スタン時はスプライトが灰色に
-	shader_set(sh_decrementSaturation);
-	var _uniform = shader_get_uniform(sh_decrementSaturation, "saturation")
-	shader_set_uniform_f(_uniform, 0.3);
+	//var _uniform = shader_get_uniform(sh_enemy, "saturation")
+	//shader_set_uniform_f(_uniform, 0.3);
 }
 
 
+shader_set(sh_enemy);
 //スプライトのどのsubimageを描画するか決める
 var _subimage_num = sprite_get_number(_sprite);
 
@@ -138,9 +143,39 @@ var _t = life_time mod (_subimage_num*_image_speed);
 var _subimage = _t/_image_speed; 
 
 //ダメージくらったとき光る
-shader_set(sh_changeValue);
+
 var _flash_ratio = sign(damage_flash_time);
 shader_set_uniform_f(uni_add, _flash_ratio);
+
+//アウトライン
+
+sh_texel_handle = shader_get_uniform(sh_enemy, "inTexel");
+sh_outline_color_handle = shader_get_uniform(sh_enemy, "outlineColor");
+
+
+
+var _tex = sprite_get_texture(_sprite, _subimage);
+var _tWidth = texture_get_texel_width(_tex);
+var _tHeight = texture_get_texel_height(_tex);
+
+var _r = 1.0;
+var _g = 1.0;
+var _b = 1.0;
+if(sign(damage_flash_time)){
+	var _a = 1.0;
+}
+else{
+	var _a = 0.5;
+}
+if(state = EnemyState.WaitForSpawn){
+	var _a = 0;
+}
+
+
+shader_set_uniform_f(sh_texel_handle, _tWidth, _tHeight);
+shader_set_uniform_f(sh_outline_color_handle, _r, _g, _b, _a);
+
+
 
 if(sprite_rightward){
 	draw_sprite_ext(_sprite, _subimage, x, y, -1, 1, 0, _color, _alpha);

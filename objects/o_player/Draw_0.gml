@@ -165,6 +165,7 @@ if(_face_up){
 	var _face_y = _sprite_y-1;
 }
 
+
 switch(look_direction){
 case LookDirection.Right:
 	//draw_sprite_ext(_sprite, subimage, x, _sprite_y, 1, 1, _sprite_dir, c_white, _alpha);
@@ -179,7 +180,9 @@ case LookDirection.Left:
 break
 }
 
+
 #endregion
+
 
 #region 銃描画
 var _gun_sprite = s_cursedGun;
