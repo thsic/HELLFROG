@@ -1,3 +1,25 @@
+#region 残像描画
+var _data_height = ds_grid_height(trail_data);
+for(var i=0; i<_data_height; i++){
+	if(trail_data[# TrailData.Enable, i] == true){
+		var _x = trail_data[# TrailData.X, i];
+		var _y = trail_data[# TrailData.Y, i];
+		var _alpha = trail_data[# TrailData.Alpha, i];
+		var _look_right = trail_data[# TrailData.LookRight, i];
+		
+		if(_look_right){
+			var _x_scale = -1;
+		}
+		else{
+			var _x_scale = 1;
+		}
+		
+		draw_sprite_ext(s_playerFace, 0, _x, _y, _x_scale, 1, 0, trail_color, _alpha);
+		draw_sprite_ext(s_playerWalk, 0, _x, _y, _x_scale, 1, 0, trail_color, _alpha);
+	}
+}
+
+#endregion
 
 #region フック描画
 switch(hook_state){
@@ -183,7 +205,6 @@ break
 
 #endregion
 
-
 #region 銃描画
 var _gun_sprite = s_cursedGun;
 switch(look_direction){
@@ -195,7 +216,6 @@ case LookDirection.Left:
 break
 }
 #endregion
-
 
 if(gun_charge_enable == true){
 	

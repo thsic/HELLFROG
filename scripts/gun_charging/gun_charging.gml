@@ -25,6 +25,7 @@ function gun_charging() {
 	if(mouse_check_button_pressed(global.shotgun_button)){
 		///発射された
 		player_shotgun_fire();
+		start_trail_time(10);
 		gun_charge_time = 0;
 		gun_charge_enable = false;
 		gun_charge_level = 0;

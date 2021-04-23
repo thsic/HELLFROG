@@ -5,9 +5,11 @@ if(global.gamestop == false or global.playerstop == false){
 	player_move();
 	player_param_manage();
 	player_gun_manage()
-
+	
 	player_do_knockback();
 	
+	//effect
+	player_trail_manage();
 }
 if(global.gamestate == gamestate.gameover){
 	player_gameover_knockback(1.2);
