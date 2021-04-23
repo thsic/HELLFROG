@@ -28,7 +28,7 @@ function player_trail_manage(){
 			trail_data[# TrailData.Enable, 0] = true;
 			trail_data[# TrailData.LifeTime, 0] = _lifeTime;
 			trail_data[# TrailData.Alpha, 0] = _alpha_base;
-			trail_data[# TrailData.LookRight, 0] = look_direction;
+			trail_data[# TrailData.LookRight, 0] = look_right;
 			
 		}
 	}

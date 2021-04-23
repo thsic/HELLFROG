@@ -4,3 +4,4 @@ for(var i=0; i<10; i++){
 
 hitstop_time = -1;
 
+bullet_destroy = false;

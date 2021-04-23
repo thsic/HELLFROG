@@ -30,6 +30,10 @@ and other.invincible_enable == false){//無敵の敵にも当たらない
 		enemy_knockback_start(other, _knockback_speed, knockback_direction_for_enemy);
 		hitstop_time = PLAYER_BULLET_HITSTOP_TIME;
 		
+		//衝突エフェクト
+		var _size = random_range(6, 10);
+		effect_create_blast(x, y, _size, 10, 5, hit_effect_color, 1, 12);
+		
 	}
 }
 

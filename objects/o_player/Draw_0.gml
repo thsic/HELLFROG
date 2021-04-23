@@ -155,14 +155,7 @@ else{
 	var _alpha = 1;
 }
 
-//左右向く
-var _px = x - camera_get_view_x(view_camera[0]);
-if(global.vmouse_x < _px){
-	look_direction = LookDirection.Left;
-}
-else{
-	look_direction = LookDirection.Right;
-}
+
 
 if(global.gamestate != gamestate.gameover){
 	//通常時
@@ -178,7 +171,7 @@ else{
 	var _sprite_dir = 90;
 	
 	//常に仰向けになる
-	look_direction = LookDirection.Right;
+	look_right = true;
 }
 
 var _face_y = _sprite_y;
@@ -187,34 +180,30 @@ if(_face_up){
 	var _face_y = _sprite_y-1;
 }
 
-
-switch(look_direction){
-case LookDirection.Right:
-	//draw_sprite_ext(_sprite, subimage, x, _sprite_y, 1, 1, _sprite_dir, c_white, _alpha);
-	draw_sprite_ext(_sprite_face, 0, x, _face_y, 1, 1, _sprite_dir, c_white, _alpha);
-	draw_sprite_ext(_sprite_body, _body_subimage, x, _sprite_y, 1, 1, _sprite_dir, c_white, _alpha);
-	
-break
-case LookDirection.Left:
-	//draw_sprite_ext(_sprite, subimage, x, _sprite_y, -1, 1, _sprite_dir, c_white, _alpha);
-	draw_sprite_ext(_sprite_face, 0, x, _face_y, -1, 1, _sprite_dir, c_white, _alpha);
-	draw_sprite_ext(_sprite_body, _body_subimage, x, _sprite_y, -1, 1, _sprite_dir, c_white, _alpha);
-break
+if(look_right){
+	var _x_scale = 1;
 }
+else{
+	var _x_scale = -1;
+}
+
+//draw_sprite_ext(_sprite, subimage, x, _sprite_y, 1, 1, _sprite_dir, c_white, _alpha);
+draw_sprite_ext(_sprite_face, 0, x, _face_y, _x_scale, 1, _sprite_dir, c_white, _alpha);
+draw_sprite_ext(_sprite_body, _body_subimage, x, _sprite_y, _x_scale, 1, _sprite_dir, c_white, _alpha);
+
 
 
 #endregion
 
 #region 銃描画
 var _gun_sprite = s_cursedGun;
-switch(look_direction){
-case LookDirection.Right:
+if(look_right){
 	draw_sprite_ext(_gun_sprite, 0, x, _sprite_y+2, 1, 1, player_direction+_sprite_dir, c_white, _alpha);
-break
-case LookDirection.Left:
-	draw_sprite_ext(_gun_sprite, 0, x, _sprite_y+2, -1, 1, player_direction-180+_sprite_dir, c_white, _alpha);
-break
 }
+else{
+	draw_sprite_ext(_gun_sprite, 0, x, _sprite_y+2, -1, 1, player_direction-180+_sprite_dir, c_white, _alpha);
+}
+
 #endregion
 
 if(gun_charge_enable == true){

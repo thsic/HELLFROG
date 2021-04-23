@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "PLAYER",
-    "path": "folders/Scripts/PLAYER.yy",
+    "name": "effect",
+    "path": "folders/Scripts/effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "player_draw_manage",
+  "name": "effect_create_blast",
   "tags": [],
   "resourceType": "GMScript",
 }

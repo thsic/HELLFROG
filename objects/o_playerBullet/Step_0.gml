@@ -6,6 +6,8 @@ if(global.playerstop == false){
 		if(hitstop_time == 0
 		and collision_destroy){
 			instance_destroy();
+			
+			
 		}
 		hitstop_time--;
 	}
@@ -36,9 +38,12 @@ if(global.gamestate == gamestate.incheckpointbarrier){
 	}
 }
 
+//壁に衝突
 var _id = instance_nearest(x, y, o_normalWall);
 if(is_in_place(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, x, y)){
 	instance_destroy();
+	var _size = random_range(6, 10);
+	effect_create_blast(x, y, _size, 10, 5, wall_collision_effect_color, 1, 12);
 }
 
 
