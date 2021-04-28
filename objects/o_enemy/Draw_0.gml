@@ -70,7 +70,12 @@ switch(state){
 	case EnemyState.Invincible:
 		if(walk_sprite != noone){
 			_sprite = walk_sprite;
-			_alpha = 0.5;
+			
+			//出現時は点滅する
+			var _flash_time = 1;
+			var _t = life_time mod (2*_flash_time);
+			var _alpha = _t/_flash_time; 
+			
 		}
 	break
 	case EnemyState.WaitForSpawn://スポーン待ちの時は透明
@@ -170,7 +175,9 @@ else{
 if(state = EnemyState.WaitForSpawn){
 	var _a = 0;
 }
-
+if(state = EnemyState.Invincible){
+	var _a = _alpha * 0.5;
+}
 
 shader_set_uniform_f(sh_texel_handle, _tWidth, _tHeight);
 shader_set_uniform_f(sh_outline_color_handle, _r, _g, _b, _a);

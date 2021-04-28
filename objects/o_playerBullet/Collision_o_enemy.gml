@@ -32,7 +32,7 @@ and other.invincible_enable == false){//無敵の敵にも当たらない
 		
 		//衝突エフェクト
 		var _size = random_range(6, 10);
-		effect_create_blast(x, y, _size, 10, 5, hit_effect_color, 1, 12);
+		effect_create_blast(x, y, _size, 15, 5, hit_effect_color, 1, 12);
 		
 	}
 }

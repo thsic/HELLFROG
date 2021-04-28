@@ -1,6 +1,6 @@
 function player_move(){
 	//移動関連
-debug_draw_angle(x, y, player_move_direction, 20, c_white, 1);
+
 	var _key_direction = player_move_direction_acquisition()//押してるキーからの移動方向取得 キーが押されていないと-1が出力される
 	var _player_speed = PLAYER_SPEED_DEFAULT;
 	if(_key_direction = -1){

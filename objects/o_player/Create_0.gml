@@ -47,6 +47,7 @@ walk_time = 0;//プレイヤーがあるき始めてからの時間
 //エフェクト
 on_slow_field_time = 0;
 player_slow_time = 0;
+drawed_charge_fin_effect = false;
 //残像
 trail_time = 0;
 trail_data = ds_grid_create(8, 30);

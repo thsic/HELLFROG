@@ -1,3 +1,4 @@
+if(total_time mod 5 != 0){
 	//最初に広がる円
 	
 	var time_percent = 1-total_time/total_time_default;
@@ -83,4 +84,5 @@
 	}
 	else{
 		draw_surface_ext(surface_id, x-effect_size, y-effect_size, 1, 1, 0, c_white, 1);
-	}
+	}*/
+}

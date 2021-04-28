@@ -144,11 +144,14 @@ var _sprite_width = sprite_get_width(_sprite);
 //無敵時間なら透明に
 if(invincible_enable){
 	var _transparency_time = invincible_time_default/5;
-	if(_transparency_time >= invincible_time){
-		var _alpha = 0.9;//無敵時間切れる直前は透明度が下がる
+	if(current_time mod 2 != 0){
+		_alpha = 0;
 	}
 	else{
-		var _alpha = 0.3;
+		_alpha = 1;
+	}
+	if(_transparency_time > invincible_time){
+		_alpha = 1;//無敵時間切れる直前は透明にならない
 	}
 }
 else{

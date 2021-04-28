@@ -10,8 +10,12 @@ function gun_charging() {
 		//ショットガンボタン押されていない
 		
 		//銃のチャージが最大値以下だと銃をチャージする
-		if(gun_charge_time < _gun_charge_time_each_level * _gun_charge_max_count){
+		if(gun_charge_time < _gun_charge_time_each_level * _gun_charge_max_count + 1){
 			gun_charge_time++;
+		}
+		else if(!drawed_charge_fin_effect){
+			effect_create_charge_fin_effect();
+			drawed_charge_fin_effect = true;
 		}
 		
 		var _charge_level = 0;
@@ -21,6 +25,7 @@ function gun_charging() {
 			}
 		}
 		gun_charge_level = _charge_level;
+		
 	}
 	if(mouse_check_button_pressed(global.shotgun_button)){
 		///発射された
@@ -29,7 +34,7 @@ function gun_charging() {
 		gun_charge_time = 0;
 		gun_charge_enable = false;
 		gun_charge_level = 0;
-
+		drawed_charge_fin_effect = false;
 	}
 
 	/*if(mouse_check_button(global.shotgun_button) <= 1){

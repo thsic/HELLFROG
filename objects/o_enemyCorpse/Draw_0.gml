@@ -3,11 +3,12 @@ draw_sprite_ext(sprite, 0, x, y, 1, 1, sprite_direction, c_white, alpha);
 
 
 var _dead_blast_enable = false;
-if(life_time <= 10){
+
+if(life_time <= 14){
 	var _dead_blast_color = blast_color_2;
 	var _dead_blast_enable = true;
 }
-if(life_time <= 5){
+if(life_time <= 7){
 	var _dead_blast_color = c_white;
 	var _dead_blast_enable = true;
 }
