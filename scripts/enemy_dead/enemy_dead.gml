@@ -11,6 +11,7 @@ function enemy_dead(_id, _do_dead_script){
 		if(_id.lock_number != -1){
 			enemy_gain_spawn_count(60);
 		}
+		gain_gun_charge_time(-1);
 	}
 	
 	instance_destroy(_id);
