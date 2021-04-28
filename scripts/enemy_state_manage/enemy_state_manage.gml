@@ -1,6 +1,6 @@
 function enemy_state_manage() {
 	//敵のステート管理
-	debug_draw_variable(x, y, invincible_enable, c_white, 1);
+	//debug_draw_variable(x, y, invincible_enable, c_white, 1);
 	switch(state){
 	case EnemyState.Idle:
 		//ランダムウォークなどする

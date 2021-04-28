@@ -27,6 +27,7 @@
   ],
   "properties": [
     {"varType":7,"value":"$FF3FDF33","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"trail_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF2E374A","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"dust_color","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

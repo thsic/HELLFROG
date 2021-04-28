@@ -1,8 +1,6 @@
 
 draw_sprite_ext(sprite, 0, x, y, 1, 1, sprite_direction, c_white, alpha);
 
-draw_line(x, y, x+lengthdir_x(speed+1, direction), y);
-
 
 var _dead_blast_enable = false;
 if(life_time <= 10){

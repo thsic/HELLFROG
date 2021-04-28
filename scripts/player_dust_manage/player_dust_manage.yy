@@ -6,7 +6,7 @@
     "path": "folders/Scripts/PLAYER/effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "player_trail_manage",
+  "name": "player_dust_manage",
   "tags": [],
   "resourceType": "GMScript",
 }

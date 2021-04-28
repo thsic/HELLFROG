@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "PLAYER",
-    "path": "folders/Scripts/PLAYER.yy",
+    "name": "effect",
+    "path": "folders/Scripts/PLAYER/effect.yy",
   },
   "resourceVersion": "1.0",
   "name": "start_trail_time",

@@ -8,10 +8,10 @@ for(var i=0; i<_data_height; i++){
 		var _look_right = trail_data[# TrailData.LookRight, i];
 		
 		if(_look_right){
-			var _x_scale = -1;
+			var _x_scale = 1;
 		}
 		else{
-			var _x_scale = 1;
+			var _x_scale = -1;
 		}
 		
 		draw_sprite_ext(s_playerFace, 0, _x, _y, _x_scale, 1, 0, trail_color, _alpha);

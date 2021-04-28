@@ -1,6 +1,6 @@
 function player_move(){
 	//移動関連
-
+debug_draw_angle(x, y, player_move_direction, 20, c_white, 1);
 	var _key_direction = player_move_direction_acquisition()//押してるキーからの移動方向取得 キーが押されていないと-1が出力される
 	var _player_speed = PLAYER_SPEED_DEFAULT;
 	if(_key_direction = -1){
@@ -67,7 +67,7 @@ function player_move(){
 			//sdm("keymove")
 		}
 		else{//押されてない
-			_finally_direction = player_direction;
+			_finally_direction = -1;
 			_finally_speed = 0;
 			//sdm("stop")
 		}
@@ -101,5 +101,7 @@ function player_move(){
 	//--------------------
 
 	player_move_execution(_finally_direction, inertia_enable, _finally_speed);//移動の実行
-
+	player_move_speed = _finally_speed;
+	player_move_direction = _finally_direction;
+	
 }

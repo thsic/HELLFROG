@@ -10,6 +10,7 @@ if(global.gamestop == false or global.playerstop == false){
 	
 	//effect
 	player_trail_manage();
+	player_dust_manage();
 }
 if(global.gamestate == gamestate.gameover){
 	player_gameover_knockback(1.2);

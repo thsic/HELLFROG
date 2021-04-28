@@ -27,6 +27,10 @@ hook_point_x = x;
 hook_point_y = y;
 hook_length = 0;
 
+//移動
+player_move_speed = 0;
+player_move_direction = 0;
+
 //その他
 invincible_time = 0;
 invincible_enable = false;
@@ -45,7 +49,7 @@ on_slow_field_time = 0;
 player_slow_time = 0;
 //残像
 trail_time = 0;
-trail_data = ds_grid_create(6, 30);
+trail_data = ds_grid_create(8, 30);
 
 
 //test

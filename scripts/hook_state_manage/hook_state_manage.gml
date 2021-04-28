@@ -18,13 +18,21 @@ function hook_state_manage() {
 			var _px = x - camera_get_view_x(view_camera[0]);
 			var _py = y - camera_get_view_y(view_camera[0]);
 			hook_direction = point_direction(_px, _py, global.vmouse_x, global.vmouse_y);
+			
 		}
+		
 	break
 	case hookState.Cooldown:
 	
 	break
 	case hookState.Shooting:
 		var _hook_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShootingSpeed);
+		
+		if(abs(angle_difference(hook_direction, player_move_direction)) < 25
+		and player_move_speed >= PLAYER_SPEED_DEFAULT){
+				_hook_speed *= 1.5;//フックの方向に動いてるとフックが加速
+		}
+		
 		var _collision_size_for_enemy = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.CollisionSizeForEnemy);
 		var _next_hook_point_x = hook_point_x + lengthdir_x(_hook_speed, hook_direction);
 		var _next_hook_point_y = hook_point_y + lengthdir_y(_hook_speed, hook_direction);

@@ -11,9 +11,9 @@ function player_trail_manage(){
 			
 			//残像生成
 			//先にデータをひとつずらす
-			var _i = _data_height;
+			var _i = _data_height-1;
 			
-			repeat(_data_height){
+			repeat(_i){
 				_i -= 1;
 				if(_i != _data_height){
 					for(var j=0; j<_data_width; j++){
@@ -49,7 +49,6 @@ function player_trail_manage(){
 				trail_data[# TrailData.LifeTime, i] = 0;
 				trail_data[# TrailData.Alpha, i] = 0;
 				trail_data[# TrailData.LookRight, i] = 0;
-				
 				
 				
 			}

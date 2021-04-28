@@ -22,11 +22,10 @@ function fire_straight_ammo(argument0) {
 		_bullet_speed_min *= 0.66;
 	break
 	case 1:
-		_bullet_speed_max *= 0.75;
-		_bullet_speed_min *= 0.75;
+		_bullet_speed_max *= 0.3;
+		_bullet_speed_min *= 0.3;
 	break
 	}
-
 	//ここらへんに追加の処理いれて
 
 	if(_bullet_amount > 1){
