@@ -43,6 +43,7 @@ gameover_knockup_time = 0;
 subimage = 0;
 lifesteal_anim_time = 5;
 walk_time = 0;//プレイヤーがあるき始めてからの時間
+draw_player = true;//プレイヤーを描画するかどうか
 
 //エフェクト
 on_slow_field_time = 0;

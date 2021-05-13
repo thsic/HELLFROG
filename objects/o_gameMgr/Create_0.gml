@@ -37,6 +37,9 @@ gameover_sequence_element = noone;
 respawn_time = 0;
 respawn_sequence_element = noone;
 
+//ゴール
+near_goal_id = noone;
+
 //エフェクト
 global.slow_enable = false;
 

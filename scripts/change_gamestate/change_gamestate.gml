@@ -54,4 +54,6 @@ enum gamestate{
 	stageclear,
 	waitforkeyinput,
 	incheckpointbarrier,
+	goalscene,
+	stagestartscene,
 }

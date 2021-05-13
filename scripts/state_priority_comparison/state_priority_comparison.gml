@@ -15,6 +15,12 @@ function state_priority_comparison(argument0) {
 		case gamestate.stagestart:
 			_state_priority_1 = 100;
 		break
+		case gamestate.stagestartscene:
+			_state_priority_1 = 98;
+		break
+		case gamestate.goalscene:
+			_state_priority_1 = 97;
+		break
 		case gamestate.stageclear:
 			_state_priority_1 = 95;
 		break
@@ -45,6 +51,12 @@ function state_priority_comparison(argument0) {
 		switch(global.nextstate){
 		case gamestate.stagestart:
 			_state_priority_2 = 100;
+		break
+		case gamestate.stagestartscene:
+			_state_priority_2 = 98;
+		break
+		case gamestate.goalscene:
+			_state_priority_2 = 97;
 		break
 		case gamestate.stageclear:
 			_state_priority_2 = 95;

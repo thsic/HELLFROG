@@ -30,8 +30,9 @@ function player_effect_manage(){
 		}
 	}
 	
-	//スローフィールドの上に居るとスロー状態になる、ただし慣性がついている状態だとフィールドの上でもスローはつかない
-	if(_on_slow_field and !inertia_enable){
+	//スローフィールドの上に居るとスロー状態になる
+	//やっぱなし→ ただし慣性がついている状態だとフィールドの上でもスローはつかない
+	if(_on_slow_field){
 		on_slow_field_time++;//スローフィールドの上に居た時間
 		global.slow_enable = true;
 	}

@@ -1,0 +1,2 @@
+
+near_player = false;

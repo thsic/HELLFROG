@@ -115,6 +115,8 @@ case gamestate.main:
 		lagging_game();
 	}
 	
+	goal_manage();
+	
 break
 #endregion
 
@@ -145,5 +147,12 @@ case gamestate.gameover:
 	}
 	
 break
+
+case gamestate.goalscene:
+	//ステージクリア時のステージ以降シーン
+	global.gamestop = true;
+	global.playerstop = true;
+break
+
 
 }
