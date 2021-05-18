@@ -5,9 +5,22 @@ global.playerstop = false;
 switch(global.gamestate){
 #region stagestart
 case gamestate.stagestart:
+	global.gamestop = true;
+	global.playerstop = true;
+
 	now_hp_type = ePHP_type.normal_hp;
 	global.player_hp = ds_grid_get(global.ds_player_hp, now_hp_type, ePHP_param.MaxHp);
 	set_respawn_point(o_player.x, o_player.y);
+	
+	//ステージスタートシーンのためにyを高くする
+	player_start_y_pos = o_player.y - (startscene_player_fall_speed*startscene_time);
+	player_default_y_pos = o_player.y;
+	o_player.y = player_start_y_pos;
+	
+	//カメラ初期位置
+	o_camera.x = o_player.x;
+	o_camera.y = o_player.y;
+	
 	
 	//敵初期位置保存
 	var _enemy_number = instance_number(o_enemy);
@@ -28,7 +41,38 @@ case gamestate.stagestart:
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.LockSpawnTime, i, _enemy_lock_spawn_time);
 	}
 	
-	change_gamestate(gamestate.waitforkeyinput);
+	//プレイヤー向き変更
+	o_player.look_right = o_persistentObject.player_look_right;
+	o_player.player_direction = o_persistentObject.player_direction;
+	
+	stagestart_scene_time = 0;
+	change_gamestate(gamestate.stagestartscene);
+break
+case gamestate.stagestartscene:
+	global.gamestop = true;
+	global.playerstop = true;
+	stagestart_scene_time++;
+	if(stagestart_scene_time < 100){
+		o_player.y = player_start_y_pos + stagestart_scene_time*startscene_player_fall_speed;
+	}
+	else{
+		start_screen_shake(10, 5, random_range(270-8, 270+8));
+		o_player.y = player_default_y_pos;
+		instance_create_layer(0, 0, "Effects", o_stageStartScene);
+		
+		change_gamestate(gamestate.main);
+	}
+	
+	var _fadeout_time = 80;
+	if(_fadeout_time > stagestart_scene_time){
+		fade_alpha = 1 - stagestart_scene_time / _fadeout_time;
+		fade_alpha = fade_alpha*0.3 + 0.7;
+	}
+	else{
+		fade_alpha = 0.7;
+	}
+	
+	
 break
 
 case gamestate.waitforkeyinput:
@@ -56,12 +100,7 @@ case gamestate.waitforkeyinput:
 		var _charge_time = ds_grid_get(global.ds_player_gun, o_player.now_shotgun, eG_param.ChargeTime);
 		o_player.gun_charge_time = _charge_count * _charge_time;
 	
-		//ラグがあるなら消す
-		if(lag_enable or room_speed != 60){
-			room_speed = 60;
-			lag_enable = false;
-			lag_time = 0;
-		}
+		
 	
 		var _up		= keyboard_check(global.up_key);
 		var _down	= keyboard_check(global.down_key);
@@ -79,6 +118,13 @@ case gamestate.waitforkeyinput:
 		//リスポーン直後
 		var _sequence_x = o_camera.x;
 		var _sequence_y = o_camera.y;
+		
+		//ラグがあるなら消す
+		if(lag_enable or room_speed != 60){
+			room_speed = 60;
+			lag_enable = false;
+			lag_time = 0;
+		}
 		
 		respawn_time = 20;
 		if(!layer_sequence_exists("Flont", respawn_sequence_element)){

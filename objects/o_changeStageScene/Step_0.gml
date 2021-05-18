@@ -2,7 +2,7 @@
 scene_time++
 var _px = o_player.x;
 var _py = o_player.y;
-var _scene_1 = 10//
+var _scene_1 = 10
 
 
 if(scene_time < _scene_1){
@@ -31,15 +31,27 @@ if(scene_time = _scene_1){
 	layer_sequence_play(goal_sequence_element);
 }
 if(layer_sequence_exists("UnderTile", goal_sequence_element)){
-	if(layer_sequence_is_finished(goal_sequence_element)){
-		var _next_room = goal_id.next_room;
-		room_goto(_next_room);
-	}
 	
 	//プレイヤーが穴に落ちたらプレイヤー消す
 	if(o_player.y > o_goal.y + 12){
 		o_player.draw_player = false;
 	}
 
+}
+
+
+//フェードインの透明度
+
+if(scene_time > fadein_start_time){
+	fade_alpha = clamp((scene_time - fadein_start_time) /fadein_end_time, 0, 1);
+}
+if(scene_time >= change_stage_time){
+	//ステージ移行
+	//プレイヤーがどっち向いてるかの情報を引き継ぐ
+	o_persistentObject.player_look_right = o_player.look_right;
+	o_persistentObject.player_direction = o_player.player_direction;
+	
+	var _next_room = goal_id.next_room;
+	room_goto(_next_room);
 }
 

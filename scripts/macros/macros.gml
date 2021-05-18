@@ -20,4 +20,17 @@ function macros() {
 #macro ENEMY_DAMAGED_FLASH_TIME 7
 #macro ENEMY_HITSTOP_TIME 5
 #macro PLAYER_BULLET_HITSTOP_TIME 7
+
+//ステージ名
+#macro STAGE1_NAME_JP "ヘル"+chr(13)+"ケイヴ"
 }
+
+
+
+/*
+ゾウフォント
+https://www.lazypolarbear.com/zou
+
+
+
+*/

@@ -6,3 +6,4 @@ if(!global.gamestop){
 player_draw_hp();
 player_draw_hp_mini();
 draw_charge_bar();
+

@@ -24,6 +24,8 @@ display_set_gui_size(camera_w, camera_h);
 
 follow = o_player;
 
+
+
 xTo = x;
 yTo = y;
 follow_xprev = follow.x;

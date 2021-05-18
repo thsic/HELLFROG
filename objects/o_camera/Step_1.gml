@@ -23,6 +23,10 @@ if(follow != noone){
 		var _strength = 1;
 	}
 	
+	if(global.gamestate == gamestate.stagestartscene or global.gamestate == gamestate.goalscene){
+		//ステージ移行中はカメラがうごきにくく
+		_strength = 0.5;
+	}
 	
 	var _collection_x = lengthdir_x(_view_distance/6*_strength, _view_direction);
 	var _collection_y = lengthdir_y(_view_distance/6*_strength, _view_direction);

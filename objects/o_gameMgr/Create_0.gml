@@ -12,6 +12,10 @@ instance_create_layer(0, 0, "GameObjects", o_menuMgr);
 instance_create_layer(0, 0, "UI", o_uiMgr);
 instance_create_layer(0, 0, "UI", o_shaderMgr);
 instance_create_layer(0, 0, "GameObjects", o_lockMgr);
+if(!instance_exists(o_persistentObject)){
+	instance_create_layer(0, 0, "GameObjects", o_persistentObject);//無いなら生成
+}
+
 //instance_create_layer(0, 0, "Shaders", o_surfaceLight);
 
 global.gamestop = false;
@@ -32,6 +36,7 @@ mouse_y_prev = display_mouse_get_y();
 //ゲームオーバー
 gameover_effect_time = -1;
 gameover_sequence_element = noone;
+waitfor_key_enable = false;//ゲームオーバーから復活したときはキー入力待つ、ステージ開始時は待たない
 
 //リスポーン
 respawn_time = 0;
@@ -42,6 +47,7 @@ near_goal_id = noone;
 
 //エフェクト
 global.slow_enable = false;
+fade_alpha = 1;
 
 
 //マウスカーソル
