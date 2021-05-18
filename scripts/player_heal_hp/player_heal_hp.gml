@@ -13,11 +13,10 @@ function player_heal_hp(_heal_point, _effect_number){
 	var _part_system = part_system_create()
 	var _part = part_type_create();
 	part_type_sprite(_part, s_lightEffect, false, false, false);
-	//part_type_size(_part, 0.8, 1.2, 0, 0);
 	part_type_scale(_part, 0.3, 0.3);
 	part_type_color1(_part, _color);
 	part_type_speed(_part, 0.8, 1.2, 0, 0);
-	part_type_direction(_part, 90, 90, 0, 0);
+	part_type_direction(_part, 85, 95, 0, 0);
 	part_type_life(_part, 8, 16);
 	
 	var _px = o_player.x;
@@ -26,6 +25,8 @@ function player_heal_hp(_heal_point, _effect_number){
 	repeat(_effect_number){
 		var _x = irandom_range(_px-_range, _px+_range);
 		var _y = irandom_range(_py-_range, _py+_range);
+		/*_x = o_player.x;
+		_y = o_player.y;*/
 		part_particles_create(_part_system, _x, _y, _part, 1);
 	}
 	

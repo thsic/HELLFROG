@@ -71,7 +71,8 @@ case gamestate.stagestartscene:
 	else{
 		fade_alpha = 0.7;
 	}
-	
+	//フェードを段階的に
+	fade_alpha = floor(fade_alpha * 16) / 16;
 	
 break
 

@@ -44,6 +44,7 @@ if(layer_sequence_exists("UnderTile", goal_sequence_element)){
 
 if(scene_time > fadein_start_time){
 	fade_alpha = clamp((scene_time - fadein_start_time) /fadein_end_time, 0, 1);
+	fade_alpha = floor(fade_alpha * 8) / 8;
 }
 if(scene_time >= change_stage_time){
 	//ステージ移行

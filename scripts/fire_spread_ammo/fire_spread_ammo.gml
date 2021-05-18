@@ -31,7 +31,7 @@ function fire_spread_ammo(argument0) {
 		var _bullet_direction = irandom_range(-_bullet_diffusivity/2, _bullet_diffusivity/2)+player_direction;//角度決定
 		var _knockback_direction = player_direction//angle_difference(_bullet_direction, player_direction);
 	
-		create_bullet(_bullet_speed, _bullet_direction, _bullet_type, _bullet_damage, _bullet_speed_atte, _bullet_speed_mag, _knockback_direction, true, o_playerBulletYellow);
+		create_bullet(_bullet_speed, _bullet_direction, _bullet_type, _bullet_damage, _bullet_speed_atte, _bullet_speed_mag, _knockback_direction, true, o_playerBulletYellow, gun_charge_level);
 	}
 
 

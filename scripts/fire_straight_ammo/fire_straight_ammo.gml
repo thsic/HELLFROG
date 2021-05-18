@@ -40,7 +40,7 @@ function fire_straight_ammo(argument0) {
 		
 			var _knockback_direction = player_direction//angle_difference(_bullet_direction, player_direction);
 		
-			create_bullet(_bullet_speed, _bullet_direction, _bullet_type, _bullet_damage, _bullet_speed_atte, _bullet_speed_mag, _knockback_direction, false, o_playerBulletRed);
+			create_bullet(_bullet_speed, _bullet_direction, _bullet_type, _bullet_damage, _bullet_speed_atte, _bullet_speed_mag, _knockback_direction, false, o_playerBulletRed, gun_charge_level);
 		}
 	}
 	else if(_bullet_amount = 1){
@@ -49,7 +49,7 @@ function fire_straight_ammo(argument0) {
 		var _bullet_direction = player_direction;
 		var _knockback_direction = player_direction;
 	
-		create_bullet(_bullet_speed, _bullet_direction, _bullet_type, _bullet_damage, _bullet_speed_atte, _bullet_speed_mag, _knockback_direction, false, o_playerBulletRed);
+		create_bullet(_bullet_speed, _bullet_direction, _bullet_type, _bullet_damage, _bullet_speed_atte, _bullet_speed_mag, _knockback_direction, false, o_playerBulletRed, gun_charge_level);
 
 	}
 

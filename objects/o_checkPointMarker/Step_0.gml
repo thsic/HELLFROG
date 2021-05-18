@@ -57,7 +57,12 @@ if(instance_nearest(o_player.x, o_player.y, o_checkPointMarker) == id){
 		if(stoppingheal_cooldown = 0){
 			if(_px = player_x_prev and _py = player_y_prev
 			and global.player_hp < _max_hp){
-				player_heal_hp(1, 2);
+				//hpが減っているほど早く回復
+				var _heal_speed_max = 4;
+				var _channel = animcurve_get_channel(ac_checkPointHealCurve, 0);
+				var _heal_point = _heal_speed_max * animcurve_channel_evaluate(_channel, global.player_hp/_max_hp);
+				
+				player_heal_hp(_heal_point, 2);
 				stoppingheal_cooldown = 2;
 			}
 		}

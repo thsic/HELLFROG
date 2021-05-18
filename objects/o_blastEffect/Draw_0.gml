@@ -19,6 +19,10 @@
 		blaststart_time--;
 	}
 	
+	//爆発の大きさを段階的にする
+	var _a = effect_size / 4;
+	circle_size = floor(circle_size / _a)*_a;
+	blast_size = floor(blast_size / _a)*_a;
 	
 	//描画
 	draw_set_color(color);

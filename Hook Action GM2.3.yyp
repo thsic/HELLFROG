@@ -58,6 +58,7 @@
     {"id":{"name":"data_set_player_bullet","path":"scripts/data_set_player_bullet/data_set_player_bullet.yy",},"order":2,},
     {"id":{"name":"data_set_knockback","path":"scripts/data_set_knockback/data_set_knockback.yy",},"order":3,},
     {"id":{"name":"o_bulletThroughWall","path":"objects/o_bulletThroughWall/o_bulletThroughWall.yy",},"order":1,},
+    {"id":{"name":"ac_checkPointHealCurve","path":"animcurves/ac_checkPointHealCurve/ac_checkPointHealCurve.yy",},"order":8,},
     {"id":{"name":"s_hookWire","path":"sprites/s_hookWire/s_hookWire.yy",},"order":11,},
     {"id":{"name":"data_set_hookshot","path":"scripts/data_set_hookshot/data_set_hookshot.yy",},"order":4,},
     {"id":{"name":"s_pinkSquare","path":"sprites/s_pinkSquare/s_pinkSquare.yy",},"order":2,},
