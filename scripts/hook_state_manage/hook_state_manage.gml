@@ -95,7 +95,7 @@ function hook_state_manage() {
 				}
 			}
 			else{
-				//敵の方向とフックの方向が逆なのであたってなかったことにする
+				//敵の方向とフックの方向が逆なのであたってなかったことにする	
 				_grab_enemy_id = noone;
 			}
 		}
@@ -111,6 +111,7 @@ function hook_state_manage() {
 			var _distance_for_hook = point_distance(x, y, hook_point_x, hook_point_y);
 			if(hook_length > _hook_range and _hook_range < _distance_for_hook){
 				//フックが射程の限界まで達した かつ プレイヤーとフックの距離が遠い
+				//まず近くに敵がいたら吸い付く
 				var _stick_wall_success = hook_stick_near_wall()//近くの壁に吸い付く処理を入れる
 				if(_stick_wall_success == true){
 					hook_state = hookState.GrabWall;//すいついた

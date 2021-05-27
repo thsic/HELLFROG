@@ -85,16 +85,19 @@ function player_shotgun_fire() {
 		player_start_knockback(_knockback_type);
 	}
 	
-	//銃撃ったときの振動
+	//銃撃ったときの振動と音
 	var _shake_dir = player_direction+180;
 	switch(gun_charge_level){
 	case 0:
+		audio_play_sound(SE_SHOTLV0, 50, false);
 		start_screen_shake(3, 3, _shake_dir);
 	break
 	case 1:
+		audio_play_sound(SE_SHOTLV1, 50, false);
 		start_screen_shake(5, 4, _shake_dir);
 	break
 	case 2:
+		audio_play_sound(SE_SHOTLV2, 50, false);
 		start_screen_shake(12, 6, _shake_dir);
 	break
 	}

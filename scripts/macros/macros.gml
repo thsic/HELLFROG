@@ -22,7 +22,10 @@ function macros() {
 #macro PLAYER_BULLET_HITSTOP_TIME 7
 
 //ステージ名
-#macro STAGE1_NAME_JP "ヘル"+chr(13)+"ケイヴ"
+#macro STAGE1_NAME_JP "ヘルケイヴ"//"ヘル"+chr(13)+"ケイヴ"
+#macro STAGE1_NAME_JP2 "地獄洞窟"
+#macro STAGE1_NAME_EN "HELL"+chr(13)+"CAVE"
+
 }
 
 
