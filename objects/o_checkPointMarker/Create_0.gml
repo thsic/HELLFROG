@@ -10,6 +10,6 @@ player_heal_point_y_prev = 0;
 
 player_x_prev = 0;
 player_y_prev = 0;
-stoppingheal_cooldown = 5;
+highheal_cooldown = 5;
 
 player_revived = false;

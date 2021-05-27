@@ -28,6 +28,9 @@ if(instance_nearest(o_player.x, o_player.y, o_checkPointMarker) == id){
 		player_revived = false;
 	}
 		
+	var _px = o_player.x;
+	var _py = o_player.y;
+	var _max_hp = ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.MaxHp);
 	
 	if(global.gamestate == gamestate.incheckpointbarrier){
 		//hp回復とかいれる
@@ -35,43 +38,56 @@ if(instance_nearest(o_player.x, o_player.y, o_checkPointMarker) == id){
 			heal_cooldown = 8;
 			
 			player_heal_hp(1, 1);
+			
+			
+			
 		}
 		else{
 			heal_cooldown--;
 		}
-		/*//動くともっと早く回復する
+		
+		
+		//動くともっと早く回復する
 		var _px = o_player.x;
 		var _py = o_player.y;
 		if(point_distance(player_heal_point_x_prev, player_heal_point_y_prev, _px, _py) > 5){
-			player_heal_hp(3);
-			player_heal_point_x_prev = _px;
-			player_heal_point_y_prev = _py;
-		}*/
-
-		
-		//
-		//停止するとはやく回復
-		var _px = o_player.x;
-		var _py = o_player.y;
-		var _max_hp = ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.MaxHp);
-		if(stoppingheal_cooldown = 0){
-			if(_px = player_x_prev and _py = player_y_prev
-			and global.player_hp < _max_hp){
-				//hpが減っているほど早く回復
+			if(global.player_hp < _max_hp){
+			
 				var _heal_speed_max = 4;
 				var _channel = animcurve_get_channel(ac_checkPointHealCurve, 0);
 				var _heal_point = _heal_speed_max * animcurve_channel_evaluate(_channel, global.player_hp/_max_hp);
 				
 				player_heal_hp(_heal_point, 2);
-				stoppingheal_cooldown = 2;
+				highheal_cooldown = 2;
+			}
+			player_heal_point_x_prev = _px;
+			player_heal_point_y_prev = _py;
+		}
+
+		
+		//
+		//停止するとはやく回復
+		
+		
+		/*if(highheal_cooldown = 0){
+			//hpが減っているほど早く回復
+			if(_px = player_x_prev and _py = player_y_prev
+				and global.player_hp < _max_hp){
+			
+				var _heal_speed_max = 4;
+				var _channel = animcurve_get_channel(ac_checkPointHealCurve, 0);
+				var _heal_point = _heal_speed_max * animcurve_channel_evaluate(_channel, global.player_hp/_max_hp);
+				
+				player_heal_hp(_heal_point, 2);
+				highheal_cooldown = 2;
 			}
 		}
 		else{
-			stoppingheal_cooldown--;
+			highheal_cooldown--;
 		}
 		
 		player_x_prev = _px;
-		player_y_prev = _py;
+		player_y_prev = _py;*/
 	
 		if(checkpoint_active == false){
 			//チェックポイントを設定

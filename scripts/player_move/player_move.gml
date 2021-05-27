@@ -60,11 +60,17 @@ function player_move(){
 		if(_key_direction != -1){//キー押されてる
 			_finally_direction = _key_direction;
 			if(global.slow_enable){
-				_player_speed *= 0.25;
+				_player_speed *= 0.25;//スロー
 			}
+			/*if(global.gamestate == gamestate.incheckpointbarrier){
+				//チェックポイントで回復中は遅くなる
+				var _max_hp = ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.MaxHp);
+				_player_speed *= power(global.player_hp / _max_hp, 4);
+			}*/
+			
 			_finally_speed = _player_speed;
 			_walking = true;
-			//sdm("keymove")
+			
 		}
 		else{//押されてない
 			_finally_direction = -1;
