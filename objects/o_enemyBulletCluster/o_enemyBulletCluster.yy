@@ -24,10 +24,13 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"o_enemyBulletCluster","path":"objects/o_enemyBulletCluster/o_enemyBulletCluster.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"bullet_create_sound","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"objectId":{"name":"o_enemyBullet","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"value":"a_treantBullet","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"bullet_fire_sound","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"objectId":{"name":"o_enemyBullet","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"value":"a_treantBulletBlast","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "bullet",
     "path": "folders/Objects/enemy/bullet.yy",

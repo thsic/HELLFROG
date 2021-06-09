@@ -21,6 +21,8 @@ if(scene_time = _scene_1){
 	var _sequence_y = goal_id.y;
 	var _player_inst = instance_find(o_player, 0);
 	
+	//音
+	audio_play_sound(a_goalsound, 90, false);
 	
 	goal_sequence_element = layer_sequence_create("UnderTile", _sequence_x, _sequence_y, sq_goal);
 	

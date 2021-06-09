@@ -1,16 +1,24 @@
 var _alpha = erasure_time/erasure_time_default;
+_alpha = floor(_alpha*3)/3;
+
 draw_set_color(c_white);
 
 if(beam_enable == false){
 	var _tex = sprite_get_texture(s_beforeBeamEffect, 0);
 	var _beam_height = sprite_get_height(s_beforeBeamEffect)/3;
-	_beam_height *= beforebeam_drawtime/beforebeam_drawtime_default;
+	
+	var _beam_height_per = beforebeam_drawtime/beforebeam_drawtime_default;
+	_beam_height_per = ceil(_beam_height_per*4)/4;
+	_beam_height *= _beam_height_per;
 	_alpha *= 0.3
 }
 else{
 	var _tex = sprite_get_texture(s_beamEffect, 0);
 	var _beam_height = sprite_get_height(s_beamEffect)/2;
-	_beam_height *= afterbeam_drawtime/afterbeam_drawtime_default;
+	
+	_beam_height_per = afterbeam_drawtime/afterbeam_drawtime_default;
+	_beam_height_per = ceil(_beam_height_per*4)/4;
+	_beam_height *= _beam_height_per;
 }
 
 draw_primitive_begin_texture(pr_trianglestrip, _tex);

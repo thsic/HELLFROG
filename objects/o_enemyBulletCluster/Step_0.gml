@@ -16,6 +16,12 @@ if(global.gamestop == false){
 				e_bullet_create_normal(o_enemyBulletNormal, 20, _cluster_direction, _bullet_speed, ac_enemyBullet, enemy_id, damage);
 			}
 		}
+		//音
+		if(bullet_create_sound != noone
+		and !audio_is_playing(bullet_fire_sound)){
+			audio_play_sound(bullet_fire_sound, 60, false);
+		}
+		
 		instance_destroy();
 	}
 

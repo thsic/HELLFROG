@@ -12,7 +12,7 @@ function macros() {
 #macro FIRST_ROOM r_stage1
 
 //敵
-#macro SCRIPT_ASSASSIN_BRINK enemy_assassin_brink
+#macro SCRIPT_ASSASSIN_BRINK enemy_assassin_blink
 
 //エフェクト
 #macro SLOW_TIME_LIMIT 180

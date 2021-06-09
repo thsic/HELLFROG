@@ -6,7 +6,7 @@
     "path": "folders/Scripts/enemy/group1.yy",
   },
   "resourceVersion": "1.0",
-  "name": "enemy_assassin_brink",
+  "name": "enemy_assassin_blink",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -95,6 +95,11 @@ function player_move(){
 	//あるき続けているとwalk_timeが上昇
 	if(_walking){
 		walk_time++
+		
+		//あしおと
+		if(walk_time mod 12 == 0){
+			audio_play_sound(a_stepsound, 20, false);
+		}
 	}
 	else{
 		walk_time = 0;

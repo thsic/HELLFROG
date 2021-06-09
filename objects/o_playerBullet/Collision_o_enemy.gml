@@ -34,6 +34,10 @@ and other.invincible_enable == false){//無敵の敵にも当たらない
 		var _size = random_range(6, 10);
 		effect_create_blast(x, y, _size, 15, 5, hit_effect_color, 1, 15);
 		
+		//音
+		if(!audio_is_playing(SE_ENEMYHIT)){
+			audio_play_sound(SE_ENEMYHIT, 30, false);
+		}
 	}
 }
 

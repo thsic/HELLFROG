@@ -6,4 +6,7 @@ function enemy_stun_start(){
 	if(stun_bullet_erasure){
 		enemy_bullet_erasure(id);
 	}
+	
+	//スタン音
+	//audio_play_sound(a_stun, 70, false);
 }

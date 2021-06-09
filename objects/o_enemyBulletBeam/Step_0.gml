@@ -13,6 +13,10 @@ if(global.gamestop == false){
 		if(afterbeam_drawtime = afterbeam_drawtime_default
 		and instance_exists(enemy_id)){
 			enemy_id.beam_enabled = true;//攻撃を発射したと本体に知らせる
+			//音ならす
+			if(!audio_is_playing(bullet_fire_sound)){
+				audio_play_sound(bullet_fire_sound, 60, false)
+			};
 		}
 		
 		beam_enable = true;

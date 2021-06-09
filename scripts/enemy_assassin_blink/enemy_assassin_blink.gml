@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function enemy_assassin_brink(){
+function enemy_assassin_blink(){
 	var _player_x = o_player.x;
 	var _player_y = o_player.y;
 	
@@ -78,5 +78,8 @@ function enemy_assassin_brink(){
 		//ワープ
 		x = _warp_x;
 		y = _warp_y;
+		
+		//音
+		audio_play_sound(a_blink, 60, false);
 	}
 }
