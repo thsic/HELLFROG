@@ -16,4 +16,5 @@ function data(){
 #macro SE_HOOKHITWALL a_hookhitWall
 #macro SE_HOOKHITENEMY a_hookhitEnemy
 
+
 }

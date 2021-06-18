@@ -6,7 +6,7 @@
     "path": "folders/Scripts/enemy.yy",
   },
   "resourceVersion": "1.0",
-  "name": "enemy_gain_spawn_count",
+  "name": "enemy_effect_manage",
   "tags": [],
   "resourceType": "GMScript",
 }

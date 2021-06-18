@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "enemy",
-    "path": "folders/Scripts/enemy.yy",
+    "name": "enemy effect",
+    "path": "folders/Scripts/enemy/enemy effect.yy",
   },
   "resourceVersion": "1.0",
-  "name": "enemy_gain_spawn_count",
+  "name": "enemy_give_effect",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "enemy",
-    "path": "folders/Scripts/enemy.yy",
+    "name": "group1",
+    "path": "folders/Scripts/enemy/group1.yy",
   },
   "resourceVersion": "1.0",
-  "name": "enemy_gain_spawn_count",
+  "name": "enemy_fire_totem_passive",
   "tags": [],
   "resourceType": "GMScript",
 }

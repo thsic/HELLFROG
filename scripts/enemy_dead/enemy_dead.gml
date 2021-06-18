@@ -18,6 +18,9 @@ function enemy_dead(_id, _do_dead_script){
 		
 		//死亡時のサウンド
 		se_play(SE_ENEMYDESTROY, 50, 1);
+		
+		//エフェクトリストを削除
+		ds_list_destroy(_id.effect_list);
 	}
 	
 	instance_destroy(_id);

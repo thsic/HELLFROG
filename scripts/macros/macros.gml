@@ -15,6 +15,7 @@ function macros() {
 
 //敵
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_blink
+#macro ENEMY_EFFECT_TOTAL_NUMBER 10//敵のエフェクトの総数
 
 //エフェクト
 #macro SLOW_TIME_LIMIT 180

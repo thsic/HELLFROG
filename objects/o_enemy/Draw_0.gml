@@ -163,6 +163,7 @@ var _tex = sprite_get_texture(_sprite, _subimage);
 var _tWidth = texture_get_texel_width(_tex);
 var _tHeight = texture_get_texel_height(_tex);
 
+
 var _r = 1.0;
 var _g = 1.0;
 var _b = 1.0;
@@ -177,6 +178,15 @@ if(state = EnemyState.WaitForSpawn){
 }
 if(state = EnemyState.Invincible){
 	var _a = _alpha * 0.5;
+}
+
+if(effect_list[| EnemyEffect.TotemFire]
+or effect_list[| EnemyEffect.SkeletonFire]){
+	//fire状態のときはアウトラインが赤くなる
+	_r = 1.0;
+	_g = 0.0;
+	_b = 0.0;
+	_a += (current_time * tan / 10) * 0.25;
 }
 
 shader_set_uniform_f(sh_texel_handle, _tWidth, _tHeight);

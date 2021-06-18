@@ -20,9 +20,8 @@ enemies_collision();
 enemy_dead_check();
 
 if(global.gamestop == false){
-	
+	enemy_effect_manage()//エフェクト管理
 	enemy_state_manage();//ステート管理
-	
 	enemy_param_manage()//敵パラメーター管理
 	enemy_move_execution();//移動
 }

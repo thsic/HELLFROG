@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Hook Action GM2.3",
-    "path": "Hook Action GM2.3.yyp",
+    "name": "fireSkeleton",
+    "path": "folders/Sprites/enemy/fireSkeleton.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_fireSkeleton",

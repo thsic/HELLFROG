@@ -77,8 +77,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Hook Action GM2.3",
-    "path": "Hook Action GM2.3.yyp",
+    "name": "fireTotem",
+    "path": "folders/Sprites/enemy/fireTotem.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_fireTotem",

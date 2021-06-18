@@ -35,5 +35,8 @@ damage_flash_time = 0;
 uni_add = shader_get_uniform(sh_enemy, "addValue");
 hitstop_time = -1;
 
+//エフェクト関連
+effect_list = ds_list_create();
+
 //ビームにのみ関係
 beam_enabled = false

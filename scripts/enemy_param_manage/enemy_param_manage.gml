@@ -18,4 +18,9 @@ function enemy_param_manage(){
 		hitstop_time--;
 	}
 	
+	//パッシブ
+	if(passive_script != noone){
+		script_execute(passive_script);
+	}
+	
 }
