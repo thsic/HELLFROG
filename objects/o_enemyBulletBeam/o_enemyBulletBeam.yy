@@ -33,6 +33,7 @@
   "overriddenProperties": [
     {"propertyId":{"name":"bullet_fire_sound","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"objectId":{"name":"o_enemyBullet","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"value":"a_beam","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"bullet_create_sound","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"objectId":{"name":"o_enemyBullet","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"value":"a_beamCharging","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"audio_simul_decay","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"objectId":{"name":"o_enemyBullet","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"value":"0.45","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "bullet",

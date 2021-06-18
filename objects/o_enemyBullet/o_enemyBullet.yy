@@ -30,6 +30,7 @@
     {"varType":5,"value":"noone","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[
         "GMSound",
       ],"resourceVersion":"1.0","name":"bullet_fire_sound","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"AUDIO_SIMUL_DECAY_DEFAULT","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"audio_simul_decay","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

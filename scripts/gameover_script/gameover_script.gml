@@ -18,7 +18,7 @@ function gameover_script(_gameover_knockback_dir){
 		}
 		
 		//音
-		audio_play_sound(SE_GAMEOVER, 90, false);
+		se_play(SE_GAMEOVER, 90, 1);
 		
 		//シーケンス
 		var _sequence_x = o_camera.x;

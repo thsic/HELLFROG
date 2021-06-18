@@ -11,6 +11,8 @@ function macros() {
 
 #macro FIRST_ROOM r_stage1
 
+
+
 //敵
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_blink
 
@@ -20,6 +22,7 @@ function macros() {
 #macro ENEMY_DAMAGED_FLASH_TIME 7
 #macro ENEMY_HITSTOP_TIME 5
 #macro PLAYER_BULLET_HITSTOP_TIME 7
+#macro AUDIO_SIMUL_DECAY_DEFAULT 0.66
 
 //ステージ名
 #macro STAGE1_NAME_JP "ヘルケイヴ"//"ヘル"+chr(13)+"ケイヴ"

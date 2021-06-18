@@ -17,7 +17,7 @@ function enemy_dead(_id, _do_dead_script){
 		gun_set_cooldown(0);
 		
 		//死亡時のサウンド
-		audio_play_sound(SE_ENEMYDESTROY, 50, false);
+		se_play(SE_ENEMYDESTROY, 50, 1);
 	}
 	
 	instance_destroy(_id);

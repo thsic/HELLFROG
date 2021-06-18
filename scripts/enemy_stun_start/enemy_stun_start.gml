@@ -8,5 +8,5 @@ function enemy_stun_start(){
 	}
 	
 	//スタン音
-	//audio_play_sound(a_stun, 70, false);
+	//se_play(a_stun, 70, false);
 }

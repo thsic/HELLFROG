@@ -12,6 +12,7 @@ instance_create_layer(0, 0, "GameObjects", o_menuMgr);
 instance_create_layer(0, 0, "UI", o_uiMgr);
 instance_create_layer(0, 0, "UI", o_shaderMgr);
 instance_create_layer(0, 0, "GameObjects", o_lockMgr);
+
 if(!instance_exists(o_persistentObject)){
 	instance_create_layer(0, 0, "GameObjects", o_persistentObject);//無いなら生成
 }

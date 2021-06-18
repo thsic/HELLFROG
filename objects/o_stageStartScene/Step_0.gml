@@ -1,7 +1,7 @@
 
 //ステージタイトルの音(?)
 if(draw_stage_name_time == 30 or draw_stage_name_time == 90){
-	audio_play_sound(a_stageTitle, 60, false);
+	se_play(a_stageTitle, 60, 1);
 }
 
 

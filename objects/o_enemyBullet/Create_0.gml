@@ -10,7 +10,6 @@ erasure_time = erasure_time_default;
 
 
 //音再生
-if(bullet_create_sound != noone
-and !audio_is_playing(bullet_create_sound)){
-	audio_play_sound(bullet_create_sound, 60, false);
+if(bullet_create_sound != noone){
+	se_play(bullet_create_sound, 60, audio_simul_decay);
 }

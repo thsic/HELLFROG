@@ -4,7 +4,7 @@ draw_stage_name_time = draw_stage_name_time_base;
 stagestart_lag = true;
 
 //音
-audio_play_sound(a_landing, 80, false);
+se_play(a_landing, 80, 1);
 
 //砂埃生成
 repeat(20){

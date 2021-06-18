@@ -80,6 +80,6 @@ function enemy_assassin_blink(){
 		y = _warp_y;
 		
 		//音
-		audio_play_sound(a_blink, 60, false);
+		se_play(a_blink, 60, AUDIO_SIMUL_DECAY_DEFAULT);
 	}
 }

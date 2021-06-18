@@ -20,7 +20,7 @@ function hook_state_manage() {
 			hook_direction = point_direction(_px, _py, global.vmouse_x, global.vmouse_y);
 			
 			//音
-			audio_play_sound(SE_HOOKSTART, 60, false);
+			se_play(SE_HOOKSTART, 60, AUDIO_SIMUL_DECAY_DEFAULT);
 		}
 		
 	break
@@ -93,12 +93,12 @@ function hook_state_manage() {
 					damage_to_enemy(_grab_enemy_id, _damage, _stun_damage);//敵にダメージを与える
 					
 					//音
-					audio_play_sound(SE_HOOKHITENEMY, 60, false);
+					se_play(SE_HOOKHITENEMY, 60, AUDIO_SIMUL_DECAY_DEFAULT);
 					
 				}
 				else{
 					//フックポールの音は壁と同じ
-					audio_play_sound(SE_HOOKHITWALL, 60, false);
+					se_play(SE_HOOKHITWALL, 60, AUDIO_SIMUL_DECAY_DEFAULT);
 				}
 			}
 			else{
@@ -136,7 +136,7 @@ function hook_state_manage() {
 		shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedDefault);
 		hook_state = hookState.Shrink;
 		
-		audio_play_sound(SE_HOOKHITWALL, 60, false);
+		se_play(SE_HOOKHITWALL, 60, AUDIO_SIMUL_DECAY_DEFAULT);
 	break
 	case hookState.GrabEnemy:
 		hook_point_x = hook_point_x_default+lengthdir_x(hook_length, hook_direction);

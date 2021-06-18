@@ -22,7 +22,7 @@ if(scene_time = _scene_1){
 	var _player_inst = instance_find(o_player, 0);
 	
 	//音
-	audio_play_sound(a_goalsound, 90, false);
+	se_play(a_goalsound, 90, 1);
 	
 	goal_sequence_element = layer_sequence_create("UnderTile", _sequence_x, _sequence_y, sq_goal);
 	

@@ -17,9 +17,8 @@ if(global.gamestop == false){
 			}
 		}
 		//音
-		if(bullet_create_sound != noone
-		and !audio_is_playing(bullet_fire_sound)){
-			audio_play_sound(bullet_fire_sound, 60, false);
+		if(bullet_create_sound != noone){
+			se_play(bullet_fire_sound, 60, AUDIO_SIMUL_DECAY_DEFAULT);
 		}
 		
 		instance_destroy();

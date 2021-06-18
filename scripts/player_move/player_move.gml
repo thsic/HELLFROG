@@ -98,7 +98,7 @@ function player_move(){
 		
 		//あしおと
 		if(walk_time mod 12 == 0){
-			audio_play_sound(a_stepsound, 20, false);
+			se_play(a_stepsound, 20, AUDIO_SIMUL_DECAY_DEFAULT);
 		}
 	}
 	else{
