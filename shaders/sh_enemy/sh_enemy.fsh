@@ -9,6 +9,7 @@ uniform vec2 inTexel;
 uniform vec4 outlineColor;
 
 uniform float addValue;
+uniform float outlineSize;
 
 //uniform float saturation;
 
@@ -46,7 +47,7 @@ void main()
 	//outline
 	vec4 newColor = v_vColour * texture2D(gm_BaseTexture, v_vTexcoord);
     
-	vec2 pixelSize = inTexel * 1.0;
+	vec2 pixelSize = inTexel * outlineSize;
 	
 	if(texture2D(gm_BaseTexture, v_vTexcoord).a <= 0.0){
 		float alpha = 0.0;

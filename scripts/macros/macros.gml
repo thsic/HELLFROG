@@ -30,6 +30,7 @@ function macros() {
 #macro STAGE1_NAME_JP2 "地獄洞窟"
 #macro STAGE1_NAME_EN "HELL"+chr(13)+"CAVE"
 
+#macro FIRE_DAMAGE 30//炎の敵をフックしたときのダメージ
 }
 
 

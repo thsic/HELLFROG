@@ -1,6 +1,7 @@
 
 global.gamestop = false;
 global.playerstop = false;
+global.game_time++;
 
 switch(global.gamestate){
 #region stagestart
@@ -204,3 +205,4 @@ break
 
 
 }
+

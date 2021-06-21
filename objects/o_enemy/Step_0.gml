@@ -15,7 +15,9 @@ and invincible_enable == false
 and hitstop_time == -1){
 	enemy_knockbacking();
 }
-enemies_collision();
+if(collision_repulsive){//敵同士がぶつかったときに移動させるかどうか
+	enemies_collision();
+}
 
 enemy_dead_check();
 

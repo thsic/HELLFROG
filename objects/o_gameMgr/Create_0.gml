@@ -50,7 +50,6 @@ near_goal_id = noone;
 global.slow_enable = false;
 fade_alpha = 1;
 
-
 //マウスカーソル
 virtual_cursol_enable = false;
 

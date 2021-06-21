@@ -156,7 +156,7 @@ shader_set_uniform_f(uni_add, _flash_ratio);
 
 sh_texel_handle = shader_get_uniform(sh_enemy, "inTexel");
 sh_outline_color_handle = shader_get_uniform(sh_enemy, "outlineColor");
-
+sh_outline_size_handle = shader_get_uniform(sh_enemy, "outlineSize");
 
 
 var _tex = sprite_get_texture(_sprite, _subimage);
@@ -167,6 +167,7 @@ var _tHeight = texture_get_texel_height(_tex);
 var _r = 1.0;
 var _g = 1.0;
 var _b = 1.0;
+var _outline_size = 1.0;
 if(sign(damage_flash_time)){
 	var _a = 1.0;
 }
@@ -180,18 +181,18 @@ if(state = EnemyState.Invincible){
 	var _a = _alpha * 0.5;
 }
 
-if(effect_list[| EnemyEffect.TotemFire]
-or effect_list[| EnemyEffect.SkeletonFire]){
+if(effect_list[| EnemyEffect.Fire]){
 	//fire状態のときはアウトラインが赤くなる
 	_r = 1.0;
 	_g = 0.0;
 	_b = 0.0;
-	_a += (current_time * tan / 10) * 0.25;
+	_a = 1 - cos(global.game_time/6) * 0.25;
+	_outline_size = 2 - sin(global.game_time/4);
 }
 
 shader_set_uniform_f(sh_texel_handle, _tWidth, _tHeight);
 shader_set_uniform_f(sh_outline_color_handle, _r, _g, _b, _a);
-
+shader_set_uniform_f(sh_outline_size_handle, _outline_size);
 
 
 if(sprite_rightward){

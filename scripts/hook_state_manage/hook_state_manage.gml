@@ -95,6 +95,12 @@ function hook_state_manage() {
 					//音
 					se_play(SE_HOOKHITENEMY, 60, AUDIO_SIMUL_DECAY_DEFAULT);
 					
+					//対象が火属性の場合はフックするとダメージ
+					if(_grab_enemy_id.effect_list[| EnemyEffect.Fire] > 0
+					and invincible_time <= 0){
+						damage_to_player(FIRE_DAMAGE, 1, player_direction+180);
+					}
+					
 				}
 				else{
 					//フックポールの音は壁と同じ
