@@ -7,6 +7,7 @@ if(global.gamestop == false or global.playerstop == false){
 	player_gun_manage()
 	
 	player_do_knockback();
+	player_tackle_manage();
 	
 	//effect
 	player_trail_manage();

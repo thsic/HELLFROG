@@ -31,6 +31,13 @@ function macros() {
 #macro STAGE1_NAME_EN "HELL"+chr(13)+"CAVE"
 
 #macro FIRE_DAMAGE 30//炎の敵をフックしたときのダメージ
+
+//細かいデータ等
+#macro TACKLE_DAMAGE 5
+#macro TACKLE_STUN_DAMAGE 100
+#macro TACKLE_KNOCKBACK_SPEED 1.5
+#macro TACKLE_REGIST_TIME_BASE 30
+
 }
 
 

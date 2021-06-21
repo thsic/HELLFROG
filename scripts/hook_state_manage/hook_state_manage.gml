@@ -14,6 +14,7 @@ function hook_state_manage() {
 			hook_point_x_default = x;
 			hook_point_y_default = y;
 			hook_length = 0;
+			grab_enemy_id = noone;
 			
 			var _px = x - camera_get_view_x(view_camera[0]);
 			var _py = y - camera_get_view_y(view_camera[0]);
@@ -86,12 +87,14 @@ function hook_state_manage() {
 				
 				//掴んだ敵がフックポールじゃない場合はノックバックとダメージ与える
 				if(_grab_enemy_id.object_index != o_hookPole){
+					/*
 					var _knockback_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.KnockbackForEnemyPower);
 					var _damage = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.Damage);
 					var _stun_damage = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.StunDamage);
 					enemy_knockback_start(_grab_enemy_id, _knockback_speed, hook_direction)//敵をノックバックさせる
 					damage_to_enemy(_grab_enemy_id, _damage, _stun_damage);//敵にダメージを与える
-					
+					*/
+					grab_enemy_id = _grab_enemy_id;
 					//音
 					se_play(SE_HOOKHITENEMY, 60, AUDIO_SIMUL_DECAY_DEFAULT);
 					
@@ -154,7 +157,8 @@ function hook_state_manage() {
 	break
 	case hookState.Shrink:
 		hook_direction = point_direction(x, y, hook_point_x, hook_point_y);
-	
+		tackle_time = 5;//フックで移動中はタックルの効果がある
+		
 		//フックボタンが離されたらフック離す
 		if(mouse_check_button(global.hook_button) == false){
 			hook_state = hookState.Idle;
@@ -165,6 +169,8 @@ function hook_state_manage() {
 		if(point_distance(x, y, hook_point_x, hook_point_y) < _shrink_speed*2){
 			hook_state = hookState.Idle;
 			player_start_knockback(eK_type.HookSmall);//フックを離すよりさらに小さいノックバックする
+			
+			grab_enemy_id = noone;
 		}
 	break
 	}

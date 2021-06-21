@@ -12,8 +12,10 @@ v_speed = 0;
 
 max_hp = hp;
 
+
 collision_size_for_hook = 0;
 on_screen = false;
+idle_mode = false;
 
 movement_enable = false;
 movement_cooldown = 0;
@@ -35,6 +37,7 @@ damage_flash_time = 0;
 uni_add = shader_get_uniform(sh_enemy, "addValue");
 hitstop_time = -1;
 
+tackle_regist_time = 0;
 //エフェクト関連
 effect_list = ds_list_create();
 

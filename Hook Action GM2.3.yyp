@@ -224,6 +224,7 @@
     {"id":{"name":"s_enemyBeamWalk","path":"sprites/s_enemyBeamWalk/s_enemyBeamWalk.yy",},"order":0,},
     {"id":{"name":"a_slash","path":"sounds/a_slash/a_slash.yy",},"order":1,},
     {"id":{"name":"player_cursed_damage","path":"scripts/player_cursed_damage/player_cursed_damage.yy",},"order":6,},
+    {"id":{"name":"player_tackle_manage","path":"scripts/player_tackle_manage/player_tackle_manage.yy",},"order":0,},
     {"id":{"name":"s_door1","path":"sprites/s_door1/s_door1.yy",},"order":6,},
     {"id":{"name":"s_enemyAcidWalk","path":"sprites/s_enemyAcidWalk/s_enemyAcidWalk.yy",},"order":0,},
     {"id":{"name":"enemy_knockback_start","path":"scripts/enemy_knockback_start/enemy_knockback_start.yy",},"order":9,},
@@ -270,6 +271,7 @@
     {"id":{"name":"set_respawn_point","path":"scripts/set_respawn_point/set_respawn_point.yy",},"order":0,},
     {"id":{"name":"o_camera","path":"objects/o_camera/o_camera.yy",},"order":0,},
     {"id":{"name":"o_wall","path":"objects/o_wall/o_wall.yy",},"order":2,},
+    {"id":{"name":"tackle_to_enemy","path":"scripts/tackle_to_enemy/tackle_to_enemy.yy",},"order":1,},
     {"id":{"name":"enemy_fire_sword","path":"scripts/enemy_fire_sword/enemy_fire_sword.yy",},"order":5,},
     {"id":{"name":"o_normalWall","path":"objects/o_normalWall/o_normalWall.yy",},"order":0,},
     {"id":{"name":"ac_lifestealOrbMagnetismRatio","path":"animcurves/ac_lifestealOrbMagnetismRatio/ac_lifestealOrbMagnetismRatio.yy",},"order":3,},
@@ -391,6 +393,7 @@
     {"folderPath":"folders/Sprites/enemy/fireSkeleton.yy","order":10,"resourceVersion":"1.0","name":"fireSkeleton","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/enemy/fireTotem.yy","order":11,"resourceVersion":"1.0","name":"fireTotem","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/enemy/enemy effect.yy","order":3,"resourceVersion":"1.0","name":"enemy effect","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/PLAYER/tackle.yy","order":15,"resourceVersion":"1.0","name":"tackle","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

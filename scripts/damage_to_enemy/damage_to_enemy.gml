@@ -6,7 +6,7 @@ function damage_to_enemy(_enemy_id, _damage, _stun_damage) {
 		stun_to_enemy(_enemy_id, _stun_damage);
 	
 		with(_enemy_id){
-			hp -= _damage;
+			hp -= ceil(_damage);
 			enemy_dead_check();
 			damage_flash_time = ENEMY_DAMAGED_FLASH_TIME;
 		}

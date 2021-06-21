@@ -52,7 +52,8 @@ drawed_charge_fin_effect = false;
 //残像
 trail_time = 0;
 trail_data = ds_grid_create(8, 30);
-
+//タックル
+tackle_time = 0;
 
 //test
 debug_draw_inertiaspd = 0;

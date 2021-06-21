@@ -17,6 +17,10 @@ function enemy_param_manage(){
 	if(hitstop_time >= 0){
 		hitstop_time--;
 	}
+	//タックル耐性
+	if(tackle_regist_time > 0){
+		tackle_regist_time--;
+	}
 	
 	//パッシブ
 	if(passive_script != noone){
