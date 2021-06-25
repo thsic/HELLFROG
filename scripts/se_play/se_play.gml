@@ -14,7 +14,6 @@ function se_play(_index, _priority, _simul_decay){
 				//既に再生されている
 				var _volume = _smgr.sound_default_volume[_index] * power(_simul_decay, _list_size);
 				//sdm(_smgr.sound_default_volume[_index]);
-				sdm(power(0.2, _list_size))
 				audio_sound_gain(_index, _volume, 0);//音量の設定
 				
 			}
