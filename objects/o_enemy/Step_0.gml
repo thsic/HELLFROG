@@ -19,7 +19,6 @@ else{
 }
 
 
-
 if(global.gamestop == false
 and idle_mode == false){
 	if(knockback_enable == true

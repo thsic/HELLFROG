@@ -12,14 +12,14 @@ function enemy_fire_totem_passive(){
 			for(var i=0; i<_enemy_num; i++){
 				var _id = instance_find(o_enemy, i);
 				var _dis = point_distance(x, y, _id.x, _id.y);
-			
 				//射程内にいる敵を探す
 				if(_dis < weapon_range
 				and _id.object_index != o_hookPole
 				and _id.object_index != o_enemyFireTotem){
-					if(fire_passive){
+					if(_id.fire_passive){
 						//既にfire状態の敵には強化fireeffectを付与
 						enemy_give_effect(_id, EnemyEffect.UltraFire, _span+1);
+						
 					}
 					else{
 						//fireeffectを付与

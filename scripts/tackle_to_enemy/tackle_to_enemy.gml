@@ -1,7 +1,8 @@
 //
 function tackle_to_enemy(_id){
 	
-	if(instance_exists(_id)){
+	if(instance_exists(_id)
+	and _id.object_index != o_hookPole){
 		if(_id.tackle_regist_time <= 0){
 			var _damage = TACKLE_DAMAGE;
 			var _stun_damage = TACKLE_STUN_DAMAGE;

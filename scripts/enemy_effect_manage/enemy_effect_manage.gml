@@ -10,6 +10,12 @@ function enemy_effect_manage(){
 		}
 	}
 	
+	if(global.game_time mod 5 == 0
+	and fire_passive){
+		enemy_give_effect(id, EnemyEffect.Fire, 6);
+	}
+	
+	
 
 	enum EnemyEffect{
 		Fire,

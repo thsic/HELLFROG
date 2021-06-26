@@ -188,6 +188,11 @@ if(effect_list[| EnemyEffect.Fire]){
 	_b = 0.0;
 	_a = 1 - cos(global.game_time/6) * 0.25;
 	_outline_size = 2 - sin(global.game_time/4);
+	if(effect_list[| EnemyEffect.UltraFire]){
+		_a = 1 - cos(global.game_time/4) * 0.25;
+		_outline_size = clamp(3 - tan(global.game_time/2), 0, 5);
+	}
+	
 }
 
 shader_set_uniform_f(sh_texel_handle, _tWidth, _tHeight);
