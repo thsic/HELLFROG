@@ -7,7 +7,12 @@ if(global.gamestop == false){
 	else{
 		life_time++;
 		
-		//いちおう
+		if(life_time == delay_time_default){
+			//発射された時音ならす
+			
+		}
+		
+		//長い時間マーカーにたどり着かないと消滅
 		if(life_time > 120){
 			part_type_destroy(pt_type);
 			part_system_destroy(pt_sys);
@@ -34,6 +39,9 @@ if(global.gamestop == false){
 			//生成されて少しのあいだ動かない
 			var _speed = 0;
 		}
+		if(stay_time == life_time){
+			se_play(bullet_shoot_sound, 60, 1);
+		}
 		
 		var _dir = point_direction(x, y, marker_x, marker_y);
 		
@@ -48,6 +56,8 @@ if(global.gamestop == false){
 			var _blast_x = marker_x-blast_size;
 			var _blast_y = marker_y-blast_size;
 			effect_create_blast(_blast_x, _blast_y, blast_size, 15, 5, blast_color, 1, 12);
+			//音
+			se_play(bullet_fire_sound, 60, 1);
 			
 			var _px = o_player.x;
 			var _py = o_player.y;

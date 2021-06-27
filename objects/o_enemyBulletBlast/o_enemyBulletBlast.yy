@@ -34,8 +34,11 @@
     {"varType":7,"value":"$FF0A0A66","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"marker_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"20","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"stay_time","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF0A1966","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"trail_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"s_blastBulletCreate","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"bullet_shoot_sound","tags":[],"resourceType":"GMObjectProperty",},
   ],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"bullet_fire_sound","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"objectId":{"name":"o_enemyBullet","path":"objects/o_enemyBullet/o_enemyBullet.yy",},"value":"a_blastBulletBlast","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "bullet",
     "path": "folders/Objects/enemy/bullet.yy",

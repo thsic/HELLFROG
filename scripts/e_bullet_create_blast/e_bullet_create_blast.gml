@@ -24,6 +24,7 @@ function e_bullet_create_blast(_object_number, _x, _y, _blast_size, _fire_delay,
 		marker_x = _marker_x;
 		marker_y = _marker_y;
 		delay_time = _fire_delay;
+		delay_time_default = _fire_delay;
 	}
 	
 }

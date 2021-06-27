@@ -14,6 +14,6 @@ function enemy_fire_fire_skeleton(){
 		var _marker_length_max = 32;
 	}
 	for(var i=0; i<_bullet_num; i++){
-		e_bullet_create_blast(o_enemyBulletBlast, x, y, _blast_size, _delay_time*i, id, _marker_length_max, fire_damage);
+		e_bullet_create_blast(o_enemyBulletBlast, x, y+8, _blast_size, _delay_time*i, id, _marker_length_max, fire_damage);
 	}
 }
