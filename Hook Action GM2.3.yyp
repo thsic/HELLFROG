@@ -191,6 +191,7 @@
     {"id":{"name":"fire_straight_ammo","path":"scripts/fire_straight_ammo/fire_straight_ammo.yy",},"order":3,},
     {"id":{"name":"sh_enemy","path":"shaders/sh_enemy/sh_enemy.yy",},"order":5,},
     {"id":{"name":"set_invincible_time","path":"scripts/set_invincible_time/set_invincible_time.yy",},"order":11,},
+    {"id":{"name":"fo_assistMode","path":"fonts/fo_assistMode/fo_assistMode.yy",},"order":6,},
     {"id":{"name":"create_button","path":"scripts/create_button/create_button.yy",},"order":10,},
     {"id":{"name":"o_roomLocker","path":"objects/o_roomLocker/o_roomLocker.yy",},"order":6,},
     {"id":{"name":"s_sqMenuSub","path":"sprites/s_sqMenuSub/s_sqMenuSub.yy",},"order":1,},

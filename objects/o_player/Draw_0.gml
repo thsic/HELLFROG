@@ -1,6 +1,20 @@
 if(draw_player){
 	#region 残像描画
 	var _data_height = ds_grid_height(trail_data);
+	
+	//アシストモードによって色をすこし変える
+	switch(global.assist_mode){
+	case 0:
+		var _trail_color = trail_color;
+	break
+	case 1:
+		var _trail_color = trail_assist_color;;
+	break
+	case -1:
+		var _trail_color = trail_hell_color;
+	break
+		
+	}
 	for(var i=0; i<_data_height; i++){
 		if(trail_data[# TrailData.Enable, i] == true){
 			var _x = trail_data[# TrailData.X, i];
@@ -15,8 +29,8 @@ if(draw_player){
 				var _x_scale = -1;
 			}
 		
-			draw_sprite_ext(s_playerFace, 0, _x, _y, _x_scale, 1, 0, trail_color, _alpha);
-			draw_sprite_ext(s_playerWalk, 0, _x, _y, _x_scale, 1, 0, trail_color, _alpha);
+			draw_sprite_ext(s_playerFace, 0, _x, _y, _x_scale, 1, 0, _trail_color, _alpha);
+			draw_sprite_ext(s_playerWalk, 0, _x, _y, _x_scale, 1, 0, _trail_color, _alpha);
 		}
 	}
 

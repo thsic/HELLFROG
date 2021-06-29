@@ -45,7 +45,9 @@ function macros() {
 /*
 ゾウフォント
 https://www.lazypolarbear.com/zou
-
-
+Mplus 
+https://mplusfonts.github.io
+Dela Gothic
+https://github.com/syakuzen/DelaGothic
 
 */

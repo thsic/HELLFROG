@@ -21,14 +21,17 @@ enum ButtonName{
 	EnemyDamage,
 	DotDamage,
 	PlayerAttackDamage,
+	ToggleAssistMode,
 }
 enum ButtonParam{
 	X,
 	Y,
 	Width,
 	Height,
-	Text,
+	TextEn,
+	TextJp,
 	OnCursor,
+	Variable,
 }
 state = Menustate.Closing;
 openmenu_sequence_element = noone;
@@ -61,12 +64,20 @@ button_param = ds_grid_create(15, 10);
 	button_param[# ButtonName.AssistMode, ButtonParam.Y] = _ch /3 + _button_height_base * 3;
 	button_param[# ButtonName.SaveAndQuit, ButtonParam.Y] = _ch /3 + _button_height_base * 4;
 	
-	button_param[# ButtonName.Resume, ButtonParam.Text] = "RESUME";
-	button_param[# ButtonName.Retry, ButtonParam.Text] = "RETRY";
-	button_param[# ButtonName.Option, ButtonParam.Text] = "OPTION";
-	button_param[# ButtonName.AssistMode, ButtonParam.Text] = "ASSIST MODE";
-	button_param[# ButtonName.SaveAndQuit, ButtonParam.Text] = "SAVE AND QUIT";
+	button_param[# ButtonName.Resume, ButtonParam.TextEn] = "RESUME";
+	button_param[# ButtonName.Retry, ButtonParam.TextEn] = "RETRY";
+	button_param[# ButtonName.Option, ButtonParam.TextEn] = "OPTION";
+	button_param[# ButtonName.AssistMode, ButtonParam.TextEn] = "ASSIST MODE";
+	button_param[# ButtonName.SaveAndQuit, ButtonParam.TextEn] = "SAVE AND QUIT";
 	
+	button_param[# ButtonName.Resume, ButtonParam.TextJp] = "戻る";
+	button_param[# ButtonName.Retry, ButtonParam.TextJp] = "リトライ";
+	button_param[# ButtonName.Option, ButtonParam.TextJp] = "オプション";
+	button_param[# ButtonName.AssistMode, ButtonParam.TextJp] = "アシストモード";
+	button_param[# ButtonName.SaveAndQuit, ButtonParam.TextJp] = "セーブして終了";
+	
+	menu_hell_button_text_en = "HELL MODE";
+	menu_hell_button_text_jp = "HELL MODE"
 	
 	//option
 	var _bar_height_base = 12;
@@ -84,25 +95,75 @@ button_param = ds_grid_create(15, 10);
 	button_param[# ButtonName.BGMVol, ButtonParam.Y] = _ch /3 + _bar_height_base * 2;
 	button_param[# ButtonName.Launguage, ButtonParam.Y] = _ch /3 + _bar_height_base * 8;
 	
-	button_param[# ButtonName.SEVol, ButtonParam.Text] = "SE";
-	button_param[# ButtonName.BGMVol, ButtonParam.Text] = "BGM";
-	button_param[# ButtonName.Launguage, ButtonParam.Text] = "LAUNGUAGE";
+	button_param[# ButtonName.SEVol, ButtonParam.TextEn] = "SE";
+	button_param[# ButtonName.BGMVol, ButtonParam.TextEn] = "BGM";
+	button_param[# ButtonName.Launguage, ButtonParam.TextEn] = "LAUNGUAGE";
+	
+	button_param[# ButtonName.SEVol, ButtonParam.TextJp] = "SE";
+	button_param[# ButtonName.BGMVol, ButtonParam.TextJp] = "BGM";
+	button_param[# ButtonName.Launguage, ButtonParam.TextJp] = "言語";
+	
 	button_param[# ButtonName.Launguage, ButtonParam.X] = _cw * 0.5;
 	button_param[# ButtonName.Launguage, ButtonParam.Height] = _bar_height_base*2;
 	
-	
-	
 	//assistmode
+	var _bar_height_base = 48;
 	var _button_name_assist;
 	_button_name_assist[0] = ButtonName.EnemyDamage;
 	_button_name_assist[1] = ButtonName.DotDamage;
 	_button_name_assist[2] = ButtonName.PlayerAttackDamage;
+	_button_name_assist[3] = ButtonName.ToggleAssistMode;
 	for(var i=0; i<array_length(_button_name_assist); i++){
-		button_param[# _button_name_assist[i], ButtonParam.X] = _cw/6;
-		button_param[# _button_name_assist[i], ButtonParam.Width] = _cw/12;
+		button_param[# _button_name_assist[i], ButtonParam.X] = _cw * 0.65;
+		button_param[# _button_name_assist[i], ButtonParam.Width] = _cw/2;
 		button_param[# _button_name_assist[i], ButtonParam.Height] = _button_height_base;
 	}
 	
+	button_param[# ButtonName.EnemyDamage, ButtonParam.Y] = _bar_height_base * 1;
+	button_param[# ButtonName.DotDamage, ButtonParam.Y] = _bar_height_base * 2;
+	button_param[# ButtonName.PlayerAttackDamage, ButtonParam.Y] = _bar_height_base * 3;
+	button_param[# ButtonName.ToggleAssistMode, ButtonParam.Y] = 4;
+	button_param[# ButtonName.ToggleAssistMode, ButtonParam.X] = _cw/2;
+	
+	
+	button_param[# ButtonName.EnemyDamage, ButtonParam.TextEn] = "ENEMY ATTACK DAMAGE";
+	button_param[# ButtonName.DotDamage, ButtonParam.TextEn] = "DOT DAMAGE";
+	button_param[# ButtonName.PlayerAttackDamage, ButtonParam.TextEn] = "PLAYER ATTACK DAMAGE";
+	button_param[# ButtonName.ToggleAssistMode, ButtonParam.TextEn] = "ASSIST MODE";
+	
+	button_param[# ButtonName.EnemyDamage, ButtonParam.TextJp] = "敵の攻撃力";
+	button_param[# ButtonName.DotDamage, ButtonParam.TextJp] = "スリップダメージ";
+	button_param[# ButtonName.PlayerAttackDamage, ButtonParam.TextJp] = "プレイヤーの攻撃力";
+	button_param[# ButtonName.ToggleAssistMode, ButtonParam.TextJp] = "ASSIST MODE";
+	
+	
+	am_enemy_damage[0] = 1;
+	am_enemy_damage[1] = 0.75;
+	am_enemy_damage[2] = 0.5;
+	am_dot_damage[0] = 1;
+	am_dot_damage[1] = 0.75;
+	am_dot_damage[2] = 0.5;
+	am_player_damage[0] = 1;
+	am_player_damage[1] = 1.5;
+	am_player_damage[2] = 2;
+	
+	button_param[# ButtonName.EnemyDamage, ButtonParam.Variable] = am_enemy_damage;
+	button_param[# ButtonName.DotDamage, ButtonParam.Variable] = am_dot_damage;
+	button_param[# ButtonName.PlayerAttackDamage, ButtonParam.Variable] = am_player_damage;
+	
+	assist_level_enemy_damage = 0;
+	assist_level_dot_damage = 0;
+	assist_level_player_damage = 0;
+	
+	hell_enemy_damage_ratio = 1.5;
+	hell_dot_damage_ratio = 1.5;
+	hell_player_damage_ratio = 0.66;
+	
+	hell_enemy_damage_enable = false;
+	hell_dot_damage_enable = false;
+	hell_player_damage_enable = false;
+	
+	hell_mode_pixel = _cw/2 - (_cw - (_cw*0.65 + _cw/4)) * 2;
 	
 	
 #endregion
