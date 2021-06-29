@@ -50,7 +50,6 @@ function player_trail_manage(){
 				trail_data[# TrailData.Alpha, i] = 0;
 				trail_data[# TrailData.LookRight, i] = 0;
 				
-				
 			}
 		}
 	}

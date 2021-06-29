@@ -2,7 +2,8 @@ if(draw_player){
 	#region 残像描画
 	var _data_height = ds_grid_height(trail_data);
 	
-	//アシストモードによって色をすこし変える
+	//アシストモードによって色と透明度すこし変える
+	var _alpha_ratio = 1;
 	switch(global.assist_mode){
 	case 0:
 		var _trail_color = trail_color;
@@ -11,9 +12,17 @@ if(draw_player){
 		var _trail_color = trail_assist_color;;
 	break
 	case -1:
-		var _trail_color = trail_hell_color;
-	break
+		//true hell状態なら色をつよめにする
+		if(global.true_hell){
+			var _trail_color = trail_true_hell_color;
+			_alpha_ratio = 2.5
+		}
+		else{
+			var _trail_color = trail_hell_color;
+			_alpha_ratio = 1.6;
+		}
 		
+	break
 	}
 	for(var i=0; i<_data_height; i++){
 		if(trail_data[# TrailData.Enable, i] == true){
@@ -21,7 +30,8 @@ if(draw_player){
 			var _y = trail_data[# TrailData.Y, i];
 			var _alpha = trail_data[# TrailData.Alpha, i];
 			var _look_right = trail_data[# TrailData.LookRight, i];
-		
+			
+			
 			if(_look_right){
 				var _x_scale = 1;
 			}
@@ -29,8 +39,8 @@ if(draw_player){
 				var _x_scale = -1;
 			}
 		
-			draw_sprite_ext(s_playerFace, 0, _x, _y, _x_scale, 1, 0, _trail_color, _alpha);
-			draw_sprite_ext(s_playerWalk, 0, _x, _y, _x_scale, 1, 0, _trail_color, _alpha);
+			draw_sprite_ext(s_playerFace, 0, _x, _y, _x_scale, 1, 0, _trail_color, _alpha*_alpha_ratio);
+			draw_sprite_ext(s_playerWalk, 0, _x, _y, _x_scale, 1, 0, _trail_color, _alpha*_alpha_ratio);
 		}
 	}
 

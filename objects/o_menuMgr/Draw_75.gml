@@ -242,14 +242,14 @@ case Menustate.AssistMode:
 	_button_name[3] = ButtonName.ToggleAssistMode;
 	
 	var _assist_level;
-	_assist_level[0] = assist_level_enemy_damage;
-	_assist_level[1] = assist_level_dot_damage;
-	_assist_level[2] = assist_level_player_damage;
+	_assist_level[0] = global.assist_level_enemy_damage;
+	_assist_level[1] = global.assist_level_dot_damage;
+	_assist_level[2] = global.assist_level_player_damage;
 	
 	var _hell_enable;
-	_hell_enable[0] = hell_enemy_damage_enable;
-	_hell_enable[1] = hell_dot_damage_enable;
-	_hell_enable[2] = hell_player_damage_enable;
+	_hell_enable[0] = global.hell_enemy_damage_enable;
+	_hell_enable[1] = global.hell_dot_damage_enable;
+	_hell_enable[2] = global.hell_player_damage_enable;
 	
 	var _hell_ratio;
 	_hell_ratio[0] = hell_enemy_damage_ratio;

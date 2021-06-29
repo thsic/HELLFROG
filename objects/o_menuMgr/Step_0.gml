@@ -226,13 +226,13 @@ case Menustate.AssistMode:
 		global.dot_damage = 1;
 		global.player_damage = 1;
 		
-		assist_level_enemy_damage = 0;
-		assist_level_dot_damage = 0;
-		assist_level_player_damage = 0;
+		global.assist_level_enemy_damage = 0;
+		global.assist_level_dot_damage = 0;
+		global.assist_level_player_damage = 0;
 		
-		hell_enemy_damage_enable = false;
-		hell_dot_damage_enable = false;
-		hell_player_damage_enable = false;
+		global.hell_enemy_damage_enable = false;
+		global.hell_dot_damage_enable = false;
+		global.hell_player_damage_enable = false;
 		
 	}
 	
@@ -254,15 +254,15 @@ case Menustate.AssistMode:
 		
 		switch(grab_bar){
 		case ButtonName.EnemyDamage:
-			hell_enemy_damage_enable = _enable;
+			global.hell_enemy_damage_enable = _enable;
 			
 		break
 		case ButtonName.DotDamage:
-			hell_dot_damage_enable = _enable;
+			global.hell_dot_damage_enable = _enable;
 			
 		break
 		case ButtonName.PlayerAttackDamage:
-			hell_player_damage_enable = _enable;
+			global.hell_player_damage_enable = _enable;
 			
 		break
 		}
@@ -318,15 +318,15 @@ case Menustate.AssistMode:
 	if(global.assist_mode != -1){//ヘルモードのときはアシストレベルの変更ができない
 		switch(grab_bar){
 		case ButtonName.EnemyDamage:
-			assist_level_enemy_damage = round(_mouse_pos / _one_scale_pixel_size);
+			global.assist_level_enemy_damage = round(_mouse_pos / _one_scale_pixel_size);
 		
 		break
 		case ButtonName.DotDamage:
-			assist_level_dot_damage = round(_mouse_pos / _one_scale_pixel_size);
+			global.assist_level_dot_damage = round(_mouse_pos / _one_scale_pixel_size);
 			
 		break
 		case ButtonName.PlayerAttackDamage:
-			assist_level_player_damage = round(_mouse_pos / _one_scale_pixel_size);
+			global.assist_level_player_damage = round(_mouse_pos / _one_scale_pixel_size);
 		
 		break
 		case noone:
@@ -339,9 +339,9 @@ case Menustate.AssistMode:
 	}
 	
 	if(global.assist_mode != -1){
-		if(assist_level_enemy_damage == 0
-		and assist_level_dot_damage == 0
-		and assist_level_player_damage == 0){
+		if(global.assist_level_enemy_damage == 0
+		and global.assist_level_dot_damage == 0
+		and global.assist_level_player_damage == 0){
 			global.assist_mode = 0;
 		}
 		else{
@@ -349,20 +349,29 @@ case Menustate.AssistMode:
 		}
 	}
 	else{
-		if(hell_enemy_damage_enable == false
-		and hell_dot_damage_enable == false
-		and hell_player_damage_enable = false){
+		if(global.hell_enemy_damage_enable == false
+		and global.hell_dot_damage_enable == false
+		and global.hell_player_damage_enable = false){
 			//すべてオフのときはヘルモードから通常モードに
 			reset_assist_mode();
 			global.assist_mode = 0;
 		}
 	}
 	
+	if(global.hell_enemy_damage_enable == true
+	and global.hell_dot_damage_enable == true
+	and global.hell_player_damage_enable = true){
+		//すべてオンの時はtrue hell 状態にする
+		global.true_hell = true;
+	}
+	else{
+		global.true_hell = false;
+	}
 	
 		
-	global.enemy_damage = am_enemy_damage[assist_level_enemy_damage];
-	global.dot_damage = am_dot_damage[assist_level_dot_damage];
-	global.player_damage = am_player_damage[assist_level_player_damage];
+	global.enemy_damage = am_enemy_damage[global.assist_level_enemy_damage];
+	global.dot_damage = am_dot_damage[global.assist_level_dot_damage];
+	global.player_damage = am_player_damage[global.assist_level_player_damage];
 	
 	if(mouse_check_button_pressed(global.hook_button)){
 		_menu_close = true;

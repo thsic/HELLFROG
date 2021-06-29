@@ -3,15 +3,29 @@ set_window_size(WINDOW_SIZE_MAGNIFICATION)
 instance_create_layer(0, 0, "Instances", o_debugMgr);
 instance_create_layer(0, 0, "Instances", o_soundMgr);
 global.game_time = 0;
-global.se_volume = 0.5;
-global.bgm_volume = 0.5;
 
+
+//アシストモード関連
 global.enemy_damage = 1;
 global.dot_damage = 1;
 global.player_damage = 1;
-
-global.launguage = Launguage.Japanese;
 global.assist_mode = 0;
+
+global.assist_level_enemy_damage = 0;
+global.assist_level_dot_damage = 0;
+global.assist_level_player_damage = 0;
+	
+global.hell_enemy_damage_enable = false;
+global.hell_dot_damage_enable = false;
+global.hell_player_damage_enable = false;
+
+global.true_hell = false;
+
+//オプション
+global.se_volume = 0.5;
+global.bgm_volume = 0.5;
+global.launguage = Launguage.Japanese;
+
 
 room_goto(FIRST_ROOM);
 

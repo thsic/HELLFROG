@@ -151,17 +151,12 @@ button_param = ds_grid_create(15, 10);
 	button_param[# ButtonName.DotDamage, ButtonParam.Variable] = am_dot_damage;
 	button_param[# ButtonName.PlayerAttackDamage, ButtonParam.Variable] = am_player_damage;
 	
-	assist_level_enemy_damage = 0;
-	assist_level_dot_damage = 0;
-	assist_level_player_damage = 0;
 	
 	hell_enemy_damage_ratio = 1.5;
 	hell_dot_damage_ratio = 1.5;
 	hell_player_damage_ratio = 0.66;
 	
-	hell_enemy_damage_enable = false;
-	hell_dot_damage_enable = false;
-	hell_player_damage_enable = false;
+	
 	
 	hell_mode_pixel = _cw/2 - (_cw - (_cw*0.65 + _cw/4)) * 2;
 	
