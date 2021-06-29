@@ -39,6 +39,12 @@ else{
 	//shader_reset();
 }
 
+if(global.gamestate == gamestate.menu){
+	shader_set(sh_decrementSaturation);
+	shader_set_uniform_f(uni_saturation, 0);
+	draw_surface(gray_surface, 0, 0);
+	shader_reset();
+}
 
 	
 
