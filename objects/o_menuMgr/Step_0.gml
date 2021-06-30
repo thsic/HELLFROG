@@ -97,7 +97,7 @@ case Menustate.Main://プレイヤーが操作できる メニューのいろい
 	//メニューを閉じる
 	if(keyboard_check_pressed(global.menu_key)
 	or _menu_close){
-		state = Menustate.Closing;
+		state = Menustate.CloseStart;
 		change_gamestate(after_menu_gamestate);
 		lagging_start(10, ac_lagRatio);//メニューを閉じるときラグを発生させる
 	}
@@ -161,6 +161,10 @@ case Menustate.Option:
 		var _w = button_param[# grab_bar, ButtonParam.Width];
 		var _ratio = clamp((global.vmouse_x - (_x - _w/2)) / _w, 0, 1);
 		global.se_volume = floor(_ratio * 100)/100;
+		
+		if(global.game_time mod 45 == 0){//一定時間ごとに音を鳴らす
+			se_play(a_shotLv2, 60, 1);
+		}
 			
 	break
 	case ButtonName.BGMVol:
@@ -289,7 +293,6 @@ case Menustate.AssistMode:
 			break
 			}
 
-			
 		}
 		else{
 			//バー
@@ -368,10 +371,8 @@ case Menustate.AssistMode:
 		global.true_hell = false;
 	}
 	
-		
-	global.enemy_damage = am_enemy_damage[global.assist_level_enemy_damage];
-	global.dot_damage = am_dot_damage[global.assist_level_dot_damage];
-	global.player_damage = am_player_damage[global.assist_level_player_damage];
+	
+	set_damage_ratio();
 	
 	if(mouse_check_button_pressed(global.hook_button)){
 		_menu_close = true;
@@ -380,13 +381,13 @@ case Menustate.AssistMode:
 	if(keyboard_check_pressed(global.menu_key)
 	or _menu_close){
 		state = Menustate.Main;
+		
 	}
 break
 case Menustate.CloseStart://閉じ始める 1f
 	
-	closemenu_sequence_element = layer_sequence_create("UI", _x, _y, sq_closeMenu);
-	layer_sequence_play(closemenu_sequence_element);
-	state = Menustate.CloseSequence;
+	set_damage_ratio();
+	state = Menustate.Closing;
 	
 break
 case Menustate.CloseSequence://閉じるシーケンス描画中

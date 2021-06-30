@@ -137,25 +137,19 @@ button_param = ds_grid_create(15, 10);
 	button_param[# ButtonName.ToggleAssistMode, ButtonParam.TextJp] = "ASSIST MODE";
 	
 	
-	am_enemy_damage[0] = 1;
-	am_enemy_damage[1] = 0.75;
-	am_enemy_damage[2] = 0.5;
-	am_dot_damage[0] = 1;
-	am_dot_damage[1] = 0.75;
-	am_dot_damage[2] = 0.5;
-	am_player_damage[0] = 1;
-	am_player_damage[1] = 1.5;
-	am_player_damage[2] = 2;
+	am_enemy_damage[0] = ASSIST_ENEMY_DAMAGE_LV0;
+	am_enemy_damage[1] = ASSIST_ENEMY_DAMAGE_LV1;
+	am_enemy_damage[2] = ASSIST_ENEMY_DAMAGE_LV2;
+	am_dot_damage[0] = ASSIST_DOT_DAMAGE_LV0;
+	am_dot_damage[1] = ASSIST_DOT_DAMAGE_LV1;
+	am_dot_damage[2] = ASSIST_DOT_DAMAGE_LV2;
+	am_player_damage[0] = ASSIST_PLAYER_DAMAGE_LV0;
+	am_player_damage[1] = ASSIST_PLAYER_DAMAGE_LV1;
+	am_player_damage[2] = ASSIST_PLAYER_DAMAGE_LV2;
 	
 	button_param[# ButtonName.EnemyDamage, ButtonParam.Variable] = am_enemy_damage;
 	button_param[# ButtonName.DotDamage, ButtonParam.Variable] = am_dot_damage;
 	button_param[# ButtonName.PlayerAttackDamage, ButtonParam.Variable] = am_player_damage;
-	
-	
-	hell_enemy_damage_ratio = 1.5;
-	hell_dot_damage_ratio = 1.5;
-	hell_player_damage_ratio = 0.66;
-	
 	
 	
 	hell_mode_pixel = _cw/2 - (_cw - (_cw*0.65 + _cw/4)) * 2;

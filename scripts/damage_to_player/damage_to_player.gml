@@ -2,6 +2,12 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_dir){
 	if(global.gamestate != gamestate.gameover){
+		if(_invinsible_time_ratio > 0){
+			//無敵時間が発生する攻撃はすべて敵の攻撃扱いとして、軽減/増加する
+			_damage *= global.enemy_damage;
+			
+		}
+		
 		global.player_hp -= _damage;
 		if(is_gameover() == true){
 			gameover_script(_gameover_knockback_dir);

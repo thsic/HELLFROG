@@ -17,6 +17,9 @@ function gameover_script(_gameover_knockback_dir){
 			instance_destroy();
 		}
 		
+		//アシストレシオ
+		set_damage_ratio();
+		
 		//音
 		se_play(SE_GAMEOVER, 90, 1);
 		

@@ -34,6 +34,10 @@ function player_cursed_damage(){
 		var _damage_per_second = ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.Dec4);
 	break
 	}
+	
+	//アシストモードのダメージ軽減/増加
+	_damage_per_second *= global.dot_damage;
+	
 	var _damage = _damage_per_second/60;
 	
 	damage_to_player(_damage, 0, o_player.player_direction+180);

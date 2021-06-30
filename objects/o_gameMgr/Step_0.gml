@@ -25,6 +25,8 @@ case gamestate.stagestart:
 	o_camera.x = o_player.x;
 	o_camera.y = o_player.y;
 	
+	//アシストモード等のダメージレシオ
+	set_damage_ratio();
 	
 	//敵初期位置保存
 	var _enemy_number = instance_number(o_enemy);

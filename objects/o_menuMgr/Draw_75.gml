@@ -252,9 +252,9 @@ case Menustate.AssistMode:
 	_hell_enable[2] = global.hell_player_damage_enable;
 	
 	var _hell_ratio;
-	_hell_ratio[0] = hell_enemy_damage_ratio;
-	_hell_ratio[1] = hell_dot_damage_ratio;
-	_hell_ratio[2] = hell_player_damage_ratio;
+	_hell_ratio[0] = HELL_ENEMY_DAMAGE_RATIO;
+	_hell_ratio[1] = HELL_DOT_DAMAGE_RATIO;
+	_hell_ratio[2] = HELL_PLAYER_DAMAGE_RATIO;
 	
 	for(var i=0; i<3; i++){
 		draw_set_alpha(1);
@@ -440,6 +440,9 @@ case Menustate.AssistMode:
 break
 case Menustate.SaveAndQuit:
 	
+break
+case Menustate.CloseStart:
+
 break
 default:
 	debug_message("Error! o_menuMgr");

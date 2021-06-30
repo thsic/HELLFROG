@@ -21,6 +21,8 @@ global.hell_player_damage_enable = false;
 
 global.true_hell = false;
 
+
+
 //オプション
 global.se_volume = 0.5;
 global.bgm_volume = 0.5;

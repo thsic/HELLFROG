@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"bgm_play","path":"scripts/bgm_play/bgm_play.yy",},"order":1,},
     {"id":{"name":"s_player","path":"sprites/s_player/s_player.yy",},"order":0,},
     {"id":{"name":"a_treantBulletBlast","path":"sounds/a_treantBulletBlast/a_treantBulletBlast.yy",},"order":5,},
     {"id":{"name":"ac_saturationShaderHpRatio","path":"animcurves/ac_saturationShaderHpRatio/ac_saturationShaderHpRatio.yy",},"order":5,},
@@ -45,6 +46,7 @@
     {"id":{"name":"fo_stageNumber","path":"fonts/fo_stageNumber/fo_stageNumber.yy",},"order":2,},
     {"id":{"name":"sq_respawn","path":"sequences/sq_respawn/sq_respawn.yy",},"order":1,},
     {"id":{"name":"square_collision_check_within_object","path":"scripts/square_collision_check_within_object/square_collision_check_within_object.yy",},"order":7,},
+    {"id":{"name":"set_damage_ratio","path":"scripts/set_damage_ratio/set_damage_ratio.yy",},"order":19,},
     {"id":{"name":"a_acidBullet","path":"sounds/a_acidBullet/a_acidBullet.yy",},"order":6,},
     {"id":{"name":"o_hole","path":"objects/o_hole/o_hole.yy",},"order":4,},
     {"id":{"name":"o_enemyBulletCluster","path":"objects/o_enemyBulletCluster/o_enemyBulletCluster.yy",},"order":1,},
