@@ -71,9 +71,10 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1537d754-ebe8-4af9-a91b-9e866aea8dc6","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
-    "name": "enemy",
-    "path": "folders/Sprites/enemy.yy",
+    "name": "map",
+    "path": "folders/Sprites/map.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_hookPole",

@@ -13,8 +13,7 @@ function enemy_dead(_id, _do_dead_script){
 		}
 		
 		//敵倒すとチャージが最大になってクールダウン解消
-		gain_gun_charge_time(-1);//チャージを最大に
-		gun_set_cooldown(0);
+		gun_fullcharge();
 		
 		//死亡時のサウンド
 		se_play(SE_ENEMYDESTROY, 50, 1);

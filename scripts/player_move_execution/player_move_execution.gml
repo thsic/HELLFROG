@@ -146,8 +146,8 @@ function player_move_execution(argument0, argument1, argument2) {
 		_vspeed = 0;
 		debug_draw_rectnagle(_hl, _ht, _hr, _hb, true, c_green, 1);
 	}
-	*/
-	/*var _near_ground = !is_in_place(_hl+_arm_len, _ht-_arm_len, _hr+_arm_len, _hb+_arm_len, _px, _py);
+	
+	var _near_ground = !is_in_place(_hl+_arm_len, _ht-_arm_len, _hr+_arm_len, _hb+_arm_len, _px, _py);
 	if(_on_hole_now_id != noone and !_inertia and _on_hole_next_frame_id != noone and _near_ground){
 		//穴の上に居る + 慣性が働いていない + 次フレームで穴から出ない + 崖に近い所
 		var _base_direction = _direction+180;
@@ -168,7 +168,8 @@ function player_move_execution(argument0, argument1, argument2) {
 			
 			if(!_on_hole and !_on_wall){
 				//地面にいる+壁に衝突しない
-				
+				_hspeed = _test_x;
+				_vspeed = _test_y;
 				
 			}
 		}

@@ -3,7 +3,7 @@ if(keyboard_check_pressed(ord("R"))){
 	game_restart();
 }
 if(keyboard_check_pressed(ord("L"))){
-	if(!debug_window){
+	/*if(!debug_window){
 		debug_window = true;
 		if(global.debug_invincible_mode){
 			var _button_default_state = 2;
@@ -28,7 +28,23 @@ if(keyboard_check_pressed(ord("L"))){
 	else{
 		debug_window = false;
 		change_button_state(ButtonType.DebugWindow, ButtonState.Destroy);
+	}*/
+	global.debug_invincible_mode = !global.debug_invincible_mode;
+	global.debug_stop_curse_mode = !global.debug_stop_curse_mode;
+	
+	if(global.debug_invincible_mode){
+		global.enemy_damage = 0;
 	}
+	else{
+		global.enemy_damage = 1;
+	}
+	if(global.debug_stop_curse_mode){
+		global.dot_damage = 0;
+	}
+	else{
+		global.dot_damage = 1;
+	}
+
 }
 if(debug_window){
 	
@@ -38,7 +54,7 @@ if(debug_window){
 
 #region デバッグモード処理
 	//無敵
-	if(invincible_button != noone){
+	/*if(invincible_button != noone){
 		switch(is_button_state(invincible_button)){
 		case 0:
 		case 1:
@@ -69,5 +85,5 @@ if(debug_window){
 	}
 	if(global.debug_stop_curse_mode){
 		stop_cursed_damage(5);
-	}
+	}*/
 #endregion

@@ -145,12 +145,18 @@ function hook_state_manage() {
 		shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedDefault);
 		hook_state = hookState.Shrink;
 		
+		//壁にフックあてると銃チャージ
+		gun_fullcharge();
+		
 		se_play(SE_HOOKHITWALL, 60, AUDIO_SIMUL_DECAY_DEFAULT);
 	break
 	case hookState.GrabEnemy:
 		hook_point_x = hook_point_x_default+lengthdir_x(hook_length, hook_direction);
 		hook_point_y = hook_point_y_default+lengthdir_y(hook_length, hook_direction);
 		shrink_speed = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.ShrinkSpeedDefault);
+		
+		//敵にフックあてると銃チャージする
+		gun_fullcharge();
 		
 		hook_state = hookState.Shrink;
 
