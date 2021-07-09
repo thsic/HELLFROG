@@ -19,7 +19,8 @@ function data_set_knockback(argument0, argument1, argument2, argument3, argument
 		CursedGun,
 		TutorialGun,
 		Hook,
-		HookSmall
+		HookSmall,
+		Empty,
 	}
 
 	enum eK_param{

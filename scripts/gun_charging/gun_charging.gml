@@ -27,7 +27,8 @@ function gun_charging() {
 		gun_charge_level = _charge_level;
 		
 	}
-	if(mouse_check_button_pressed(global.shotgun_button)){
+	if(mouse_check_button_pressed(global.shotgun_button)
+	and now_shotgun != eG_type.Empty){
 		///発射された
 		player_shotgun_fire();
 		start_trail_time(10);

@@ -9,6 +9,7 @@ case gamestate.stagestart:
 	global.gamestop = true;
 	global.playerstop = true;
 	
+	
 	if(!instance_exists(o_menuMgr)){
 		instance_create_layer(0, 0, "GameObjects", o_menuMgr);
 	}
@@ -16,10 +17,18 @@ case gamestate.stagestart:
 	global.player_hp = ds_grid_get(global.ds_player_hp, now_hp_type, ePHP_param.MaxHp);
 	set_respawn_point(o_player.x, o_player.y);
 	
-	//ステージスタートシーンのためにyを高くする
-	player_start_y_pos = o_player.y - (startscene_player_fall_speed*startscene_time);
-	player_default_y_pos = o_player.y;
-	o_player.y = player_start_y_pos;
+	
+	if(room == r_tutorial){
+		var _next_game_state = gamestate.event;
+	}
+	else{
+		var _next_game_state = gamestate.stagestartscene;
+		//ステージスタートシーンのためにyを高くする
+		player_start_y_pos = o_player.y - (startscene_player_fall_speed*startscene_time);
+		player_default_y_pos = o_player.y;
+		o_player.y = player_start_y_pos;
+	}
+	
 	
 	//カメラ初期位置
 	o_camera.x = o_player.x;
@@ -52,7 +61,7 @@ case gamestate.stagestart:
 	o_player.player_direction = o_persistentObject.player_direction;
 	
 	stagestart_scene_time = 0;
-	change_gamestate(gamestate.stagestartscene);
+	change_gamestate(_next_game_state);
 break
 case gamestate.stagestartscene:
 	global.gamestop = true;
@@ -206,7 +215,11 @@ case gamestate.goalscene:
 	global.gamestop = true;
 	global.playerstop = true;
 break
-
+case gamestate.event:
+	//イベントシーン
+	global.gamestop = true;
+	global.playerstop = true;
+break
 
 
 }

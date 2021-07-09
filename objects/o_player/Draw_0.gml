@@ -224,14 +224,16 @@ if(draw_player){
 	#endregion
 
 	#region 銃描画
-	var _gun_sprite = s_cursedGun;
-	if(look_right){
-		draw_sprite_ext(_gun_sprite, 0, x, _sprite_y+2, 1, 1, player_direction+_sprite_dir, c_white, _alpha);
+	var _gun_sprite = global.ds_player_gun[# now_shotgun, eG_param.Sprite];
+	
+	if(_gun_sprite != noone){
+		if(look_right){
+			draw_sprite_ext(_gun_sprite, 0, x, _sprite_y+2, 1, 1, player_direction+_sprite_dir, c_white, _alpha);
+		}
+		else{
+			draw_sprite_ext(_gun_sprite, 0, x, _sprite_y+2, -1, 1, player_direction-180+_sprite_dir, c_white, _alpha);
+		}
 	}
-	else{
-		draw_sprite_ext(_gun_sprite, 0, x, _sprite_y+2, -1, 1, player_direction-180+_sprite_dir, c_white, _alpha);
-	}
-
 	#endregion
 
 	if(gun_charge_enable == true){

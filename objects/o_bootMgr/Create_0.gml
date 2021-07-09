@@ -3,7 +3,7 @@ set_window_size(WINDOW_SIZE_MAGNIFICATION)
 instance_create_layer(0, 0, "Instances", o_debugMgr);
 instance_create_layer(0, 0, "Instances", o_soundMgr);
 global.game_time = 0;
-
+text();
 
 //アシストモード関連
 global.enemy_damage = 1;
@@ -26,7 +26,7 @@ global.true_hell = false;
 //オプション
 global.se_volume = 0.5;
 global.bgm_volume = 0.5;
-global.launguage = Launguage.Japanese;
+global.launguage = Launguage.English;
 
 
 room_goto(FIRST_ROOM);

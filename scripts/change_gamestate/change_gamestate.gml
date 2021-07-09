@@ -56,4 +56,5 @@ enum gamestate{
 	incheckpointbarrier,
 	goalscene,
 	stagestartscene,
+	event,
 }

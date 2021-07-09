@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "s_testWall",
-    "path": "sprites/s_testWall/s_testWall.yy",
+    "name": "s_testEnemy",
+    "path": "sprites/s_testEnemy/s_testEnemy.yy",
   },
-  "solid": true,
-  "visible": false,
+  "solid": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "o_wall",
-    "path": "objects/o_wall/o_wall.yy",
+    "name": "o_enemy",
+    "path": "objects/o_enemy/o_enemy.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -27,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "system",
-    "path": "folders/Objects/system.yy",
+    "name": "group1",
+    "path": "folders/Objects/enemy/group1.yy",
   },
   "resourceVersion": "1.0",
-  "name": "o_normalWall",
+  "name": "o_enemyTest",
   "tags": [],
   "resourceType": "GMObject",
 }

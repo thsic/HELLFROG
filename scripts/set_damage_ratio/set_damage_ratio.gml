@@ -24,4 +24,10 @@ function set_damage_ratio(){
 		global.dot_damage = HELL_DOT_DAMAGE_RATIO;
 		global.player_damage = HELL_PLAYER_DAMAGE_RATIO;
 	}
+	
+	//アシストモードヘルモードにかかわらずチュートリアルではレシオがいろいろちがう
+	if(room == r_tutorial){
+		global.enemy_damage = 0.5;
+		global.dot_damage = 0;
+	}
 }
