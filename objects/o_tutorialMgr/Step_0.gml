@@ -71,36 +71,41 @@ for(var i=0; i<trigger_num; i++){
 		trigger[i] = 2;
 		switch(i){
 		case 0:
-			tutorial_reset_trigger()
+			tutorial_reset_trigger();
 			if(!hook_ui_trigger){
 				hook_ui_trigger = true;
 				draw_move_ui = false;
 			}
 		break
 		case 1:
-			tutorial_reset_trigger()
+			tutorial_reset_trigger();
+			draw_hook_ui = false;
+		break
+		case 2:
+			tutorial_reset_trigger();
 			if(!shot_ui_trigger){
 				//銃ゲット
 				shot_ui_trigger = true;
-				draw_hook_ui = false;
 				ui_change_time = ui_change_time_base;
 				o_player.now_shotgun = eG_type.TutorialGun;
 				instance_destroy(o_mozandique);
 			}
 		break
-		case 2:
-			tutorial_reset_trigger()
+		case 3:
+			tutorial_reset_trigger();
 			draw_shot_ui = false;
 		break
-		case 3:
-			tutorial_reset_trigger()
+		case 4:
+			tutorial_reset_trigger();
 			draw_kill_ui = true;
 		break
-		case 4:
+		case 5:
+			tutorial_reset_trigger();
 			draw_kill_ui = false;
 		break
-		case 5:
+		case 6:
 			//へるがん
+			
 			o_player.now_shotgun = eG_type.CursedGun;
 			instance_destroy(o_hellgun);
 		break
