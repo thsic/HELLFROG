@@ -40,7 +40,11 @@ if(layer_sequence_exists("UnderTile", goal_sequence_element)){
 	}
 
 }
-
+if(layer_sequence_is_finished(goal_sequence_element)){
+	
+	o_player.y += hole_fall_speed_base * power(1.015, fall_time);
+	fall_time++
+}
 
 //フェードインの透明度
 

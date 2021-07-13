@@ -53,6 +53,8 @@ draw_set_color(c_red);
 draw_set_halign(fa_middle);
 draw_set_valign(fa_top);
 var _text = global.ds_text[# TEXT.TUTORIAL_HELL, global.launguage];
-draw_text(o_goal.x, o_goal.y-32, _text);
+draw_text(o_goal.x, o_goal.y-24, _text);
+
+
 
 draw_set_default();

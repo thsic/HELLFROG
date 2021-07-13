@@ -2,7 +2,7 @@
 if(global.gamestate == gamestate.event){
 	if(fadeout_time > 0){
 		fadeout_time--;
-		fade_alpha = 1-(fadeout_time / fadeout_time_default);
+		fade_alpha = (fadeout_time / fadeout_time_default);
 		global.gamestop = true;
 		global.playerstop = true;
 		o_player.now_shotgun = eG_type.Empty;
@@ -89,6 +89,7 @@ for(var i=0; i<trigger_num; i++){
 				ui_change_time = ui_change_time_base;
 				o_player.now_shotgun = eG_type.TutorialGun;
 				instance_destroy(o_mozandique);
+				se_play(a_getgun, 80, 1);
 			}
 		break
 		case 3:
@@ -105,7 +106,7 @@ for(var i=0; i<trigger_num; i++){
 		break
 		case 6:
 			//へるがん
-			
+			se_play(a_getgun, 80, 1);
 			o_player.now_shotgun = eG_type.CursedGun;
 			instance_destroy(o_hellgun);
 		break

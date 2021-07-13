@@ -798,7 +798,7 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"o_checkPointMarker","path":"objects/o_checkPointMarker/o_checkPointMarker.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":616.0,"resourceVersion":"1.0","name":"inst_25A590B4","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
-            {"propertyId":{"name":"next_room","path":"objects/o_goal/o_goal.yy",},"objectId":{"name":"o_goal","path":"objects/o_goal/o_goal.yy",},"value":"r_test","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"next_room","path":"objects/o_goal/o_goal.yy",},"objectId":{"name":"o_goal","path":"objects/o_goal/o_goal.yy",},"value":"r_stage1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"o_goal","path":"objects/o_goal/o_goal.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":272.0,"y":256.0,"resourceVersion":"1.0","name":"inst_38C1E8F8","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
             {"propertyId":{"name":"sprite","path":"objects/o_hookPole/o_hookPole.yy",},"objectId":{"name":"o_hookPole","path":"objects/o_hookPole/o_hookPole.yy",},"value":"s_hookPoleTutorial","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
