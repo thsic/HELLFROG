@@ -17,70 +17,68 @@ function player_move_execution(argument0, argument1, argument2) {
 	var _collision_height = sprite_get_height(s_playerCollisionMask);
 	
 	#region 壁
-	if(!global.debug_wall_collision){
-		//壁とくっついているときに進行方向の斜め左右方向のどちらかに空間があればそっちにスライドする
-		if(place_free(x+_hspeed, y) == false) {
+	//壁とくっついているときに進行方向の斜め左右方向のどちらかに空間があればそっちにスライドする
+	if(place_free(x+_hspeed, y) == false) {
 	
-			//ぎりぎり壁に引っかかったときはいい感じに空間の方へスライドさせる
-			//空間の方へ近づくほど速くなる
-			for(var i=0; i<5; i++){
-				if(place_free(x+_hspeed_default, y+_collision_height*(1+i*0.5)) == true){
-					_vspeed_temp += abs(_hspeed_default)/8;
-				}
-				if(place_free(x+_hspeed_default, y-_collision_height*(1+i*0.5)) == true){
-					_vspeed_temp -= abs(_hspeed_default)/8;
-				}
+		//ぎりぎり壁に引っかかったときはいい感じに空間の方へスライドさせる
+		//空間の方へ近づくほど速くなる
+		for(var i=0; i<5; i++){
+			if(place_free(x+_hspeed_default, y+_collision_height*(1+i*0.5)) == true){
+				_vspeed_temp += abs(_hspeed_default)/8;
+			}
+			if(place_free(x+_hspeed_default, y-_collision_height*(1+i*0.5)) == true){
+				_vspeed_temp -= abs(_hspeed_default)/8;
 			}
 		}
-		if(place_free(x, y+_vspeed) == false) {
+	}
+	if(place_free(x, y+_vspeed) == false) {
 	
-			//ぎりぎり壁に引っかかったときはいい感じに空間の方へスライドさせる
-			for(var i=0; i<5; i++){
-				if(place_free(x+_collision_width*(1+i*0.5), y+_vspeed_default) == true){
-					_hspeed_temp += abs(_vspeed_default)/8;
-				}
-				if(place_free(x-_collision_width*(1+i*0.5), y+_vspeed_default) == true){
-					_hspeed_temp -= abs(_vspeed_default)/8;
-				}
+		//ぎりぎり壁に引っかかったときはいい感じに空間の方へスライドさせる
+		for(var i=0; i<5; i++){
+			if(place_free(x+_collision_width*(1+i*0.5), y+_vspeed_default) == true){
+				_hspeed_temp += abs(_vspeed_default)/8;
+			}
+			if(place_free(x-_collision_width*(1+i*0.5), y+_vspeed_default) == true){
+				_hspeed_temp -= abs(_vspeed_default)/8;
 			}
 		}
+	}
 
 
-		_vspeed += _vspeed_temp;
-		_hspeed += _hspeed_temp;
+	_vspeed += _vspeed_temp;
+	_hspeed += _hspeed_temp;
 
-		//最後に壁との当たり判定
-		//x軸で当たり判定確認して衝突したら壁にくっつける
-		if(place_free(x, y+_vspeed) == false) {
-		    var dir = point_direction(0, 0, 0, _vspeed);
-		    move_contact_solid(dir, abs(_vspeed)); // 壁にぴったりくっつける
-		    _vspeed = 0;
+	//最後に壁との当たり判定
+	//x軸で当たり判定確認して衝突したら壁にくっつける
+	if(place_free(x, y+_vspeed) == false) {
+	    var dir = point_direction(0, 0, 0, _vspeed);
+	    move_contact_solid(dir, abs(_vspeed)); // 壁にぴったりくっつける
+	    _vspeed = 0;
+	}
+	//y軸で当たり判定
+	if(place_free(x+_hspeed, y) == false) {
+	    var dir = point_direction(0, 0, _hspeed, 0);
+	    move_contact_solid(dir, abs(_hspeed)); // 壁にぴったりくっつける
+	    _hspeed = 0;
+	}
+	//斜めの当たり判定(これがないと壁にはまる)
+	if(place_free(x+_hspeed, y+_vspeed) == false) {
+	    var dir = point_direction(0, 0, _hspeed, _vspeed);
+		var _diagonal_speed = point_distance(0, 0, _hspeed, _vspeed);
+	    move_contact_solid(dir, _diagonal_speed); // 壁にぴったりくっつける
+		
+		
+		if(place_free(x+sign(_hspeed), y) and place_free(x, y+sign(_vspeed))){
+			//完全に斜めにくっついた場合(あんまりない)は_vspeed を+1する
+			_vspeed = sign(_vspeed);
 		}
-		//y軸で当たり判定
-		if(place_free(x+_hspeed, y) == false) {
-		    var dir = point_direction(0, 0, _hspeed, 0);
-		    move_contact_solid(dir, abs(_hspeed)); // 壁にぴったりくっつける
-		    _hspeed = 0;
+		else{
+			_vspeed = 0;
 		}
-		//斜めの当たり判定(これがないと壁にはまる)
-		if(place_free(x+_hspeed, y+_vspeed) == false) {
-		    var dir = point_direction(0, 0, _hspeed, _vspeed);
-			var _diagonal_speed = point_distance(0, 0, _hspeed, _vspeed);
-		    move_contact_solid(dir, _diagonal_speed); // 壁にぴったりくっつける
+		
+	    _hspeed = 0;
 		
 		
-			if(place_free(x+sign(_hspeed), y) and place_free(x, y+sign(_vspeed))){
-				//完全に斜めにくっついた場合(あんまりない)は_vspeed を+1する
-				_vspeed = sign(_vspeed);
-			}
-			else{
-				_vspeed = 0;
-			}
-		
-		    _hspeed = 0;
-		
-		
-		}
 	}
 	#endregion
 	

@@ -4,8 +4,8 @@ function data_player_parameter_default() {
 	data_set_player_bullet(ePB_type.BulletRed, 20, 20, 0.3, 0.92, 6, 20, 3, fire_straight_ammo, 1, 25);
 	data_set_player_bullet(ePB_type.BulletYellow, 17, 13, 0.3, 0.9, 70, 8, 10, fire_spread_ammo, 0.3, 10);
 
-	data_set_player_gun(eG_type.CursedGun, 15, 2, 120, 20, eK_type.CursedGun, ePB_type.BulletRed, ePB_type.BulletYellow, ePB_type.Empty, s_cursedGun);
-	data_set_player_gun(eG_type.TutorialGun, 60, 2, 120, 20, eK_type.CursedGun, ePB_type.BulletRed, ePB_type.BulletYellow, ePB_type.Empty, s_mozandiqueHand);
+	data_set_player_gun(eG_type.CursedGun, 15, 2, 120, 20, eK_type.CursedGun, ePB_type.BulletRed, ePB_type.BulletYellow, ePB_type.Empty, s_mozandiqueHand);
+	data_set_player_gun(eG_type.TutorialGun, 60, 2, 120, 20, eK_type.CursedGun, ePB_type.BulletRed, ePB_type.BulletYellow, ePB_type.Empty, s_cursedGun);
 	data_set_player_gun(eG_type.Empty, 15, 2, 120, 20, eK_type.Empty, ePB_type.Empty, ePB_type.Empty, ePB_type.Empty, noone);
 	
 	data_set_knockback(eK_type.CursedGun, 9, 0.09, 0.9, 7, 0.15);

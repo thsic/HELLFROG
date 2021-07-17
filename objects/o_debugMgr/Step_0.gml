@@ -46,9 +46,7 @@ if(keyboard_check_pressed(ord("L"))){
 	}
 
 }
-
-if(keyboard_check_pressed(ord("O"))){
-	global.debug_wall_collision = !global.debug_wall_collision;
+if(debug_window){
 	
 }
 

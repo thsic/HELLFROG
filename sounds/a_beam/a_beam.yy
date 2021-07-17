@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "a_beam.ogg",
-  "duration": 0.562732,
+  "duration": 0.557732,
   "parent": {
     "name": "enemy",
     "path": "folders/Sounds/enemy.yy",

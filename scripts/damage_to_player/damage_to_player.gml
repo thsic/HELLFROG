@@ -8,15 +8,7 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 			
 		}
 		
-		
 		global.player_hp -= _damage;
-		
-		//チュートリアルでは死なない
-		if(room == r_tutorial
-		and global.player_hp <= 0){
-			global.player_hp = 1;
-		}
-		
 		if(is_gameover() == true){
 			gameover_script(_gameover_knockback_dir);
 		}
