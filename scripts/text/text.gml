@@ -48,6 +48,13 @@ global.ds_text[# TEXT.TUTORIAL_BROKENGUN, Launguage.Japanese] =		"壊れた銃";
 global.ds_text[# TEXT.TUTORIAL_HELLGUN, Launguage.Japanese] =		"地獄の銃";
 global.ds_text[# TEXT.TUTORIAL_MOZA, Launguage.Japanese] =			"モザムディーク";
 
+global.ds_text[# TEXT.STAGE1_TEXT1, Launguage.Japanese] =			"あなたは地獄に落ちた。";
+global.ds_text[# TEXT.STAGE1_TEXT2, Launguage.Japanese] =			"地獄では瘴気があなたの体力を奪う。";
+global.ds_text[# TEXT.STAGE1_TEXT3, Launguage.Japanese] =			"体力を回復するには魔物の魂が必要だ。";
+global.ds_text[# TEXT.STAGE1_TEXT4, Launguage.Japanese] =			"魔物を殺して魂を奪え";
+global.ds_text[# TEXT.STAGE1_TEXT5, Launguage.Japanese] =			"";
+
+
 
 
 //en
@@ -103,7 +110,11 @@ enum TEXT{
 	TUTORIAL_BROKENGUN,
 	TUTORIAL_HELLGUN,
 	TUTORIAL_MOZA,
-	
+	STAGE1_TEXT1,
+	STAGE1_TEXT2,
+	STAGE1_TEXT3,
+	STAGE1_TEXT4,
+	STAGE1_TEXT5,
 }
 
 

@@ -10,8 +10,10 @@ knockback_enable = false;
 h_speed = 0;
 v_speed = 0;
 
+if(blue_aura){
+	hp *= 3;
+}
 max_hp = hp;
-
 
 collision_size_for_hook = 0;
 on_screen = false;
