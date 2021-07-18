@@ -59,4 +59,5 @@ enum EnemyDefaultPosition{
 	YPosition,
 	LockNumber,
 	LockSpawnTime,
+	BlueAura,
 }

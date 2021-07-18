@@ -14,6 +14,9 @@ function macros() {
 //敵
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_blink
 #macro ENEMY_EFFECT_TOTAL_NUMBER 10//敵のエフェクトの総数
+#macro BLUEAURA_HP_RATIO 4
+#macro BLUEAURA_FIRE_COOLDOWN 0.5
+#macro BLUEAURA_MOVEMENT_SPEED_RATIO 3
 
 //エフェクト
 #macro SLOW_TIME_LIMIT 180

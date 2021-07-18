@@ -8,7 +8,6 @@ erasure_enable = false;
 erasure_time_default = 15;
 erasure_time = erasure_time_default;
 
-
 //音再生
 if(bullet_create_sound != noone){
 	se_play(bullet_create_sound, 60, audio_simul_decay);

@@ -186,7 +186,7 @@ if(effect_list[| EnemyEffect.Fire]){
 	//fire状態のときはアウトラインが赤くなる
 	_r = 1.0;
 	_g = 0.0;
-	_b = 1.0;
+	_b = 0.0;
 	_a = 1 - cos(global.game_time/6) * 0.25;
 	_outline_size = 2 - sin(global.game_time/4);
 	if(effect_list[| EnemyEffect.UltraFire]){
@@ -197,9 +197,16 @@ if(effect_list[| EnemyEffect.Fire]){
 }
 
 if(blue_aura){
-	_g = 0.0;
+	
+	_r = 0.2;
+	_g = 0.2;
 	_b = 1.0;
+	
+	_a = 1 - cos(global.game_time/6) * 0.25;
+	_outline_size = 2 - sin(global.game_time/4);
+	
 }
+
 
 shader_set_uniform_f(sh_texel_handle, _tWidth, _tHeight);
 shader_set_uniform_f(sh_outline_color_handle, _r, _g, _b, _a);

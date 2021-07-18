@@ -1,4 +1,4 @@
-
+sdm(global.game_time)
 global.gamestop = false;
 global.playerstop = false;
 global.game_time++;
@@ -40,7 +40,8 @@ case gamestate.stagestart:
 	//敵初期位置保存
 	var _enemy_number = instance_number(o_enemy);
 	var _enemy_id, _enemy_index, _enemy_x, _enemy_y;
-	ds_enemy_default_position = ds_grid_create(5, _enemy_number);
+	ds_enemy_default_position = ds_grid_create(6, _enemy_number);
+	
 	for(var i=0; i<_enemy_number; i++){
 		_enemy_id = instance_find(o_enemy, i);
 		_enemy_x = _enemy_id.x;
@@ -48,12 +49,14 @@ case gamestate.stagestart:
 		_enemy_index = _enemy_id.object_index;
 		var _enemy_lock_num = _enemy_id.lock_number;
 		var _enemy_lock_spawn_time = _enemy_id.lock_spawn_time;
+		var _enemy_blueaura = _enemy_id.blue_aura;
 		
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.ObjectIndex, i, _enemy_index);
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.XPosition, i, _enemy_x);
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.YPosition, i, _enemy_y);
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.LockNumber, i, _enemy_lock_num);
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.LockSpawnTime, i, _enemy_lock_spawn_time);
+		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.BlueAura, i, _enemy_blueaura);
 	}
 	
 	//プレイヤー向き変更

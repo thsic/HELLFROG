@@ -2,6 +2,8 @@
 event_inherited();
 life_time = 0;
 
+damage_enable = false;
+
 pt_sys = part_system_create();
 pt_type = part_type_create();
 
