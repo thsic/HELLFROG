@@ -47,6 +47,7 @@ function reset_stage(){
 			
 		}
 	}
+	global.floor_enemy_number_now = global.floor_enemy_number_total;
 	
 	//ルームのロック状態をリセットする
 	room_lock_reset();

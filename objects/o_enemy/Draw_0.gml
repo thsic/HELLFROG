@@ -1,7 +1,13 @@
 
 //hpゲージ描画
 if(state != EnemyState.WaitForSpawn){//スポーン待ちのときは透明
-	draw_bar(hp, max_hp, x, y-sprite_height/2-4, 20, 0, c_gray, c_red, true);
+	if(blue_aura){
+		var _bar_color = buleaura_hp_bar_color;
+	}
+	else{
+		var _bar_color = hp_bar_color;
+	}
+	draw_bar(hp, max_hp, x, y-sprite_height/2-4, 20, 0, c_gray, _bar_color, true);
 }
 
 

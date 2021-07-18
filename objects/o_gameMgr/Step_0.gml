@@ -41,6 +41,8 @@ case gamestate.stagestart:
 	var _enemy_number = instance_number(o_enemy);
 	var _enemy_id, _enemy_index, _enemy_x, _enemy_y;
 	ds_enemy_default_position = ds_grid_create(6, _enemy_number);
+	global.floor_enemy_number_total = _enemy_number;
+	global.floor_enemy_number_now = _enemy_number;
 	
 	for(var i=0; i<_enemy_number; i++){
 		_enemy_id = instance_find(o_enemy, i);

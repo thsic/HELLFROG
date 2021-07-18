@@ -20,6 +20,8 @@ function enemy_dead(_id, _do_dead_script){
 		
 		//エフェクトリストを削除
 		ds_list_destroy(_id.effect_list);
+		
+		global.floor_enemy_number_now--;
 	}
 	
 	instance_destroy(_id);

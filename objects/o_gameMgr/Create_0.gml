@@ -8,6 +8,8 @@ global.vmouse_y = window_mouse_get_y() / global.window_magnification;
 global.gamestate = gamestate.stagestart;
 global.nextstate = noone;
 
+global.floor_enemy_number_total = 1;
+global.floor_enemy_number_now = 1;
 
 instance_create_layer(0, 0, "UI", o_uiMgr);
 instance_create_layer(0, 0, "UI", o_shaderMgr);
