@@ -47,6 +47,8 @@
           ],"isDnd":false,"objectId":{"name":"o_enemyBeam","path":"objects/o_enemyBeam/o_enemyBeam.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":480.0,"y":160.0,"resourceVersion":"1.0","name":"inst_6A646A37","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_enemyAcid","path":"objects/o_enemyAcid/o_enemyAcid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":320.0,"y":96.0,"resourceVersion":"1.0","name":"inst_5F4FB7D7","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_enemyAcid","path":"objects/o_enemyAcid/o_enemyAcid.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":224.0,"y":80.0,"resourceVersion":"1.0","name":"inst_1A1DD333","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"o_enemyBeam","path":"objects/o_enemyBeam/o_enemyBeam.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":96.0,"resourceVersion":"1.0","name":"inst_48DCB35E","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"o_enemyBeam","path":"objects/o_enemyBeam/o_enemyBeam.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":128.0,"resourceVersion":"1.0","name":"inst_5C8CC14A","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":800,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tl_mapTile1","path":"tilesets/tl_mapTile1/tl_mapTile1.yy",},"x":8,"y":8,"tiles":{"SerialiseWidth":38,"SerialiseHeight":32,"TileSerialiseData":[
 2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,
@@ -485,6 +487,8 @@
     {"name":"inst_13D30529","path":"rooms/r_test/r_test.yy",},
     {"name":"inst_3CB0F3C6","path":"rooms/r_test/r_test.yy",},
     {"name":"inst_1CDD90FD","path":"rooms/r_test/r_test.yy",},
+    {"name":"inst_48DCB35E","path":"rooms/r_test/r_test.yy",},
+    {"name":"inst_5C8CC14A","path":"rooms/r_test/r_test.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

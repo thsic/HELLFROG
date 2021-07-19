@@ -7,7 +7,9 @@ if(state != EnemyState.WaitForSpawn){//スポーン待ちのときは透明
 	else{
 		var _bar_color = hp_bar_color;
 	}
-	draw_bar(hp, max_hp, x, y-sprite_height/2-4, 20, 0, c_gray, _bar_color, true);
+	
+	var _bar_width = clamp(sprite_width*(max_hp/100), sprite_width/5, sprite_width*5);
+	draw_bar(hp, max_hp, x, y-sprite_height/2-4, _bar_width, 0, 0, _bar_color, true);
 }
 
 

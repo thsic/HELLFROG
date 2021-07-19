@@ -133,6 +133,8 @@ case gamestate.waitforkeyinput:
 		//なにかキーが押されたらゲーム開始
 		if(_up or _down or _left or _right or _shotgun or _hook){
 			change_gamestate(gamestate.main);
+			start_shockwave(o_player.x, o_player.y, 100, 50, 200, 4);
+			se_play(a_treantBulletBlast, 80, 1);
 		}
 	}
 	if(respawn_time = -1){

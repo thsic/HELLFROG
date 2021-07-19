@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "a_treantBulletBlast.ogg",
-  "duration": 0.316111,
+  "duration": 0.311111,
   "parent": {
     "name": "enemy",
     "path": "folders/Sounds/enemy.yy",

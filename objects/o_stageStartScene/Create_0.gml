@@ -6,6 +6,9 @@ stagestart_lag = true;
 //音
 se_play(a_landing, 80, 1);
 
+//ショックウェーブ
+start_shockwave(o_player.x, o_player.y, 100, 50, 200, 4);
+
 //砂埃生成
 repeat(20){
 	var _dust_size = random_range(0.7, 0.9);

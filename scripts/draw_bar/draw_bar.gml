@@ -21,9 +21,11 @@ function draw_bar(argument0, argument1, argument2, argument3, argument4, argumen
 		_y -= _height/2;
 	}
 	//下地描画
-	draw_set_color(_under_color);
-	draw_rectangle(_x, _y, _x+_width, _y+_height, false);
-
+	if(_under_color != 0){
+		draw_set_color(_under_color);
+		draw_rectangle(_x, _y, _x+_width, _y+_height, false);
+	}
+	
 	//ゲージ描画
 	draw_set_color(_front_color);
 	draw_rectangle(_x, _y, _x+_front_bar_width, _y+_height, false);
