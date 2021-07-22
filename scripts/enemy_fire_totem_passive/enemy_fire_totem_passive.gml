@@ -15,7 +15,7 @@ function enemy_fire_totem_passive(){
 				//射程内にいる敵を探す
 				if(_dis < weapon_range
 				and _id.object_index != o_hookPole
-				and _id.object_index != o_enemyFireTotem){
+				and _id.soul_enemy == true){
 					if(_id.fire_passive){
 						//既にfire状態の敵には強化fireeffectを付与
 						enemy_give_effect(_id, EnemyEffect.UltraFire, _span+1);

@@ -9,4 +9,6 @@ if(global.gamestate != gamestate.menu){
 	player_draw_hp();
 	player_draw_hp_mini();
 	draw_charge_bar();
+	draw_enemy_number();
+	
 }

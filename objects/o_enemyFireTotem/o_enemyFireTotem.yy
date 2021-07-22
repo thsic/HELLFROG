@@ -40,6 +40,7 @@
     {"propertyId":{"name":"weight","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"0.05","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"collision_repulsive","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"stun_resistance_default","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"soul_enemy","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "group1",

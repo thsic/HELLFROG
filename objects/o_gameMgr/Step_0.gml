@@ -9,6 +9,8 @@ case gamestate.stagestart:
 	global.gamestop = true;
 	global.playerstop = true;
 	
+	//ステージ情報入れる
+	put_stage_param();
 	
 	if(!instance_exists(o_menuMgr)){
 		instance_create_layer(0, 0, "GameObjects", o_menuMgr);
@@ -41,8 +43,8 @@ case gamestate.stagestart:
 	var _enemy_number = instance_number(o_enemy);
 	var _enemy_id, _enemy_index, _enemy_x, _enemy_y;
 	ds_enemy_default_position = ds_grid_create(6, _enemy_number);
-	global.floor_enemy_number_total = _enemy_number;
-	global.floor_enemy_number_now = _enemy_number;
+	
+	var _floor_enemy_num = 0;
 	
 	for(var i=0; i<_enemy_number; i++){
 		_enemy_id = instance_find(o_enemy, i);
@@ -59,7 +61,15 @@ case gamestate.stagestart:
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.LockNumber, i, _enemy_lock_num);
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.LockSpawnTime, i, _enemy_lock_spawn_time);
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.BlueAura, i, _enemy_blueaura);
+		
+		if(_enemy_id.object_index != o_hookPole
+		and _enemy_id.soul_enemy == true){
+			_floor_enemy_num++;
+		}
 	}
+	//敵の総数数える
+	global.floor_enemy_number_total = _floor_enemy_num;
+	global.floor_enemy_number_now = _floor_enemy_num;
 	
 	//プレイヤー向き変更
 	o_player.look_right = o_persistentObject.player_look_right;

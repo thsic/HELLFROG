@@ -9,6 +9,12 @@ if(state != EnemyState.WaitForSpawn){//スポーン待ちのときは透明
 	}
 	
 	var _bar_width = clamp(sprite_width*(max_hp/100), sprite_width/5, sprite_width*5);
+	if(!soul_enemy){
+		var _bar_color = totem_hp_color;
+		var _bar_width = clamp(sprite_width*(max_hp/100), sprite_width/5, sprite_width*5)*0.25;
+	}
+	
+	
 	draw_bar(hp, max_hp, x, y-sprite_height/2-4, _bar_width, 0, 0, _bar_color, true);
 }
 
