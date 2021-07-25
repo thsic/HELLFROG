@@ -21,6 +21,7 @@ if(!global.gamestop){
 			range = 10;
 			life_time = other.life_time;
 			range_square = false;
+			stage_reset_destroy = true;
 		}
 		
 	}

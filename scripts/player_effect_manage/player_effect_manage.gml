@@ -8,20 +8,23 @@ function player_effect_manage(){
 	var _slow_field_num = instance_number(o_slowField);
 	for(var i=0; i<_slow_field_num; i++){
 		var _id = instance_find(o_slowField, i);
-		var _r = _id.range;
 		var _range_square = _id.range_square;
 		var _x = _id.x;
 		var _y = _id.y;
 		
 		if(_range_square){
 			//フィールドの当たり判定が四角形の場合
-			if(is_in_place(_x-_r, _y-_r, _x+_r, _y+_r, _px, _py)){
+			var _w = _id.field_width;
+			var _h = _id.field_height;
+			
+			if(is_in_place(_x-_w/2, _y-_h/2, _x+_w/2, _y+_h/2, _px, _py)){
 				_on_slow_field = true;
 				break;
 			}
 		}
 		else{
 			//円形の場合
+			var _r = _id.range;
 			var _dis = point_distance(_x, _y, _px, _py);
 			if(_dis < _r){
 				_on_slow_field = true;

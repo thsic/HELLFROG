@@ -108,7 +108,7 @@ break
 
 case gamestate.waitforkeyinput:
 	global.gamestop = true;
-	global.playerstop = false;
+	global.playerstop = true;
 	
 	
 	if(respawn_time > 0){
@@ -121,10 +121,7 @@ case gamestate.waitforkeyinput:
 		}
 	}
 	else if(respawn_time != -1){
-		//リスポーンシーケンス表示終わり
-		if(layer_sequence_exists("Flont", respawn_sequence_element)){
-			layer_sequence_destroy(respawn_sequence_element);
-		}
+		
 		
 		//銃のチャージを最大にする
 		var _charge_count = ds_grid_get(global.ds_player_gun, o_player.now_shotgun, eG_param.ChargeCount);
@@ -145,6 +142,11 @@ case gamestate.waitforkeyinput:
 			change_gamestate(gamestate.main);
 			start_shockwave(o_player.x, o_player.y, 100, 50, 200, 4);
 			se_play(a_treantBulletBlast, 80, 1);
+			
+			//シーケンス消す
+			if(layer_sequence_exists("Flont", respawn_sequence_element)){
+				layer_sequence_destroy(respawn_sequence_element);
+			}
 		}
 	}
 	if(respawn_time = -1){
@@ -159,7 +161,7 @@ case gamestate.waitforkeyinput:
 			lag_time = 0;
 		}
 		
-		respawn_time = 20;
+		respawn_time = 5;
 		if(!layer_sequence_exists("Flont", respawn_sequence_element)){
 			respawn_sequence_element = layer_sequence_create("Flont", _sequence_x, _sequence_y, sq_respawn);
 			//layer_sequence_speedscale(o_gameMgr.respawn_sequence_element, 0.5);
@@ -167,6 +169,12 @@ case gamestate.waitforkeyinput:
 			
 		}
 		
+	}
+	//リスポーンシーケンス表示終わり
+	if(layer_sequence_exists("Flont", respawn_sequence_element)){
+		if(layer_sequence_is_finished(respawn_sequence_element)){
+			layer_sequence_destroy(respawn_sequence_element);
+		}
 	}
 break
 

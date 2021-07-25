@@ -19,6 +19,34 @@ function reset_stage(){
 	with(o_enemyBullet){
 		instance_destroy();
 	}
+	//オブ消し
+	with(o_lifestealOrb){
+		instance_destroy();
+	}
+	//acid消し
+	with(o_enemyBulletAcid){
+		instance_destroy()
+	}
+	//スローフィールド消し
+	var _slow_field_num = instance_number(o_slowField);
+	for(var i=0; i<_slow_field_num; i++){
+		var _id = instance_find(o_slowField, i);
+		
+		if(_id.stage_reset_destroy){
+			instance_destroy();
+		}
+	}
+	//慣性消し スロー消し
+	with(o_player){
+		inertia_speed = 0;
+		inertia_enable = false;
+		
+		o_player.player_slow_time = 0;
+		on_slow_field_time = 0;
+	}
+	global.slow_enable = false;
+	
+	
 	//敵を再生成
 	with(o_enemy){
 		instance_destroy();

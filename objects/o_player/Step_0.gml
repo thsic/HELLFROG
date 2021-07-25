@@ -16,3 +16,5 @@ if(global.gamestop == false or global.playerstop == false){
 if(global.gamestate == gamestate.gameover){
 	player_gameover_knockback(1.2);
 }
+
+debug_draw_variable(x, y, global.gamestate, c_white, 1)

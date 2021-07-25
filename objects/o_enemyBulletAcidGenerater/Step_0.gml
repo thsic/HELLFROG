@@ -29,6 +29,12 @@ if(global.gamestop == false){
 		}
 	}
 	
+	//壁にあたると消える
+	var _id = instance_nearest(x, y, o_wall);
+	var _dis = point_distance(x, y, _id.x, _id.y);
+	if(_dis < 16){
+		instance_destroy();
+	}
 	
 	
 	//弾強制消滅フラグ
