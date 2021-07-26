@@ -63,25 +63,34 @@ function player_effect_manage(){
 	
 	#region 呪い
 	
-	var _curse_point_limit = 120;
+	
 	if(add_curse_point){
-		curse_point++
+		var _curse_max_level = 16;
+		curse_point = clamp(curse_point + 1, 0, CURSE_POINT_LIMIT)
 		
-		if(curse_point >= _curse_point_limit){
+		if(curse_point >= CURSE_POINT_LIMIT
+		and curse_level < _curse_max_level){
 			//curse_pointが一定たまったらレベルあげる
-			curse_level = clamp(curse_level + 1, 0, 16);
+			curse_level++;
 			curse_point = 0;
 		}
 	}
 	else{
-		curse_point -= 2;
+		//呪いフィールドにいないときは下がってく
+		curse_point = clamp(curse_point - 2, 0, CURSE_POINT_LIMIT);
 		
-		if(curse_point <= 0){
-			curse_level = clamp(curse_level - 1, 0, 16);
-			curse_point = _curse_point_limit;
+		if(curse_point <= 0
+		and curse_level > 0){
+			curse_level--;
+			curse_point = CURSE_POINT_LIMIT;
 		}
 	}
 	add_curse_point = false;
 	
 	#endregion
+	
+	enum PLAYEREFFECT{
+		SLOW,
+		CURSE,
+	}
 }

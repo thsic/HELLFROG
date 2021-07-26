@@ -59,8 +59,11 @@ global.ds_text[# TEXT.STAGE1_TEXT2, Launguage.Japanese] =			"地獄では瘴気�
 global.ds_text[# TEXT.STAGE1_TEXT3, Launguage.Japanese] =			"体力を回復するには魔物の魂が必要だ。";
 global.ds_text[# TEXT.STAGE1_TEXT4, Launguage.Japanese] =			"皆殺しにしろ";
 
+global.ds_text[# TEXT.EFFECT_SLOW, Launguage.English] =				"Slow";
+global.ds_text[# TEXT.EFFECT_CURSE, Launguage.English] =			"Incoming Damage";
 
-
+global.ds_text[# TEXT.EFFECT_SLOW, Launguage.Japanese] =			"スロウ";
+global.ds_text[# TEXT.EFFECT_CURSE, Launguage.Japanese] =			"被ダメージ";
 
 //en
 #macro EN_MENU_RESUME "RESUME"
@@ -115,6 +118,9 @@ enum TEXT{
 	TUTORIAL_BROKENGUN,
 	TUTORIAL_HELLGUN,
 	TUTORIAL_MOZA,
+	EFFECT_SLOW,
+	EFFECT_CURSE,
+	
 	STAGE1_TEXT1,
 	STAGE1_TEXT2,
 	STAGE1_TEXT3,

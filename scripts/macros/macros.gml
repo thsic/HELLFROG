@@ -25,6 +25,7 @@ function macros() {
 #macro ENEMY_HITSTOP_TIME 5
 #macro PLAYER_BULLET_HITSTOP_TIME 7
 #macro AUDIO_SIMUL_DECAY_DEFAULT 0.66
+#macro CURSE_POINT_LIMIT 120
 
 //ステージ名
 #macro STAGE1_NAME_JP "ヘルケイヴ"//"ヘル"+chr(13)+"ケイヴ"
