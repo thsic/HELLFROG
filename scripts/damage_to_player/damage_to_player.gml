@@ -6,6 +6,10 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 			//無敵時間が発生する攻撃はすべて敵の攻撃扱いとして、軽減/増加する
 			_damage *= global.enemy_damage;
 			
+			//呪い状態のときはダメージが増える
+			if(o_player.curse_level > 0){
+				_damage *= power(2, o_player.curse_level)
+			}
 		}
 		
 		

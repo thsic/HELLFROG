@@ -3,7 +3,7 @@ function player_effect_manage(){
 	var _px = o_player.x;
 	var _py = o_player.y;
 	
-	//スロー
+	#region スロー
 	var _on_slow_field = false;
 	var _slow_field_num = instance_number(o_slowField);
 	for(var i=0; i<_slow_field_num; i++){
@@ -59,5 +59,29 @@ function player_effect_manage(){
 		}
 		on_slow_field_time = 0;//フィールドにいた時間リセット
 	}
+	#endregion
 	
+	#region 呪い
+	
+	var _curse_point_limit = 120;
+	if(add_curse_point){
+		curse_point++
+		
+		if(curse_point >= _curse_point_limit){
+			//curse_pointが一定たまったらレベルあげる
+			curse_level = clamp(curse_level + 1, 0, 16);
+			curse_point = 0;
+		}
+	}
+	else{
+		curse_point -= 2;
+		
+		if(curse_point <= 0){
+			curse_level = clamp(curse_level - 1, 0, 16);
+			curse_point = _curse_point_limit;
+		}
+	}
+	add_curse_point = false;
+	
+	#endregion
 }

@@ -4,7 +4,7 @@ function player_draw_hp(){
 	var _center_x = global.camera_width/2;
 	var _center_y = global.camera_height;
 	var _width = global.camera_width;
-	var _height = 10;
+	var _height = 14;
 	var _x = _center_x-_width/2;
 	var _y = _center_y-_height;
 	
@@ -30,9 +30,9 @@ function player_draw_hp(){
 	draw_set_valign(fa_bottom);
 	draw_set_halign(fa_middle);
 	draw_set_color(_text_color);
-	draw_text(_x+_width/2, _y+_height+6, "/")
-	draw_text(_x+_width/2-16, _y+_height+6, ceil(global.player_hp));
-	draw_text(_x+_width/2+16, _y+_height+6, ceil(_max_hp));
+	draw_text(_x+_width/2, _y+_height+4, "/")
+	draw_text(_x+_width/2-16, _y+_height+4, ceil(global.player_hp));
+	draw_text(_x+_width/2+16, _y+_height+4, ceil(_max_hp));
 	draw_set_default();
 	
 	

@@ -101,7 +101,7 @@ function hook_state_manage() {
 					//対象が火属性の場合はフックするとダメージ
 					if(_grab_enemy_id.effect_list[| EnemyEffect.Fire] > 0
 					and invincible_time <= 0){
-						damage_to_player(FIRE_DAMAGE, 1, player_direction+180);
+						damage_to_player(FIRE_DAMAGE, 0.33, player_direction+180);
 					}
 					
 				}

@@ -49,6 +49,10 @@ draw_player = true;//プレイヤーを描画するかどうか
 on_slow_field_time = 0;
 player_slow_time = 0;
 drawed_charge_fin_effect = false;
+add_curse_point = false;
+curse_point = 0;
+curse_level = 0;
+
 //残像
 trail_time = 0;
 trail_data = ds_grid_create(8, 30);
