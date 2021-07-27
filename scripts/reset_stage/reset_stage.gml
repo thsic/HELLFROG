@@ -41,8 +41,12 @@ function reset_stage(){
 		inertia_speed = 0;
 		inertia_enable = false;
 		
-		o_player.player_slow_time = 0;
+		player_slow_time = 0;
 		on_slow_field_time = 0;
+		
+		curse_point = 0;
+		curse_level = 0;
+		
 	}
 	global.slow_enable = false;
 	

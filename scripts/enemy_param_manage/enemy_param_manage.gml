@@ -41,6 +41,7 @@ function enemy_param_manage(){
 		weapon_charge_time_default *= BLUEAURA_FIRE_COOLDOWN;
 		aim_time_default *= BLUEAURA_FIRE_COOLDOWN;
 		movement_speed *= BLUEAURA_MOVEMENT_SPEED_RATIO;
+		orb_quantity_mag *= BLUEAURA_ORB_QUANTITY_MAG;
 	}
 	
 }

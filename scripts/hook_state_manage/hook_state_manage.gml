@@ -76,7 +76,7 @@ function hook_state_manage() {
 				and _grab_enemy_id.state == EnemyState.Aim){
 					//隠し要素で口が閉じている時にフックを当てるとhp回復
 					repeat(3){
-						create_lifesteal_orb(_grab_enemy_id.x, _grab_enemy_id.y, false);
+						create_lifesteal_orb(_grab_enemy_id.x, _grab_enemy_id.y, false, 1);
 					}
 					
 				}
