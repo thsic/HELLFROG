@@ -25,14 +25,14 @@ function player_draw_hp(){
 		draw_rectangle(_x, _y, _x+_bar_width, _y+_height, false);
 	}
 	
-	//HPは整数で表示される
+	//HPは整数で表示されるt
 	draw_set_font(fo_hpUi);
 	draw_set_valign(fa_bottom);
 	draw_set_halign(fa_middle);
 	draw_set_color(_text_color);
-	draw_text(_x+_width/2, _y+_height+4, "/")
-	draw_text(_x+_width/2-16, _y+_height+4, ceil(global.player_hp));
-	draw_text(_x+_width/2+16, _y+_height+4, ceil(_max_hp));
+	draw_text(_x+_width/2, _y+_height+3, "/")
+	draw_text(_x+_width/2-16, _y+_height+3, ceil(global.player_hp));
+	draw_text(_x+_width/2+16, _y+_height+3, ceil(_max_hp));
 	draw_set_default();
 	
 	

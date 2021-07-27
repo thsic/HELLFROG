@@ -13,13 +13,13 @@ function player_draw_hp_mini(){
 	var _bar_percent = global.player_hp/_max_hp;
 	var _bar_width = _bar_percent*_width;
 	
-	draw_set_color(_under_color);
+	/*draw_set_color(_under_color);
 	draw_rectangle(_x, _y, _x+_width, _y+_height, false);
 	
 	if(global.player_hp > 0){
 		draw_set_color(_bar_color);
 		draw_rectangle(_x, _y, _x+_bar_width, _y+_height, false);
-	}
+	}*/
 	//HPは整数で表示される
 	
 	var _channel = animcurve_get_channel(ac_hpUiMergeColor, 0);

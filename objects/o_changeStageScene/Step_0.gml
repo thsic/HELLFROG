@@ -24,6 +24,7 @@ if(scene_time = _scene_1){
 	//音
 	se_play(a_goalsound, 90, 1);
 	
+	
 	goal_sequence_element = layer_sequence_create("UnderTile", _sequence_x, _sequence_y, sq_goal);
 	
 	//インスタンスを上書き

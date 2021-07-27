@@ -1,8 +1,10 @@
 
+var _id = other.id;
+
 if(instance_exists(other)){
 	if(other.object_index != o_hookPole //フックポールには当たらない
 	and global.gamestate != gamestate.incheckpointbarrier
-	and other.invincible_enable == false){//無敵の敵にも当たらない
+	and _id.invincible_enable == false){//無敵の敵にも当たらない
 	
 		var _collided = false;
 		//衝突した敵idの中からいま当たった敵を探す

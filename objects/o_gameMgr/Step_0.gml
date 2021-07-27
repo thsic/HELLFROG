@@ -181,8 +181,9 @@ break
 #endregion
 #region main
 case gamestate.main:
-	if(cursed_damage_enable == true){
-		player_cursed_damage();
+	if(cursed_damage_enable == true
+	and global.floor_enemy_number_now > 0){
+		player_cursed_damage();//敵が0体の時はドットダメージなし
 	}
 	if(stop_cursed_damage_time > 0){
 		stop_cursed_damage_time--;
@@ -202,6 +203,7 @@ case gamestate.main:
 		lagging_game();
 	}
 	
+	count_time();
 	goal_manage();
 	
 break

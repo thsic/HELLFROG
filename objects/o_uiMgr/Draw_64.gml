@@ -12,3 +12,4 @@ if(global.gamestate != gamestate.menu){
 	draw_player_effect_ui();
 	
 }
+draw_timer();
