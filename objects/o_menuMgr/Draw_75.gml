@@ -193,16 +193,60 @@ case Menustate.Option:
 			var _jpn_color = text_oncursor_color;
 		}
 	}
+
+	
 	draw_set_color(_eng_color);
 	draw_text(_eng_x, _y, "ENGLISH");
 	
 	draw_set_color(_jpn_color);
 	draw_text(_jpn_x, _y, "日本語");
 	
-	
 	draw_set_halign(fa_middle);
 	draw_set_color(text_color);
 	draw_text(_x, _y - _h, button_param[# ButtonName.Launguage, _text_mode]);
+	
+	
+	
+	//タイマー
+	if(global.timer_enable = true){
+		var _timer_on_color = text_oncursor_color;
+		var _timer_off_color = text_color;
+	}
+	else{
+		var _timer_on_color = text_color;
+		var _timer_off_color = text_oncursor_color;
+	}
+	
+	
+	var _w = button_param[# ButtonName.Timer, ButtonParam.Width];
+	var _h = button_param[# ButtonName.Timer, ButtonParam.Height];
+	var _x = button_param[# ButtonName.Timer, ButtonParam.X];
+	var _y = button_param[# ButtonName.Timer, ButtonParam.Y];
+	
+	draw_rectangle(_x-_w/2, _y-_w/2, _x+_w/2, _y+_h/2, true);
+	var _timer_on_x = _x - _w/4;
+	var _timer_off_x = _x + _w/4;
+	
+	if(button_param[# ButtonName.Timer, ButtonParam.OnCursor]){
+		if(global.vmouse_x < _x){
+			var _timer_on_color = text_oncursor_color;
+		}
+		else{
+			var _timer_off_color = text_oncursor_color;
+		}
+	}
+	
+	
+	draw_set_color(_timer_on_color);
+	draw_text(_timer_on_x, _y, "ON");
+	
+	draw_set_color(_timer_off_color);
+	draw_text(_timer_off_x, _y, "OFF");
+	
+	draw_set_halign(fa_middle);
+	draw_set_color(text_color);
+	draw_text(_x, _y - _h, button_param[# ButtonName.Timer, _text_mode]);
+	
 	
 	draw_set_default();
 break

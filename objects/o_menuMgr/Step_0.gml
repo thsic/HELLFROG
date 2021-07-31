@@ -112,6 +112,7 @@ case Menustate.Option:
 	_button_name[0] = ButtonName.SEVol;
 	_button_name[1] = ButtonName.BGMVol;
 	_button_name[2] = ButtonName.Launguage;
+	_button_name[3] = ButtonName.Timer;
 	for(var i=0; i<array_length(_button_name); i++){
 		var _bw = button_param[# _button_name[i], ButtonParam.Width];
 		var _bh = button_param[# _button_name[i], ButtonParam.Height];
@@ -133,7 +134,8 @@ case Menustate.Option:
 	//クリック
 	
 	if(mouse_check_button_pressed(global.shotgun_button)){
-		if(_on_cursor_button == ButtonName.Launguage){
+		switch(_on_cursor_button){
+		case ButtonName.Launguage:
 			var _x = button_param[# _on_cursor_button, ButtonParam.X];
 			var _w = button_param[# _on_cursor_button, ButtonParam.Width];
 			//言語設定
@@ -143,11 +145,26 @@ case Menustate.Option:
 			else{
 				global.launguage = Launguage.Japanese;
 			}
-		}
-		else{
-			//バー
+		break
+		case ButtonName.Timer:
+			var _x = button_param[# _on_cursor_button, ButtonParam.X];
+			var _w = button_param[# _on_cursor_button, ButtonParam.Width];
+			//言語設定
+			if(global.vmouse_x < _x){
+				global.timer_enable = true;
+			}
+			else{
+				global.timer_enable = false;
+			}
+		break
+		case ButtonName.SEVol:
+		case ButtonName.BGMVol:
 			grab_bar = _on_cursor_button;
+		break
 		}
+
+		
+		
 		
 	}
 	

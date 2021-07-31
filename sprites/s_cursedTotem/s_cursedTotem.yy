@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "enemy",
+    "path": "folders/Sprites/enemy.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_cursedTotem",

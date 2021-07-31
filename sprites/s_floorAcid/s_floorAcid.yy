@@ -93,8 +93,8 @@
     "resourceType": "GMNineSliceData",
   },
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "map",
+    "path": "folders/Sprites/map.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_floorAcid",

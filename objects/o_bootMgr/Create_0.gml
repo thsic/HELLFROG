@@ -33,7 +33,7 @@ global.true_hell = false;
 global.se_volume = 0.5;
 global.bgm_volume = 0.5;
 global.launguage = Launguage.English;
-
+global.timer_enable = false;
 
 room_goto(FIRST_ROOM);
 

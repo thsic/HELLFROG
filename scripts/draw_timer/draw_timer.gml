@@ -1,6 +1,6 @@
 //
 function draw_timer(){
-	if(global.draw_time_enable){
+	if(global.timer_enable){
 		
 		var _total_second = global.time_second;
 		

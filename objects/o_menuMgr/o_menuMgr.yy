@@ -43,8 +43,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "openmenu",
-    "path": "folders/Sequences/openmenu.yy",
+    "name": "manage",
+    "path": "folders/Objects/manage.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_menuMgr",
