@@ -7,7 +7,7 @@ stagestart_lag = true;
 se_play(a_landing, 80, 1);
 
 //ショックウェーブ
-start_shockwave(o_player.x, o_player.y, 100, 50, 200, 4);
+start_shockwave(o_player.x, o_player.y, 100, 50, 200, 4, false);
 
 //砂埃生成
 repeat(20){

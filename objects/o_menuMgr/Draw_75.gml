@@ -87,7 +87,14 @@ case Menustate.Main:
 				var _color = text_color;
 			}
 			else{
-				var _color = hell_mode_menu_text_color;
+				//truehellならメニュー画面の色も変わる
+				if(global.true_hell){
+					var _color = hell_mode_menu_text_color;
+				}
+				else{
+					var _color = true_hell_color;
+				}
+				
 			}
 			var _text_x = global.camera_width/2
 		}
@@ -223,7 +230,7 @@ case Menustate.Option:
 	var _x = button_param[# ButtonName.Timer, ButtonParam.X];
 	var _y = button_param[# ButtonName.Timer, ButtonParam.Y];
 	
-	draw_rectangle(_x-_w/2, _y-_w/2, _x+_w/2, _y+_h/2, true);
+	
 	var _timer_on_x = _x - _w/4;
 	var _timer_off_x = _x + _w/4;
 	
@@ -448,7 +455,13 @@ case Menustate.AssistMode:
 		var _color = assist_mode_bar_color_top;
 	break
 	case -1:
-		var _color = text_color;
+		if(global.true_hell){
+			var _color = true_hell_color;
+		}
+		else{
+			var _color = text_color;
+		}
+		
 	break
 	}
 

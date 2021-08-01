@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.65,
+  "volume": 0.5,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "a_destroy.ogg",
-  "duration": 0.494206,
+  "duration": 0.489206,
   "parent": {
     "name": "player",
     "path": "folders/Sounds/player.yy",

@@ -4,17 +4,24 @@ var _y = o_camera.y;
 
 switch(state){
 case Menustate.Closing://メニューが完全に閉じている
-
-	if(keyboard_check_pressed(global.menu_key)){
-		switch(global.gamestate){
+	var _open_menu = false;
+	switch(global.gamestate){
 		case gamestate.main:
 		case gamestate.incheckpointbarrier:
 		case gamestate.waitforkeyinput:
-			after_menu_gamestate = global.gamestate;
-			change_gamestate(gamestate.menu);
-			state = Menustate.Main;
+			if(keyboard_check_pressed(global.menu_key)){
+				_open_menu = true;
+			}		
+			if(os_is_paused()){
+				_open_menu = true;
+			}
+			
 		break
-		}
+	}
+	if(_open_menu){
+		after_menu_gamestate = global.gamestate;
+		change_gamestate(gamestate.menu);
+		state = Menustate.Main;
 	}
 	
 break
@@ -267,6 +274,7 @@ case Menustate.AssistMode:
 			if(global.assist_mode != -1){
 				reset_assist_mode();
 				global.assist_mode = -1;
+				se_play(a_hellmode, 90, 1)
 			}
 		}
 		else{

@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.4,
+  "volume": 0.5,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "a_shotLv2.ogg",
-  "duration": 0.320601,
+  "duration": 0.357279,
   "parent": {
     "name": "player",
     "path": "folders/Sounds/player.yy",

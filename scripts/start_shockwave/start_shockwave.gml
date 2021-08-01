@@ -1,5 +1,5 @@
 //
-function start_shockwave(_x, _y, _range, _damage, _stundamage, _knockback_speed){
+function start_shockwave(_x, _y, _range, _damage, _stundamage, _knockback_speed, _play_se){
 	var _enemy_num = instance_number(o_enemy);
 	
 	for(var i=0; i<_enemy_num; i++){
@@ -13,8 +13,12 @@ function start_shockwave(_x, _y, _range, _damage, _stundamage, _knockback_speed)
 				var _dir = point_direction(_x, _y, _id.x, _id.y);
 				damage_to_enemy(_id, _damage, _stundamage);
 				enemy_knockback_start(_id, _knockback_speed, _dir);
-				
 			}
 		}
+	}
+	
+	if(_play_se){
+		//だめーじ判定があるときだめおとならす
+		se_play(a_shockwave, 80, 1);
 	}
 }

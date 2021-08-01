@@ -29,7 +29,8 @@ function enemy_dead(_id, _do_dead_script){
 		//エフェクトリストを削除
 		ds_list_destroy(_id.effect_list);
 		
-		if(global.floor_enemy_number_now <= 1){
+		if(global.floor_enemy_number_now <= 1
+		and _id.soul_enemy){
 			//ゴールを出現させる
 			pop_goal(_x, _y);
 		}

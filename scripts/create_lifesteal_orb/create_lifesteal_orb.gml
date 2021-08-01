@@ -25,7 +25,7 @@ function create_lifesteal_orb(_x, _y, _increase_orb_quantity, _orb_quantity_mag)
 		var _orb_quantity = ceil(1 * _orb_quantity_mag);
 	}
 	
-	debug_draw_variable(x, y, _orb_quantity, c_white, 60);
+	
 	var _base_direction = random(360);
 	var _angle_size = clamp(360 / _orb_quantity, _min_angle_size, 360);
 	

@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "a_shotLv1.ogg",
-  "duration": 0.25432,
+  "duration": 0.24932,
   "parent": {
     "name": "player",
     "path": "folders/Sounds/player.yy",

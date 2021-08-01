@@ -36,24 +36,47 @@ function instance_direction_indicator(_object_type, _color){
 			_ins_x = _ins_id.x;
 			_ins_y = _ins_id.y;
 			_distance_for_instance = point_distance(_px, _py, _ins_x, _ins_y);
-			if(detect_length > _distance_for_instance 
-			and !_ins_id.on_screen 
-			and _ins_id.object_index != o_hookPole
-			and _ins_id.state != EnemyState.WaitForSpawn){
-				//一定距離内にいる画面に写ってない敵をds_indicatorにいれる hookpoleは敵として判定しない
-				_direction_for_instance = point_direction(_px, _py, _ins_x, _ins_y);
-				ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Id, _detect_number, _ins_id);
-				ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Distance, _detect_number, _distance_for_instance);
-				ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Direction, _detect_number, _direction_for_instance);
+			if(_object_type[i] = o_enemy){
+				//敵のインジケータ
+				if(detect_length > _distance_for_instance 
+				and !_ins_id.on_screen 
+				and _ins_id.object_index != o_hookPole
+				and _ins_id.state != EnemyState.WaitForSpawn){
+					//一定距離内にいる画面に写ってない敵をds_indicatorにいれる hookpoleは敵として判定しない
+					_direction_for_instance = point_direction(_px, _py, _ins_x, _ins_y);
+					ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Id, _detect_number, _ins_id);
+					ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Distance, _detect_number, _distance_for_instance);
+					ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Direction, _detect_number, _direction_for_instance);
 				
-				if(is_array(_color)){
-					ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Color, _detect_number, _color[i]);
-				}
-				else{
-					ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Color, _detect_number, _color);
-				}
+					if(is_array(_color)){
+						ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Color, _detect_number, _color[i]);
+					}
+					else{
+						ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Color, _detect_number, _color);
+					}
 				
-				_detect_number++;
+					_detect_number++;
+				}
+			}
+			else{
+				var _on_screen = object_check_within_view_range(0, _ins_id);
+				if(detect_length > _distance_for_instance
+				and _on_screen == false){
+					_direction_for_instance = point_direction(_px, _py, _ins_x, _ins_y);
+					
+					ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Id, _detect_number, _ins_id);
+					ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Distance, _detect_number, _distance_for_instance);
+					ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Direction, _detect_number, _direction_for_instance);
+					
+					if(is_array(_color)){
+						ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Color, _detect_number, _color[i]);
+					}
+					else{
+						ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Color, _detect_number, _color);
+					}
+					
+					_detect_number++;
+				}
 			}
 		}
 	}

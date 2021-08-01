@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.6,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "a_beamCharging.ogg",
-  "duration": 0.65737,
+  "soundFile": "a_shockwave.ogg",
+  "duration": 0.484308,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "player",
+    "path": "folders/Sounds/player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "a_beamCharging",
+  "name": "a_shockwave",
   "tags": [],
   "resourceType": "GMSound",
 }

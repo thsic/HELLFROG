@@ -11,6 +11,7 @@ function tackle_to_enemy(_id){
 				//フックでのタックル
 				_damage *= 1;
 				_knockback_speed *= 0.5;
+				se_play(a_tackle, 50, 1);//音が重複するため銃のノックバックでのタックルは音がならない
 			}
 			else{
 				//スピードが早い状態でのタックルは速度が早いほどタックルがつよい
@@ -19,6 +20,7 @@ function tackle_to_enemy(_id){
 				_knockback_speed *= _mag;
 			}
 		
+			
 			damage_to_enemy(_id, _damage, _stun_damage);
 			enemy_knockback_start(_id, _knockback_speed, player_move_direction);
 			_id.tackle_regist_time = TACKLE_REGIST_TIME_BASE;

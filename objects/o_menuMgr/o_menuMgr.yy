@@ -37,9 +37,10 @@
     {"varType":7,"value":"$FF16164C","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hell_mode_bar_color_under","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF262222","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"assist_mode_disable_bar_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF666666","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"assist_mode_disable_text_color","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":7,"value":"$FF000AFF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hell_mode_scale_color","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":7,"value":"$FF000AFF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hell_mode_menu_text_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF1919F0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hell_mode_scale_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF1919F0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hell_mode_menu_text_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FFE5D172","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"assist_mode_enable_text_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF0000FF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"true_hell_color","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

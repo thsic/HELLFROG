@@ -20,6 +20,8 @@ function draw_instance_direction_indicator(){
 			_color = ds_grid_get(ds_direction_arrow, DirectionIndicator.Color, i);
 			_alpha = _draw_time/detect_draw_time_default*0.7;
 			
+			//ゴールへのインジケータ
+			
 			if(_color != 0){//このif文がないと最初に変な黒い右矢印が出る
 				//描画
 				//遠いほど矢印が小さくなる 
@@ -30,5 +32,7 @@ function draw_instance_direction_indicator(){
 			}
 		}
 	}
+
+	
 	
 }

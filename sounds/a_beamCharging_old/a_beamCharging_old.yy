@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.45,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "a_beamCharging.ogg",
-  "duration": 0.65737,
+  "soundFile": "a_beamCharging_old.ogg",
+  "duration": 0.619853,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "enemy",
+    "path": "folders/Sounds/enemy.yy",
   },
   "resourceVersion": "1.0",
-  "name": "a_beamCharging",
+  "name": "a_beamCharging_old",
   "tags": [],
   "resourceType": "GMSound",
 }
