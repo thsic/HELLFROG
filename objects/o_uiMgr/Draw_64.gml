@@ -10,6 +10,7 @@ if(global.gamestate != gamestate.menu){
 	draw_charge_bar();
 	draw_enemy_number();
 	draw_player_effect_ui();
+	draw_stage_name();
 	
 }
 draw_timer();

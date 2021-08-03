@@ -23,13 +23,15 @@ if(is_in_range(60, 90, draw_stage_name_time) or is_in_range(0, 30, draw_stage_na
 	draw_set_color(stage_name_color);
 	
 	if(draw_stage_name_time > 40){
-		var _stage_name = global.now_stage_param[STAGEPARAM.NAMEEN];
-		draw_set_font(fo_stageTitleEn);
+		var _stage_name = draw_stage_name_1st;
+		draw_set_font(font_1st);
 	}
 	else{
-		var _stage_name = global.now_stage_param[STAGEPARAM.NAMEJP];
-		draw_set_font(fo_stageTitleJp);
+		var _stage_name = draw_stage_name_2nd;
+		draw_set_font(font_2nd);
 	}
+	
+	_stage_name = string_replace(_stage_name, "@", chr(13));
 	draw_text(_name_x, _name_y, _stage_name);
 	
 	

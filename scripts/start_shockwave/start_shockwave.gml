@@ -9,9 +9,9 @@ function start_shockwave(_x, _y, _range, _damage, _stundamage, _knockback_speed,
 			
 			if(_dis < _range){
 				
-				//ダメージをあたえる
+				//ダメージをあたえる ショックウェーブで倒せちゃうとたのしさが減るので倒せないように
 				var _dir = point_direction(_x, _y, _id.x, _id.y);
-				damage_to_enemy(_id, _damage, _stundamage);
+				damage_to_enemy(_id, _damage/global.player_damage, _stundamage);
 				enemy_knockback_start(_id, _knockback_speed, _dir);
 			}
 		}

@@ -36,3 +36,33 @@ repeat(20){
 	part_particles_create(_psys, o_player.x, o_player.y+8, _ptype, 1);
 }
 
+var _stage_num = global.now_stage_param[STAGEPARAM.STAGENUM];
+if(_stage_num <= 1){
+	//最初のステージ
+	if(global.launguage == Launguage.English){
+		draw_stage_name_1st = global.now_stage_param[STAGEPARAM.NAMEJP];
+		draw_stage_name_2nd = global.now_stage_param[STAGEPARAM.NAMEEN];
+		font_1st = fo_stageTitleJp;
+		font_2nd = fo_stageTitleEn;
+	}
+	else{
+		draw_stage_name_1st = global.now_stage_param[STAGEPARAM.NAMEEN];
+		draw_stage_name_2nd = global.now_stage_param[STAGEPARAM.NAMEJP];
+		font_1st = fo_stageTitleEn;
+		font_2nd = fo_stageTitleJp;
+	}
+}
+else{
+	//2ステージ目以降
+	if(global.launguage == Launguage.English){
+		draw_stage_name_1st = global.now_stage_param[STAGEPARAM.NAMEEN];
+		font_1st = fo_stageTitleEn;
+	}
+	else{
+		draw_stage_name_1st = global.now_stage_param[STAGEPARAM.NAMEJP];
+		font_1st = fo_stageTitleJp;
+	}
+	draw_stage_name_2nd = global.now_stage_param[STAGEPARAM.STAGENUM];
+	font_2nd = fo_stageTitleNumber;
+}
+

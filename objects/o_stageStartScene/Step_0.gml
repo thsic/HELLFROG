@@ -7,7 +7,7 @@ if(draw_stage_name_time == 30 or draw_stage_name_time == 90){
 
 draw_stage_name_time--;
 
-if(draw_stage_name_time <= -100){
+if(draw_stage_name_time <= -20){
 	instance_destroy();
 }
 if(o_gameMgr.lag_enable == false and stagestart_lag == true and global.gamestate == gamestate.main){

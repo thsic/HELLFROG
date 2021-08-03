@@ -25,12 +25,13 @@ function put_stage_param(){
 	var _stage_name_jp = global.ds_stage_param[# _now_stage_number, STAGEPARAM.NAMEJP];
 	var _stage_bgm = global.ds_stage_param[# _now_stage_number, STAGEPARAM.BGM];
 	var _next_stage = global.ds_stage_param[# _now_stage_number, STAGEPARAM.NEXTSTAGE];
-	
+	var _stage_number = global.ds_stage_param[# _now_stage_number, STAGEPARAM.STAGENUM];
 		
 	global.now_stage_param[STAGEPARAM.STAGEID] = _stage_id;
 	global.now_stage_param[STAGEPARAM.NAMEEN] = _stage_name_en;
 	global.now_stage_param[STAGEPARAM.NAMEJP] = _stage_name_jp;
 	global.now_stage_param[STAGEPARAM.BGM] = _stage_bgm;
 	global.now_stage_param[STAGEPARAM.NEXTSTAGE] = _next_stage;
+	global.now_stage_param[STAGEPARAM.STAGENUM] = _stage_number;
 	
 }

@@ -13,7 +13,7 @@ function pop_goal(_x, _y){
 		}
 	}*/
 	
-	
+	se_play(a_popGoal, 80, 1);
 	with(instance_create_layer(_x, _y, "UnderTile", o_goal)){
 		next_room = global.now_stage_param[STAGEPARAM.NEXTSTAGE];
 	}

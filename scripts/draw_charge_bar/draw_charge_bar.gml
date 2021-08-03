@@ -4,9 +4,9 @@ function draw_charge_bar() {
 	var _bar_width = 24;
 	var _bar_height = 0;
 
-	var _bar_under_color = c_black;
-	var _bar_color_charged = c_green;
-	var _bar_color_charging = c_blue;
+	var _bar_under_color = 0;
+	var _bar_color_charged = charge_bar_charged_color;
+	var _bar_color_charging = charge_bar_charging_color;
 	var _bar_color_edge = c_white;
 
 	var _base_point_x = o_player.x-camera_get_view_x(view_camera[0])-_bar_width/2;
@@ -37,7 +37,7 @@ function draw_charge_bar() {
 
 	//下地描画
 	draw_set_color(_bar_under_color);
-	draw_rectangle(_base_point_x, _base_point_y, _base_point_x+_bar_width, _base_point_y+_bar_height, false);
+	//draw_rectangle(_base_point_x, _base_point_y, _base_point_x+_bar_width, _base_point_y+_bar_height, false);
 	draw_set_color(_bar_color_edge);
 	//draw_rectangle(_base_point_x, _base_point_y, _base_point_x+_bar_width, _base_point_y+_bar_height, true);
 
