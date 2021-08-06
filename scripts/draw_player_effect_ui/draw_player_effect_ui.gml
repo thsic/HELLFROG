@@ -50,6 +50,17 @@ function draw_player_effect_ui(){
 		_order++;
 		
 	}
+	if(o_player.supp_point > 0){
+		_draw_effect_order[_order] = PLAYEREFFECT.SUPPRESSION;
+		_text_color[_order] = effect_supp_text_color;
+		_bar_color[_order] = effect_supp_bar_color;
+		_effect_text[_order] = global.ds_text[# TEXT.EFFECT_SUPP, global.launguage];
+		_bar_point[_order] = clamp(o_player.supp_point, 0, SUPP_POINT_LIMIT);
+		_bar_max[_order] = SUPP_POINT_LIMIT;
+		_alpha[_order] = 1;
+		
+		_order++;
+	}
 	
 	
 	if(_order > 0){

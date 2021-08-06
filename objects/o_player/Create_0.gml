@@ -52,6 +52,8 @@ drawed_charge_fin_effect = false;
 add_curse_point = false;
 curse_point = 0;
 curse_level = 0;
+add_supp_point = false;
+supp_point = 0;
 
 //残像
 trail_time = 0;

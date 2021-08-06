@@ -89,8 +89,24 @@ function player_effect_manage(){
 	
 	#endregion
 	
+	#region サプレッション
+	
+	if(add_supp_point){
+		//サプレッションポイント上がってく
+		supp_point = clamp(supp_point + 1, 0, SUPP_POINT_LIMIT);
+		
+	}
+	else{
+		//サプレッションポイント下がってく
+		supp_point = clamp(supp_point - 0.25, 0, SUPP_POINT_LIMIT);
+	}
+
+	add_supp_point = false;
+	#endregion
+	
 	enum PLAYEREFFECT{
 		SLOW,
 		CURSE,
+		SUPPRESSION,
 	}
 }

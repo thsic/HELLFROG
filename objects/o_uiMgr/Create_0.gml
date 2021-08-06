@@ -1,5 +1,5 @@
-ds_out_of_screen_enemy = ds_grid_create(5, 100);
-ds_direction_arrow = ds_grid_create(5, 15);
+ds_out_of_screen_enemy = ds_grid_create(8, 100);
+ds_direction_arrow = ds_grid_create(8, 15);
 detect_length = 400;
 detect_draw_time_default = 30;
 
@@ -18,4 +18,5 @@ enum DirectionIndicator{
 	Direction,
 	DrawTime,
 	Color,
+	FarDetect,
 }

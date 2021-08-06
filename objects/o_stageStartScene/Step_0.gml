@@ -15,3 +15,6 @@ if(o_gameMgr.lag_enable == false and stagestart_lag == true and global.gamestate
 	stagestart_lag = false;
 }
 
+if(global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.TUTORIAL){
+	instance_destroy();
+}

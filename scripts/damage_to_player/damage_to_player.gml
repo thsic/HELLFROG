@@ -16,7 +16,7 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 		global.player_hp -= _damage;
 		
 		//チュートリアルでは死なない
-		if(room == r_tutorial
+		if(global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.TUTORIAL
 		and global.player_hp <= 0){
 			global.player_hp = 1;
 		}

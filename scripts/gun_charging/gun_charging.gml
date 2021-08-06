@@ -11,7 +11,14 @@ function gun_charging() {
 		
 		//銃のチャージが最大値以下だと銃をチャージする
 		if(gun_charge_time < _gun_charge_time_each_level * _gun_charge_max_count + 1){
-			gun_charge_time++;
+			
+			if(supp_point <= 0){
+				gun_charge_time++;
+			}
+			else{
+				gun_charge_time += SUPP_GUN_CHARGE_MAG;
+			}
+			
 		}
 		else if(!drawed_charge_fin_effect){
 			effect_create_charge_fin_effect();

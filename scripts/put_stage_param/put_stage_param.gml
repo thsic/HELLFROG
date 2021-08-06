@@ -37,6 +37,7 @@ function put_stage_param(){
 	global.now_stage_param[STAGEPARAM.BGM] = _stage_bgm;
 	global.now_stage_param[STAGEPARAM.NEXTSTAGE] = _next_stage;
 	global.now_stage_param[STAGEPARAM.STAGENUM] = _stage_number;
+	global.now_stage_param[STAGEPARAM.STAGETYPE] = _stage_type;
 	global.now_stage_param[STAGEPARAM.STAGECOLOR] = _stage_color;
 	
 	

@@ -148,6 +148,9 @@ function enemy_state_manage() {
 			invincible_time = 30;
 			
 		}
+		if(lock_number == -1){
+			lock_spawn_time--;
+		}
 	break
 	case EnemyState.Invincible://無敵
 		invincible_enable = true;

@@ -35,6 +35,8 @@
     {"varType":7,"value":"$FF1313F4","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"effect_curse_merge_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF5B244E","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"charge_bar_charging_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FFE719FF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"charge_bar_charged_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF999999","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"effect_supp_text_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF666666","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"effect_supp_bar_color","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {
