@@ -9,8 +9,7 @@ function macros() {
 
 #macro OPPOSITEKEY_POWER_FOR_INERTIA 10
 
-#macro FIRST_ROOM r_stage1
-
+#macro FIRST_ROOM r_test
 
 //敵
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_blink
@@ -28,6 +27,9 @@ function macros() {
 #macro PLAYER_BULLET_HITSTOP_TIME 7
 #macro AUDIO_SIMUL_DECAY_DEFAULT 0.66
 #macro CURSE_POINT_LIMIT 120
+#macro LAVA_DAMAGE 1
+#macro LAVA_TICKS_PER_SECOND 15
+
 
 //ステージ名
 #macro STAGE1_NAME_JP "ヘルケイヴ"//"ヘル"+chr(13)+"ケイヴ"

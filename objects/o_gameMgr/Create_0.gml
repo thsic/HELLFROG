@@ -64,3 +64,9 @@ enum EnemyDefaultPosition{
 	LockSpawnTime,
 	BlueAura,
 }
+enum ObjDefaultPosition{
+	ObjectIndex,
+	XPosition,
+	YPosition,
+	Sprite,
+}

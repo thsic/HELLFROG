@@ -89,10 +89,10 @@ case Menustate.Main:
 			else{
 				//truehellならメニュー画面の色も変わる
 				if(global.true_hell){
-					var _color = hell_mode_menu_text_color;
+					var _color = true_hell_color;
 				}
 				else{
-					var _color = true_hell_color;
+					var _color = hell_mode_menu_text_color;
 				}
 				
 			}

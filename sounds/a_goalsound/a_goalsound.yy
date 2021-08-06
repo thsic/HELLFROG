@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.8,
+  "volume": 0.5,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "a_goalsound.ogg",
-  "duration": 2.884138,
+  "duration": 2.879138,
   "parent": {
     "name": "player",
     "path": "folders/Sounds/player.yy",

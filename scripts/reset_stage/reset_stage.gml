@@ -81,6 +81,26 @@ function reset_stage(){
 	}
 	global.floor_enemy_number_now = global.floor_enemy_number_total;
 	
+	//オブジェクトを再生成
+	with(o_breakableObject){
+		instance_destroy();
+	}
+	with(o_breakableWall){
+		instance_destroy();
+	}
+	var _obj_num = ds_grid_height(ds_obj_default_position);
+	var _obj_x, _obj_y, _obj_index, _obj_sprite;
+	for(var i=0; i<_obj_num; i++){
+		_obj_index = ds_obj_default_position[# ObjDefaultPosition.ObjectIndex, i];
+		_obj_x = ds_obj_default_position[# ObjDefaultPosition.XPosition, i];
+		_obj_y = ds_obj_default_position[# ObjDefaultPosition.YPosition, i];
+		_obj_sprite = ds_obj_default_position[# ObjDefaultPosition.Sprite, i];
+		
+		with(instance_create_layer(_obj_x, _obj_y, "BreakableObjects", _obj_index)){
+			sprite = _obj_sprite;
+		}
+	}
+	
 	//ルームのロック状態をリセットする
 	room_lock_reset();
 	

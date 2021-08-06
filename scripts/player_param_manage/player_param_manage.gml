@@ -27,5 +27,36 @@ function player_param_manage() {
 	else{
 		look_right = true;
 	}
-
+	
+	
+	//溶岩
+	var _frame = floor(room_speed / LAVA_TICKS_PER_SECOND);
+	if(global.game_time mod _frame == 0){
+		var _on_damage_field = false;
+		var _damage_field_num = instance_number(o_damageField);
+		for(var i=0; i<_damage_field_num; i++){
+			var _id = instance_find(o_damageField, i);
+			var _x = _id.x;
+			var _y = _id.y;
+		
+		
+			//フィールドの当たり判定が四角形の場合
+			var _w = _id.field_width;
+			var _h = _id.field_height;
+			
+			if(is_in_place(_x-_w/2, _y-_h/2, _x+_w/2, _y+_h/2, x, y)){
+				_on_damage_field = true;
+				break;
+			}
+		}
+	
+		//ダメージ床踏んでいる
+		if(_on_damage_field){
+			damage_to_player(LAVA_DAMAGE, 0, 0);
+			
+			if(!audio_is_playing(a_lava)){
+				se_play(a_lava, 70, 1);
+			}
+		}
+	}
 }

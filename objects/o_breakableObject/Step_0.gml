@@ -4,7 +4,7 @@ if(break_enable){
 		//破片の初期設定
 		dust_setting_enable = true;
 		var _speed_min = dust_speed_base-dust_speed_base*0.5;
-		var _speed_max = dust_speed_base+dust_speed_base*2;
+		var _speed_max = dust_speed_base+dust_speed_base;
 		var _dir_min = dust_direction_base-20;
 		var _dir_max = dust_direction_base+20;
 		
@@ -47,7 +47,7 @@ if(break_enable){
 			_x = _x + lengthdir_x(_speed, _direction);
 			_y = _y + lengthdir_y(_speed, _direction);
 			
-			_speed = clamp(_speed * 0.98 - 0.01, 0, 14);
+			_speed = clamp(_speed * 0.95 - 0.01, 0, 14);
 			if(_speed <= 0){
 				dust_param[# i, DUSTPARAM.ENABLE] = false;
 			}

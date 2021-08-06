@@ -42,7 +42,7 @@ case gamestate.stagestart:
 	//敵初期位置保存
 	var _enemy_number = instance_number(o_enemy);
 	var _enemy_id, _enemy_index, _enemy_x, _enemy_y;
-	ds_enemy_default_position = ds_grid_create(6, _enemy_number);
+	ds_enemy_default_position = ds_grid_create(8, _enemy_number);
 	
 	var _floor_enemy_num = 0;
 	
@@ -67,9 +67,47 @@ case gamestate.stagestart:
 			_floor_enemy_num++;
 		}
 	}
+	
 	//敵の総数数える
 	global.floor_enemy_number_total = _floor_enemy_num;
 	global.floor_enemy_number_now = _floor_enemy_num;
+	
+	
+	//ゲームオーバー時に再生成されるオブジェクトの初期位置保存
+	var _obj_num = instance_number(o_breakableObject);
+	var _wall_num = instance_number(o_breakableWall);
+	ds_obj_default_position = ds_grid_create(5, _obj_num+_wall_num);
+	
+	for(var i=0; i<_obj_num; i++){
+		var _obj_id = instance_find(o_breakableObject, i);
+		var _obj_x = _obj_id.x;
+		var _obj_y = _obj_id.y;
+		var _obj_index = _obj_id.object_index;
+		var _obj_sprite = _obj_id.sprite;
+		
+		ds_grid_set(ds_obj_default_position, ObjDefaultPosition.ObjectIndex, i, _obj_index);
+		ds_grid_set(ds_obj_default_position, ObjDefaultPosition.XPosition, i, _obj_x);
+		ds_grid_set(ds_obj_default_position, ObjDefaultPosition.YPosition, i, _obj_y);
+		ds_grid_set(ds_obj_default_position, ObjDefaultPosition.Sprite, i, _obj_sprite);
+	}
+	
+	
+	
+	
+	for(var i=0; i<_wall_num; i++){
+		var _obj_id = instance_find(o_breakableWall, i);
+		var _obj_x = _obj_id.x;
+		var _obj_y = _obj_id.y;
+		var _obj_index = _obj_id.object_index;
+		var _obj_sprite = _obj_id.sprite;
+		
+		ds_grid_set(ds_obj_default_position, ObjDefaultPosition.ObjectIndex, i+_obj_num, _obj_index);
+		ds_grid_set(ds_obj_default_position, ObjDefaultPosition.XPosition, i+_obj_num, _obj_x);
+		ds_grid_set(ds_obj_default_position, ObjDefaultPosition.YPosition, i+_obj_num, _obj_y);
+		ds_grid_set(ds_obj_default_position, ObjDefaultPosition.Sprite, i+_obj_num, _obj_sprite);
+	}
+	
+	
 	
 	//プレイヤー向き変更
 	o_player.look_right = o_persistentObject.player_look_right;
