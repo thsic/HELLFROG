@@ -34,7 +34,7 @@ function player_draw_hp_mini(){
 	draw_set_halign(fa_middle);
 	draw_set_valign(fa_bottom)
 	draw_set_color(_text_color);
-	var _hp_text = string(ceil(global.player_hp));
+	var _hp_text = string(clamp(ceil(global.player_hp), 0, _max_hp));
 	draw_text(_x+_width/2, _y-2, _hp_text);
 	draw_set_default();
 }

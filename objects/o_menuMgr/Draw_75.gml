@@ -53,7 +53,14 @@ case Menustate.Main:
 	for(var i=0; i<array_length(_button_name); i++){
 		
 		var _text_y = button_param[# _button_name[i], ButtonParam.Y];
-		var _text = button_param[# _button_name[i], _text_mode];
+		
+		//日本語表示でもマウスオーバーしてない時は英語で表示
+		if(button_param[# _button_name[i], ButtonParam.OnCursor]){
+			var _text = button_param[# _button_name[i], _text_mode];
+		}
+		else{
+			var _text = button_param[# _button_name[i], ButtonParam.TextEn];
+		}
 		
 		if(_button_name[i] == ButtonName.AssistMode
 		and global.assist_mode == -1){
@@ -63,6 +70,7 @@ case Menustate.Main:
 			}
 			else{
 				_text = menu_hell_button_text_jp;
+
 			}
 		}
 		else{
