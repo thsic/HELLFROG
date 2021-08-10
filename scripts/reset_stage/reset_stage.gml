@@ -27,6 +27,12 @@ function reset_stage(){
 	with(o_enemyBulletAcid){
 		instance_destroy()
 	}
+	//ポップゴール消し
+	with(o_goal){
+		if(poped_goal){
+			instance_destroy();
+		}
+	}
 	//スローフィールド消し
 	var _slow_field_num = instance_number(o_slowField);
 	for(var i=0; i<_slow_field_num; i++){

@@ -31,7 +31,7 @@
   ],
   "overriddenProperties": [
     {"propertyId":{"name":"hp","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"500","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"stun_time_default","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"60","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"stun_time_default","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"90","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"weapon_range","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"150","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"view_range","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"400","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"fire_script","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"noone","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
