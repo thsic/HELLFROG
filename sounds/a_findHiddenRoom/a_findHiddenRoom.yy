@@ -13,8 +13,8 @@
   "soundFile": "a_findHiddenRoom.ogg",
   "duration": 1.931519,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "other",
+    "path": "folders/Sounds/other.yy",
   },
   "resourceVersion": "1.0",
   "name": "a_findHiddenRoom",

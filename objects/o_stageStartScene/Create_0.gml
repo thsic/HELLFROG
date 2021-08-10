@@ -1,7 +1,15 @@
+
+if(global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.TUTORIAL){
+	instance_destroy();
+}
+
+
 //プレイヤーが着地してからのエフェクト等
 
 draw_stage_name_time = draw_stage_name_time_base;
 stagestart_lag = true;
+
+
 
 //音
 se_play(a_landing, 80, 1);

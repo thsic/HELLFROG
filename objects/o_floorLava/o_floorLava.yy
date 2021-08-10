@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_floorLava",
-    "path": "sprites/s_floorLava/s_floorLava.yy",
+    "name": "s_redSquare",
+    "path": "sprites/s_redSquare/s_redSquare.yy",
   },
   "solid": false,
   "visible": true,

@@ -13,8 +13,8 @@
   "soundFile": "a_lava.wav",
   "duration": 0.25932,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "player",
+    "path": "folders/Sounds/player.yy",
   },
   "resourceVersion": "1.0",
   "name": "a_lava",

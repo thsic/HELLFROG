@@ -30,6 +30,10 @@
     {"propertyId":{"name":"walk_sprite","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"s_enemyTrentWalk","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"chargeing_sprite","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"s_enemyTrentCharging","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"attack_sprite","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"s_enemyTrentAttack","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"hp","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"140","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"weapon_range","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"170","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"aim_time_default","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"40","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"weapon_charge_time_default","path":"objects/o_enemy/o_enemy.yy",},"objectId":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"value":"20","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "group1",

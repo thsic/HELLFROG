@@ -31,7 +31,9 @@ function player_param_manage() {
 	
 	//溶岩
 	var _frame = floor(room_speed / LAVA_TICKS_PER_SECOND);
-	if(global.game_time mod _frame == 0){
+	if(global.game_time mod _frame == 0
+	and !inertia_enable
+	and hook_state != hookState.Shrink){
 		var _on_damage_field = false;
 		var _damage_field_num = instance_number(o_damageField);
 		for(var i=0; i<_damage_field_num; i++){
