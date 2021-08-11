@@ -165,9 +165,7 @@ case gamestate.waitforkeyinput:
 		var _charge_count = ds_grid_get(global.ds_player_gun, o_player.now_shotgun, eG_param.ChargeCount);
 		var _charge_time = ds_grid_get(global.ds_player_gun, o_player.now_shotgun, eG_param.ChargeTime);
 		o_player.gun_charge_time = _charge_count * _charge_time;
-	
 		
-	
 		var _up		= keyboard_check(global.up_key);
 		var _down	= keyboard_check(global.down_key);
 		var _left	= keyboard_check(global.left_key);

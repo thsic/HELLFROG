@@ -344,7 +344,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fo_stageTitleEn",
+  "name": "fo_stageTitle58",
   "tags": [],
   "resourceType": "GMFont",
 }

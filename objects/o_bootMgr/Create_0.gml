@@ -30,8 +30,8 @@ global.true_hell = false;
 
 
 //オプション
-global.se_volume = 0.5;
-global.bgm_volume = 0.5;
+global.se_volume = 0.2;
+global.bgm_volume = 0.2;
 global.launguage = Launguage.English;
 global.timer_enable = false;
 

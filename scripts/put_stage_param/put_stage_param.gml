@@ -29,7 +29,8 @@ function put_stage_param(){
 	var _stage_name_jp = global.ds_stage_type_param[# _stage_type, STAGEPARAM.NAMEJP];
 	var _stage_bgm = global.ds_stage_type_param[# _stage_type, STAGEPARAM.BGM];
 	var _stage_color = global.ds_stage_type_param[# _stage_type, STAGEPARAM.STAGECOLOR];
-	
+	var _stage_fonten = global.ds_stage_type_param[# _stage_type, STAGEPARAM.FONTEN];
+	var _stage_fontjp = global.ds_stage_type_param[# _stage_type, STAGEPARAM.FONTJP];
 	
 	global.now_stage_param[STAGEPARAM.STAGEID] = _stage_id;
 	global.now_stage_param[STAGEPARAM.NAMEEN] = _stage_name_en;
@@ -39,6 +40,7 @@ function put_stage_param(){
 	global.now_stage_param[STAGEPARAM.STAGENUM] = _stage_number;
 	global.now_stage_param[STAGEPARAM.STAGETYPE] = _stage_type;
 	global.now_stage_param[STAGEPARAM.STAGECOLOR] = _stage_color;
-	
+	global.now_stage_param[STAGEPARAM.FONTEN] = _stage_fonten;
+	global.now_stage_param[STAGEPARAM.FONTJP] = _stage_fontjp;
 	
 }

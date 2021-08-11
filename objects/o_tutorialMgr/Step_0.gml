@@ -87,8 +87,8 @@ for(var i=0; i<trigger_num; i++){
 				//銃ゲット
 				shot_ui_trigger = true;
 				ui_change_time = ui_change_time_base;
-				o_player.now_shotgun = eG_type.TutorialGun;
-				instance_destroy(o_mozandique);
+				o_player.now_shotgun = eG_type.CursedGun;
+				instance_destroy(o_hellgun);
 				se_play(a_getgun, 80, 1);
 			}
 		break
@@ -105,10 +105,10 @@ for(var i=0; i<trigger_num; i++){
 			draw_kill_ui = false;
 		break
 		case 6:
-			//へるがん
+			/*//へるがん
 			se_play(a_getgun, 80, 1);
 			o_player.now_shotgun = eG_type.CursedGun;
-			instance_destroy(o_hellgun);
+			instance_destroy(o_hellgun);*/
 		break
 		}
 	}

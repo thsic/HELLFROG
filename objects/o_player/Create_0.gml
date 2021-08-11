@@ -14,9 +14,11 @@ now_shotgun = eG_type.CursedGun;
 now_knockback_type = noone;
 
 //銃関連
-gun_charge_level = noone;
-gun_charge_enable = false;
-gun_charge_time = 0;
+gun_charge_level = 3;
+//gun_charge_level = 0;
+gun_charge_enable = true;
+//gun_charge_time = 0;
+gun_charge_time = 100;//ds_grid_get(global.ds_player_gun, now_shotgun, eG_param.ChargeTime);
 gun_max_charge_time = 0;
 gun_cooldown = 0;
 

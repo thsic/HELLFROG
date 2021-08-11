@@ -19,6 +19,6 @@ function lagging_game(){//room_speedを下げてラグっぽくする処理
 		global.gamestop = false;
 	}*/
 	var _room_speed = 60*_lag_ratio;
-	room_speed = _room_speed;
+	//room_speed = _room_speed;
 	
 }

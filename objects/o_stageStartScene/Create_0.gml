@@ -50,25 +50,25 @@ if(_stage_num <= 1){
 	if(global.launguage == Launguage.English){
 		draw_stage_name_1st = global.now_stage_param[STAGEPARAM.NAMEJP];
 		draw_stage_name_2nd = global.now_stage_param[STAGEPARAM.NAMEEN];
-		font_1st = fo_stageTitleJp;
-		font_2nd = fo_stageTitleEn;
+		font_1st = global.now_stage_param[STAGEPARAM.FONTJP];
+		font_2nd = global.now_stage_param[STAGEPARAM.FONTEN];
 	}
 	else{
 		draw_stage_name_1st = global.now_stage_param[STAGEPARAM.NAMEEN];
 		draw_stage_name_2nd = global.now_stage_param[STAGEPARAM.NAMEJP];
-		font_1st = fo_stageTitleEn;
-		font_2nd = fo_stageTitleJp;
+		font_1st = global.now_stage_param[STAGEPARAM.FONTEN];
+		font_2nd = global.now_stage_param[STAGEPARAM.FONTJP];
 	}
 }
 else{
 	//2ステージ目以降
 	if(global.launguage == Launguage.English){
 		draw_stage_name_1st = global.now_stage_param[STAGEPARAM.NAMEEN];
-		font_1st = fo_stageTitleEn;
+		font_1st = global.now_stage_param[STAGEPARAM.FONTEN];
 	}
 	else{
 		draw_stage_name_1st = global.now_stage_param[STAGEPARAM.NAMEJP];
-		font_1st = fo_stageTitleJp;
+		font_1st = global.now_stage_param[STAGEPARAM.FONTJP];
 	}
 	draw_stage_name_2nd = global.now_stage_param[STAGEPARAM.STAGENUM];
 	font_2nd = fo_stageTitleNumber;
