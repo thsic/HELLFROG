@@ -34,10 +34,11 @@ global.ds_text[# TEXT.TUTORIAL_MOVE, Launguage.English] =			"move";
 global.ds_text[# TEXT.TUTORIAL_HOOK, Launguage.English] =			"tongue";
 global.ds_text[# TEXT.TUTORIAL_SHOT, Launguage.English] =			"shot";
 global.ds_text[# TEXT.TUTORIAL_KILL, Launguage.English] =			"kill";
-global.ds_text[# TEXT.TUTORIAL_HELL, Launguage.English] =			"hell";
+global.ds_text[# TEXT.TUTORIAL_HELL, Launguage.English] =			"HELL";
 global.ds_text[# TEXT.TUTORIAL_BROKENGUN, Launguage.English] =		"Broken Gun";
 global.ds_text[# TEXT.TUTORIAL_HELLGUN, Launguage.English] =		"Hell Gun";
 global.ds_text[# TEXT.TUTORIAL_MOZA, Launguage.English] =			"Mozandique";
+global.ds_text[# TEXT.TUTORIAL_HIDDENGOAL, Launguage.English] =		"Shortcut XD";
 
 global.ds_text[# TEXT.TUTORIAL_MOVE, Launguage.Japanese] =			"移動";
 global.ds_text[# TEXT.TUTORIAL_HOOK, Launguage.Japanese] =			"舌";
@@ -47,6 +48,7 @@ global.ds_text[# TEXT.TUTORIAL_HELL, Launguage.Japanese] =			"ヘル";
 global.ds_text[# TEXT.TUTORIAL_BROKENGUN, Launguage.Japanese] =		"壊れた銃";
 global.ds_text[# TEXT.TUTORIAL_HELLGUN, Launguage.Japanese] =		"地獄の銃";
 global.ds_text[# TEXT.TUTORIAL_MOZA, Launguage.Japanese] =			"モザムディーク";
+global.ds_text[# TEXT.TUTORIAL_HIDDENGOAL, Launguage.Japanese] =	"地獄への近道 (便利)";
 
 
 global.ds_text[# TEXT.STAGE1_TEXT1, Launguage.English] =			"You've gone to hell.";
@@ -122,6 +124,8 @@ enum TEXT{
 	TUTORIAL_BROKENGUN,
 	TUTORIAL_HELLGUN,
 	TUTORIAL_MOZA,
+	TUTORIAL_HIDDENGOAL,
+	
 	EFFECT_SLOW,
 	EFFECT_CURSE,
 	EFFECT_SUPP,

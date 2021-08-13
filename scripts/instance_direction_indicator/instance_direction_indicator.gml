@@ -62,7 +62,8 @@ function instance_direction_indicator(_object_type, _color){
 			else{
 				//ゴールとか
 				var _on_screen = object_check_within_view_range(0, _ins_id);
-				if(_on_screen == false){
+				if(_on_screen == false
+				and !_ins_id.hidden_goal){
 					_direction_for_instance = point_direction(_px, _py, _ins_x, _ins_y);
 					
 					ds_grid_set(ds_out_of_screen_enemy, DirectionIndicator.Id, _detect_number, _ins_id);

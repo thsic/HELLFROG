@@ -80,8 +80,14 @@ case Menustate.Main://プレイヤーが操作できる メニューのいろい
 			var _menu_close = true;
 		break
 		case ButtonName.Retry:
-			state = Menustate.Closing;
-			gameover_script(o_player.player_direction);
+			if(global.now_stage_param[STAGEPARAM.STAGETYPE] != STAGETYPE.TUTORIAL){
+				state = Menustate.Closing;
+				gameover_script(o_player.player_direction);
+			}
+			else{
+				se_play(a_shotLv2, 20, 1);
+			}
+			
 		break
 		case ButtonName.Option:
 			state = Menustate.Option;
