@@ -30,5 +30,5 @@ function draw_stage_name(){
 		draw_text(_center_x, _y, _text);
 	}
 	
-	draw_text(global.camera_width/4*3, 6, fps);
+	
 }

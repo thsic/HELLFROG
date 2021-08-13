@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function enemy_set_movement(_length, _speed, _player_finded){
+function enemy_set_movement(_length, _speed, _player_finded, _dir){
 	if(homing_player == false){
 		if(_player_finded == true){
 			var _direction_for_player = point_direction(x, y, o_player.x, o_player.y);
@@ -9,7 +9,7 @@ function enemy_set_movement(_length, _speed, _player_finded){
 			var _direction = irandom_range(_max_angle, _min_angle);
 		}
 		else{
-			var _direction = irandom(360);
+			var _direction = _dir;
 		}
 		movement_length = _length;
 		movement_speed = _speed;

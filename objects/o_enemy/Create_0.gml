@@ -17,6 +17,7 @@ max_hp = hp;
 collision_size_for_hook = 0;
 on_screen = false;
 idle_mode = false;
+finded_player = false;
 
 movement_enable = false;
 movement_cooldown = 0;

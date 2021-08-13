@@ -1,0 +1,1 @@
+draw_text(6, 6, fps);

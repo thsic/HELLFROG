@@ -19,3 +19,4 @@ if(global.gamestate != gamestate.menu){
 	
 }
 draw_timer();
+draw_text(global.camera_width/4*3, 6, fps);

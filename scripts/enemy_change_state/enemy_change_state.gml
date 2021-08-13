@@ -58,4 +58,5 @@ enum EnemyState{
 	AfterFire,
 	WaitForSpawn,
 	Invincible,
+	FollowingPlayer,
 }

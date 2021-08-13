@@ -7,7 +7,12 @@ function enemy_state_manage() {
 		var _distance_for_player = point_distance(x, y, o_player.x, o_player.y);
 		var _see_player = collision_line(x, y, o_player.x, o_player.y, o_wall, false, true);
 		var _collision_door = collision_line(x, y, o_player.x, o_player.y, o_door, false, true);
-		if(!idle_mode){
+		if(finded_player){
+			//プレイヤーを見つけている場合追いかける
+			enemy_follow_player();
+			
+		}
+		else if(!idle_mode){
 			enemy_movement_manage(false, 1);//ランダムウォーク
 		}
 		if(_distance_for_player < view_range 
@@ -25,6 +30,7 @@ function enemy_state_manage() {
 	break
 	case EnemyState.Approach:
 		invincible_enable = false;
+		finded_player = true;
 		if(rigor_time >= 0){
 			//発見時の硬直
 			rigor_time--;

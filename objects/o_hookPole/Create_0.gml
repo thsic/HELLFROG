@@ -3,6 +3,7 @@ state = EnemyState.Idle;
 knockback_enable = false;
 h_speed = 0;
 v_speed = 0;
+finded_player = false;
 
 max_hp = hp;
 

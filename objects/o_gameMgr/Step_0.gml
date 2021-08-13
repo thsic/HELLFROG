@@ -1,4 +1,4 @@
-sdm(global.game_time)
+
 global.gamestop = false;
 global.playerstop = false;
 global.game_time++;
@@ -283,7 +283,5 @@ case gamestate.event:
 	global.gamestop = true;
 	global.playerstop = true;
 break
-
-
 }
 
