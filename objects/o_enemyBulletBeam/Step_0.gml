@@ -36,7 +36,12 @@ if(global.gamestop == false){
 		beam_enable = false;
 		beforebeam_drawtime--;
 	}
-
+	
+	if(!instance_exists(enemy_id)
+	and !erasure_start){
+		erasure_start = true;
+	}
+	
 	//弾強制消滅フラグ
 	if(erasure_start == true and erasure_enable == false){
 		erasure_enable = true;

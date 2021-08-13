@@ -4,8 +4,8 @@ function enemy_follow_player(){
 		movement_cooldown -= 3;//通常よりはやくクールダウンが減ってく
 	}
 	else{
-		var _random_var = random(1);
-		if(movement_probability*3 > _random_var){//毎フレーム低確率で移動を実行
+		/*var _random_var = random(1);
+		if(movement_probability*3 > _random_var){//毎フレーム低確率で移動を実行*/
 			//移動する
 			var _ds_w = ds_grid_width(global.ds_footprint);
 			var _move_to_footprint = false;
@@ -49,9 +49,9 @@ function enemy_follow_player(){
 			
 			//移動実行
 			_movement_length = irandom_range(movement_length_max, movement_length_min);
-			enemy_set_movement(_movement_length, movement_speed, false, _dir);
+			enemy_set_movement(_movement_length*2, movement_speed, false, _dir);
 			
-		}
+	//	}
 	}
 	
 	

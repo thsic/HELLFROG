@@ -184,6 +184,30 @@ case gamestate.waitforkeyinput:
 				layer_sequence_destroy(respawn_sequence_element);
 			}
 		}
+		
+		//プレイヤーの向いてる方向
+		with(o_player){
+			//プレイヤー座標を画面座標に変換して向いている方角
+			var _x = x - camera_get_view_x(view_camera[0]);
+			var _y = y - camera_get_view_y(view_camera[0]);
+			var _mx = global.vmouse_x;
+			var _my = global.vmouse_y;
+			player_direction = point_direction(_x, _y, _mx, _my);
+		}
+		
+		if(_shotgun){
+			//ショットガンボタンが押された時は銃の発射処理を行う ごりおし
+			with(o_player){
+				player_shotgun_fire();
+				start_trail_time(10);
+				gun_charge_time = 0;
+				gun_charge_enable = false;
+				gun_charge_level = 0;
+				drawed_charge_fin_effect = false;
+			}
+		}
+		
+		
 	}
 	if(respawn_time = -1){
 		//リスポーン直後

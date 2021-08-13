@@ -54,7 +54,7 @@ function player_param_manage() {
 	
 		//ダメージ床踏んでいる
 		if(_on_damage_field){
-			damage_to_player(LAVA_DAMAGE, 0, 0);
+			damage_to_player(LAVA_DAMAGE * global.dot_damage, 0, player_direction+180);
 			
 			if(!audio_is_playing(a_lava)){
 				se_play(a_lava, 70, 1);

@@ -167,16 +167,13 @@ var _flash_ratio = sign(damage_flash_time);
 shader_set_uniform_f(uni_add, _flash_ratio);
 
 //アウトライン
-
 sh_texel_handle = shader_get_uniform(sh_enemy, "inTexel");
 sh_outline_color_handle = shader_get_uniform(sh_enemy, "outlineColor");
 sh_outline_size_handle = shader_get_uniform(sh_enemy, "outlineSize");
 
-
 var _tex = sprite_get_texture(_sprite, _subimage);
 var _tWidth = texture_get_texel_width(_tex);
 var _tHeight = texture_get_texel_height(_tex);
-
 
 var _r = 1.0;
 var _g = 1.0;
@@ -218,9 +215,7 @@ if(blue_aura){
 	
 	_a = 1 - cos(global.game_time/6) * 0.25;
 	_outline_size = 2 - sin(global.game_time/4);
-	
 }
-
 
 shader_set_uniform_f(sh_texel_handle, _tWidth, _tHeight);
 shader_set_uniform_f(sh_outline_color_handle, _r, _g, _b, _a);

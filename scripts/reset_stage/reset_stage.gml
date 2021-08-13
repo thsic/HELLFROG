@@ -56,6 +56,11 @@ function reset_stage(){
 	}
 	global.slow_enable = false;
 	
+	//足跡マネージャーの再生性
+	with(o_footprintMgr){
+		instance_destroy()
+	}
+	instance_create_layer(0, 0 ,"GameObjects", o_footprintMgr);
 	
 	//敵を再生成
 	with(o_enemy){
