@@ -20,3 +20,4 @@ if(global.game_time mod 4 == 0){
 	part_particles_create_color(pt_sys, _smog_x, _smog_y, pt_type, _color, 1);
 	
 }
+

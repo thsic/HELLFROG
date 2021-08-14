@@ -96,7 +96,7 @@ case Menustate.Main://プレイヤーが操作できる メニューのいろい
 			state = Menustate.AssistMode;
 		break
 		case ButtonName.SaveAndQuit:
-			game_restart();
+			game_end();
 		break
 		case noone:
 		
@@ -402,6 +402,14 @@ case Menustate.AssistMode:
 		global.true_hell = false;
 	}
 	
+	if(global.assist_level_enemy_damage == 3
+	or global.assist_level_dot_damage == 3
+	or global.assist_level_player_damage == 3){
+		global.assist_level_max = true;
+	}
+	else{
+		global.assist_level_max = false;	
+	}
 	
 	set_damage_ratio();
 	

@@ -9,13 +9,20 @@ if(draw_player){
 		var _trail_color = trail_color;
 	break
 	case 1:
-		var _trail_color = trail_assist_color;;
+		if(global.assist_level_max){//maxlevelだと色がかわる
+			var _trail_color = trail_assist_maxlevel_color;
+			_alpha_ratio = 2.5;
+		}
+		else{
+			var _trail_color = trail_assist_color;
+		}
+		
 	break
 	case -1:
 		//true hell状態なら色をつよめにする
 		if(global.true_hell){
 			var _trail_color = trail_true_hell_color;
-			_alpha_ratio = 2.5
+			_alpha_ratio = 2.5;
 		}
 		else{
 			var _trail_color = trail_hell_color;

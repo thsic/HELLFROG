@@ -419,6 +419,7 @@
     {"id":{"name":"o_enemySuppTotem","path":"objects/o_enemySuppTotem/o_enemySuppTotem.yy",},"order":11,},
     {"id":{"name":"s_mozandiqueHand","path":"sprites/s_mozandiqueHand/s_mozandiqueHand.yy",},"order":19,},
     {"id":{"name":"o_chargeFinishEffect","path":"objects/o_chargeFinishEffect/o_chargeFinishEffect.yy",},"order":2,},
+    {"id":{"name":"enemy_homing_passive","path":"scripts/enemy_homing_passive/enemy_homing_passive.yy",},"order":4,},
     {"id":{"name":"a_damaged","path":"sounds/a_damaged/a_damaged.yy",},"order":4,},
     {"id":{"name":"o_bulletThroughWallTutorial","path":"objects/o_bulletThroughWallTutorial/o_bulletThroughWallTutorial.yy",},"order":12,},
     {"id":{"name":"s_tutorialEnemy","path":"sprites/s_tutorialEnemy/s_tutorialEnemy.yy",},"order":1,},
@@ -439,6 +440,7 @@
     {"id":{"name":"o_floorAcid","path":"objects/o_floorAcid/o_floorAcid.yy",},"order":20,},
     {"id":{"name":"enemy_bullet_erasure","path":"scripts/enemy_bullet_erasure/enemy_bullet_erasure.yy",},"order":19,},
     {"id":{"name":"s_enemyBulletTest","path":"sprites/s_enemyBulletTest/s_enemyBulletTest.yy",},"order":0,},
+    {"id":{"name":"a_chargeEndTutorial","path":"sounds/a_chargeEndTutorial/a_chargeEndTutorial.yy",},"order":18,},
     {"id":{"name":"r_test","path":"rooms/r_test/r_test.yy",},"order":1,},
   ],
   "Options": [

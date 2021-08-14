@@ -4,5 +4,9 @@ var _effect_y = y - 28;
 top_side_y = _effect_y - _half;
 bottom_side_y = _effect_y + _half;
 
-
-se_play(a_chargeEnd, 0.4, 1);
+if(room == r_tutorial2){
+	se_play(a_chargeEndTutorial, 40, 1);
+}
+else{
+	se_play(a_chargeEnd, 40, 1);
+}

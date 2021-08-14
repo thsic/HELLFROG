@@ -1,6 +1,6 @@
 //
-function enemy_fire_totem_passive(){
-	var _span = 5;
+function enemy_fire_totem_passive(){//炎のトーテムの効果はシールドに
+	/*var _span = 5;
 	
 	//負荷軽減のために一定時間おきにエフェクトを付与
 	if(global.game_time mod _span == 0){
@@ -29,5 +29,5 @@ function enemy_fire_totem_passive(){
 				}
 			}
 		}
-	}
+	}*/
 }

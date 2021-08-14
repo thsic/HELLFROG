@@ -1,4 +1,4 @@
-// Inherit the parent event
+/*// Inherit the parent event
 event_inherited();
 
 //範囲の円描画
@@ -22,4 +22,4 @@ draw_circle(x, y, weapon_range, true);
 draw_set_alpha(_alpha2);
 draw_circle(x, y, weapon_range, false);
 
-draw_set_default();
+draw_set_default();*/

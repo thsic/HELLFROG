@@ -84,6 +84,7 @@ global.ds_text[# TEXT.EFFECT_SUPP, Launguage.Japanese] =			"サプレッショ�
 #macro EN_MENU_PLAYERDAMAGE "PLAYER ATTACK DAMAGE"
 #macro EN_MENU_TOGGLEASSISTMODE "ASSIST MODE"
 #macro EN_MENU_HELLMODE "HELL MODE"
+#macro EN_MENU_ASSISTLEVEL_MAX "Achievements not obtainable."
 
 //jp
 #macro JP_MENU_RESUME "戻る"
@@ -100,7 +101,7 @@ global.ds_text[# TEXT.EFFECT_SUPP, Launguage.Japanese] =			"サプレッショ�
 #macro JP_MENU_PLAYERDAMAGE "プレイヤーの攻撃力"
 #macro JP_MENU_TOGGLEASSISTMODE "アシストモード"
 #macro JP_MENU_HELLMODE "HELL MODE"
-
+#macro JP_MENU_ASSISTLEVEL_MAX "実績を取得できません。"
 
 enum TEXT{
 	MENU_RESUME,
@@ -116,6 +117,7 @@ enum TEXT{
 	MENU_PLAYERDAMAGE,
 	MENU_TOGGLEASSISTMODE,
 	MENU_HELLMODE,
+	
 	TUTORIAL_MOVE,
 	TUTORIAL_HOOK,
 	TUTORIAL_SHOT,

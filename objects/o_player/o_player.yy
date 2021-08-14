@@ -31,6 +31,7 @@
     {"varType":7,"value":"$FFA9F230","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"trail_assist_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF0039FC","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"trail_hell_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF0B00FF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"trail_true_hell_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FFFFB200","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"trail_assist_maxlevel_color","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

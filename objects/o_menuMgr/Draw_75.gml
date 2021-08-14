@@ -333,7 +333,13 @@ case Menustate.AssistMode:
 		var _one_scale_pixel_size = _w/(_scale_number-1);
 		
 		if(_assist_level[i] > 0){//アシストレベルが0のときは描画しない
-			draw_set_color(assist_mode_bar_color_top);
+			if(_assist_level[i] = 3){//アシストレベルが最大の時は色が変わる
+				draw_set_color(assist_mode_max_level_color);
+			}
+			else{
+				draw_set_color(assist_mode_bar_color_top);
+			}
+			
 			draw_rectangle(_x, _y-_bar_h/2, _x+_one_scale_pixel_size*_assist_level[i], _y+_bar_h/2, false);
 		}
 		
@@ -362,11 +368,19 @@ case Menustate.AssistMode:
 					draw_set_color(assist_mode_scale_color);
 				}
 				else{
-					draw_set_color(assist_mode_enable_text_color);
+					if(_assist_level[i] = 3){
+						draw_set_color(assist_mode_max_level_color);
+					}
+					else{
+						draw_set_color(assist_mode_enable_text_color);
+					}
+					
 				}
 			}
 			else{
 				draw_set_color(assist_mode_disable_text_color);
+				
+				
 				
 			}
 			
@@ -397,6 +411,7 @@ case Menustate.AssistMode:
 		if(global.assist_mode != -1){
 			var _text_x = _x;
 			draw_set_color(assist_mode_text_color);
+		
 		}
 		else{
 			var _text_x = _x - hell_mode_pixel;
@@ -460,7 +475,13 @@ case Menustate.AssistMode:
 		var _color = assist_mode_text_color;
 	break
 	case 1:
-		var _color = assist_mode_bar_color_top;
+		if(global.assist_level_max){
+			var _color = assist_mode_max_level_color;
+		}
+		else{
+			var _color = assist_mode_bar_color_top;	
+		}
+	
 	break
 	case -1:
 		if(global.true_hell){
@@ -499,6 +520,21 @@ case Menustate.AssistMode:
 	}
 	draw_text(_x, _text_y, _text);
 	
+	if(global.assist_level_max){
+		var _x = button_param[# ButtonName.MaxLevelText, ButtonParam.X];
+		var _y = button_param[# ButtonName.MaxLevelText, ButtonParam.Y];
+		var _h = button_param[# ButtonName.MaxLevelText, ButtonParam.Height];
+		var _text = button_param[# ButtonName.MaxLevelText, _text_mode];
+		var _text_y = _y+_h/2;
+		
+		var _color = assist_mode_max_level_text_color;
+		draw_set_font(fo_assistMode);
+		draw_set_halign(fa_middle);
+		draw_set_valign(fa_middle);
+		draw_set_color(_color);
+		
+		draw_text(_x, _text_y, _text);
+	}
 	
 	
 	draw_set_default();

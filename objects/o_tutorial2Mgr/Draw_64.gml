@@ -9,8 +9,8 @@ and draw_power_bar_enable){
 	var _bar_color_charging = o_uiMgr.charge_bar_charging_color;
 	var _bar_color_edge = c_white;
 	
-	var _base_point_x = o_player.x-_bar_width/2;
-	var _base_point_y = o_player.y-_bar_height/2 + global.camera_height/4;
+	var _base_point_x = 0 //o_player.x-_bar_width/2;
+	var _base_point_y = global.camera_height/5*3//o_player.y-_bar_height/2 + global.camera_height/4;
 	
 	var _now_shotgun = o_player.now_shotgun;
 	var _gun_charge_time = o_player.gun_charge_time;
@@ -37,7 +37,7 @@ and draw_power_bar_enable){
 
 	//下地描画
 	draw_set_color(charge_bar_under_color);
-	draw_rectangle(_base_point_x, _base_point_y, _base_point_x+_bar_width, _base_point_y+_bar_height, false);
+	//draw_rectangle(_base_point_x, _base_point_y, _base_point_x+_bar_width, _base_point_y+_bar_height, false);
 	draw_set_color(_bar_color_edge);
 	//draw_rectangle(_base_point_x, _base_point_y, _base_point_x+_bar_width, _base_point_y+_bar_height, true);
 

@@ -23,6 +23,7 @@ enum ButtonName{
 	DotDamage,
 	PlayerAttackDamage,
 	ToggleAssistMode,
+	MaxLevelText,
 }
 enum ButtonParam{
 	X,
@@ -132,29 +133,36 @@ button_param = ds_grid_create(15, 10);
 	button_param[# ButtonName.DotDamage, ButtonParam.Y] = _bar_height_base * 2;
 	button_param[# ButtonName.PlayerAttackDamage, ButtonParam.Y] = _bar_height_base * 3;
 	button_param[# ButtonName.ToggleAssistMode, ButtonParam.Y] = 4;
-	button_param[# ButtonName.ToggleAssistMode, ButtonParam.X] = _cw/2;
-	
-	
+	button_param[# ButtonName.MaxLevelText, ButtonParam.Y] = 32;
+		
 	button_param[# ButtonName.EnemyDamage, ButtonParam.TextEn] = EN_MENU_ENEMYDAMAGE;
 	button_param[# ButtonName.DotDamage, ButtonParam.TextEn] = EN_MENU_DOTDAMAGE;
 	button_param[# ButtonName.PlayerAttackDamage, ButtonParam.TextEn] = EN_MENU_PLAYERDAMAGE;
 	button_param[# ButtonName.ToggleAssistMode, ButtonParam.TextEn] = EN_MENU_TOGGLEASSISTMODE;
+	button_param[# ButtonName.MaxLevelText, ButtonParam.TextEn] = EN_MENU_ASSISTLEVEL_MAX;
 	
 	button_param[# ButtonName.EnemyDamage, ButtonParam.TextJp] = JP_MENU_ENEMYDAMAGE;
 	button_param[# ButtonName.DotDamage, ButtonParam.TextJp] = JP_MENU_DOTDAMAGE;
 	button_param[# ButtonName.PlayerAttackDamage, ButtonParam.TextJp] = JP_MENU_PLAYERDAMAGE;
 	button_param[# ButtonName.ToggleAssistMode, ButtonParam.TextJp] = JP_MENU_TOGGLEASSISTMODE;
+	button_param[# ButtonName.MaxLevelText, ButtonParam.TextJp] = JP_MENU_ASSISTLEVEL_MAX;
+
+	button_param[# ButtonName.MaxLevelText, ButtonParam.X] = _cw/2;
+	button_param[# ButtonName.ToggleAssistMode, ButtonParam.X] = _cw/2;
 	
 	
 	am_enemy_damage[0] = ASSIST_ENEMY_DAMAGE_LV0;
 	am_enemy_damage[1] = ASSIST_ENEMY_DAMAGE_LV1;
 	am_enemy_damage[2] = ASSIST_ENEMY_DAMAGE_LV2;
+	am_enemy_damage[3] = ASSIST_ENEMY_DAMAGE_LV3;
 	am_dot_damage[0] = ASSIST_DOT_DAMAGE_LV0;
 	am_dot_damage[1] = ASSIST_DOT_DAMAGE_LV1;
 	am_dot_damage[2] = ASSIST_DOT_DAMAGE_LV2;
+	am_dot_damage[3] = ASSIST_DOT_DAMAGE_LV3;
 	am_player_damage[0] = ASSIST_PLAYER_DAMAGE_LV0;
 	am_player_damage[1] = ASSIST_PLAYER_DAMAGE_LV1;
 	am_player_damage[2] = ASSIST_PLAYER_DAMAGE_LV2;
+	am_player_damage[3] = ASSIST_PLAYER_DAMAGE_LV3;
 	
 	button_param[# ButtonName.EnemyDamage, ButtonParam.Variable] = am_enemy_damage;
 	button_param[# ButtonName.DotDamage, ButtonParam.Variable] = am_dot_damage;
@@ -162,6 +170,5 @@ button_param = ds_grid_create(15, 10);
 	
 	
 	hell_mode_pixel = _cw/2 - (_cw - (_cw*0.65 + _cw/4)) * 2;
-	
 	
 #endregion

@@ -41,6 +41,8 @@
     {"varType":7,"value":"$FF0814FF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"hell_mode_menu_text_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FFE5D172","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"assist_mode_enable_text_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF0000FF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"true_hell_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF9EFF00","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"assist_mode_max_level_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF0000FF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"assist_mode_max_level_text_color","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

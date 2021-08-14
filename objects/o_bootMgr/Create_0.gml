@@ -26,7 +26,7 @@ global.hell_dot_damage_enable = false;
 global.hell_player_damage_enable = false;
 
 global.true_hell = false;
-
+global.assist_level_max = false;
 
 
 //オプション
