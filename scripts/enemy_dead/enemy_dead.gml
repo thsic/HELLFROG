@@ -8,7 +8,7 @@ function enemy_dead(_id, _do_dead_script){
 		var _y = _id.y;
 		
 		if(_id.sprite_enable){
-			create_enemy_corpse(_x, _y, _id.sprite_index, _id.knockback_direction, 13);
+			create_enemy_corpse(_x, _y, _id.sprite_index, _id.knockback_direction, 3);
 		}
 		
 		stop_cursed_damage(ds_grid_get(global.ds_player_hp, o_gameMgr.now_hp_type, ePHP_param.KillStopCurseTime));

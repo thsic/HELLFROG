@@ -1,4 +1,4 @@
-for(var i=0; i<60; i++){
+/*for(var i=0; i<60; i++){
 	if(global.ds_footprint[# i, FOOTPRINT.ENABLE]){
 		var _x = global.ds_footprint[# i, FOOTPRINT.X];
 		var _y = global.ds_footprint[# i, FOOTPRINT.Y];

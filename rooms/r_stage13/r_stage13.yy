@@ -44,7 +44,6 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"o_enemyFireSkeleton","path":"objects/o_enemyFireSkeleton/o_enemyFireSkeleton.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":368.0,"resourceVersion":"1.0","name":"inst_698561A","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_enemyBeam","path":"objects/o_enemyBeam/o_enemyBeam.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":320.0,"resourceVersion":"1.0","name":"inst_4056F879","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_enemyBeam","path":"objects/o_enemyBeam/o_enemyBeam.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":176.0,"y":352.0,"resourceVersion":"1.0","name":"inst_28F77710","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"o_enemyFireTotem","path":"objects/o_enemyFireTotem/o_enemyFireTotem.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":768.0,"y":256.0,"resourceVersion":"1.0","name":"inst_9212E8","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":800,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Enemies","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"ts_mapTile3","path":"tilesets/ts_mapTile3/ts_mapTile3.yy",},"x":8,"y":8,"tiles":{"SerialiseWidth":57,"SerialiseHeight":32,"TileSerialiseData":[
 2147483648,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,2147483648,
@@ -497,7 +496,6 @@
     {"name":"inst_5255F179","path":"rooms/r_stage13/r_stage13.yy",},
     {"name":"inst_765D40AF","path":"rooms/r_stage13/r_stage13.yy",},
     {"name":"inst_509E4785","path":"rooms/r_stage13/r_stage13.yy",},
-    {"name":"inst_9212E8","path":"rooms/r_stage13/r_stage13.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

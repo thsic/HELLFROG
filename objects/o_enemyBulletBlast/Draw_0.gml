@@ -1,5 +1,13 @@
 if(delay_time <= 0){
-	draw_set_color(marker_color);
+	
+	
+	if(floor(global.game_time/3) mod 2 == 0){
+		var _color = marker_color;
+	}
+	else{
+		var _color = marker_color2;
+	}
+	draw_set_color(_color);
 	draw_circle(marker_x, marker_y, 4, true);
 }
 var _dir = point_direction(x, y, marker_x, marker_y);

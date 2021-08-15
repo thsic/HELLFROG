@@ -183,7 +183,10 @@ if(sign(damage_flash_time)){
 	var _a = 1.0;
 }
 else{
-	var _a = 0.5;
+	var _a = 1.0;
+	var _r = 0.7;
+	var _g = 0.7;
+	var _b = 0.7;
 }
 if(state = EnemyState.WaitForSpawn){
 	var _a = 0;

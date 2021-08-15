@@ -34,8 +34,9 @@ if(global.gamestop == false){
 			var _dis_total = point_distance(enemy_id.x, enemy_id.y, marker_x, marker_y);
 			var _dis_for_marker = point_distance(x, y, marker_x, marker_y);
 			var _dis_per = _dis_for_marker / _dis_total;
-			alpha = clamp(ceil((1-_dis_per) * 2) / 2, 0, 1)/2;
-		
+			alpha = clamp(ceil((1*_dis_per)) / 2, 0, 1)/2;
+			
+			alpha = clamp((0.6 - _dis_per), 0, 1);
 			var _rnd = irandom(100);
 			if(_rnd > 10){
 				//炎の軌道を出す

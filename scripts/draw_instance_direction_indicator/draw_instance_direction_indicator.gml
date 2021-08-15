@@ -19,7 +19,7 @@ function draw_instance_direction_indicator(){
 			_detect_dir = ds_grid_get(ds_direction_arrow, DirectionIndicator.Direction, i);
 			_color = ds_grid_get(ds_direction_arrow, DirectionIndicator.Color, i);
 			_far_detect = ds_grid_get(ds_direction_arrow, DirectionIndicator.FarDetect, i);
-			_alpha = _draw_time/detect_draw_time_default*0.7;
+			_alpha = _draw_time/detect_draw_time_default;
 			
 			//ゴールへのインジケータ
 			
@@ -35,6 +35,7 @@ function draw_instance_direction_indicator(){
 				
 				_arrow_x = lengthdir_x(_circle_size, _detect_dir) + _center_x;
 				_arrow_y = lengthdir_y(_circle_size, _detect_dir) + _center_y;
+				draw_sprite_ext(s_whiteArrow, 0, _arrow_x, _arrow_y, _scale*1.2, _scale*1.2, _detect_dir, c_gray, _alpha);
 				draw_sprite_ext(s_whiteArrow, 0, _arrow_x, _arrow_y, _scale, _scale, _detect_dir, _color, _alpha);
 			}
 		}

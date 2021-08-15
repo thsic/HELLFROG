@@ -39,7 +39,7 @@
       ],"closed_edge":false,"resourceVersion":"1.0","name":"autotile_1","tags":[],"resourceType":"GMAutoTileSet",},
   ],
   "tileAnimationFrames": [],
-  "tileAnimationSpeed": 15.0,
+  "tileAnimationSpeed": 2.0,
   "tileAnimation": {
     "FrameData": [
       0,

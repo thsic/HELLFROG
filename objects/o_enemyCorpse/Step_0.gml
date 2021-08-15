@@ -28,6 +28,9 @@ if(!global.gamestop){
 	}
 	life_time++;
 	
+	if(life_time > life_time_limit){
+		instance_destroy();
+	}
 }
 else{
 	speed = 0;

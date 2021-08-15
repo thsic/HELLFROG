@@ -458,8 +458,8 @@ case Menustate.AssistMode:
 			draw_text(_hell_bar_x, _y - _bar_h/2, "x"+string(_hell_string));
 		}
 		else{
-			//ヘルモードじゃないときはうすくバーを描画
-			draw_set_alpha(0.045);
+			//ヘルモードじゃないときは薄くバーを描画
+			draw_set_alpha(0.07);
 			var _hell_bar_x = _x - hell_mode_pixel;
 			
 			draw_set_color(hell_mode_bar_color_under);

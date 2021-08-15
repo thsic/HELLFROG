@@ -30,8 +30,9 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
-    {"varType":7,"value":"$FF1433CC","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"blast_color","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":7,"value":"$FF0A0A66","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"marker_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF167EE5","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"blast_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF006664","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"marker_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF268FCC","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"marker_color2","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"20","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"stay_time","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF0A1966","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"trail_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":5,"value":"s_blastBulletCreate","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"bullet_shoot_sound","tags":[],"resourceType":"GMObjectProperty",},
