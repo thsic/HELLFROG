@@ -9,7 +9,8 @@ function macros() {
 
 #macro OPPOSITEKEY_POWER_FOR_INERTIA 10
 
-#macro FIRST_ROOM r_stage16
+#macro FIRST_ROOM r_stage21
+
 //敵
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_blink
 #macro ENEMY_EFFECT_TOTAL_NUMBER 10//敵のエフェクトの総数
@@ -17,6 +18,7 @@ function macros() {
 #macro BLUEAURA_FIRE_COOLDOWN 0.5
 #macro BLUEAURA_MOVEMENT_SPEED_RATIO 3
 #macro BLUEAURA_ORB_QUANTITY_MAG 10
+#macro ENEMY_ALTAR_BUFF_RATE 1.5
 
 //エフェクト
 #macro SLOW_TIME_LIMIT 180

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s_redSquare",
-    "path": "sprites/s_redSquare/s_redSquare.yy",
+    "name": "s_yellowSquare",
+    "path": "sprites/s_yellowSquare/s_yellowSquare.yy",
   },
   "solid": false,
   "visible": false,

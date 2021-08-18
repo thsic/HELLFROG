@@ -15,6 +15,9 @@ case gamestate.stagestart:
 	if(!instance_exists(o_menuMgr)){
 		instance_create_layer(0, 0, "GameObjects", o_menuMgr);
 	}
+	if(global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.ALTAR){
+		instance_create_layer(0, 0, "GameObjects", o_altarMgr);
+	}
 	now_hp_type = ePHP_type.normal_hp;
 	global.player_hp = ds_grid_get(global.ds_player_hp, now_hp_type, ePHP_param.MaxHp);
 	set_respawn_point(o_player.x, o_player.y);

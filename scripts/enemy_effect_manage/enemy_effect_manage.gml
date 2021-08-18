@@ -15,10 +15,18 @@ function enemy_effect_manage(){
 		enemy_give_effect(id, EnemyEffect.Fire, 6);
 	}
 	
-	
+	if(effect_list[| EnemyEffect.AltarBuff] > 0){
+		fire_damage = fire_damage_base * ENEMY_ALTAR_BUFF_RATE;
+	}
+	else{
+		fire_damage = fire_damage_base;
+		
+	}
 
 	enum EnemyEffect{
 		Fire,
 		UltraFire,
+		AltarBuff,
+		
 	}
 }

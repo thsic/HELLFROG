@@ -8,10 +8,10 @@ if(state != EnemyState.WaitForSpawn){//スポーン待ちのときは透明
 		var _bar_color = hp_bar_color;
 	}
 	
-	var _bar_width = clamp(sprite_width*(max_hp/100), sprite_width/5, sprite_width*5);
+	var _bar_width = clamp(sprite_width*(max_hp/100), sprite_width/3, sprite_width*3);
 	if(!soul_enemy){
 		var _bar_color = totem_hp_color;
-		var _bar_width = clamp(sprite_width*(max_hp/100), sprite_width/5, sprite_width*5)*0.25;
+		//var _bar_width = clamp(sprite_width*(max_hp/100), sprite_width/5, sprite_width*5)*0.25;
 	}
 	
 	
@@ -233,4 +233,14 @@ else{
 }
 shader_reset();
 
+//バフ表示
+if(effect_list[| EnemyEffect.AltarBuff] > 0){
+	
+	draw_set_color(c_white);
+	draw_set_halign(fa_middle);
+	draw_set_valign(fa_bottom);
+	draw_set_font(fo_assistMode);
+	
+	draw_text(x, bbox_top-12, "ATK x1.5");
+}
 
