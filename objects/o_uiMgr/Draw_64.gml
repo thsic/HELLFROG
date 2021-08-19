@@ -3,7 +3,8 @@ if(!global.gamestop){
 	draw_instance_direction_indicator();
 }
 
-if(global.gamestate != gamestate.menu){
+if(global.gamestate != gamestate.menu
+and !instance_exists(o_clearGameScene)){
 	//メニュー画面ではゲームuiは表示しない
 	player_draw_hp();
 	player_draw_hp_mini();

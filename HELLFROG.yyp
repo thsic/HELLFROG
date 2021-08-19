@@ -410,6 +410,7 @@
     {"id":{"name":"a_shotLv0","path":"sounds/a_shotLv0/a_shotLv0.yy",},"order":0,},
     {"id":{"name":"s_brinkEffect","path":"sprites/s_brinkEffect/s_brinkEffect.yy",},"order":1,},
     {"id":{"name":"return_to_checkpoint","path":"scripts/return_to_checkpoint/return_to_checkpoint.yy",},"order":2,},
+    {"id":{"name":"get_timer_string","path":"scripts/get_timer_string/get_timer_string.yy",},"order":26,},
     {"id":{"name":"start_screen_shake","path":"scripts/start_screen_shake/start_screen_shake.yy",},"order":1,},
     {"id":{"name":"o_enemy","path":"objects/o_enemy/o_enemy.yy",},"order":0,},
     {"id":{"name":"o_playerBullet","path":"objects/o_playerBullet/o_playerBullet.yy",},"order":1,},

@@ -53,7 +53,7 @@ global.ds_text[# TEXT.TUTORIAL_HIDDENGOAL, Launguage.Japanese] =	"地獄への�
 
 global.ds_text[# TEXT.STAGE1_TEXT1, Launguage.English] =			"You've gone to hell.";
 global.ds_text[# TEXT.STAGE1_TEXT2, Launguage.English] =			"In hell, the miasma will rob you of your health.";
-global.ds_text[# TEXT.STAGE1_TEXT3, Launguage.English] =			"You'll need the demon's soul to restore your health.";
+global.ds_text[# TEXT.STAGE1_TEXT3, Launguage.English] =			"You'll need the enemy's soul to restore your health.";
 global.ds_text[# TEXT.STAGE1_TEXT4, Launguage.English] =			"KILL THEM ALL";
 
 global.ds_text[# TEXT.STAGE1_TEXT1, Launguage.Japanese] =			"あなたは地獄に落ちた。";
@@ -68,6 +68,13 @@ global.ds_text[# TEXT.EFFECT_SUPP, Launguage.English] =				"SUPPRASSION";
 global.ds_text[# TEXT.EFFECT_SLOW, Launguage.Japanese] =			"スロウ";
 global.ds_text[# TEXT.EFFECT_CURSE, Launguage.Japanese] =			"被ダメージ";
 global.ds_text[# TEXT.EFFECT_SUPP, Launguage.Japanese] =			"サプレッション";
+
+global.ds_text[# TEXT.CLEARTEXT_DEVELOPER1, Launguage.English] =	"DEVELOPER";
+global.ds_text[# TEXT.CLEARTEXT_DEVELOPER2, Launguage.English] =	"LIC";
+global.ds_text[# TEXT.CLEARTEXT_TOOL1, Launguage.English] =			"MADE WITH";
+global.ds_text[# TEXT.CLEARTEXT_TOOL2, Launguage.English] =			"GAMEMAKER STUDIO 2";
+global.ds_text[# TEXT.CLEARTEXT_HELLFROG, Launguage.English] =		"HELLFROG";
+global.ds_text[# TEXT.CLEARTEXT_TIMER, Launguage.English] =			"TIME";
 
 //en
 #macro EN_MENU_RESUME "RESUME"
@@ -136,6 +143,13 @@ enum TEXT{
 	STAGE1_TEXT2,
 	STAGE1_TEXT3,
 	STAGE1_TEXT4,
+	
+	CLEARTEXT_DEVELOPER1,
+	CLEARTEXT_DEVELOPER2,
+	CLEARTEXT_TOOL1,
+	CLEARTEXT_TOOL2,
+	CLEARTEXT_HELLFROG,
+	CLEARTEXT_TIMER,
 }
 
 
