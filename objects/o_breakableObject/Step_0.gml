@@ -61,8 +61,6 @@ if(break_enable){
 		
 	}
 	if(!_dust_enable){
-		//すべての破片が消えたら消滅
-		ds_grid_destroy(dust_param);
 		instance_destroy();
 	}
 }

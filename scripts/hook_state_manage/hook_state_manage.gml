@@ -3,8 +3,18 @@ function hook_state_manage() {
 	case hookState.Idle:
 	
 		//発射
-		var hook_shot_key_check = key_check_pressed_within_certain_frame(eKLPF.m_hook, 5);
-		if(can_hookshot and hook_shot_key_check){
+		var _hook_mouse = key_check_pressed_within_certain_frame(eKLPF.m_hook, 5);
+		var _hook_keyboard = key_check_pressed_within_certain_frame(eKLPF.k_hook, 5);
+		var _hook_keyboard2 = key_check_pressed_within_certain_frame(eKLPF.k_hook2, 5);
+		
+		if(_hook_mouse or _hook_keyboard or _hook_keyboard2){
+			var _hook_shot_key_check = true;
+		}
+		else{
+			var _hook_shot_key_check = false;
+		}
+		
+		if(can_hookshot and _hook_shot_key_check){
 			can_hookshot = false;
 			hookshot_cooldown = ds_grid_get(global.ds_player_hook, now_hook, eHK_param.Cooldown);
 			hook_state = hookState.Shooting
@@ -166,7 +176,9 @@ function hook_state_manage() {
 		tackle_time = 5;//フックで移動中はタックルの効果がある
 		
 		//フックボタンが離されたらフック離す
-		if(mouse_check_button(global.hook_button) == false){
+		if(mouse_check_button(global.hook_button) == false
+		and keyboard_check(global.hook_button_keyboard) == false
+		and keyboard_check(global.hook_button_keyboard2) == false){
 			hook_state = hookState.Idle;
 			player_start_knockback(eK_type.Hook);//小さいノックバックもする
 		}

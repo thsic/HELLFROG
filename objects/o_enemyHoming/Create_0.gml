@@ -11,3 +11,7 @@ part_type_life(pt_type, 60, 60);
 part_type_sprite(pt_type, s_whiteCircle, 0, 0, 0);
 
 used_blink = false;
+
+if(room == r_stage17){
+	movement_speed = 4;
+}

@@ -47,6 +47,15 @@ function last_key_pushed_frame() {
 			_button_type = 1;
 			_button = global.hook_button;
 		break
+		case 8:
+			_button_type = 0;
+			_button = global.hook_button_keyboard;
+		break
+		case 9:
+			_button_type = 0;
+			_button = global.hook_button_keyboard2;
+		break
+		
 		default:
 			_button_type = -1;
 			_button = noone;
@@ -80,6 +89,8 @@ function last_key_pushed_frame() {
 		menu,
 		m_shotgun,
 		m_hook,
+		k_hook,
+		k_hook2,
 	
 	}
 

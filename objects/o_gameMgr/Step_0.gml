@@ -176,9 +176,11 @@ case gamestate.waitforkeyinput:
 		var _right	= keyboard_check(global.right_key);
 		var _shotgun = mouse_check_button(global.shotgun_button);
 		var _hook = mouse_check_button(global.hook_button);
-	
+		var _hook2 = keyboard_check(global.hook_button_keyboard);
+		var _hook3 = keyboard_check(global.hook_button_keyboard2);
+		
 		//なにかキーが押されたらゲーム開始
-		if(_up or _down or _left or _right or _shotgun or _hook){
+		if(_up or _down or _left or _right or _shotgun or _hook or _hook2 or _hook3){
 			change_gamestate(gamestate.main);
 			start_shockwave(o_player.x, o_player.y, 100, 50, 200, 4, true);
 			

@@ -9,8 +9,7 @@ function macros() {
 
 #macro OPPOSITEKEY_POWER_FOR_INERTIA 10
 
-#macro FIRST_ROOM r_test
-
+#macro FIRST_ROOM r_stage21
 //敵
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_blink
 #macro ENEMY_EFFECT_TOTAL_NUMBER 10//敵のエフェクトの総数

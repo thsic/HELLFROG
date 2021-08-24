@@ -25,7 +25,7 @@ if(draw_hook_ui){
 	var _text = global.ds_text[# TEXT.TUTORIAL_HOOK, global.launguage];
 	
 	draw_sprite(s_rightClick, 0, _ui_x, _ui_y);
-	draw_text(_ui_x+20, _ui_y, _text);
+	draw_text(_ui_x+30, _ui_y, _text);
 }
 
 if(draw_shot_ui){

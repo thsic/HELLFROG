@@ -356,7 +356,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fo_stageTitle32",
+  "name": "fo_stageTitle38",
   "tags": [],
   "resourceType": "GMFont",
 }
