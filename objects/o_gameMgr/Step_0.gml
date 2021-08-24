@@ -23,7 +23,8 @@ case gamestate.stagestart:
 	set_respawn_point(o_player.x, o_player.y);
 	
 	
-	if(room == r_tutorial){
+	if(room == r_tutorial
+	or room == r_void){
 		var _next_game_state = gamestate.event;
 	}
 	else{

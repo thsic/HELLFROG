@@ -1,3 +1,7 @@
+if(room == r_void){
+	instance_destroy();
+}
+
 ds_out_of_screen_enemy = ds_grid_create(8, 100);
 ds_direction_arrow = ds_grid_create(8, 15);
 detect_length = 500;

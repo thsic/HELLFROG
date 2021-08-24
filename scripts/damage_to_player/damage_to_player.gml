@@ -12,6 +12,12 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 			}
 		}
 		
+		//アルターで敵を全滅させたあとは被ダメージが0になる
+		if(global.floor_enemy_number_now <= 0
+		and global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.ALTAR){
+			_damage = 0;
+		}
+		
 		
 		global.player_hp -= _damage;
 		

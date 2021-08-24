@@ -1,4 +1,6 @@
 
+time = 0;
+played_se = false;
 //soulenemyをsoulenemyじゃなくする
 var _enemy_num = instance_number(o_enemy);
 

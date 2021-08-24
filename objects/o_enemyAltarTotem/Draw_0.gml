@@ -23,8 +23,8 @@ draw_set_alpha(_alpha2);
 draw_circle(x, y, weapon_range, false);
 
 
-var _y = y-16 - cos(global.game_time/6)*3;
-draw_sprite_ext(s_whiteArrow, 0, x, _y, 0.3, 0.3, 270, c_white, 0.5);
+var _y = y-24 - cos(global.game_time/6)*3;
+draw_sprite_ext(s_whiteArrow, 0, x, _y, 0.3, 0.3, 270, c_white, 1);
 
 
 draw_set_default();

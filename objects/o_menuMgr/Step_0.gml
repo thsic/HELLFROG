@@ -18,10 +18,15 @@ case Menustate.Closing://メニューが完全に閉じている
 			
 		break
 	}
+	
+	//アルター敵全滅後はメニュー開けない
 	if(_open_menu){
-		after_menu_gamestate = global.gamestate;
-		change_gamestate(gamestate.menu);
-		state = Menustate.Main;
+		if(global.now_stage_param[STAGEPARAM.STAGETYPE] != STAGETYPE.ALTAR
+		or global.floor_enemy_number_now > 0){
+			after_menu_gamestate = global.gamestate;
+			change_gamestate(gamestate.menu);
+			state = Menustate.Main;
+		}
 	}
 	
 break

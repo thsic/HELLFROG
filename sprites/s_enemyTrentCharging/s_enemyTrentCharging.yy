@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"48febe55-706f-4cbb-aea9-8fd85cde37c2","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"48febe55-706f-4cbb-aea9-8fd85cde37c2","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},"LayerId":{"name":"0da2eb53-d2bc-49cc-9548-be98b54788a7","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_enemyTrentCharging","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},"resourceVersion":"1.0","name":"48febe55-706f-4cbb-aea9-8fd85cde37c2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"289aa916-ba71-4a72-bbb4-ffbe7a288166","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"289aa916-ba71-4a72-bbb4-ffbe7a288166","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},"LayerId":{"name":"0da2eb53-d2bc-49cc-9548-be98b54788a7","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s_enemyTrentCharging","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},"resourceVersion":"1.0","name":"289aa916-ba71-4a72-bbb4-ffbe7a288166","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"s_enemyTrentCharging","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4b093a16-347e-4166-875d-e8c82128eada","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"48febe55-706f-4cbb-aea9-8fd85cde37c2","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9206bc4e-37a0-4187-a092-25406c1fefcc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"289aa916-ba71-4a72-bbb4-ffbe7a288166","path":"sprites/s_enemyTrentCharging/s_enemyTrentCharging.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,

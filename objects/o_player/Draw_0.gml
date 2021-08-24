@@ -208,6 +208,15 @@ if(draw_player){
 		//常に仰向けになる
 		look_right = true;
 	}
+	
+	//ラストのプレイヤー傾ける処理
+	if(instance_exists(o_clearGameScene)){
+		var _time = o_clearGameScene.scene_time_total;
+		var _fadein_total_time = o_clearGameScene.fadein_end;
+		
+		_sprite_dir = _time/_fadein_total_time * 90;
+		
+	}
 
 	var _face_y = _sprite_y;
 	if(_face_up){

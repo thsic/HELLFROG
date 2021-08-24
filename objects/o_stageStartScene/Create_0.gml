@@ -1,5 +1,6 @@
 
-if(global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.TUTORIAL){
+if(global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.TUTORIAL
+or global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.VOID){
 	instance_destroy();
 }
 

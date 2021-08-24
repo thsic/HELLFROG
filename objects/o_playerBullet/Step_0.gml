@@ -39,28 +39,31 @@ if(global.gamestate == gamestate.incheckpointbarrier){
 }
 
 //壁に衝突
-var _id = instance_nearest(x, y, o_normalWall);
-if(is_in_place(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, x, y)){
-	instance_destroy();
-	var _size = random_range(6, 10);
-	effect_create_blast(x, y, _size, 10, 5, wall_collision_effect_color, 1, 10);
-}
+if(instance_exists(o_normalWall)){
+	var _id = instance_nearest(x, y, o_normalWall);
+	if(is_in_place(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, x, y)){
+		instance_destroy();
+		var _size = random_range(6, 10);
+		effect_create_blast(x, y, _size, 10, 5, wall_collision_effect_color, 1, 10);
+	}
 
-//スピードが一定以上の場合弾判定を大きく 若干重いぞ！
-var _wallsize = abs(ceil(abs(_id.bbox_left) - abs(_id.bbox_right)))/2;
-if(speed >= _wallsize){
+
+	//スピードが一定以上の場合弾判定を大きく 若干重いぞ！
+	var _wallsize = abs(ceil(abs(_id.bbox_left) - abs(_id.bbox_right)))/2;
+	if(speed >= _wallsize){
 	
-	var _count = ceil(speed / _wallsize);
+		var _count = ceil(speed / _wallsize);
 	
-	for(var i=0; i<_count; i++){
-		var _xx = x+lengthdir_x(speed*(i/_count), direction);
-		var _yy = y+lengthdir_y(speed*(i/_count), direction);
-		var _id = instance_nearest(_xx, _yy, o_normalWall);
+		for(var i=0; i<_count; i++){
+			var _xx = x+lengthdir_x(speed*(i/_count), direction);
+			var _yy = y+lengthdir_y(speed*(i/_count), direction);
+			var _id = instance_nearest(_xx, _yy, o_normalWall);
 		
-		if(is_in_place(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, _xx, _yy)){
-			instance_destroy();
-			var _size = random_range(6, 10);
-			effect_create_blast(_xx, _yy, _size, 10, 5, wall_collision_effect_color, 1, 10);
+			if(is_in_place(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, _xx, _yy)){
+				instance_destroy();
+				var _size = random_range(6, 10);
+				effect_create_blast(_xx, _yy, _size, 10, 5, wall_collision_effect_color, 1, 10);
+			}
 		}
 	}
 }

@@ -35,6 +35,11 @@ enum ButtonParam{
 	OnCursor,
 	Variable,
 }
+
+if(room == r_void){
+	instance_destroy();
+}
+
 state = Menustate.Closing;
 openmenu_sequence_element = noone;
 closemenu_sequence_element = noone;
