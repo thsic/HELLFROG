@@ -56,6 +56,11 @@ function reset_stage(){
 	}
 	global.slow_enable = false;
 	
+	//ダメージ表記消し
+	with(o_uiMgr){
+		popup_damage = 0;
+		popup_time = 0;
+	}
 	//足跡マネージャーの再生性
 	with(o_footprintMgr){
 		instance_destroy()

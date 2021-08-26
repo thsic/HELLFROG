@@ -18,6 +18,8 @@ and !instance_exists(o_clearGameScene)){
 		draw_enemy_number();
 	}
 	
+	
+	
 }
 draw_timer();
 draw_text(global.camera_width/4*3, 6, fps);

@@ -10,6 +10,9 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 			if(o_player.curse_level > 0){
 				_damage *= power(2, o_player.curse_level)
 			}
+			
+			o_uiMgr.popup_damage += _damage;
+			o_uiMgr.popup_time = POPUP_DAMAGE_DRAW_TIME;
 		}
 		
 		//アルターで敵を全滅させたあとは被ダメージが0になる
@@ -39,6 +42,9 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 				//start_screen_shake(_damage/2, _damage/3, random(360));
 			}
 		}
+		
+		
+		
 		
 		if(global.player_hp < 0){
 			//プレイヤーのhpが0より低い場合0にする

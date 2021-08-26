@@ -6,4 +6,14 @@ if(!global.gamestop){
 	_indicator_color[1] = c_green;
 	instance_direction_indicator(_indicator_instance, _indicator_color);
 	
+	
+	if(popup_time > 0){
+		if(!instance_exists(o_lifestealOrb)){
+			popup_time--;
+		}
+		
+	}
+	else{
+		popup_damage = 0;
+	}
 }

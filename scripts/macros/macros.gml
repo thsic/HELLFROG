@@ -9,7 +9,7 @@ function macros() {
 
 #macro OPPOSITEKEY_POWER_FOR_INERTIA 10
 
-#macro FIRST_ROOM r_stage21
+#macro FIRST_ROOM r_test
 //敵
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_blink
 #macro ENEMY_EFFECT_TOTAL_NUMBER 10//敵のエフェクトの総数
@@ -32,6 +32,7 @@ function macros() {
 #macro LAVA_DAMAGE 1
 #macro LAVA_TICKS_PER_SECOND 15
 
+#macro POPUP_DAMAGE_DRAW_TIME 10
 
 //ステージ名
 #macro STAGE1_NAME_JP "ヘルケイヴ"//"ヘル"+chr(13)+"ケイヴ"
