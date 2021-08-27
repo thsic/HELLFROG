@@ -3,7 +3,13 @@
 
 function menu_background_clear(){
 	draw_set_color(c_black);
-	draw_set_alpha(0.5);
+	if(room != r_title){
+		draw_set_alpha(0.5);
+	}
+	else{
+		draw_set_alpha(0.8);
+	}
+	
 	draw_rectangle(0, 0, global.camera_width, global.camera_height, false);
 	
 	draw_set_default();

@@ -1,6 +1,6 @@
 //
 function reset_game(){
-	ds_grid_destroy(global.ds_player_bullet);
+	/*ds_grid_destroy(global.ds_player_bullet);
 	ds_grid_destroy(global.ds_player_knockback);
 	ds_grid_destroy(global.ds_player_hook);
 	ds_grid_destroy(global.ds_player_gun);
@@ -11,7 +11,7 @@ function reset_game(){
 	
 	ds_grid_destroy(global.ds_stage_param);
 	ds_grid_destroy(global.ds_stage_type_param);
-	ds_grid_destroy(global.ds_text);
+	ds_grid_destroy(global.ds_text);*/
 	
-	
+	room_goto(r_boot);
 }

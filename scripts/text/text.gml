@@ -77,6 +77,19 @@ global.ds_text[# TEXT.CLEARTEXT_TOOL2, Launguage.English] =			"GAMEMAKER@STUDIO@
 global.ds_text[# TEXT.CLEARTEXT_HELLFROG, Launguage.English] =		"HELLFROG";
 global.ds_text[# TEXT.CLEARTEXT_TIMER, Launguage.English] =			"TIME";
 
+global.ds_text[# TEXT.TITLETEXT_GAMESTART, Launguage.English] =		"START GAME";
+global.ds_text[# TEXT.TITLETEXT_LOADGAME, Launguage.English] =		"LOAD GAME";
+global.ds_text[# TEXT.TITLETEXT_OPTION, Launguage.English] =		"OPTION";
+global.ds_text[# TEXT.TITLETEXT_ASSISTMODE, Launguage.English] =	"ASSISTMODE";
+global.ds_text[# TEXT.TITLETEXT_EXITGAME, Launguage.English] =		"EXIT GAME";
+
+global.ds_text[# TEXT.TITLETEXT_GAMESTART, Launguage.Japanese] =	"ゲーム開始";
+global.ds_text[# TEXT.TITLETEXT_LOADGAME, Launguage.Japanese] =		"ロード";
+global.ds_text[# TEXT.TITLETEXT_OPTION, Launguage.Japanese] =		"オプション";
+global.ds_text[# TEXT.TITLETEXT_ASSISTMODE, Launguage.Japanese] =	"アシストモード";
+global.ds_text[# TEXT.TITLETEXT_EXITGAME, Launguage.Japanese] =		"ゲーム終了";
+
+
 //en
 #macro EN_MENU_RESUME "RESUME"
 #macro EN_MENU_RETRY "RETRY"
@@ -152,6 +165,14 @@ enum TEXT{
 	CLEARTEXT_TOOL2,
 	CLEARTEXT_HELLFROG,
 	CLEARTEXT_TIMER,
+	
+	TITLETEXT_GAMESTART,
+	TITLETEXT_LOADGAME,
+	TITLETEXT_OPTION,
+	TITLETEXT_ASSISTMODE,
+	TITLETEXT_EXITGAME,
+	TITLETEXT_LOGO,
+	
 }
 
 

@@ -21,10 +21,7 @@ var _win_scale = global.window_magnification;
 
 display_set_gui_size(camera_w, camera_h);
 
-
 follow = o_player;
-
-
 
 xTo = x;
 yTo = y;
