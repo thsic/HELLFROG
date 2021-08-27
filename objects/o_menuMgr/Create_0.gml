@@ -17,7 +17,7 @@ enum ButtonName{
 	AssistMode,
 	SEVol,
 	BGMVol,
-	Launguage,
+	language,
 	Timer,
 	EnemyDamage,
 	DotDamage,
@@ -91,7 +91,7 @@ button_param = ds_grid_create(15, 10);
 	var _button_name_option;
 	_button_name_option[0] = ButtonName.SEVol;
 	_button_name_option[1] = ButtonName.BGMVol;
-	_button_name_option[2] = ButtonName.Launguage;
+	_button_name_option[2] = ButtonName.language;
 	_button_name_option[3] = ButtonName.Timer;
 	for(var i=0; i<array_length(_button_name_option); i++){
 		button_param[# _button_name_option[i], ButtonParam.X] = _cw*0.6;
@@ -101,21 +101,21 @@ button_param = ds_grid_create(15, 10);
 	
 	button_param[# ButtonName.SEVol, ButtonParam.Y] = _ch /3 -  _bar_height_base * 2;
 	button_param[# ButtonName.BGMVol, ButtonParam.Y] = _ch /3;
-	button_param[# ButtonName.Launguage, ButtonParam.Y] = _ch /3 + _bar_height_base * 5;
+	button_param[# ButtonName.language, ButtonParam.Y] = _ch /3 + _bar_height_base * 5;
 	button_param[# ButtonName.Timer, ButtonParam.Y] = _ch /3 + _bar_height_base * 10;
 	
 	button_param[# ButtonName.SEVol, ButtonParam.TextEn] = EN_MENU_SE;
 	button_param[# ButtonName.BGMVol, ButtonParam.TextEn] = EN_MENU_BGM;
-	button_param[# ButtonName.Launguage, ButtonParam.TextEn] = EN_MENU_LAUNGUAGE;
+	button_param[# ButtonName.language, ButtonParam.TextEn] = EN_MENU_language;
 	button_param[# ButtonName.Timer, ButtonParam.TextEn] = EN_MENU_TIMER;
 	
 	button_param[# ButtonName.SEVol, ButtonParam.TextJp] = JP_MENU_SE;
 	button_param[# ButtonName.BGMVol, ButtonParam.TextJp] = JP_MENU_BGM;
-	button_param[# ButtonName.Launguage, ButtonParam.TextJp] = JP_MENU_LAUNGUAGE;
+	button_param[# ButtonName.language, ButtonParam.TextJp] = JP_MENU_language;
 	button_param[# ButtonName.Timer, ButtonParam.TextJp] = JP_MENU_TIMER;
 	
-	button_param[# ButtonName.Launguage, ButtonParam.X] = _cw * 0.5;
-	button_param[# ButtonName.Launguage, ButtonParam.Height] = _bar_height_base*2;
+	button_param[# ButtonName.language, ButtonParam.X] = _cw * 0.5;
+	button_param[# ButtonName.language, ButtonParam.Height] = _bar_height_base*2;
 	
 	button_param[# ButtonName.Timer, ButtonParam.X] = _cw * 0.5;
 	button_param[# ButtonName.Timer, ButtonParam.Height] = _bar_height_base*2;

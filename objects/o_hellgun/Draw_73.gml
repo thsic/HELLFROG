@@ -1,4 +1,4 @@
-var _text = global.ds_text[# TEXT.TUTORIAL_HELLGUN, global.launguage];
+var _text = global.ds_text[# TEXT.TUTORIAL_HELLGUN, global.language];
 
 draw_set_font(fo_itemText);
 draw_set_halign(fa_middle);

@@ -5,7 +5,7 @@ function popup_player_damage(){
 		var _x = o_player.x;
 		var _y = o_player.y-46;
 		var _alpha = 1;
-		var _color = c_red;
+		var _color = popup_damage_color;
 		var _text = "- "+string(round(popup_damage))
 		
 		draw_set_font(fo_damage);

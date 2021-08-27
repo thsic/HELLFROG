@@ -22,11 +22,11 @@ if(title_screen_button){
 			var _text = _texten;
 			var _text_color = text_color1;
 			var _button_color = noone;
-		
+			
 		}
 		else{
 			//マウス上にある
-			if(global.launguage == Launguage.English){
+			if(global.language == language.English){
 				var _text = _texten;
 			}
 			else{
@@ -36,7 +36,14 @@ if(title_screen_button){
 			var _text_color = text_color2;
 			var _button_color = button_color
 		}
-	
+		
+		//セーブデータが存在しない場合ロードゲームは灰色になる
+		if(!savedata_enable
+		and i = TITLENAME.LOADGAME){
+			_text_color = load_disable_color;
+		}
+		
+		
 		if(_text != 0){
 			if(_button_color != noone){
 				var _r_h = _h;
@@ -54,5 +61,8 @@ if(title_screen_button){
 	var _logo_x = room_width/2;
 	var _logo_y = room_height/5*2;
 	draw_text(_logo_x, _logo_y, "HELLFROG");
+	
+	draw_set_font(fo_uiText)
+	draw_text(room_width/2, 20, working_directory);
 }
 

@@ -16,7 +16,7 @@ var _button_height = room_height/16;
 var _button_y_offset = room_height/5*3;
 title_param = ds_grid_create(_grid_width, 10);
 
-
+savedata_enable = file_exists("save");
 
 for(var i=0; i<_grid_width; i++){
 	title_param[# i, TITLEPARAM.X] = room_width/2;
@@ -33,17 +33,17 @@ title_param[# TITLENAME.ASSISTMODE, TITLEPARAM.Y] = _button_y_offset+_button_hei
 title_param[# TITLENAME.EXITGAME, TITLEPARAM.Y] = _button_y_offset+_button_height*5;
 
 
-title_param[# TITLENAME.GAMESTART, TITLEPARAM.TEXT] = global.ds_text[# TEXT.TITLETEXT_GAMESTART, Launguage.English];
-title_param[# TITLENAME.LOADGAME, TITLEPARAM.TEXT] = global.ds_text[# TEXT.TITLETEXT_LOADGAME, Launguage.English];
-title_param[# TITLENAME.OPTION, TITLEPARAM.TEXT] = global.ds_text[# TEXT.TITLETEXT_OPTION, Launguage.English];
-title_param[# TITLENAME.ASSISTMODE, TITLEPARAM.TEXT] = global.ds_text[# TEXT.TITLETEXT_ASSISTMODE, Launguage.English];
-title_param[# TITLENAME.EXITGAME, TITLEPARAM.TEXT] = global.ds_text[# TEXT.TITLETEXT_EXITGAME, Launguage.English];
+title_param[# TITLENAME.GAMESTART, TITLEPARAM.TEXT] = global.ds_text[# TEXT.TITLETEXT_GAMESTART, language.English];
+title_param[# TITLENAME.LOADGAME, TITLEPARAM.TEXT] = global.ds_text[# TEXT.TITLETEXT_LOADGAME, language.English];
+title_param[# TITLENAME.OPTION, TITLEPARAM.TEXT] = global.ds_text[# TEXT.TITLETEXT_OPTION, language.English];
+title_param[# TITLENAME.ASSISTMODE, TITLEPARAM.TEXT] = global.ds_text[# TEXT.TITLETEXT_ASSISTMODE, language.English];
+title_param[# TITLENAME.EXITGAME, TITLEPARAM.TEXT] = global.ds_text[# TEXT.TITLETEXT_EXITGAME, language.English];
 
-title_param[# TITLENAME.GAMESTART, TITLEPARAM.TEXTJP] = global.ds_text[# TEXT.TITLETEXT_GAMESTART, Launguage.Japanese];
-title_param[# TITLENAME.LOADGAME, TITLEPARAM.TEXTJP] = global.ds_text[# TEXT.TITLETEXT_LOADGAME, Launguage.Japanese];
-title_param[# TITLENAME.OPTION, TITLEPARAM.TEXTJP] = global.ds_text[# TEXT.TITLETEXT_OPTION, Launguage.Japanese];
-title_param[# TITLENAME.ASSISTMODE, TITLEPARAM.TEXTJP] = global.ds_text[# TEXT.TITLETEXT_ASSISTMODE, Launguage.Japanese];
-title_param[# TITLENAME.EXITGAME, TITLEPARAM.TEXTJP] = global.ds_text[# TEXT.TITLETEXT_EXITGAME, Launguage.Japanese];
+title_param[# TITLENAME.GAMESTART, TITLEPARAM.TEXTJP] = global.ds_text[# TEXT.TITLETEXT_GAMESTART, language.Japanese];
+title_param[# TITLENAME.LOADGAME, TITLEPARAM.TEXTJP] = global.ds_text[# TEXT.TITLETEXT_LOADGAME, language.Japanese];
+title_param[# TITLENAME.OPTION, TITLEPARAM.TEXTJP] = global.ds_text[# TEXT.TITLETEXT_OPTION, language.Japanese];
+title_param[# TITLENAME.ASSISTMODE, TITLEPARAM.TEXTJP] = global.ds_text[# TEXT.TITLETEXT_ASSISTMODE, language.Japanese];
+title_param[# TITLENAME.EXITGAME, TITLEPARAM.TEXTJP] = global.ds_text[# TEXT.TITLETEXT_EXITGAME, language.Japanese];
 
 
 on_mouse_button = -1;

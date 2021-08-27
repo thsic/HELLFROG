@@ -41,7 +41,7 @@ case Menustate.Main:
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	if(global.launguage == Launguage.English){
+	if(global.language == language.English){
 		var _text_mode = ButtonParam.TextEn
 	}
 	else{
@@ -71,7 +71,7 @@ case Menustate.Main:
 		if(_button_name[i] == ButtonName.AssistMode
 		and global.assist_mode == -1){
 			var _hell_mode = true;
-			if(global.launguage == Launguage.English){//ヘルモードなら"ヘルモード"と表示させる
+			if(global.language == language.English){//ヘルモードなら"ヘルモード"と表示させる
 				_text = menu_hell_button_text_en;
 			}
 			else{
@@ -139,7 +139,7 @@ case Menustate.Option:
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	if(global.launguage == Launguage.English){
+	if(global.language == language.English){
 		var _text_mode = ButtonParam.TextEn
 	}
 	else{
@@ -150,7 +150,7 @@ case Menustate.Option:
 	var _button_name;
 	_button_name[0] = ButtonName.SEVol;
 	_button_name[1] = ButtonName.BGMVol;
-	_button_name[2] = ButtonName.Launguage;
+	_button_name[2] = ButtonName.language;
 	
 	
 	//バー
@@ -188,7 +188,7 @@ case Menustate.Option:
 	//言語
 	draw_set_halign(fa_middle);
 	draw_set_valign(fa_top);
-	if(global.launguage == Launguage.English){
+	if(global.language == language.English){
 		var _eng_color = text_oncursor_color;
 		var _jpn_color = text_color;
 	}
@@ -197,16 +197,16 @@ case Menustate.Option:
 		var _jpn_color = text_oncursor_color;
 	}
 	
-	var _w = button_param[# ButtonName.Launguage, ButtonParam.Width];
-	var _h = button_param[# ButtonName.Launguage, ButtonParam.Height];
-	var _x = button_param[# ButtonName.Launguage, ButtonParam.X];
-	var _y = button_param[# ButtonName.Launguage, ButtonParam.Y];
+	var _w = button_param[# ButtonName.language, ButtonParam.Width];
+	var _h = button_param[# ButtonName.language, ButtonParam.Height];
+	var _x = button_param[# ButtonName.language, ButtonParam.X];
+	var _y = button_param[# ButtonName.language, ButtonParam.Y];
 	
 	var _eng_x = _x - _w/4;
 	var _jpn_x = _x + _w/4;
 	
 	//マウスオーバー時色変える
-	if(button_param[# ButtonName.Launguage, ButtonParam.OnCursor]){
+	if(button_param[# ButtonName.language, ButtonParam.OnCursor]){
 		if(global.vmouse_x < _x){
 			var _eng_color = text_oncursor_color;
 		}
@@ -224,7 +224,7 @@ case Menustate.Option:
 	
 	draw_set_halign(fa_middle);
 	draw_set_color(text_color);
-	draw_text(_x, _y - _h, button_param[# ButtonName.Launguage, _text_mode]);
+	draw_text(_x, _y - _h, button_param[# ButtonName.language, _text_mode]);
 	
 	
 	
@@ -280,7 +280,7 @@ case Menustate.AssistMode:
 		draw_set_alpha(1);//アシストモードかヘルモードなら薄くしない
 	}
 	
-	if(global.launguage == Launguage.English){
+	if(global.language == language.English){
 		var _text_mode = ButtonParam.TextEn
 	}
 	else{

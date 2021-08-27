@@ -10,7 +10,7 @@ function draw_stage_name(){
 		draw_set_halign(fa_middle);
 		draw_set_font(fo_hpUi);
 	
-		if(global.launguage == Launguage.English){
+		if(global.language == language.English){
 			var _stage_name = string(global.now_stage_param[STAGEPARAM.NAMEEN]);
 		}
 		else{

@@ -16,4 +16,6 @@ if(!global.gamestop){
 	else{
 		popup_damage = 0;
 	}
+	
+	
 }

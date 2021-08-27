@@ -29,7 +29,9 @@ if(mouse_check_button(global.shotgun_button)){
 		pressed_button = TITLENAME.GAMESTART;
 	break
 	case TITLENAME.LOADGAME:
-		pressed_button = TITLENAME.LOADGAME
+		if(savedata_enable){
+			pressed_button = TITLENAME.LOADGAME;
+		}
 	break
 	case TITLENAME.OPTION:
 		title_screen_button = false;
@@ -51,7 +53,7 @@ if(mouse_check_button(global.shotgun_button)){
 switch(pressed_button){
 case TITLENAME.GAMESTART:
 	if(fadein_time <= 0){
-		room_goto(r_tutorial);
+		start_game();
 	}
 	else{
 		fadein_time--;
@@ -60,7 +62,7 @@ case TITLENAME.GAMESTART:
 break
 case TITLENAME.LOADGAME:
 	if(fadein_time <= 0){
-		room_goto(r_tutorial);
+		load_game(true);
 	}
 	else{
 		fadein_time--;

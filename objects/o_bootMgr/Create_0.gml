@@ -5,11 +5,16 @@ instance_create_layer(0, 0, "Instances", o_soundMgr);
 text();
 stage_param();
 
+
+
 global.game_time = 0;
 
 global.time_milisecond = 0;
 global.time_second = 0;
 global.draw_time_enable = true;
+global.difficulty = 
+
+global.language_setting_done = true;
 
 //アシストモード関連
 global.enemy_damage = 1;
@@ -32,12 +37,20 @@ global.assist_level_max = false;
 //オプション
 global.se_volume = 0.2;
 global.bgm_volume = 0.2;
-global.launguage = Launguage.English;
+global.language = language.English;
 global.timer_enable = false;
+
+//設定をロード
+load_config();
 
 room_goto(FIRST_ROOM);
 
-enum Launguage{
+enum language{
 	Japanese,
 	English,
+}
+
+enum Difficulty{
+	Normal,
+	VeryHard,
 }

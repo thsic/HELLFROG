@@ -129,7 +129,7 @@ if(room != r_title){
 		var _button_name;
 		_button_name[0] = ButtonName.SEVol;
 		_button_name[1] = ButtonName.BGMVol;
-		_button_name[2] = ButtonName.Launguage;
+		_button_name[2] = ButtonName.language;
 		_button_name[3] = ButtonName.Timer;
 		for(var i=0; i<array_length(_button_name); i++){
 			var _bw = button_param[# _button_name[i], ButtonParam.Width];
@@ -153,15 +153,15 @@ if(room != r_title){
 	
 		if(mouse_check_button_pressed(global.shotgun_button)){
 			switch(_on_cursor_button){
-			case ButtonName.Launguage:
+			case ButtonName.language:
 				var _x = button_param[# _on_cursor_button, ButtonParam.X];
 				var _w = button_param[# _on_cursor_button, ButtonParam.Width];
 				//言語設定
 				if(global.vmouse_x < _x){
-					global.launguage = Launguage.English;
+					global.language = language.English;
 				}
 				else{
-					global.launguage = Launguage.Japanese;
+					global.language = language.Japanese;
 				}
 			break
 			case ButtonName.Timer:
@@ -224,6 +224,8 @@ if(room != r_title){
 	
 		if(keyboard_check_pressed(global.menu_key)
 		or _menu_close){
+			//セーブ
+			save_config();
 			state = Menustate.Main;
 		}
 	break
@@ -424,6 +426,9 @@ if(room != r_title){
 	
 		if(keyboard_check_pressed(global.menu_key)
 		or _menu_close){
+			
+			//セーブ
+			save_config();
 			state = Menustate.Main;
 		
 		}
@@ -466,7 +471,7 @@ else{
 			var _button_name;
 			_button_name[0] = ButtonName.SEVol;
 			_button_name[1] = ButtonName.BGMVol;
-			_button_name[2] = ButtonName.Launguage;
+			_button_name[2] = ButtonName.language;
 			_button_name[3] = ButtonName.Timer;
 			for(var i=0; i<array_length(_button_name); i++){
 				var _bw = button_param[# _button_name[i], ButtonParam.Width];
@@ -490,15 +495,15 @@ else{
 	
 			if(mouse_check_button_pressed(global.shotgun_button)){
 				switch(_on_cursor_button){
-				case ButtonName.Launguage:
+				case ButtonName.language:
 					var _x = button_param[# _on_cursor_button, ButtonParam.X];
 					var _w = button_param[# _on_cursor_button, ButtonParam.Width];
 					//言語設定
 					if(mouse_x < _x){
-						global.launguage = Launguage.English;
+						global.language = language.English;
 					}
 					else{
-						global.launguage = Launguage.Japanese;
+						global.language = language.Japanese;
 					}
 				break
 				case ButtonName.Timer:

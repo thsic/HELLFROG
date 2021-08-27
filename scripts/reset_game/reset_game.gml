@@ -13,5 +13,7 @@ function reset_game(){
 	ds_grid_destroy(global.ds_stage_type_param);
 	ds_grid_destroy(global.ds_text);*/
 	
+	save_game();
+	save_config();
 	room_goto(r_boot);
 }

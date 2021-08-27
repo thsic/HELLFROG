@@ -29,7 +29,7 @@ case GAMECLEARSCENE.THANKYOU:
 	draw_set_color(bg_color);
 	draw_rectangle(0, 0, global.camera_width, global.camera_height, false);
 	
-	var _text1 = global.ds_text[# TEXT.CLEARTEXT_THANKYOU, Launguage.English];
+	var _text1 = global.ds_text[# TEXT.CLEARTEXT_THANKYOU, language.English];
 	var _text1_y = global.camera_height/2;
 	
 	//二回
@@ -48,8 +48,8 @@ case GAMECLEARSCENE.DEVELOPER:
 	draw_set_color(bg_color);
 	draw_rectangle(0, 0, global.camera_width, global.camera_height, false);
 	
-	var _text1 = global.ds_text[# TEXT.CLEARTEXT_DEVELOPER1, Launguage.English];
-	var _text2 = global.ds_text[# TEXT.CLEARTEXT_DEVELOPER2, Launguage.English];
+	var _text1 = global.ds_text[# TEXT.CLEARTEXT_DEVELOPER1, language.English];
+	var _text2 = global.ds_text[# TEXT.CLEARTEXT_DEVELOPER2, language.English];
 	var _text1_y = global.camera_height/4;
 	var _text2_y = global.camera_height/5*3;
 	
@@ -67,8 +67,8 @@ case GAMECLEARSCENE.TOOL:
 	draw_set_color(bg_color);
 	draw_rectangle(0, 0, global.camera_width, global.camera_height, false);
 	
-	var _text1 = global.ds_text[# TEXT.CLEARTEXT_TOOL1, Launguage.English];
-	var _text2 = global.ds_text[# TEXT.CLEARTEXT_TOOL2, Launguage.English];
+	var _text1 = global.ds_text[# TEXT.CLEARTEXT_TOOL1, language.English];
+	var _text2 = global.ds_text[# TEXT.CLEARTEXT_TOOL2, language.English];
 	var _text1_y = global.camera_height/8;
 	var _text2_y = global.camera_height/5*3;
 	
@@ -91,7 +91,7 @@ case GAMECLEARSCENE.HELLFROG:
 	draw_rectangle(0, 0, global.camera_width, global.camera_height, false);
 	
 	
-	var _text1 = global.ds_text[# TEXT.CLEARTEXT_HELLFROG, Launguage.English];
+	var _text1 = global.ds_text[# TEXT.CLEARTEXT_HELLFROG, language.English];
 	var _text1_y = global.camera_height/10*4;;
 	
 	draw_set_color(text_color3);
@@ -105,8 +105,8 @@ case GAMECLEARSCENE.TIMER:
 	draw_set_color(bg_color2);
 	draw_rectangle(0, 0, global.camera_width, global.camera_height, false);
 	
-	var _text1 = global.ds_text[# TEXT.CLEARTEXT_HELLFROG, Launguage.English];
-	var _text2 = global.ds_text[# TEXT.CLEARTEXT_TIMER, Launguage.English];
+	var _text1 = global.ds_text[# TEXT.CLEARTEXT_HELLFROG, language.English];
+	var _text2 = global.ds_text[# TEXT.CLEARTEXT_TIMER, language.English];
 	var _text3 = get_timer_string(global.time_second, global.time_milisecond);
 	var _text1_y = global.camera_height/10*4;
 	var _text2_y = global.camera_height/5*4;

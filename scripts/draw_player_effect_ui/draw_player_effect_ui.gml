@@ -32,9 +32,15 @@ function draw_player_effect_ui(){
 		
 		_text_color[_order] = merge_color(effect_curse_text_color, effect_curse_merge_color, _merge_ratio);
 		_bar_color[_order] = merge_color(effect_curse_bar_color, effect_curse_merge_color, _merge_ratio);
-		_effect_text[_order] = global.ds_text[# TEXT.EFFECT_CURSE, global.launguage]+" x"+string(_damage_mag);
+		_effect_text[_order] = global.ds_text[# TEXT.EFFECT_CURSE, global.language]+" x"+string(_damage_mag);
 		_bar_point[_order] = o_player.curse_point;
 		_bar_max[_order] = CURSE_POINT_LIMIT;
+		
+		if(o_player.curse_point <= 20
+		and o_player.curse_point > curse_point_prev){
+			_text_color[_order] = c_white;
+			_bar_color[_order] = c_white;
+		}
 		
 		_order++;
 	}
@@ -42,7 +48,7 @@ function draw_player_effect_ui(){
 		_draw_effect_order[_order] = PLAYEREFFECT.SLOW;
 		_text_color[_order] = effect_slow_text_color;
 		_bar_color[_order] = effect_slow_bar_color;
-		_effect_text[_order] = global.ds_text[# TEXT.EFFECT_SLOW, global.launguage];
+		_effect_text[_order] = global.ds_text[# TEXT.EFFECT_SLOW, global.language];
 		_bar_point[_order] = clamp(o_player.player_slow_time + o_player.on_slow_field_time * GAIN_SLOW_TIME_PER_FRAME, 0, SLOW_TIME_LIMIT);
 		_bar_max[_order] = SLOW_TIME_LIMIT;
 		_alpha[_order] = 1;
@@ -54,7 +60,7 @@ function draw_player_effect_ui(){
 		_draw_effect_order[_order] = PLAYEREFFECT.SUPPRESSION;
 		_text_color[_order] = effect_supp_text_color;
 		_bar_color[_order] = effect_supp_bar_color;
-		_effect_text[_order] = global.ds_text[# TEXT.EFFECT_SUPP, global.launguage];
+		_effect_text[_order] = global.ds_text[# TEXT.EFFECT_SUPP, global.language];
 		_bar_point[_order] = clamp(o_player.supp_point, 0, SUPP_POINT_LIMIT);
 		_bar_max[_order] = SUPP_POINT_LIMIT;
 		_alpha[_order] = 1;
@@ -85,4 +91,5 @@ function draw_player_effect_ui(){
 		}
 	}
 	
+	curse_point_prev = o_player.curse_point;
 }

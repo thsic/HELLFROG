@@ -12,12 +12,16 @@ function gameover_script(_gameover_knockback_dir){
 		
 			o_player.gameover_knockup_time = _gameover_knockup_time;
 			o_player.gameover_knockup_time_default = _gameover_knockup_time
-		
+			
 			//死体を消す
 			with(o_enemyCorpse){
 				instance_destroy();
 			}
-		
+			
+			//セーブなど
+			global.death_count++;
+			save_game();
+			
 			//アシストレシオ
 			set_damage_ratio();
 		

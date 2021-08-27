@@ -9,6 +9,12 @@ case gamestate.stagestart:
 	global.gamestop = true;
 	global.playerstop = true;
 	
+	//セーブ
+	//一番最初のステージの開始時はセーブしない
+	if(room != r_tutorial){
+		save_game();
+	}
+	
 	//ステージ情報入れる
 	put_stage_param();
 	

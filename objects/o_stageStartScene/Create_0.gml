@@ -48,7 +48,7 @@ repeat(20){
 var _stage_num = global.now_stage_param[STAGEPARAM.STAGENUM];
 if(_stage_num <= 1){
 	//最初のステージ
-	if(global.launguage == Launguage.English){
+	if(global.language == language.English){
 		draw_stage_name_1st = global.now_stage_param[STAGEPARAM.NAMEJP];
 		draw_stage_name_2nd = global.now_stage_param[STAGEPARAM.NAMEEN];
 		font_1st = global.now_stage_param[STAGEPARAM.FONTJP];
@@ -63,7 +63,7 @@ if(_stage_num <= 1){
 }
 else{
 	//2ステージ目以降
-	if(global.launguage == Launguage.English){
+	if(global.language == language.English){
 		draw_stage_name_1st = global.now_stage_param[STAGEPARAM.NAMEEN];
 		font_1st = global.now_stage_param[STAGEPARAM.FONTEN];
 	}
