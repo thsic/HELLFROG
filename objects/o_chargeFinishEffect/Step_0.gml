@@ -9,7 +9,7 @@ if(room == r_tutorial2){
 		instance_destroy();
 	}
 	
-	color = tutorial_color;//うわがき
+	//color = tutorial_color;//うわがき
 }
 else{
 	top_side_y -= top_side_speed;

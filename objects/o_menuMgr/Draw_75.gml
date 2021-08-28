@@ -7,7 +7,7 @@ function menu_background_clear(){
 		draw_set_alpha(0.5);
 	}
 	else{
-		draw_set_alpha(0.8);
+		draw_set_alpha(0.5);
 	}
 	
 	draw_rectangle(0, 0, global.camera_width, global.camera_height, false);

@@ -69,7 +69,7 @@ and draw_power_bar_enable){
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	draw_set_valign(fa_bottom);
-	draw_set_font(fo_uiText);
+	draw_set_font(fo_maruMonica);
 	draw_text(_base_point_x, _base_point_y, "POWER")
 
 	draw_set_default();

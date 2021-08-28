@@ -15,13 +15,13 @@ function save_config(){
 	}
 	
 	array_push(_savedata, _save_entity);
-
+	
 	var _string = json_stringify(_savedata);
 	var _buffer = buffer_create(string_byte_length(_string) +1, buffer_fixed, 1);
 	buffer_write(_buffer, buffer_string, _string);
 	buffer_save(_buffer, "config");
 	buffer_delete(_buffer);
 
-	show_debug_message("configがセーブされました！"+ _string);
-
+	//show_debug_message("configがセーブされました！"+ _string);
+	
 }

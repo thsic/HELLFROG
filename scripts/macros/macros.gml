@@ -19,6 +19,12 @@ function macros() {
 #macro BLUEAURA_ORB_QUANTITY_MAG 10
 #macro ENEMY_ALTAR_BUFF_RATE 1.5
 
+//難易度設定
+#macro HARD_INVINCIBLE_TIME_RATIO 0.25
+#macro HARD_DOT_DAMAGE_RATIO 1.5
+#macro HARD_ENEMY_ATTACKSPEED 1.5
+
+
 //エフェクト
 #macro SLOW_TIME_LIMIT 180
 #macro GAIN_SLOW_TIME_PER_FRAME 3
@@ -33,11 +39,6 @@ function macros() {
 #macro LAVA_TICKS_PER_SECOND 15
 
 #macro POPUP_DAMAGE_DRAW_TIME 20
-
-//ステージ名
-#macro STAGE1_NAME_JP "ヘルケイヴ"//"ヘル"+chr(13)+"ケイヴ"
-#macro STAGE1_NAME_JP2 "地獄洞窟"
-#macro STAGE1_NAME_EN "HELL"+chr(13)+"CAVE"
 
 #macro FIRE_DAMAGE 30//炎の敵をフックしたときのダメージ
 

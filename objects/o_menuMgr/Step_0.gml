@@ -123,6 +123,11 @@ if(room != r_title){
 	
 	break
 	case Menustate.Option:
+		//1秒に1回セーブ
+		if(global.game_time mod 60 == 0){
+			save_config();
+		}
+		
 		var _menu_close = false;
 	
 		var _on_cursor_button = noone;
@@ -230,6 +235,11 @@ if(room != r_title){
 		}
 	break
 	case Menustate.AssistMode:
+		
+		//1秒に1回セーブ
+		if(global.game_time mod 60 == 0){
+			save_config();
+		}
 		var _menu_close = false;
 	
 		var _on_cursor_button = noone;
@@ -437,7 +447,7 @@ if(room != r_title){
 	
 		set_damage_ratio();
 		state = Menustate.Closing;
-	
+		
 	break
 	case Menustate.CloseSequence://閉じるシーケンス描画中
 	
@@ -465,6 +475,10 @@ else{
 			
 		break
 		case Menustate.Option:
+			//1秒に1回セーブ
+			if(global.game_time mod 60 == 0){
+				save_config();
+			}
 			var _menu_close = false;
 	
 			var _on_cursor_button = noone;
@@ -562,9 +576,14 @@ else{
 			if(keyboard_check_pressed(global.menu_key)
 			or _menu_close){
 				state = Menustate.Closing;
+				save_config();
 			}
 		break
 		case Menustate.AssistMode:
+			//1秒に1回セーブ
+			if(global.game_time mod 60 == 0){
+				save_config();
+			}
 			var _menu_close = false;
 	
 			var _on_cursor_button = noone;
@@ -762,9 +781,8 @@ else{
 			if(keyboard_check_pressed(global.menu_key)
 			or _menu_close){
 				state = Menustate.Closing;
-		
+				save_config();
 			}
-		break
 		break
 	}
 }

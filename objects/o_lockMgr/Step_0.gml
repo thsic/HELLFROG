@@ -84,7 +84,7 @@ var _py = o_player.y;
 for(var i=0; i<_locker_num; i++){
 	var _id = instance_find(o_roomLocker, i);
 	if(debug_mode){
-		debug_draw_rectnagle(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, true, c_white, 3);
+		//debug_draw_rectnagle(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, true, c_white, 3);
 	}
 	if(is_in_place(_id.bbox_left, _id.bbox_top, _id.bbox_right, _id.bbox_bottom, _px, _py)){
 		var _lock_num = _id.lock_number;

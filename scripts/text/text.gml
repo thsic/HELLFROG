@@ -36,7 +36,7 @@ global.ds_text[# TEXT.TUTORIAL_SHOT, language.English] =			"shot";
 global.ds_text[# TEXT.TUTORIAL_KILL, language.English] =			"kill";
 global.ds_text[# TEXT.TUTORIAL_HELL, language.English] =			"HELL";
 global.ds_text[# TEXT.TUTORIAL_BROKENGUN, language.English] =		"Broken Gun";
-global.ds_text[# TEXT.TUTORIAL_HELLGUN, language.English] =		"Hell Gun";
+global.ds_text[# TEXT.TUTORIAL_HELLGUN, language.English] =			"Hell Gun";
 global.ds_text[# TEXT.TUTORIAL_MOZA, language.English] =			"Mozandique";
 global.ds_text[# TEXT.TUTORIAL_HIDDENGOAL, language.English] =		"Shortcut XD";
 
@@ -48,13 +48,13 @@ global.ds_text[# TEXT.TUTORIAL_HELL, language.Japanese] =			"ヘル";
 global.ds_text[# TEXT.TUTORIAL_BROKENGUN, language.Japanese] =		"壊れた銃";
 global.ds_text[# TEXT.TUTORIAL_HELLGUN, language.Japanese] =		"地獄の銃";
 global.ds_text[# TEXT.TUTORIAL_MOZA, language.Japanese] =			"モザムディーク";
-global.ds_text[# TEXT.TUTORIAL_HIDDENGOAL, language.Japanese] =	"地獄への近道 (便利)";
+global.ds_text[# TEXT.TUTORIAL_HIDDENGOAL, language.Japanese] =		"地獄への近道 (便利)";
 
 
-global.ds_text[# TEXT.STAGE1_TEXT1, language.English] =			"You've gone to hell.";
-global.ds_text[# TEXT.STAGE1_TEXT2, language.English] =			"In hell, the miasma will rob you of your health.";
-global.ds_text[# TEXT.STAGE1_TEXT3, language.English] =			"You'll need the enemy's soul to restore your health.";
-global.ds_text[# TEXT.STAGE1_TEXT4, language.English] =			"KILL THEM ALL";
+global.ds_text[# TEXT.STAGE1_TEXT1, language.English] =				"You've gone to hell.";
+global.ds_text[# TEXT.STAGE1_TEXT2, language.English] =				"In hell, the miasma will rob you of your health.";
+global.ds_text[# TEXT.STAGE1_TEXT3, language.English] =				"You'll need the enemy's soul to restore your health.";
+global.ds_text[# TEXT.STAGE1_TEXT4, language.English] =				"KILL THEM ALL";
 
 global.ds_text[# TEXT.STAGE1_TEXT1, language.Japanese] =			"あなたは地獄に落ちた。";
 global.ds_text[# TEXT.STAGE1_TEXT2, language.Japanese] =			"地獄では瘴気があなたの体力を奪う。";
@@ -62,16 +62,16 @@ global.ds_text[# TEXT.STAGE1_TEXT3, language.Japanese] =			"体力を回復す�
 global.ds_text[# TEXT.STAGE1_TEXT4, language.Japanese] =			"皆殺しにしろ";
 
 global.ds_text[# TEXT.EFFECT_SLOW, language.English] =				"SLOW";
-global.ds_text[# TEXT.EFFECT_CURSE, language.English] =			"INCOMING DAMAGE";
+global.ds_text[# TEXT.EFFECT_CURSE, language.English] =				"INCOMING DAMAGE";
 global.ds_text[# TEXT.EFFECT_SUPP, language.English] =				"SUPPRASSION";
 
-global.ds_text[# TEXT.EFFECT_SLOW, language.Japanese] =			"スロウ";
+global.ds_text[# TEXT.EFFECT_SLOW, language.Japanese] =				"スロウ";
 global.ds_text[# TEXT.EFFECT_CURSE, language.Japanese] =			"被ダメージ";
-global.ds_text[# TEXT.EFFECT_SUPP, language.Japanese] =			"サプレッション";
+global.ds_text[# TEXT.EFFECT_SUPP, language.Japanese] =				"サプレッション";
 
 global.ds_text[# TEXT.CLEARTEXT_THANKYOU, language.English] =		"THANKYOU@FOR@PLAYING";
-global.ds_text[# TEXT.CLEARTEXT_DEVELOPER1, language.English] =	"DEVELOPER";
-global.ds_text[# TEXT.CLEARTEXT_DEVELOPER2, language.English] =	"LIC";
+global.ds_text[# TEXT.CLEARTEXT_DEVELOPER1, language.English] =		"DEVELOPER";
+global.ds_text[# TEXT.CLEARTEXT_DEVELOPER2, language.English] =		"LIC";
 global.ds_text[# TEXT.CLEARTEXT_TOOL1, language.English] =			"MADE WITH";
 global.ds_text[# TEXT.CLEARTEXT_TOOL2, language.English] =			"GAMEMAKER@STUDIO@2";
 global.ds_text[# TEXT.CLEARTEXT_HELLFROG, language.English] =		"HELLFROG";
@@ -79,11 +79,11 @@ global.ds_text[# TEXT.CLEARTEXT_TIMER, language.English] =			"TIME";
 
 global.ds_text[# TEXT.TITLETEXT_GAMESTART, language.English] =		"START GAME";
 global.ds_text[# TEXT.TITLETEXT_LOADGAME, language.English] =		"LOAD GAME";
-global.ds_text[# TEXT.TITLETEXT_OPTION, language.English] =		"OPTION";
-global.ds_text[# TEXT.TITLETEXT_ASSISTMODE, language.English] =	"ASSISTMODE";
+global.ds_text[# TEXT.TITLETEXT_OPTION, language.English] =			"OPTION";
+global.ds_text[# TEXT.TITLETEXT_ASSISTMODE, language.English] =		"ASSISTMODE";
 global.ds_text[# TEXT.TITLETEXT_EXITGAME, language.English] =		"EXIT GAME";
 
-global.ds_text[# TEXT.TITLETEXT_GAMESTART, language.Japanese] =	"ゲーム開始";
+global.ds_text[# TEXT.TITLETEXT_GAMESTART, language.Japanese] =		"ゲーム開始";
 global.ds_text[# TEXT.TITLETEXT_LOADGAME, language.Japanese] =		"ロード";
 global.ds_text[# TEXT.TITLETEXT_OPTION, language.Japanese] =		"オプション";
 global.ds_text[# TEXT.TITLETEXT_ASSISTMODE, language.Japanese] =	"アシストモード";
@@ -98,7 +98,7 @@ global.ds_text[# TEXT.TITLETEXT_EXITGAME, language.Japanese] =		"ゲーム終了
 #macro EN_MENU_SAVEANDQUIT "SAVE AND QUIT"
 #macro EN_MENU_SE "SE"
 #macro EN_MENU_BGM "BGM"
-#macro EN_MENU_language "language"
+#macro EN_MENU_language "LANGUAGE"
 #macro EN_MENU_TIMER "TIMER"
 #macro EN_MENU_ENEMYDAMAGE "ENEMY ATTACK DAMAGE"
 #macro EN_MENU_DOTDAMAGE "DOT DAMAGE"

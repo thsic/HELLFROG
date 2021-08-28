@@ -12,9 +12,9 @@ global.game_time = 0;
 global.time_milisecond = 0;
 global.time_second = 0;
 global.draw_time_enable = true;
-global.difficulty = 
+global.difficulty = Difficulty.Normal;
 
-global.language_setting_done = true;
+global.language_setting_done = false;
 
 //アシストモード関連
 global.enemy_damage = 1;

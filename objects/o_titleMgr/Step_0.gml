@@ -1,78 +1,176 @@
 
 global.game_time++;
-//ボタン設定
 
-if(pressed_button = -1){
-	var _button_num = ds_grid_width(title_param);
-	on_mouse_button = -1;
-
-	for(var i=0; i<_button_num; i++){
-		var _x = title_param[# i, TITLEPARAM.X];
-		var _y = title_param[# i, TITLEPARAM.Y];
-		var _w = title_param[# i, TITLEPARAM.WIDTH];
-		var _h = title_param[# i, TITLEPARAM.HEIGHT];
+global.vmouse_x = mouse_x;
+global.vmouse_y = mouse_y;
 	
-		if(is_in_place(_x-_w/2, _y-_h/2, _x+_w/2, _y+_h/2, mouse_x, mouse_y)
-		and title_screen_button){
-			title_param[# i, TITLEPARAM.ONMOUSE] = true;
-			on_mouse_button = i;
-		}
-		else{
-			title_param[# i, TITLEPARAM.ONMOUSE] = false;
+function title_put_onmouse_param(_screen){
+	if(pressed_button = -1){
+		var _button_num = ds_grid_width(title_param);
+		on_mouse_button = -1;
+
+		for(var i=0; i<_button_num; i++){
+			if(title_param[# i, TITLEPARAM.SCREEN] == _screen){
+				var _x = title_param[# i, TITLEPARAM.X];
+				var _y = title_param[# i, TITLEPARAM.Y];
+				var _w = title_param[# i, TITLEPARAM.WIDTH];
+				var _h = title_param[# i, TITLEPARAM.HEIGHT];
+			
+	
+				if(is_in_place(_x-_w/2, _y-_h/2, _x+_w/2, _y+_h/2, mouse_x, mouse_y)){
+					title_param[# i, TITLEPARAM.ONMOUSE] = true;
+					on_mouse_button = i;
+				}
+				else{
+					title_param[# i, TITLEPARAM.ONMOUSE] = false;
+				}
+			}
 		}
 	}
 }
 
-if(mouse_check_button(global.shotgun_button)){
-	switch(on_mouse_button){
+switch(now_screen){
+case TITLESCREEN.SETLANGUAGE:
+	title_put_onmouse_param(TITLESCREEN.SETLANGUAGE);
+	
+	if(mouse_check_button(global.shotgun_button)
+	and on_mouse_button != -1){
+		pressed_button = on_mouse_button;
+		now_screen = TITLESCREEN.MAIN;
+	}
+	
+	switch(pressed_button){
+	case TITLENAME.LANGUAGE_EN:
+		global.language_setting_done = true;
+		global.language = language.English;
+		pressed_button = -1;
+	break
+	case TITLENAME.LANGUAGE_JP:
+		global.language_setting_done = true;
+		global.language = language.Japanese;
+		pressed_button = -1;
+	break
+	}
+	
+break
+case TITLESCREEN.MAIN:
+	//ボタン設定
+	
+	title_put_onmouse_param(TITLESCREEN.MAIN);
+
+	if(mouse_check_button_pressed(global.shotgun_button)){
+		switch(on_mouse_button){
+		case TITLENAME.GAMESTART:
+			pressed_button = TITLENAME.GAMESTART;
+			fade_time = 0;
+		break
+		case TITLENAME.LOADGAME:
+			if(savedata_enable){
+				pressed_button = TITLENAME.LOADGAME;
+				fade_time = 0;
+			}
+		break
+		case TITLENAME.OPTION:
+			now_screen = TITLESCREEN.OPTION;
+			o_menuMgr.state = Menustate.Option;
+			fade_time = 0;
+		break
+		case TITLENAME.ASSISTMODE:
+			now_screen = TITLESCREEN.ASSISTMODE;
+			o_menuMgr.state = Menustate.AssistMode;
+			fade_time = 0;
+		break
+		case TITLENAME.EXITGAME:
+			game_end();
+		break
+		default:
+		
+		break
+		}
+	}
+
+	switch(pressed_button){
 	case TITLENAME.GAMESTART:
-		pressed_button = TITLENAME.GAMESTART;
+		now_screen = TITLESCREEN.DIFFICULTY;
+		pressed_button = -1;
+	
 	break
 	case TITLENAME.LOADGAME:
-		if(savedata_enable){
-			pressed_button = TITLENAME.LOADGAME;
+		if(fadein_time <= 0){
+			load_game(true);
+		}
+		else{
+			fadein_time--;
 		}
 	break
-	case TITLENAME.OPTION:
-		title_screen_button = false;
-		o_menuMgr.state = Menustate.Option;
-	break
-	case TITLENAME.ASSISTMODE:
-		title_screen_button = false;
-		o_menuMgr.state = Menustate.AssistMode;
-	break
-	case TITLENAME.EXITGAME:
-		game_end();
-	break
-	default:
-		
-	break
-	}
-}
-
-switch(pressed_button){
-case TITLENAME.GAMESTART:
-	if(fadein_time <= 0){
-		start_game();
-	}
-	else{
-		fadein_time--;
 	}
 	
-break
-case TITLENAME.LOADGAME:
-	if(fadein_time <= 0){
-		load_game(true);
+	
+	if(fade_time > 0){
+		fade_time--;
 	}
-	else{
-		fadein_time--;
+	
+	if(keyboard_check(vk_delete)
+	and keyboard_check(vk_alt)){
+		if(file_exists("save")){
+			file_delete("save");
+			se_play(a_damaged, 95, 1);
+		}
+		if(file_exists("config")){
+			file_delete("config");
+		}
 	}
 break
-}
+case TITLESCREEN.DIFFICULTY:
+//難易度選択画面
+	title_put_onmouse_param(TITLESCREEN.DIFFICULTY);
+	
+	if(mouse_check_button_pressed(global.shotgun_button)
+	and on_mouse_button != -1){
+		pressed_button = on_mouse_button;
+	}
+	
+	switch(pressed_button){
+	case TITLENAME.DIFF_HARD:
+		global.difficulty = Difficulty.VeryHard;
+		
+	break
+	case TITLENAME.DIFF_NORMAL:
+		global.difficulty = Difficulty.Normal;
+	break
+	default:
+		//戻るキーおされたら戻る
+		if(keyboard_check_pressed(global.menu_key)
+		or mouse_check_button_pressed(global.hook_button)
+		or keyboard_check_pressed(global.hook_button_keyboard)
+		or keyboard_check_pressed(global.hook_button_keyboard2)){
+			now_screen = TITLESCREEN.MAIN;
+		}
+	break
+	}
+	
+	if(pressed_button != -1){
+		if(fadein_time <= 0){
+			start_game();
+		}
+		else{
+			fadein_time--;
+		}
+	}
+	
+	
 
-if(o_menuMgr.state != Menustate.Option
-and o_menuMgr.state != Menustate.AssistMode){
-	title_screen_button = true;
+break
+case TITLESCREEN.OPTION:
+	if(o_menuMgr.state != Menustate.Option){
+		now_screen = TITLESCREEN.MAIN;
+	}
+break
+case TITLESCREEN.ASSISTMODE:
+	if(o_menuMgr.state != Menustate.AssistMode){
+		now_screen = TITLESCREEN.MAIN;
+	}
+break
 }
 
 var _rnd = random(1);
@@ -84,11 +182,3 @@ if(_rnd < 0.5){
 		part_particles_create(pt_sys, _x, room_height+16, pt_type, 1);
 	}
 }
-
-global.vmouse_x = mouse_x;
-global.vmouse_y = mouse_y;
-
-if(fade_time > 0){
-	fade_time--;
-}
-

@@ -8,7 +8,7 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 			
 			//呪い状態のときはダメージが増える
 			if(o_player.curse_level > 0){
-				_damage *= power(2, o_player.curse_level)
+				_damage *= power(2, o_player.curse_level);
 			}
 			
 			o_uiMgr.popup_damage += _damage;

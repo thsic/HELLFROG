@@ -1,6 +1,6 @@
 var _text = global.ds_text[# TEXT.TUTORIAL_BROKENGUN, global.language];
 
-draw_set_font(fo_itemText);
+draw_set_font(fo_maruMonica);
 draw_set_halign(fa_middle);
 draw_set_valign(fa_middle);
 
