@@ -1,3 +1,10 @@
+
+//ハードモード限定の敵ならノーマルでは消す
+if(global.difficulty == Difficulty.Normal
+and hard_only_enemy == true){
+	instance_destroy();	
+}
+
 next_state = noone;
 //初期ステート
 if(lock_spawn_time = -1){
@@ -28,7 +35,6 @@ fire_direction = 0;
 fire_damage = fire_damage_base;
 
 sprite_rightward = true;
-
 life_time = 0;
 
 invincible_time = 0;

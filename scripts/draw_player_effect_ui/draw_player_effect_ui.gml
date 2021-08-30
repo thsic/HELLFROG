@@ -34,7 +34,13 @@ function draw_player_effect_ui(){
 		_bar_color[_order] = merge_color(effect_curse_bar_color, effect_curse_merge_color, _merge_ratio);
 		_effect_text[_order] = global.ds_text[# TEXT.EFFECT_CURSE, global.language]+" x"+string(_damage_mag);
 		_bar_point[_order] = o_player.curse_point;
-		_bar_max[_order] = CURSE_POINT_LIMIT;
+		
+		if(global.difficulty == Difficulty.VeryHard){
+			_bar_max[_order] = HARD_CURSE_POINT_LIMIT;
+		}
+		else{
+			_bar_max[_order] = CURSE_POINT_LIMIT;
+		}
 		
 		if(o_player.curse_point <= 20
 		and o_player.curse_point > curse_point_prev){

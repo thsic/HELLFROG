@@ -1,5 +1,6 @@
 //
 function enemy_altar_totem_passive(){//アルターバフ
+	
 	var _span = 5;
 	//負荷軽減のために一定時間おきにエフェクトを付与
 	if(global.game_time mod _span == 0){

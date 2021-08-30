@@ -396,7 +396,7 @@
     {"id":{"name":"fo_stageTitleNumber","path":"fonts/fo_stageTitleNumber/fo_stageTitleNumber.yy",},"order":13,},
     {"id":{"name":"o_uiMgr","path":"objects/o_uiMgr/o_uiMgr.yy",},"order":4,},
     {"id":{"name":"a_hookhitWall","path":"sounds/a_hookhitWall/a_hookhitWall.yy",},"order":5,},
-    {"id":{"name":"e_bullet_create_cluster","path":"scripts/e_bullet_create_cluster/e_bullet_create_cluster.yy",},"order":1,},
+    {"id":{"name":"e_bullet_create_cluster","path":"scripts/e_bullet_create_cluster/e_bullet_create_cluster.yy",},"order":15,},
     {"id":{"name":"s_enemyAcidCharging","path":"sprites/s_enemyAcidCharging/s_enemyAcidCharging.yy",},"order":1,},
     {"id":{"name":"r_stage1","path":"rooms/r_stage1/r_stage1.yy",},"order":0,},
     {"id":{"name":"debug_draw_variable","path":"scripts/debug_draw_variable/debug_draw_variable.yy",},"order":4,},

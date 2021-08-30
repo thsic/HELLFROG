@@ -129,6 +129,11 @@ repeat(400){
 	var _y = irandom_range(room_height/2, room_height);
 	part_particles_create(pt_sys, _x, _y, pt_type, 2);
 }
+repeat(200){
+	var _x = irandom_range(0, room_width);
+	var _y = irandom_range(room_height/4*3, room_height);
+	part_particles_create(pt_sys, _x, _y, pt_type, 2);
+}
 enum TITLENAME{
 	GAMESTART,
 	LOADGAME,

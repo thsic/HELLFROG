@@ -38,8 +38,10 @@ function reset_stage(){
 	for(var i=0; i<_slow_field_num; i++){
 		var _id = instance_find(o_slowField, i);
 		
-		if(_id.stage_reset_destroy){
-			instance_destroy();
+		if(instance_exists(_id)){
+			if(_id.stage_reset_destroy){
+				instance_destroy(_id);
+			}
 		}
 	}
 	//慣性消し スロー消し

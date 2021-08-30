@@ -5,5 +5,5 @@ function start_game(){
 	global.time_second = 0;
 	global.death_count = 0;
 	
-	room_goto(r_tutorial);
+	room_goto(FIRST_STAGE);
 }

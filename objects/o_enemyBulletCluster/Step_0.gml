@@ -9,7 +9,15 @@ if(global.gamestop == false){
 	if(life_time <= 0){
 		//クラスター弾は消滅時に大量の弾を放つ
 		if(erasure_enable == false){
-		var _bullet_speed_base = 15;
+			
+			if(global.difficulty == Difficulty.VeryHard){
+				//ハード
+				var _bullet_speed_base = 15;
+			}
+			else{
+				var _bullet_speed_base = 10;
+			}
+			
 			for(var i=0; i<cluster_amount; i++){
 				var _cluster_direction = irandom_range(cluster_direction_min, cluster_direction_max)+direction;
 				var _bullet_speed = random_range(_bullet_speed_base-10, _bullet_speed_base+10);

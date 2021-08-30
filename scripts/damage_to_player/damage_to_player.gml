@@ -36,6 +36,11 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 		else{
 			if(_invinsible_time_ratio > 0){
 				var _invinsible_time = ds_grid_get(global.ds_player_other, ePO_type.normal, ePO_param.InvincibleTime) * _invinsible_time_ratio;
+				if(global.difficulty == Difficulty.VeryHard){
+					//無敵時間の軽減
+					_invinsible_time *= HARD_INVINCIBLE_TIME_RATIO;
+				}
+				
 				set_invincible_time(_invinsible_time);
 				lagging_start(20, ac_lagRatio);
 				se_play(SE_DAMAGED, 80, 1);

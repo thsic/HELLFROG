@@ -22,4 +22,12 @@ draw_circle(x, y, weapon_range, true);
 draw_set_alpha(_alpha2);
 draw_circle(x, y, weapon_range, false);
 
+if(curse_enable){
+	draw_set_alpha(abs(sin(global.game_time/8)));
+	draw_set_color(passive_range_color);
+	var _x = x+irandom_range(-4, 4);
+	var _y = y+irandom_range(-4, 4);
+	draw_line(_x, _y, o_player.x, o_player.y);
+}
+
 draw_set_default();

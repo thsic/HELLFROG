@@ -129,7 +129,7 @@ case TITLESCREEN.DIFFICULTY:
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_middle);
 	draw_set_font(fo_maruMonica);
-	draw_set_color(diff_text_color);
+	draw_set_color(diff_text_onmouse_color);
 	
 	if(global.language == language.English){
 		var _text = "Select Difficulty";
@@ -184,7 +184,7 @@ case TITLESCREEN.DIFFICULTY:
 				}
 				draw_set_halign(fa_middle);
 				draw_set_font(fo_maruMonica);
-				draw_set_color(diff_text_onmouse_color);
+				draw_set_color(_text_color);
 				draw_text(_x, _top, "NORMAL");
 				
 				draw_set_color(_text_color);
@@ -218,7 +218,7 @@ case TITLESCREEN.DIFFICULTY:
 				
 				draw_set_font(fo_maruMonica);
 				
-				draw_set_color(diff_text_color);
+				draw_set_color(_text_color);
 				draw_set_halign(fa_middle);
 				draw_text(_x, _top, _text.difficulty);
 				

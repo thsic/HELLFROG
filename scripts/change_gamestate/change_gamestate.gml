@@ -6,7 +6,7 @@ function change_gamestate(argument0) {
 	if(o_gameMgr.lag_time > 0 or room_speed != 60){
 		o_gameMgr.lag_time = 0;
 		room_speed = 60
-		lag_enable = false;
+		o_gameMgr.lag_enable = false;
 	}
 	
 	

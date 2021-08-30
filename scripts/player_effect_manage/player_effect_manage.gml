@@ -63,12 +63,18 @@ function player_effect_manage(){
 	
 	#region 呪い
 	
+	if(global.difficulty == Difficulty.Normal){
+		var _curse_point_limit = CURSE_POINT_LIMIT;
+	}
+	else{
+		var _curse_point_limit = HARD_CURSE_POINT_LIMIT;
+	}
 	
 	if(add_curse_point){
 		var _curse_max_level = 16;
-		curse_point = clamp(curse_point + 1, 0, CURSE_POINT_LIMIT)
+		curse_point = clamp(curse_point + 1, 0, _curse_point_limit)
 		
-		if(curse_point >= CURSE_POINT_LIMIT
+		if(curse_point >= _curse_point_limit
 		and curse_level < _curse_max_level){
 			//curse_pointが一定たまったらレベルあげる
 			curse_level++;
@@ -77,12 +83,12 @@ function player_effect_manage(){
 	}
 	else{
 		//呪いフィールドにいないときは下がってく
-		curse_point = clamp(curse_point - 2, 0, CURSE_POINT_LIMIT);
+		curse_point = clamp(curse_point - 2, 0, _curse_point_limit);
 		
 		if(curse_point <= 0
 		and curse_level > 0){
 			curse_level--;
-			curse_point = CURSE_POINT_LIMIT;
+			curse_point = _curse_point_limit;
 		}
 	}
 	add_curse_point = false;

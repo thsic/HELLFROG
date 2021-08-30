@@ -38,6 +38,10 @@ function player_cursed_damage(){
 	//アシストモードのダメージ軽減/増加
 	_damage_per_second *= global.dot_damage;
 	
+	if(global.difficulty == Difficulty.VeryHard){
+		_damage_per_second *= HARD_DOT_DAMAGE_RATIO;
+	}
+	
 	var _damage = _damage_per_second/60;
 	
 	damage_to_player(_damage, 0, o_player.player_direction+180);

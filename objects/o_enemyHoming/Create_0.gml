@@ -15,3 +15,7 @@ used_blink = false;
 if(room == r_stage17){
 	movement_speed = 4;
 }
+
+if(global.difficulty == Difficulty.VeryHard){
+	movement_speed = 2;
+}

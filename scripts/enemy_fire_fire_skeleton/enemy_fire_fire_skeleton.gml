@@ -8,10 +8,18 @@ function enemy_fire_fire_skeleton(){
 		var _marker_length_max = 92;
 	}
 	else{
-		var _bullet_num = 6;
-		var _delay_time = 5;
-		var _blast_size = 16;
-		var _marker_length_max = 32;
+		if(global.difficulty == Difficulty.VeryHard){
+			var _bullet_num = 9;
+			var _delay_time = 4;
+			var _blast_size = 16;
+			var _marker_length_max = 48;
+		}
+		else{
+			var _bullet_num = 6;
+			var _delay_time = 5;
+			var _blast_size = 16;
+			var _marker_length_max = 32;
+		}
 	}
 	for(var i=0; i<_bullet_num; i++){
 		e_bullet_create_blast(o_enemyBulletBlast, x, y+8, _blast_size, _delay_time*i, id, _marker_length_max, fire_damage);
