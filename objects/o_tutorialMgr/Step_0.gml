@@ -3,6 +3,8 @@ if(global.gamestate == gamestate.event){
 	if(fadeout_time > 0){
 		fadeout_time--;
 		fade_alpha = (fadeout_time / fadeout_time_default);
+		fade_alpha = ceil(fade_alpha*6)/6;
+		
 		global.gamestop = true;
 		global.playerstop = true;
 		o_player.now_shotgun = eG_type.Empty;

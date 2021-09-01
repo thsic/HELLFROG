@@ -9,6 +9,8 @@ or now_screen == TITLESCREEN.DIFFICULTY){
 	if(pressed_button != -1){
 		_alpha = 1 - fadein_time / fadein_time_base;
 	}
+	
+	_alpha = ceil(_alpha*6)/6;
 
 	draw_set_alpha(_alpha);
 	draw_set_color(c_black);

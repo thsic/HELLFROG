@@ -7,6 +7,7 @@ if(now_screen == TITLESCREEN.MAIN){
 	
 	if(fade_time > 0){
 		_alpha = 1-fade_time / fade_time_base;
+		_alpha = ceil(_alpha*6)/6;
 	}
 	else{
 		var _alpha = 1;

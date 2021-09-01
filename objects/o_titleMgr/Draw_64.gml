@@ -202,7 +202,7 @@ case TITLESCREEN.DIFFICULTY:
 					difficulty : "VERY HARD",
 					invincibility_time : string(HARD_INVINCIBLE_TIME_RATIO*100)+"% Invincibility Time",
 					dot_damage : string(HARD_DOT_DAMAGE_RATIO*100)+"% Dot Damage",
-					enemy_bullet : "Enemy attacks are difficult to avoid",
+					enemy_bullet : "Enemy attacks are difficult to dodge",
 					more_enemy : "More Enemies"
 				}
 				var _text_jp ={

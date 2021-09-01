@@ -397,6 +397,7 @@
     {"id":{"name":"draw_player_effect_ui","path":"scripts/draw_player_effect_ui/draw_player_effect_ui.yy",},"order":22,},
     {"id":{"name":"debug_draw_rectnagle","path":"scripts/debug_draw_rectnagle/debug_draw_rectnagle.yy",},"order":3,},
     {"id":{"name":"a_popGoal","path":"sounds/a_popGoal/a_popGoal.yy",},"order":4,},
+    {"id":{"name":"save_achievement","path":"scripts/save_achievement/save_achievement.yy",},"order":37,},
     {"id":{"name":"s_hellgun","path":"sprites/s_hellgun/s_hellgun.yy",},"order":17,},
     {"id":{"name":"fo_stageTitleNumber","path":"fonts/fo_stageTitleNumber/fo_stageTitleNumber.yy",},"order":13,},
     {"id":{"name":"o_uiMgr","path":"objects/o_uiMgr/o_uiMgr.yy",},"order":4,},

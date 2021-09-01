@@ -23,9 +23,27 @@ function set_damage_ratio(){
 	}
 	else{
 		//ヘルモード
-		global.enemy_damage = HELL_ENEMY_DAMAGE_RATIO;
-		global.dot_damage = HELL_DOT_DAMAGE_RATIO;
-		global.player_damage = HELL_PLAYER_DAMAGE_RATIO;
+		if(global.hell_enemy_damage_enable){
+			global.enemy_damage = HELL_ENEMY_DAMAGE_RATIO;
+		}
+		else{
+			global.enemy_damage = 1;
+		}
+		if(global.hell_dot_damage_enable){
+			global.dot_damage = HELL_DOT_DAMAGE_RATIO;
+		}
+		else{
+			global.dot_damage = 1;
+		}
+		if(global.hell_player_damage_enable){
+			global.player_damage = HELL_PLAYER_DAMAGE_RATIO;
+		}
+		else{
+			global.player_damage = 1;
+		}
+		
+		
+		
 	}
 	
 	//アシストモードヘルモードにかかわらずチュートリアルではレシオがいろいろちがう

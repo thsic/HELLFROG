@@ -42,7 +42,7 @@ for(var i=0; i<_achievement_num; i++){
 	and global.achievement_param[# i, ACHIEVEMENT_PARAM.ACQUIRED] == false){
 		switch(i){
 		case ACHIEVEMENT_NAME.REACH_HELLCAVE:
-			if(global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.HELLCAVE){
+			if(room == r_stage1){
 				array_push(_get_achievement_list, i);
 			}
 		break
@@ -69,6 +69,7 @@ for(var i=0; i<_achievement_num; i++){
 		case ACHIEVEMENT_NAME.CLEAR_NORMAL:
 			if(global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.VOID
 			and instance_exists(o_clearGameScene)){
+				global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY, ACHIEVEMENT_PARAM.DRAWDESCRIPTION] = true;
 				array_push(_get_achievement_list, i);
 			}
 		break
@@ -81,6 +82,8 @@ for(var i=0; i<_achievement_num; i++){
 		break
 		case ACHIEVEMENT_NAME.FIND_HELLMODE:
 			if(global.assist_mode == -1){
+				global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_HELLMODE, ACHIEVEMENT_PARAM.DRAWDESCRIPTION] = true;
+				global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.DRAWDESCRIPTION] = true;
 				array_push(_get_achievement_list, i);
 			}
 		break
@@ -111,7 +114,7 @@ for(var i=0; i<_achievement_num; i++){
 			var _other_achievement_acquired = true;
 			for(var j=0; j<_achievement_num; j++){
 				if(global.achievement_param[# j, ACHIEVEMENT_PARAM.ENABLE]){
-					if(global.achievement_param[# j, ACHIEVEMENT_PARAM.ACQUIRED]){
+					if(!global.achievement_param[# j, ACHIEVEMENT_PARAM.ACQUIRED]){
 						//取得可能な実績を取得していない場合はfalse
 						var _other_achievement_acquired = false;
 					}
@@ -136,16 +139,24 @@ for(var i=0; i<_length; i++){
 	//実績の取得
 	var _achievement = array_pop(_get_achievement_list);
 	global.achievement_param[# _achievement, ACHIEVEMENT_PARAM.ACQUIRED] = true;
-	array_push(draw_achievement_window_queue, _achievement);
-	achievement_window_time = achievement_window_time_base;
+	global.achievement_param[# _achievement, ACHIEVEMENT_PARAM.DRAWDESCRIPTION] = true;
+	
+	var _array_length = array_length(draw_achievement_window_queue);
+	for(var i=0; i<_array_length; i++){
+		if(draw_achievement_window_queue[i] == noone){
+			draw_achievement_window_queue[i] = _achievement;
+			achievement_window_time = achievement_window_time_base;
+			break;
+		}
+	}
 }
 
 now_draw_achievement_window = noone;
 
 //実績取得ウィンドウの描画
 var _length = array_length(draw_achievement_window_queue);
-if(_length > 0
-and achievement_window_time > 0){
+
+if(draw_achievement_window_queue[0] != noone){
 	now_draw_achievement_window = draw_achievement_window_queue[0];
 	
 	if(achievement_window_time <= 0){
@@ -153,9 +164,10 @@ and achievement_window_time > 0){
 		for(var i=0; i<_length; i++){
 			if(i > 0){
 				draw_achievement_window_queue[i-1] = draw_achievement_window_queue[i];
-				achievement_window_time = achievement_window_time_base;
 			}
+			draw_achievement_window_queue[i] = noone;
 		}
+		achievement_window_time = achievement_window_time_base;
 	}
 	else{
 		achievement_window_time--;

@@ -30,6 +30,12 @@ function damage_to_player(_damage, _invinsible_time_ratio, _gameover_knockback_d
 			global.player_hp = 1;
 		}
 		
+		//ライフスティールオーブあるときはHPが1残る
+		if(instance_exists(o_lifestealOrb)
+		and global.player_hp <= 0){
+			global.player_hp = 1;
+		}
+		
 		if(is_gameover() == true){
 			gameover_script(_gameover_knockback_dir);
 		}

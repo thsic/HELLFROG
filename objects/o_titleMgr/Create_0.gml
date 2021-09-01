@@ -18,7 +18,7 @@ put_stage_param();
 var _grid_width = 20;
 var _button_width = room_width/2;
 var _button_height = room_height/16;
-var _button_y_offset = room_height/5*3;
+var _button_y_offset = room_height/7*4;
 
 var _language_button_w = room_width*0.4;
 var _diff_button_h = room_height*0.42;
@@ -106,8 +106,8 @@ else{
 }
 
 
-fade_time = 240;
-fade_time_base = 180;
+fade_time = 180;
+fade_time_base = 120;
 
 fadein_time = 60;
 fadein_time_base = 60

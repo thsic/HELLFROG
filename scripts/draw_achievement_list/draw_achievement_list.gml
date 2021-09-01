@@ -7,8 +7,8 @@ function draw_achievement_list(){
 	
 	var _achievement_num = ds_grid_width(global.achievement_param);
 	var _sprite_size = sprite_get_width(s_achievement);
-	var _icon_x_offset = 2+_sprite_size;
-	var _icon_y_offset = global.camera_height - _sprite_size;
+	var _icon_x_offset = 2+_sprite_size/2;
+	var _icon_y_offset = global.camera_height - _sprite_size/2 - 2;
 	for(var i=0; i<_achievement_num; i++){
 		if(global.achievement_param[# i, ACHIEVEMENT_PARAM.ENABLE]){
 			var _icon_x = _icon_x_offset + i * _sprite_size + 2;
@@ -31,28 +31,26 @@ function draw_achievement_list(){
 			}
 			
 			if(is_in_place(_icon_x-_sprite_size/2, _icon_y-_sprite_size/2,
-			_icon_x+_sprite_size/2, _icon_y+_sprite_size/2, global.vmouse_x, global.vmouse_y)){
+			_icon_x+_sprite_size/2+2, _icon_y+_sprite_size/2+2, global.vmouse_x, global.vmouse_y)){
 				_on_mouse_icon = i;
 				_on_mouse_icon_x = _icon_x;
 				_on_mouse_icon_y = _icon_y;
 				
 			}
 		}
-		else{
-			draw_circle(_icon_x_offset, _icon_y_offset, 5+i*3, true);
-		}
 	}
 	
 	if(_on_mouse_icon != noone){
-		var _win_w = 120;
-		var _win_h = 32;
+		var _win_w = 130;
+		var _win_h = 40;
 		var _win_x = _on_mouse_icon_x-_win_w/2;
 		var _win_y = _on_mouse_icon_y-_win_h-_sprite_size/2;
-		draw_circle(_win_x, _win_y, 10, false);
 		
-		var _window_color = c_gray;
+		_win_x = clamp(_win_x, 0, global.camera_width-_win_w);
+		
+		var _window_color = c_black;
 		var _title_color = c_white;
-		var _description_color = c_white;
+		var _description_color = c_gray;
 		
 		draw_achievement_window(_on_mouse_icon, _win_x, _win_y, _win_w, _win_h,
 		_window_color, _window_color, _title_color, _description_color);
