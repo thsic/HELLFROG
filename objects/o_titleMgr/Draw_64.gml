@@ -187,7 +187,7 @@ case TITLESCREEN.DIFFICULTY:
 					var _text = _text_jp;
 				}
 				draw_set_halign(fa_middle);
-				draw_set_font(fo_maruMonica);
+				draw_set_font(fo_kagurazaka12);
 				draw_set_color(_text_color);
 				draw_text(_x, _top, "NORMAL");
 				
@@ -220,7 +220,7 @@ case TITLESCREEN.DIFFICULTY:
 					var _text = _text_jp;
 				}
 				
-				draw_set_font(fo_maruMonica);
+				draw_set_font(fo_kagurazaka12);
 				
 				draw_set_color(_text_color);
 				draw_set_halign(fa_middle);

@@ -301,7 +301,7 @@ case Menustate.AssistMode:
 		
 	}
 	draw_set_alpha(1);
-	draw_set_font(fo_assistMode);
+	draw_set_font(fo_misakiGothic);
 	
 	var _button_name;
 	_button_name[0] = ButtonName.EnemyDamage;
@@ -468,7 +468,12 @@ case Menustate.AssistMode:
 		}
 		else{
 			//ヘルモードじゃないときは薄くバーを描画
-			draw_set_alpha(0.07);
+			if(room != r_title){
+				draw_set_alpha(0.115);
+			}
+			else{
+				draw_set_alpha(0.07);
+			}
 			var _hell_bar_x = _x - hell_mode_pixel;
 			
 			draw_set_color(hell_mode_bar_color_under);
@@ -529,15 +534,21 @@ case Menustate.AssistMode:
 	}
 	draw_text(_x, _text_y, _text);
 	
-	if(global.assist_level_max){
+	//実績獲得できません　テキスト表示
+	if(global.assist_level_max
+	or global.used_super_assistmode){
 		var _x = button_param[# ButtonName.MaxLevelText, ButtonParam.X];
 		var _y = button_param[# ButtonName.MaxLevelText, ButtonParam.Y];
 		var _h = button_param[# ButtonName.MaxLevelText, ButtonParam.Height];
 		var _text = button_param[# ButtonName.MaxLevelText, _text_mode];
 		var _text_y = _y+_h/2;
 		
+		if(global.assist_mode == -1){
+			_text_y += 8;
+		}
+		
 		var _color = assist_mode_max_level_text_color;
-		draw_set_font(fo_assistMode);
+		draw_set_font(fo_misakiGothic);
 		draw_set_halign(fa_middle);
 		draw_set_valign(fa_middle);
 		draw_set_color(_color);

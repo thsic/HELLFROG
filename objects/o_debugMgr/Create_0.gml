@@ -11,6 +11,6 @@ global.debug_invincible_mode = false;
 global.debug_stop_curse_mode = false;
 global.debug_wall_collision = false;
 
-if(!debug_mode and !DEBUGMODE){
+if(!debug_mode){
 	instance_destroy();
 }

@@ -1,5 +1,5 @@
 //
-function draw_achievement_window(_achiev_id, _x, _y, _w, _h, _win_c1, _win_c2, _title_col, _descrip_col){
+	function draw_achievement_window(_achiev_id, _x, _y, _w, _h, _win_c1, _win_c2, _title_col, _descrip_col){
 	if(_achiev_id != noone){
 		if(global.game_time mod 12 < 6){
 			var _window_color = _win_c1;
@@ -27,12 +27,13 @@ function draw_achievement_window(_achiev_id, _x, _y, _w, _h, _win_c1, _win_c2, _
 		var _icon_y = _window_y+_window_h/2;
 		var _subimage = global.achievement_param[# _achievement_id, ACHIEVEMENT_PARAM.SUBIMAGE];
 		
-		draw_sprite(s_achievementFrame, 0, _icon_x, _icon_y);
 		//未取得だと灰色に
 		if(global.achievement_param[# _achievement_id, ACHIEVEMENT_PARAM.ACQUIRED]){
+			draw_sprite(s_achievementFrame, 1, _icon_x, _icon_y);
 			draw_sprite(s_achievement, _subimage, _icon_x, _icon_y);
 		}
 		else{
+			draw_sprite(s_achievementFrame, 0, _icon_x, _icon_y);
 			shader_set(sh_decrementSaturation);
 			var _sh_saturation_handle = shader_get_uniform(sh_decrementSaturation, "saturation");
 			shader_set_uniform_f(_sh_saturation_handle, 0.0);
@@ -63,7 +64,7 @@ function draw_achievement_window(_achiev_id, _x, _y, _w, _h, _win_c1, _win_c2, _
 
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
-		draw_set_font(fo_maruMonica);
+		draw_set_font(fo_kagurazaka12);
 
 		draw_set_color(_title_col);
 		draw_text(_title_x, _title_y, _title);
@@ -71,7 +72,7 @@ function draw_achievement_window(_achiev_id, _x, _y, _w, _h, _win_c1, _win_c2, _
 		var _description_x = _title_x;
 		var _description_y = _title_y+16;
 		draw_set_color(_descrip_col);
-		draw_set_font(fo_assistMode);
+		draw_set_font(fo_misakiGothic);
 		
 		_description = string_replace(_description, "@", chr(13));
 		_description = string_replace(_description, "@", chr(13));

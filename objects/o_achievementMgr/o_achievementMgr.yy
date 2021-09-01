@@ -23,7 +23,7 @@
     {"isDnD":false,"eventNum":75,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [
-    {"varType":1,"value":"300","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"achievement_window_time_base","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":1,"value":"180","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"achievement_window_time_base","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF001166","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"window_color1","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF0C517F","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"window_color2","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FFFFFFFF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"title_text_color","tags":[],"resourceType":"GMObjectProperty",},

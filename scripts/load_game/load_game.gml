@@ -20,7 +20,18 @@ function load_game(_change_room){
 		global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_HELLMODE, ACHIEVEMENT_PARAM.GETTABLE] = _load_entity.gettable_hellmode_clear;
 		global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.GETTABLE] = _load_entity.gettable_truehell;
 		global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY, ACHIEVEMENT_PARAM.GETTABLE] = _load_entity.gettable_no_movekey_clear;
-			
+		
+		//ロードしたデータがアシストレベルmaxをしたデータだった場合実績取得不可になる
+		global.used_super_assistmode = _load_entity.used_super_assistmode;
+		if(global.used_super_assistmode){
+			var _length = ds_grid_width(global.achievement_param);
+			for(var i=0; i<_length; i++){
+				if(global.achievement_param[# i, ACHIEVEMENT_PARAM.ENABLE]){
+					global.achievement_param[# i, ACHIEVEMENT_PARAM.GETTABLE] = false;
+				}
+			}
+		}
+		
 		show_debug_message("gamedataをロードしました！" +_string);
 		
 		if(_change_room){

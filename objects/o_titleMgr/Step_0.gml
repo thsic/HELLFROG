@@ -1,5 +1,6 @@
 
 global.game_time++;
+global.gamestop = true;
 
 global.vmouse_x = mouse_x;
 global.vmouse_y = mouse_y;
@@ -37,6 +38,7 @@ case TITLESCREEN.SETLANGUAGE:
 	and on_mouse_button != -1){
 		pressed_button = on_mouse_button;
 		now_screen = TITLESCREEN.MAIN;
+		save_config();
 	}
 	
 	switch(pressed_button){
@@ -110,14 +112,22 @@ case TITLESCREEN.MAIN:
 		fade_time--;
 	}
 	
-	if(keyboard_check(vk_delete)
-	and keyboard_check(vk_alt)){
-		if(file_exists("save")){
+	//deleteキー+A or C or Gでそれぞれデータ削除
+	if(keyboard_check(vk_delete)){
+		if(keyboard_check(ord("A"))
+		and file_exists("achievements")){
+			file_delete("achievements");
+			se_play(a_damaged, 95, 1);
+		}
+		if(keyboard_check(ord("G"))
+		and file_exists("save")){
 			file_delete("save");
 			se_play(a_damaged, 95, 1);
 		}
-		if(file_exists("config")){
+		if(keyboard_check(ord("C"))
+		and file_exists("config")){
 			file_delete("config");
+			se_play(a_damaged, 95, 1);
 		}
 	}
 break

@@ -15,5 +15,6 @@ function reset_game(){
 	
 	save_game();
 	save_config();
+	save_achievement();
 	room_goto(r_boot);
 }

@@ -12,7 +12,7 @@ function save_game(){
 		gettable_hellmode_clear : global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_HELLMODE, ACHIEVEMENT_PARAM.GETTABLE],
 		gettable_truehell : global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.GETTABLE],
 		gettable_no_movekey_clear : global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY, ACHIEVEMENT_PARAM.GETTABLE],
-		
+		used_super_assistmode : global.used_super_assistmode,
 	}
 	
 	array_push(_savedata, _save_entity);

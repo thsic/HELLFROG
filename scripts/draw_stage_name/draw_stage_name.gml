@@ -8,7 +8,7 @@ function draw_stage_name(){
 		draw_set_color(c_white);
 		draw_set_valign(fa_top);
 		draw_set_halign(fa_middle);
-		draw_set_font(fo_hpUi);
+		draw_set_font(fo_dougenzaka16);
 	
 		if(global.language == language.English){
 			var _stage_name = string(global.now_stage_param[STAGEPARAM.NAMEEN]);

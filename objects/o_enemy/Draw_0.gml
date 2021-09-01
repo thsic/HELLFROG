@@ -239,7 +239,7 @@ if(effect_list[| EnemyEffect.AltarBuff] > 0){
 	draw_set_color(c_white);
 	draw_set_halign(fa_middle);
 	draw_set_valign(fa_bottom);
-	draw_set_font(fo_assistMode);
+	draw_set_font(fo_misakiGothic);
 	
 	draw_text(x, bbox_top-12, "ATK x1.5");
 }

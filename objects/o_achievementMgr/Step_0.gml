@@ -149,6 +149,9 @@ for(var i=0; i<_length; i++){
 			break;
 		}
 	}
+	
+	//セーブ
+	save_achievement();
 }
 
 now_draw_achievement_window = noone;
@@ -171,6 +174,19 @@ if(draw_achievement_window_queue[0] != noone){
 	}
 	else{
 		achievement_window_time--;
+	}
+}
+
+//アシストモードをレベルmaxにした場合実績取得不可に
+if(global.assist_level_max
+and !global.gamestop){
+	global.used_super_assistmode = true;
+	var _length = ds_grid_width(global.achievement_param);
+	
+	for(var i=0; i<_length; i++){
+		if(global.achievement_param[# i, ACHIEVEMENT_PARAM.ENABLE]){
+			global.achievement_param[# i, ACHIEVEMENT_PARAM.GETTABLE] = false;
+		}
 	}
 }
 

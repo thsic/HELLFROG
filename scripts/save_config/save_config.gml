@@ -1,6 +1,7 @@
 //
 function save_config(){
 	var _savedata = array_create(0);
+	
 	var _save_entity =
 	{
 		language_setting_done : global.language_setting_done,
@@ -21,7 +22,4 @@ function save_config(){
 	buffer_write(_buffer, buffer_string, _string);
 	buffer_save(_buffer, "config");
 	buffer_delete(_buffer);
-
-	//show_debug_message("configがセーブされました！"+ _string);
-	
 }

@@ -1,6 +1,6 @@
 
 if(keyboard_check_pressed(ord("R"))){
-	game_restart();
+	room_goto(r_boot);
 }
 if(keyboard_check_pressed(ord("L"))){
 	/*if(!debug_window){

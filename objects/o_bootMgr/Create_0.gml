@@ -33,6 +33,7 @@ global.hell_player_damage_enable = false;
 
 global.true_hell = false;
 global.assist_level_max = false;
+global.used_super_assistmode = false;
 
 
 
@@ -44,6 +45,14 @@ global.timer_enable = false;
 
 //設定をロード
 load_config();
+//実績をロード
+load_achievement();
+
+//実績を取得可能にする
+var _achievement_num = ds_grid_width(global.achievement_param);
+for(var i=0; i<_achievement_num; i++){
+	global.achievement_param[# i, ACHIEVEMENT_PARAM.GETTABLE] = true;
+}
 
 room_goto(FIRST_ROOM);
 

@@ -448,7 +448,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "fo_assistMode",
+  "name": "fo_misakiGothic",
   "tags": [],
   "resourceType": "GMFont",
 }

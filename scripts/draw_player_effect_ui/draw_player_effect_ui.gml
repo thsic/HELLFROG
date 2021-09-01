@@ -76,7 +76,7 @@ function draw_player_effect_ui(){
 	
 	
 	if(_order > 0){
-		draw_set_font(fo_effectUi);
+		draw_set_font(fo_misakiGothic);
 		draw_set_halign(fa_left);
 		draw_set_valign(fa_top);
 	
