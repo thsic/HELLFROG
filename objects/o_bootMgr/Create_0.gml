@@ -2,9 +2,10 @@ set_default_keyconfig();//キーコンフィグ設定
 set_window_size(WINDOW_SIZE_MAGNIFICATION)
 instance_create_layer(0, 0, "Instances", o_debugMgr);
 instance_create_layer(0, 0, "Instances", o_soundMgr);
+instance_create_layer(0, 0, "Instances", o_achievementMgr);
 text();
 stage_param();
-
+put_stage_param();
 
 
 global.game_time = 0;
@@ -32,6 +33,7 @@ global.hell_player_damage_enable = false;
 
 global.true_hell = false;
 global.assist_level_max = false;
+
 
 
 //オプション

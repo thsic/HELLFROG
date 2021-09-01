@@ -15,6 +15,11 @@ function load_game(_change_room){
 		global.time_second = _load_entity.time_second;
 		global.death_count = _load_entity.death_count;
 		global.difficulty = _load_entity.difficulty;
+		
+		//実績関連
+		global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_HELLMODE, ACHIEVEMENT_PARAM.GETTABLE] = _load_entity.gettable_hellmode_clear;
+		global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.GETTABLE] = _load_entity.gettable_truehell;
+		global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY, ACHIEVEMENT_PARAM.GETTABLE] = _load_entity.gettable_no_movekey_clear;
 			
 		show_debug_message("gamedataをロードしました！" +_string);
 		

@@ -127,6 +127,9 @@ case Menustate.Main:
 	draw_set_font(fo_menuBig);
 	draw_text(_x, global.camera_height / 12, "PAUSE");
 	
+	//実績リスト描画
+	draw_achievement_list();
+	
 	draw_set_default();
 break
 case Menustate.Option:

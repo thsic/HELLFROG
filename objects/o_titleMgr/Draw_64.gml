@@ -118,6 +118,10 @@ case TITLESCREEN.MAIN:
 	var _logo_x = room_width/2;
 	var _logo_y = room_height/5*2;
 	draw_text(_logo_x, _logo_y, "HELLFROG");
+	
+	//実績リスト描画
+	draw_achievement_list();
+	
 	draw_set_default();
 	
 break;

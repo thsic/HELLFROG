@@ -10,8 +10,10 @@ global.camera_y = y+_ch/2
 global.gamestate = gamestate.main;
 
 with(instance_create_layer(0, 0, "Instances", o_menuMgr)){
-	//state = Menustate.Closing;
+	state = Menustate.Closing;
 }
+
+put_stage_param();
 
 var _grid_width = 20;
 var _button_width = room_width/2;

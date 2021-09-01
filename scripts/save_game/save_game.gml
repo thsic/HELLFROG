@@ -8,6 +8,11 @@ function save_game(){
 		time_second : global.time_second,
 		death_count : global.death_count,
 		difficulty : global.difficulty,
+		
+		gettable_hellmode_clear : global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_HELLMODE, ACHIEVEMENT_PARAM.GETTABLE],
+		gettable_truehell : global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.GETTABLE],
+		gettable_no_movekey_clear : global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY, ACHIEVEMENT_PARAM.GETTABLE],
+		
 	}
 	
 	array_push(_savedata, _save_entity);
