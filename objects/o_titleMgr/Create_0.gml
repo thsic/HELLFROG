@@ -124,7 +124,7 @@ part_type_life(pt_type, 400, 400);
 part_type_speed(pt_type, 0.6, 1.2, 0, 0);
 part_type_sprite(pt_type, s_whiteCircle, 0, 0, 0);
 part_type_direction(pt_type, 80, 100, 0, 0.1);
-part_type_size(pt_type, 0.5, 0.9, -0.0012, 0);
+part_type_size(pt_type, 0.8, 1.2, -0.0018, 0);
 
 repeat(400){
 	var _x = irandom_range(0, room_width);

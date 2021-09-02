@@ -184,7 +184,7 @@ break
 }
 
 var _rnd = random(1);
-var _num = 50;
+var _num = 25;
 
 if(_rnd < 0.5){
 	repeat(_num){

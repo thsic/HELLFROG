@@ -132,7 +132,7 @@ case TITLESCREEN.DIFFICULTY:
 	draw_rectangle(0, 0, room_width, room_height, false);
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_middle);
-	draw_set_font(fo_maruMonica);
+	draw_set_font(fo_kagurazaka12);
 	draw_set_color(diff_text_onmouse_color);
 	
 	if(global.language == language.English){

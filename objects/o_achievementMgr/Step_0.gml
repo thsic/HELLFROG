@@ -3,7 +3,8 @@ var _get_achievement_list = array_create(0);
 var _achievement_num = ds_grid_width(global.achievement_param);
 
 if(instance_exists(o_gameMgr)
-and !global.gamestop){
+and !global.gamestop
+and global.now_stage_param[STAGEPARAM.STAGETYPE] != STAGETYPE.TUTORIAL){
 	//実績取得不可にする処理
 	
 	//ヘルモードでクリア
@@ -17,7 +18,7 @@ and !global.gamestop){
 		if(global.assist_mode != -1
 		or global.true_hell == false
 		or global.difficulty != Difficulty.VeryHard){
-			global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_HELLMODE, ACHIEVEMENT_PARAM.GETTABLE] = false;
+			global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.GETTABLE] = false;
 		}
 	}
 	
@@ -103,8 +104,7 @@ for(var i=0; i<_achievement_num; i++){
 			}
 		break
 		case ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY:
-			if(global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.VOID
-			and instance_exists(o_clearGameScene)){
+			if(global.now_stage_param[STAGEPARAM.STAGETYPE] == STAGETYPE.HELLMOUNTAIN){
 				array_push(_get_achievement_list, i);
 			}
 		break

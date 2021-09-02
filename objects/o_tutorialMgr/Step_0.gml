@@ -43,7 +43,7 @@ if(draw_move_ui){
 	}
 	if(!hook_enable){
 		//動かないとフックは撃てない
-		o_player.hookshot_cooldown = 1;
+		//o_player.hookshot_cooldown = 1;
 		o_player.now_shotgun = eG_type.Empty;
 	}
 	

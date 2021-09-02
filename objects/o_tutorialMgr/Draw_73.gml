@@ -8,7 +8,7 @@ var _ui_y = _py+30//-10;
 if(draw_move_ui){
 	draw_set_color(c_white);
 	draw_set_alpha(1);
-	draw_set_font(fo_maruMonica);
+	draw_set_font(fo_kagurazaka12);
 	draw_set_valign(fa_middle)
 	var _text = global.ds_text[# TEXT.TUTORIAL_MOVE, global.language];
 	
@@ -20,7 +20,7 @@ if(draw_move_ui){
 if(draw_hook_ui){
 	draw_set_color(c_white);
 	draw_set_alpha(1);
-	draw_set_font(fo_maruMonica);
+	draw_set_font(fo_kagurazaka12);
 	draw_set_valign(fa_middle)
 	var _text = global.ds_text[# TEXT.TUTORIAL_HOOK, global.language];
 	
@@ -31,7 +31,7 @@ if(draw_hook_ui){
 if(draw_shot_ui){
 	draw_set_color(c_white);
 	draw_set_alpha(1);
-	draw_set_font(fo_maruMonica);
+	draw_set_font(fo_kagurazaka12);
 	draw_set_valign(fa_middle)
 	var _text = global.ds_text[# TEXT.TUTORIAL_SHOT, global.language];
 	
@@ -42,7 +42,7 @@ if(draw_shot_ui){
 if(draw_kill_ui){
 	draw_set_color(c_white);
 	draw_set_alpha(1);
-	draw_set_font(fo_maruMonica);
+	draw_set_font(fo_kagurazaka12);
 	draw_set_valign(fa_middle)
 	var _text = global.ds_text[# TEXT.TUTORIAL_KILL, global.language];
 	
@@ -51,7 +51,7 @@ if(draw_kill_ui){
 	draw_text(_ui_x+20, _ui_y, _text);
 }
 
-draw_set_font(fo_maruMonica);
+draw_set_font(fo_kagurazaka12);
 
 draw_set_halign(fa_middle);
 draw_set_valign(fa_top);

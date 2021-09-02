@@ -27,6 +27,10 @@
 		var _icon_y = _window_y+_window_h/2;
 		var _subimage = global.achievement_param[# _achievement_id, ACHIEVEMENT_PARAM.SUBIMAGE];
 		
+		//黒の下地
+		draw_set_color(c_black);
+		draw_rectangle(_icon_x-8, _icon_y-8, _icon_x+8, _icon_y+8, false);
+		
 		//未取得だと灰色に
 		if(global.achievement_param[# _achievement_id, ACHIEVEMENT_PARAM.ACQUIRED]){
 			draw_sprite(s_achievementFrame, 1, _icon_x, _icon_y);

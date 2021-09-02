@@ -30,6 +30,7 @@ function player_param_manage() {
 	
 	
 	//溶岩
+	
 	var _frame = floor(room_speed / LAVA_TICKS_PER_SECOND);
 	if(global.game_time mod _frame == 0
 	and !inertia_enable
@@ -55,6 +56,10 @@ function player_param_manage() {
 		//ダメージ床踏んでいる
 		if(_on_damage_field){
 			var _damage = LAVA_DAMAGE * global.dot_damage;
+			
+			if(global.difficulty == Difficulty.VeryHard){
+				_damage *= HARD_DOT_DAMAGE_RATIO;
+			}
 			damage_to_player(_damage, 0, player_direction+180);
 			
 			o_uiMgr.popup_damage += _damage;

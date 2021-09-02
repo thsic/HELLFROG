@@ -1,6 +1,7 @@
 //
 function draw_achievement_list(){
 	
+	var _greenback_alpha = abs(cos(global.game_time/24)/2);
 	var _on_mouse_icon = noone;
 	var _on_mouse_icon_x = 0;
 	var _on_mouse_icon_y = 0;
@@ -14,9 +15,41 @@ function draw_achievement_list(){
 			var _icon_x = _icon_x_offset + i * _sprite_size + 2;
 			var _icon_y = _icon_y_offset;
 			
+			
+			var _back_color = c_black;
+			var _alpha = 1;
+			if(room != r_title){
+				//その実績が取得可能ならアイコンの背景が緑色になる
+				switch(i){
+				case ACHIEVEMENT_NAME.CLEAR_HELLMODE:
+					if(global.achievement_param[# i, ACHIEVEMENT_PARAM.GETTABLE]){
+						_back_color = 2065156;
+						_alpha = _greenback_alpha;
+					}
+				break
+				case ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE:
+					if(global.achievement_param[# i, ACHIEVEMENT_PARAM.GETTABLE]){
+						_back_color = 2065156;
+						_alpha = _greenback_alpha;
+					}
+				break
+				case ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY:
+					if(global.achievement_param[# i, ACHIEVEMENT_PARAM.GETTABLE]){
+						_back_color = 2065156;
+						_alpha = _greenback_alpha;
+					}
+				break
+				}
+			}
+			draw_set_color(_back_color);
+			draw_set_alpha(_alpha);
+			draw_rectangle(_icon_x-8, _icon_y-8, _icon_x+7, _icon_y+8, false);
+			
 			var _gray_icon = !global.achievement_param[# i, ACHIEVEMENT_PARAM.ACQUIRED];
 			var _subimage = global.achievement_param[# i, ACHIEVEMENT_PARAM.SUBIMAGE];
 			
+			draw_set_color(c_white);
+			draw_set_alpha(1);
 			if(_gray_icon){
 				shader_set(sh_decrementSaturation);
 				var _sh_saturation_handle = shader_get_uniform(sh_decrementSaturation, "saturation");
@@ -63,7 +96,5 @@ function draw_achievement_list(){
 		_window_color, _window_color, _title_color, _description_color);
 		
 	}
-	
-	
 	
 }
