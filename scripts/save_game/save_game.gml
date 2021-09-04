@@ -13,6 +13,8 @@ function save_game(){
 		gettable_truehell : global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.GETTABLE],
 		gettable_no_movekey_clear : global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY, ACHIEVEMENT_PARAM.GETTABLE],
 		used_super_assistmode : global.used_super_assistmode,
+		
+		lic : "セーブファイルの暗号化を解いちゃうなんて！？！！？",
 	}
 	
 	array_push(_savedata, _save_entity);
@@ -20,9 +22,13 @@ function save_game(){
 	var _string = json_stringify(_savedata);
 	var _buffer = buffer_create(string_byte_length(_string) +1, buffer_fixed, 1);
 	buffer_write(_buffer, buffer_string, _string);
-	buffer_save(_buffer, "save");
+	var _buffer_str = buffer_base64_encode(_buffer, 0, buffer_get_size(_buffer))
 	buffer_delete(_buffer);
-
+	
+	var _file = file_text_open_write("save");
+	file_text_write_string(_file, _buffer_str);
+	file_text_close(_file);
+	
 	show_debug_message("gamedataがセーブされました！"+ _string);
 
 }

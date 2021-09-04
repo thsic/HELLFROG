@@ -2,7 +2,14 @@
 function load_achievement(){
 	if(file_exists("achievements")){
 		
-		var _buffer = buffer_load("achievements");
+		
+		//ファイル読み込み
+		var _file = file_text_open_read("achievements");
+		var _buffer_str = file_text_read_string(_file);
+		file_text_open_read(_file);
+		
+		//bufferに変換
+		var _buffer = buffer_base64_decode(_buffer_str);
 		var _string = buffer_read(_buffer, buffer_string);
 		buffer_delete(_buffer);
 	

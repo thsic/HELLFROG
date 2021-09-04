@@ -33,11 +33,24 @@
 		
 		//未取得だと灰色に
 		if(global.achievement_param[# _achievement_id, ACHIEVEMENT_PARAM.ACQUIRED]){
+			//取得済み
 			draw_sprite(s_achievementFrame, 1, _icon_x, _icon_y);
 			draw_sprite(s_achievement, _subimage, _icon_x, _icon_y);
 		}
 		else{
-			draw_sprite(s_achievementFrame, 0, _icon_x, _icon_y);
+			var _frame_subimage = 0;
+			
+			//その実績が取得可能ならアイコンのフレームが緑色になる
+			if(room != r_title
+			and global.achievement_param[# _achiev_id, ACHIEVEMENT_PARAM.GETTABLE]){
+				if(_achiev_id == ACHIEVEMENT_NAME.CLEAR_HELLMODE
+				or _achiev_id == ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE
+				or _achiev_id == ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY){
+					var _frame_subimage = 2;
+				}
+			}
+			
+			draw_sprite(s_achievementFrame, _frame_subimage, _icon_x, _icon_y);
 			shader_set(sh_decrementSaturation);
 			var _sh_saturation_handle = shader_get_uniform(sh_decrementSaturation, "saturation");
 			shader_set_uniform_f(_sh_saturation_handle, 0.0);

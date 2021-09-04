@@ -3,7 +3,13 @@ function load_game(_change_room){
 	if(file_exists("save")){
 		
 		var _room = r_stage1;
-		var _buffer = buffer_load("save");
+		//ファイル読み込み
+		var _file = file_text_open_read("save");
+		var _buffer_str = file_text_read_string(_file);
+		file_text_open_read(_file);
+		
+		//bufferに変換
+		var _buffer = buffer_base64_decode(_buffer_str);
 		var _string = buffer_read(_buffer, buffer_string);
 		buffer_delete(_buffer);
 	

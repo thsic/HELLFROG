@@ -6,7 +6,14 @@ function draw_difficulty(){
 		draw_set_color(diff_normal_col);
 	}
 	else{
-		var _difficulty = "VERYHARD"
+		if(global.true_hell
+		and global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.GETTABLE]){
+			var _difficulty = "TRUEHELL"
+		}
+		else{
+			var _difficulty = "VERYHARD"
+		}
+		
 		draw_set_color(diff_vh_col);
 	}
 	draw_set_halign(fa_right);

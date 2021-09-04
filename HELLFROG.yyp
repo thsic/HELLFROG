@@ -279,6 +279,7 @@
     {"id":{"name":"enemy_fire_fire_skeleton","path":"scripts/enemy_fire_fire_skeleton/enemy_fire_fire_skeleton.yy",},"order":12,},
     {"id":{"name":"s_rightClick","path":"sprites/s_rightClick/s_rightClick.yy",},"order":6,},
     {"id":{"name":"a_hit","path":"sounds/a_hit/a_hit.yy",},"order":11,},
+    {"id":{"name":"s_cursedIcon","path":"sprites/s_cursedIcon/s_cursedIcon.yy",},"order":15,},
     {"id":{"name":"sq_gameover","path":"sequences/sq_gameover/sq_gameover.yy",},"order":0,},
     {"id":{"name":"gun_charge_start","path":"scripts/gun_charge_start/gun_charge_start.yy",},"order":1,},
     {"id":{"name":"ac_lagRatio","path":"animcurves/ac_lagRatio/ac_lagRatio.yy",},"order":1,},

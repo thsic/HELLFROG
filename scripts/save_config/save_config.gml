@@ -9,10 +9,16 @@ function save_config(){
 		bgm_volume : global.bgm_volume,
 		language_setting : global.language,
 		timer_enable : global.timer_enable,
+		
 		assist_level_enemy_damage : global.assist_level_enemy_damage,
 		assist_level_dot_damage : global.assist_level_dot_damage,
 		assist_level_player_damage : global.assist_level_player_damage,
 		
+		hell_enemy_damage_enable : global.hell_enemy_damage_enable,
+		hell_dot_damage_enable : global.hell_dot_damage_enable,
+		hell_player_damage_enable : global.hell_player_damage_enable,
+		
+		assist_mode : global.assist_mode,
 	}
 	
 	array_push(_savedata, _save_entity);

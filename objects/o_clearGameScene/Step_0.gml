@@ -52,7 +52,20 @@ case GAMECLEARSCENE.HELLFROG:
 	}
 break
 case GAMECLEARSCENE.TIMER:
-
+	if(mouse_check_button_pressed(global.shotgun_button)
+	and !back_to_title){
+		back_to_title = true;
+	}
 break
 
+}
+
+//タイトルに戻る
+if(back_to_title){
+	if(title_fade_time > 0){
+		title_fade_time--
+	}
+	else{
+		reset_game();
+	}
 }

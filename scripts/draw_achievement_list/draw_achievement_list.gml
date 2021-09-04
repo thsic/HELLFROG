@@ -1,7 +1,7 @@
 //
 function draw_achievement_list(){
 	
-	var _greenback_alpha = abs(cos(global.game_time/24)/2);
+	var _greenback_alpha = floor(abs(cos(global.game_time/24)/2)*8)/8;
 	var _on_mouse_icon = noone;
 	var _on_mouse_icon_x = 0;
 	var _on_mouse_icon_y = 0;
@@ -18,7 +18,8 @@ function draw_achievement_list(){
 			
 			var _back_color = c_black;
 			var _alpha = 1;
-			if(room != r_title){
+			if(room != r_title
+			and !global.achievement_param[# i, ACHIEVEMENT_PARAM.ACQUIRED]){
 				//その実績が取得可能ならアイコンの背景が緑色になる
 				switch(i){
 				case ACHIEVEMENT_NAME.CLEAR_HELLMODE:

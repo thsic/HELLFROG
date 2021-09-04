@@ -98,4 +98,30 @@ function draw_player_effect_ui(){
 	}
 	
 	curse_point_prev = o_player.curse_point;
+	
+	//呪い状態だとプレイヤーの上に描画
+	if(o_player.curse_level > 0
+	or o_player.curse_point > 0){
+		var _damage_mag = power(2, o_player.curse_level);
+		var _text = "x"+string(_damage_mag);
+		
+		var _x = o_player.x - camera_get_view_x(view_camera[0]);
+		var _y = o_player.y - camera_get_view_y(view_camera[0]) - 44;
+		
+		draw_set_font(fo_hpUi);
+		var _text_length = string_width(_text);
+		
+		var _spr_w = sprite_get_width(s_cursedIcon);
+		var _total_length = _spr_w+_text_length;
+		
+		var _spr_x = _x-_total_length/2+_spr_w/2;
+		draw_sprite(s_cursedIcon, 0, _spr_x, _y);
+		draw_set_halign(fa_left);
+		draw_set_valign(fa_middle);
+		draw_set_color(effect_curse_bar_color);
+		
+		var _text_x = _x-_total_length/2+_spr_w;
+		draw_text(_text_x, _y, _text);
+		
+	}
 }

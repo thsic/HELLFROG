@@ -1,6 +1,9 @@
 
 scene_time_total = 0;
 player_x_default = o_player.x;
+back_to_title = false;
+title_fade_time_base = 120;
+title_fade_time = 120;
 
 var _t = 0;
 scene_time[GAMECLEARSCENE.FADEIN] = fadein_end;

@@ -83,7 +83,14 @@ function player_effect_manage(){
 	}
 	else{
 		//呪いフィールドにいないときは下がってく
-		curse_point = clamp(curse_point - 2, 0, _curse_point_limit);
+		if(global.difficulty == Difficulty.Normal){
+			var _down_curse_point = 3;;
+		}
+		else{
+			var _down_curse_point = 2;
+		}
+		
+		curse_point = clamp(curse_point - _down_curse_point, 0, _curse_point_limit);
 		
 		if(curse_point <= 0
 		and curse_level > 0){

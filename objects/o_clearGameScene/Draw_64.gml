@@ -125,6 +125,14 @@ case GAMECLEARSCENE.TIMER:
 break
 }
 
-draw_set_default();
+if(back_to_title){
+	var _alpha = 1-title_fade_time / title_fade_time_base;
+	_alpha = ceil(_alpha*8)/8;
+	draw_set_alpha(_alpha);
+	draw_set_color(bg_color2);
+	
+	draw_rectangle(0, 0, global.camera_width, global.camera_height, false);
+	
+}
 
-//draw_text(0, 0, scene_time_total)
+draw_set_default();
