@@ -14,3 +14,8 @@ if(global.floor_enemy_number_now <= 0){
 		instance_create_layer(0, 0, "GameObjects", o_clearGameScene);
 	}*/
 }
+
+if(global.gamestate == gamestate.main
+and totem_text_time > 0){
+	totem_text_time--;
+}

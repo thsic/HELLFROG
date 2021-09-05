@@ -5,6 +5,8 @@ if(global.floor_enemy_number_now <= 0){
 	draw_set_alpha(_alpha);
 	draw_rectangle(0, 0, global.camera_width, global.camera_height, false);
 	
-	
+	draw_set_default();
 }
+
+
 

@@ -133,7 +133,8 @@ function reset_stage(){
 			}
 	
 		}
-
+		
+		o_altarMgr.totem_text_time = o_altarMgr.totem_text_time_base/2;
 	}
 	
 	respawn_time = -1;

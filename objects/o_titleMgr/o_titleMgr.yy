@@ -41,6 +41,8 @@
     {"varType":7,"value":"$FFCCF3FF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"diff_text_onmouse_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF0F0F7F","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"diff_text_hard_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF142FCC","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"title_background_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF67E571","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"super_assistmode_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FFE5E5D5","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"assistmode_color","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

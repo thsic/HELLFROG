@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.7,
+  "volume": 0.65,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "a_bgmOnFire.mp3",
-  "duration": 90.41378,
+  "soundFile": "a_destroyAltarTotem.ogg",
+  "duration": 0.688617,
   "parent": {
     "name": "HELLFROG",
     "path": "HELLFROG.yyp",
   },
   "resourceVersion": "1.0",
-  "name": "a_bgmOnFire",
+  "name": "a_destroyAltarTotem",
   "tags": [],
   "resourceType": "GMSound",
 }

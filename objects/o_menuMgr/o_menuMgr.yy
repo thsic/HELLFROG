@@ -44,6 +44,7 @@
     {"varType":7,"value":"$FF0000FF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"true_hell_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF9EFF00","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"assist_mode_max_level_color","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":7,"value":"$FF0000FF","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"assist_mode_max_level_text_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF33B23A","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"main_assist_max_color","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

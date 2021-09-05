@@ -79,20 +79,37 @@ case TITLESCREEN.MAIN:
 				var _button_color = button_color
 			}
 			
-			//ヘルモード
-			if(global.assist_mode = -1
-			and i == TITLENAME.ASSISTMODE){
-				_text = "HELLMODE"
-				if(_on_mouse){
-					if(global.true_hell){
-						_button_color = true_hellmode_color;
+			
+			if(i == TITLENAME.ASSISTMODE){
+				switch(global.assist_mode){
+				case -1:
+				//ヘルモード
+					_text = "HELLMODE"
+					if(_on_mouse){
+						if(global.true_hell){
+							_button_color = true_hellmode_color;
+						}
+						else{
+							_button_color = hellmode_color;
+						}
+					
+					}
+				break
+				case 1:
+					//アシストモード
+					if(global.assist_level_max){
+						_text_color = super_assistmode_color;
 					}
 					else{
-						_button_color = hellmode_color;
+						_text_color = assistmode_color;
 					}
-					
+					if(_on_mouse){
+						var _text_color = text_color2;
+					}
+				break
 				}
 			}
+
 			//セーブデータが存在しない場合ロードゲームは灰色になる
 			if(!savedata_enable
 			and i = TITLENAME.LOADGAME){

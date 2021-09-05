@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "a_touchPortal.ogg",
-  "duration": 1.450136,
+  "duration": 2.290544,
   "parent": {
     "name": "other",
     "path": "folders/Sounds/other.yy",

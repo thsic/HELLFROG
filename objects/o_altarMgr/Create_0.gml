@@ -12,3 +12,5 @@ for(var i=0; i<_enemy_num; i++){
 	}
 	
 }
+
+totem_text_time = totem_text_time_base;

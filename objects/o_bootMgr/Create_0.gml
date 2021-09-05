@@ -38,8 +38,8 @@ global.used_super_assistmode = false;
 
 
 //オプション
-global.se_volume = 0.2;
-global.bgm_volume = 0.2;
+global.se_volume = 0.4;
+global.bgm_volume = 0.4;
 global.language = language.English;
 global.timer_enable = false;
 

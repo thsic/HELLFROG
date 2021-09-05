@@ -89,6 +89,9 @@ global.ds_text[# TEXT.TITLETEXT_OPTION, language.Japanese] =		"オプション";
 global.ds_text[# TEXT.TITLETEXT_ASSISTMODE, language.Japanese] =	"アシストモード";
 global.ds_text[# TEXT.TITLETEXT_EXITGAME, language.Japanese] =		"ゲーム終了";
 
+global.ds_text[# TEXT.ALTAR_TOTEM, language.English] =				"DESTROY ALL ALTARTOTEMS";
+global.ds_text[# TEXT.ALTAR_TOTEM, language.Japanese] =				"すべてのアルタートーテムを破壊しろ";
+
 
 //en
 #macro EN_MENU_RESUME "RESUME"
@@ -173,6 +176,7 @@ enum TEXT{
 	TITLETEXT_EXITGAME,
 	TITLETEXT_LOGO,
 	
+	ALTAR_TOTEM,
 }
 
 

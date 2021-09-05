@@ -24,7 +24,12 @@ function enemy_dead(_id, _do_dead_script){
 		gun_fullcharge();
 		
 		//死亡時のサウンド
-		se_play(SE_ENEMYDESTROY, 50, 1);
+		if(_id.object_index != o_enemyAltarTotem){
+			se_play(SE_ENEMYDESTROY, 50, 1);
+		}
+		else{
+			se_play(a_destroyAltarTotem, 50, 1);
+		}
 		
 		//エフェクトリストを削除
 		ds_list_destroy(_id.effect_list);

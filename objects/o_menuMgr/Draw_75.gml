@@ -68,19 +68,24 @@ case Menustate.Main:
 			var _text = button_param[# _button_name[i], ButtonParam.TextEn];
 		}
 		
-		if(_button_name[i] == ButtonName.AssistMode
-		and global.assist_mode == -1){
-			var _hell_mode = true;
-			if(global.language == language.English){//ヘルモードなら"ヘルモード"と表示させる
-				_text = menu_hell_button_text_en;
-			}
-			else{
-				_text = menu_hell_button_text_jp;
+		if(_button_name[i] == ButtonName.AssistMode){
+			if(global.assist_mode == -1){
+				var _hell_mode = true;
+				if(global.language == language.English){//ヘルモードなら"ヘルモード"と表示させる
+					_text = menu_hell_button_text_en;
+				}
+				else{
+					_text = menu_hell_button_text_jp;
 
+				}
+			}
+			if(global.assist_level_max){
+				var _super_assist = true;
 			}
 		}
 		else{
 			var _hell_mode = false;
+			var _super_assist = false;
 		}
 		
 		if(button_param[# _button_name[i], ButtonParam.OnCursor]){
@@ -98,7 +103,13 @@ case Menustate.Main:
 		}
 		else{
 			if(!_hell_mode){
+				
 				var _color = text_color;
+				
+				if(_super_assist){
+					var _color = main_assist_max_color;
+				}
+				
 			}
 			else{
 				//truehellならメニュー画面の色も変わる
