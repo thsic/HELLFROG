@@ -89,6 +89,11 @@ case TITLESCREEN.MAIN:
 		
 		break
 		}
+		
+		//音鳴らす
+		if(on_mouse_button != -1){
+			se_play(a_buttonClick, 0.7, 1);
+		}
 	}
 
 	switch(pressed_button){
@@ -103,6 +108,11 @@ case TITLESCREEN.MAIN:
 		}
 		else{
 			fadein_time--;
+			if(!bgm_fadeout_enable){
+				bgm_fadeout_enable = true;
+				audio_sound_gain(global.now_bgm, 0, 1000);
+			}
+			
 		}
 	break
 	}
@@ -138,6 +148,7 @@ case TITLESCREEN.DIFFICULTY:
 	if(mouse_check_button_pressed(global.shotgun_button)
 	and on_mouse_button != -1){
 		pressed_button = on_mouse_button;
+		se_play(a_buttonClick, 0.7, 1);
 	}
 	
 	switch(pressed_button){
@@ -155,6 +166,7 @@ case TITLESCREEN.DIFFICULTY:
 		or keyboard_check_pressed(global.hook_button_keyboard)
 		or keyboard_check_pressed(global.hook_button_keyboard2)){
 			now_screen = TITLESCREEN.MAIN;
+			se_play(a_cancel, 0.7, 1);
 		}
 	break
 	}
@@ -162,6 +174,11 @@ case TITLESCREEN.DIFFICULTY:
 	if(pressed_button != -1){
 		if(fadein_time <= 0){
 			start_game();
+			//startgameの場合はbgmはそのまま
+			/*if(!bgm_fadeout_enable){
+				bgm_fadeout_enable = true;
+				audio_sound_gain(global.now_bgm, 0, 1000);
+			}*/
 		}
 		else{
 			fadein_time--;

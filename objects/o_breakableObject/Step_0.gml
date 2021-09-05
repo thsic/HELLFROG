@@ -1,5 +1,7 @@
 
 if(break_enable){
+
+	
 	if(!dust_setting_enable){
 		//破片の初期設定
 		dust_setting_enable = true;
@@ -63,4 +65,6 @@ if(break_enable){
 	if(!_dust_enable){
 		instance_destroy();
 	}
+	
+	
 }

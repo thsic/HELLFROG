@@ -25,7 +25,9 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"break_se","path":"objects/o_breakableObject/o_breakableObject.yy",},"objectId":{"name":"o_breakableObject","path":"objects/o_breakableObject/o_breakableObject.yy",},"value":"a_breakStone","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "map",
     "path": "folders/Objects/map.yy",

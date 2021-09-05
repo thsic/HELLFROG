@@ -105,6 +105,9 @@ else{
 	now_screen = TITLESCREEN.SETLANGUAGE;
 }
 
+//bgm
+bgm_play(a_bgmWind03, 0.5, true);
+bgm_fadeout_enable = false;
 
 fade_time = 180;
 fade_time_base = 120;

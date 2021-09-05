@@ -74,11 +74,18 @@ function player_effect_manage(){
 		var _curse_max_level = 16;
 		curse_point = clamp(curse_point + 1, 0, _curse_point_limit)
 		
+		
 		if(curse_point >= _curse_point_limit
 		and curse_level < _curse_max_level){
 			//curse_pointが一定たまったらレベルあげる
 			curse_level++;
 			curse_point = 0;
+			se_play(a_curseLevelUp, 0.7, 0);
+		}
+		
+		//効果音
+		if(global.game_time mod 45 == 0){
+			se_play(a_cursePointUp, 0.7, 1);
 		}
 	}
 	else{

@@ -142,10 +142,10 @@ for(var i=0; i<_length; i++){
 	global.achievement_param[# _achievement, ACHIEVEMENT_PARAM.DRAWDESCRIPTION] = true;
 	
 	var _array_length = array_length(draw_achievement_window_queue);
-	for(var i=0; i<_array_length; i++){
-		if(draw_achievement_window_queue[i] == noone){
-			draw_achievement_window_queue[i] = _achievement;
-			achievement_window_time = achievement_window_time_base;
+	for(var j=0; j<_array_length; j++){
+		if(draw_achievement_window_queue[j] == noone){
+			draw_achievement_window_queue[j] = _achievement;
+			achievement_window_time = global.achievement_param[# _achievement, ACHIEVEMENT_PARAM.WINDOW_DRAWTIME];
 			break;
 		}
 	}
@@ -161,6 +161,8 @@ var _length = array_length(draw_achievement_window_queue);
 
 if(draw_achievement_window_queue[0] != noone){
 	now_draw_achievement_window = draw_achievement_window_queue[0];
+	var _achievement = draw_achievement_window_queue[0];
+	var _base_time = global.achievement_param[# _achievement, ACHIEVEMENT_PARAM.WINDOW_DRAWTIME];
 	
 	if(achievement_window_time <= 0){
 		//キューから削除
@@ -170,11 +172,28 @@ if(draw_achievement_window_queue[0] != noone){
 			}
 			draw_achievement_window_queue[i] = noone;
 		}
-		achievement_window_time = achievement_window_time_base;
+		achievement_window_time = _base_time;
 	}
 	else{
 		achievement_window_time--;
 	}
+	
+	//効果音再生
+	if(achievement_window_time == _base_time-1){
+		se_play(a_getAchievement, 0.9, 1);
+	}
+}
+
+
+//ゲームセーブ→タイトル画面→アシストレベル変更→ゲーム再起動→ロード
+//でアシストレベルmaxでも実績解除できてしまうので修正
+if(global.assist_level_enemy_damage == 3
+or global.assist_level_dot_damage == 3
+or global.assist_level_player_damage == 3){
+	global.assist_level_max = true;
+}
+else{
+	global.assist_level_max = false;	
 }
 
 //アシストモードをレベルmaxにした場合実績取得不可に

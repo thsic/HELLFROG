@@ -6,6 +6,7 @@ if(sprite_index == noone){
 break_enable = false;
 dust_setting_enable = false;
 wall_collision = false;
+played_se = true;
 
 subimage = irandom(sprite_get_number(sprite_index));
 dust_number = irandom_range(dust_num_min, dust_num_max);

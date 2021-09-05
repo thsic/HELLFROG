@@ -57,6 +57,9 @@ fade_alpha = 1;
 //マウスカーソル
 virtual_cursol_enable = false;
 
+//bgm
+bgm_fadeout_enable = false;
+
 enum EnemyDefaultPosition{
 	ObjectIndex,
 	XPosition,

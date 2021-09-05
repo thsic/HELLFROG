@@ -63,3 +63,33 @@ if(scene_time >= change_stage_time){
 	room_goto(_next_room);
 }
 
+if(!change_bgm){
+	change_bgm = true;
+	//bgmが違う面に行く時はここでbgmを消す
+	var _now_bgm = global.now_stage_param[STAGEPARAM.BGM];
+	
+	//次ステージのid探す
+	var _param_width = ds_grid_width(global.ds_stage_param);
+	var _next_stage_number = noone;
+	for(var i=0; i<_param_width; i++){
+		var _id = global.ds_stage_param[# i, STAGEPARAM.STAGEID];
+		if(_id == goal_id.next_room){
+			_next_stage_number = i;
+			break
+		}
+		
+	}
+
+	//次のステージのbgm取得
+	if(_next_stage_number != noone){
+		var _stage_type = global.ds_stage_param[# _next_stage_number, STAGEPARAM.STAGETYPE];
+		var _next_bgm = global.ds_stage_type_param[# _stage_type, STAGEPARAM.BGM];
+	}
+
+	//bgm消す
+	if(_now_bgm != _next_bgm){
+		audio_sound_gain(_now_bgm, 0, 1000);
+	}
+	debug_draw_variable(o_player.x, o_player.y, string(_next_stage_number)+"  "+string(_next_bgm), c_white, 100)
+
+}

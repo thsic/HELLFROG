@@ -43,6 +43,8 @@ global.bgm_volume = 0.2;
 global.language = language.English;
 global.timer_enable = false;
 
+global.now_bgm = noone;
+
 //設定をロード
 load_config();
 //実績をロード

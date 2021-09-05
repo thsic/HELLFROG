@@ -13,6 +13,8 @@ function reset_game(){
 	ds_grid_destroy(global.ds_stage_type_param);
 	ds_grid_destroy(global.ds_text);*/
 	
+	audio_stop_all();
+	
 	save_game();
 	save_config();
 	save_achievement();

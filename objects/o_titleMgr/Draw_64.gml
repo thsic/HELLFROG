@@ -141,7 +141,7 @@ case TITLESCREEN.DIFFICULTY:
 	else{
 		var _text = "難易度選択"
 	}
-	draw_text(room_width/2, 0, _text);
+	draw_text(room_width/2, 2, _text);
 	
 	
 	for(var i=0; i<_button_num; i++){
@@ -168,7 +168,7 @@ case TITLESCREEN.DIFFICULTY:
 			}
 			
 			var _top = _y-_h/2;
-			var _left = _x-_w/2;
+			var _left = _x-_w/2+4;
 			
 			switch(i){
 			case TITLENAME.DIFF_NORMAL:

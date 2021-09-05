@@ -52,8 +52,6 @@ if(room != r_title){
 		/*layer_sequence_x(openmenu_sequence_element, _x);
 		layer_sequence_y(openmenu_sequence_element, _y);*/
 	
-	
-	
 		var _on_cursor_button = noone;
 		var _button_name;
 		_button_name[0] = ButtonName.Resume;
@@ -111,6 +109,9 @@ if(room != r_title){
 				debug_message("Error! o_menuMgr");
 			break
 			}
+			if(_on_cursor_button != noone){
+				se_play(a_buttonClick, 0.7, 1);
+			}
 		}
 	
 		//メニューを閉じる
@@ -119,6 +120,7 @@ if(room != r_title){
 			state = Menustate.CloseStart;
 			change_gamestate(after_menu_gamestate);
 			lagging_start(10, ac_lagRatio);//メニューを閉じるときラグを発生させる
+			se_play(a_cancel, 0.7, 1);
 		}
 	
 	break
@@ -185,10 +187,12 @@ if(room != r_title){
 				grab_bar = _on_cursor_button;
 			break
 			}
-
-		
-		
-		
+			
+			//音
+			if(_on_cursor_button != noone){
+				se_play(a_buttonClick, 0.7, 1);
+			
+			}
 		}
 	
 		//音量調節
@@ -213,6 +217,9 @@ if(room != r_title){
 			var _ratio = clamp((global.vmouse_x - (_x- _w/2)) / _w, 0, 1);
 			global.bgm_volume = floor(_ratio * 100)/100;
 			
+			var _volume = global.bgm_volume * o_soundMgr.sound_default_volume[global.now_bgm];
+			audio_sound_gain(global.now_bgm, _volume, 0);
+			
 		break
 		case noone:
 		
@@ -226,12 +233,14 @@ if(room != r_title){
 		if(mouse_check_button_pressed(global.hook_button)){
 			_menu_close = true;
 		}
-	
+		
+		//戻る
 		if(keyboard_check_pressed(global.menu_key)
 		or _menu_close){
 			//セーブ
 			save_config();
 			state = Menustate.Main;
+			se_play(a_cancel, 0.7, 1);
 		}
 	break
 	case Menustate.AssistMode:
@@ -346,7 +355,10 @@ if(room != r_title){
 				//バー
 				grab_bar = _on_cursor_button;
 			}
-		
+			
+			if(_on_cursor_button != noone){
+				se_play(a_buttonClick, 0.7, 1);
+			}
 		}
 	
 		if(mouse_check_button(global.shotgun_button) == 0){
@@ -440,6 +452,7 @@ if(room != r_title){
 			//セーブ
 			save_config();
 			state = Menustate.Main;
+			se_play(a_cancel, 0.7, 1);
 		
 		}
 	break
@@ -447,7 +460,7 @@ if(room != r_title){
 	
 		set_damage_ratio();
 		state = Menustate.Closing;
-		
+		se_play(a_cancel, 0.7, 1);
 	break
 	case Menustate.CloseSequence://閉じるシーケンス描画中
 	
@@ -536,6 +549,10 @@ else{
 					grab_bar = _on_cursor_button;
 				break
 				}
+				
+				if(_on_cursor_button != noone){
+					se_play(a_buttonClick, 0.7, 1);
+				}
 			}
 	
 			//音量調節
@@ -559,6 +576,9 @@ else{
 				var _w = button_param[# grab_bar, ButtonParam.Width];
 				var _ratio = clamp((global.vmouse_x - (_x- _w/2)) / _w, 0, 1);
 				global.bgm_volume = floor(_ratio * 100)/100;
+				
+				var _volume = global.bgm_volume * o_soundMgr.sound_default_volume[global.now_bgm];
+				audio_sound_gain(global.now_bgm, _volume, 0);
 			
 			break
 			case noone:
@@ -577,6 +597,7 @@ else{
 			or _menu_close){
 				state = Menustate.Closing;
 				save_config();
+				se_play(a_cancel, 0.7, 1);
 			}
 		break
 		case Menustate.AssistMode:
@@ -690,7 +711,10 @@ else{
 					//バー
 					grab_bar = _on_cursor_button;
 				}
-		
+				
+				if(_on_cursor_button != noone){
+					se_play(a_buttonClick, 0.7, 1);
+				}
 			}
 	
 			if(mouse_check_button(global.shotgun_button) == 0){
@@ -782,6 +806,7 @@ else{
 			or _menu_close){
 				state = Menustate.Closing;
 				save_config();
+				se_play(a_cancel, 0.7, 1);
 			}
 		break
 	}

@@ -32,3 +32,26 @@ for(var i=0; i<sound_num; i++){
 		ds_list_sort(_list_id, true);
 	}
 }
+
+
+//bgmのフェードアウト
+/*if(bgm_fadeout_enable){
+	var _base_volume = global.bgm_volume * _smgr.sound_default_volume[_index];
+	var _t = bgm_fadeout_time / bgm_fadeout_time_base;
+	
+	var _volume = lerp(0, _base_volume, _t);
+	
+	audio_sound_gain(global.bgm_volume, _volume, 1000);//音量の設定
+	
+	bgm_fadeout_time--;
+	
+	if(bgm_fadeout_time <= 0){
+		if(bgm_after_fadeout_pause){
+			audio_pause_sound(global.now_bgm);
+		}
+		else{
+			audio_stop_sound(global.now_bgm);
+		}
+	}
+	
+}*/

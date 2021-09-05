@@ -19,3 +19,8 @@ for(var i=0; i<sound_num; i++){
 
 sound_delete_queue =  ds_queue_create();
 
+/*
+bgm_fadeout_time = 0;
+bgm_fadeout_time_base = 0;
+bgm_after_fadeout_pause = false;
+bgm_fadeout_enable = false;*/

@@ -10,3 +10,5 @@ and o_player.inertia_enable){
 if(flash_time > 0){
 	flash_time--;
 }
+
+

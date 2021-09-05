@@ -11,3 +11,5 @@ fade_alpha = 0;
 hole_fall_speed_base = 9;
 hole_fall_speed = hole_fall_speed_base;
 fall_time = 0;
+
+change_bgm = false;

@@ -102,8 +102,6 @@ case gamestate.stagestart:
 	}
 	
 	
-	
-	
 	for(var i=0; i<_wall_num; i++){
 		var _obj_id = instance_find(o_breakableWall, i);
 		var _obj_x = _obj_id.x;
@@ -116,7 +114,6 @@ case gamestate.stagestart:
 		ds_grid_set(ds_obj_default_position, ObjDefaultPosition.YPosition, i+_obj_num, _obj_y);
 		ds_grid_set(ds_obj_default_position, ObjDefaultPosition.Sprite, i+_obj_num, _obj_sprite);
 	}
-	
 	
 	
 	//プレイヤー向き変更
@@ -134,9 +131,13 @@ case gamestate.stagestartscene:
 		o_player.y = player_start_y_pos + stagestart_scene_time*startscene_player_fall_speed;
 	}
 	else{
+		//着地
 		start_screen_shake(10, 5, random_range(270-8, 270+8));
 		o_player.y = player_default_y_pos;
 		instance_create_layer(0, 0, "Effects", o_stageStartScene);
+		
+		var _bgm = global.now_stage_param[STAGEPARAM.BGM];
+		bgm_play(_bgm, 0.5, true);
 		
 		change_gamestate(gamestate.main);
 	}
@@ -256,7 +257,9 @@ case gamestate.main:
 	if(cursed_damage_enable == true
 	and global.floor_enemy_number_now > 0){
 		player_cursed_damage();//敵が0体の時はドットダメージなし
+		
 	}
+
 	if(stop_cursed_damage_time > 0){
 		stop_cursed_damage_time--;
 		cursed_damage_enable = false;
@@ -313,6 +316,8 @@ case gamestate.goalscene:
 	//ステージクリア時のステージ以降シーン
 	global.gamestop = true;
 	global.playerstop = true;
+	
+	//bgm消す処理はchangeStageScene
 break
 case gamestate.event:
 	//イベントシーン
