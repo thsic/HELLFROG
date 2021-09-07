@@ -1,10 +1,4 @@
 
-//ハードモード限定の敵ならノーマルでは消す
-if(global.difficulty == Difficulty.Normal
-and hard_only_enemy == true){
-	instance_destroy();	
-}
-
 next_state = noone;
 //初期ステート
 if(lock_spawn_time = -1){
@@ -45,6 +39,8 @@ idle_mode = false;
 damage_flash_time = 0;
 uni_add = shader_get_uniform(sh_enemy, "addValue");
 hitstop_time = -1;
+
+check_difficulty = false;
 
 tackle_regist_time = 0;
 //エフェクト関連

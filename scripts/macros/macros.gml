@@ -10,7 +10,7 @@ function macros() {
 #macro OPPOSITEKEY_POWER_FOR_INERTIA 10
 
 #macro FIRST_ROOM r_title
-#macro FIRST_STAGE r_stage1
+#macro FIRST_STAGE r_stage14
 
 //敵
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_blink

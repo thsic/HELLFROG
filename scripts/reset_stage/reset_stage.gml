@@ -74,7 +74,7 @@ function reset_stage(){
 		instance_destroy();
 	}
 	var _enemy_number = ds_grid_height(ds_enemy_default_position);
-	var _enemy_x, _enemy_y, _enemy_index, _enemy_lock_num, _enemy_lock_spawn_time, _enemy_blueaura;
+	var _enemy_x, _enemy_y, _enemy_index, _enemy_lock_num, _enemy_lock_spawn_time, _enemy_blueaura, _enemy_hardonly;
 	for(var i=0; i<_enemy_number; i++){
 		_enemy_index = ds_grid_get(ds_enemy_default_position, EnemyDefaultPosition.ObjectIndex, i);
 		_enemy_x = ds_grid_get(ds_enemy_default_position, EnemyDefaultPosition.XPosition, i);
@@ -82,12 +82,15 @@ function reset_stage(){
 		_enemy_lock_num = ds_grid_get(ds_enemy_default_position, EnemyDefaultPosition.LockNumber, i);
 		_enemy_lock_spawn_time = ds_grid_get(ds_enemy_default_position, EnemyDefaultPosition.LockSpawnTime, i);
 		_enemy_blueaura = ds_grid_get(ds_enemy_default_position, EnemyDefaultPosition.BlueAura, i);
+		_enemy_hardonly = ds_grid_get(ds_enemy_default_position, EnemyDefaultPosition.HardOnly, i);
+		
 		with(instance_create_layer(_enemy_x, _enemy_y, "Enemies", _enemy_index)){
 			
 			//敵の初期値設定
 			lock_number = _enemy_lock_num;
 			lock_spawn_time = _enemy_lock_spawn_time;
 			blue_aura = _enemy_blueaura;
+			hard_only_enemy = _enemy_hardonly;
 			if(lock_spawn_time = -1){
 				state = EnemyState.Idle;//通常
 			}

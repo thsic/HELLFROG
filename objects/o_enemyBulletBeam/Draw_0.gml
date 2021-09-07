@@ -10,7 +10,7 @@ if(beam_enable == false){
 	var _beam_height_per = beforebeam_drawtime/beforebeam_drawtime_default;
 	_beam_height_per = ceil(_beam_height_per*4)/4;
 	_beam_height *= _beam_height_per;
-	_alpha *= 0.3
+	_alpha *= 0.5
 }
 else{
 	var _tex = sprite_get_texture(s_beamEffect, 0);

@@ -67,6 +67,7 @@ enum EnemyDefaultPosition{
 	LockNumber,
 	LockSpawnTime,
 	BlueAura,
+	HardOnly,
 }
 enum ObjDefaultPosition{
 	ObjectIndex,

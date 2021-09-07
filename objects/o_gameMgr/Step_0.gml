@@ -64,6 +64,7 @@ case gamestate.stagestart:
 		var _enemy_lock_num = _enemy_id.lock_number;
 		var _enemy_lock_spawn_time = _enemy_id.lock_spawn_time;
 		var _enemy_blueaura = _enemy_id.blue_aura;
+		var _enemy_hardonly = _enemy_id.hard_only_enemy;
 		
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.ObjectIndex, i, _enemy_index);
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.XPosition, i, _enemy_x);
@@ -71,6 +72,7 @@ case gamestate.stagestart:
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.LockNumber, i, _enemy_lock_num);
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.LockSpawnTime, i, _enemy_lock_spawn_time);
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.BlueAura, i, _enemy_blueaura);
+		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.HardOnly, i, _enemy_hardonly);
 		
 		if(_enemy_id.object_index != o_hookPole
 		and _enemy_id.soul_enemy == true){

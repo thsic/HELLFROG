@@ -18,5 +18,4 @@ if(!break_enable){
 		instance_destroy();
 	}
 	
-	
 }
