@@ -90,6 +90,5 @@ if(!change_bgm){
 	if(_now_bgm != _next_bgm){
 		audio_sound_gain(_now_bgm, 0, 1000);
 	}
-	debug_draw_variable(o_player.x, o_player.y, string(_next_stage_number)+"  "+string(_next_bgm), c_white, 100)
 
 }
