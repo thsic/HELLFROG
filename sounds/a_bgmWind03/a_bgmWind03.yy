@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.8,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -13,8 +13,8 @@
   "soundFile": "a_bgmWind03.mp3",
   "duration": 95.64,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "bgm",
+    "path": "folders/Sounds/bgm.yy",
   },
   "resourceVersion": "1.0",
   "name": "a_bgmWind03",

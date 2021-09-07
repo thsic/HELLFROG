@@ -26,7 +26,7 @@
   "properties": [
     {"varType":1,"value":"20","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"fadein_time","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"120","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"totem_text_time_base","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":7,"value":"$FF001F66","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"totem_text_color","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":7,"value":"$FF0036B2","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"totem_text_color","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

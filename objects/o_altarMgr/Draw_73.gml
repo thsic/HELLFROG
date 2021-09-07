@@ -1,5 +1,6 @@
 
-if(totem_text_time > 0){
+if(totem_text_time > 0
+and !global.playerstop){
 	if(floor(global.game_time/8) mod 2 == 0){
 		var _color = totem_text_color;
 	}
@@ -24,7 +25,7 @@ if(totem_text_time > 0){
 	var _w = string_width(_text)+4;
 	var _h = string_height(_text);
 	
-	draw_set_color(c_white);
+	draw_set_color(c_black);
 	draw_rectangle(_x-_w/2, _y-_h, _x+_w/2, _y, false);
 	
 	draw_set_color(_color);

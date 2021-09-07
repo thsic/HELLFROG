@@ -13,8 +13,8 @@
   "soundFile": "a_bgmOnFire.mp3",
   "duration": 90.41378,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "bgm",
+    "path": "folders/Sounds/bgm.yy",
   },
   "resourceVersion": "1.0",
   "name": "a_bgmOnFire",

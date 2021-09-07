@@ -104,6 +104,7 @@ function reset_stage(){
 		instance_destroy();
 	}
 	with(o_breakableWall){
+		blast_effect = false;
 		instance_destroy();
 	}
 	var _obj_num = ds_grid_height(ds_obj_default_position);

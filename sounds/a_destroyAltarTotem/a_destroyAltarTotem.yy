@@ -13,8 +13,8 @@
   "soundFile": "a_destroyAltarTotem.ogg",
   "duration": 0.688617,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "enemy",
+    "path": "folders/Sounds/enemy.yy",
   },
   "resourceVersion": "1.0",
   "name": "a_destroyAltarTotem",

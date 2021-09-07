@@ -77,8 +77,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "system",
+    "path": "folders/Sprites/system.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_achievementFrame",

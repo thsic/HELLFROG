@@ -13,8 +13,8 @@
   "soundFile": "a_bgmDemonHowl.mp3",
   "duration": 117.946846,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "bgm",
+    "path": "folders/Sounds/bgm.yy",
   },
   "resourceVersion": "1.0",
   "name": "a_bgmDemonHowl",

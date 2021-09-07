@@ -13,8 +13,8 @@
   "soundFile": "a_bgmGrenade.mp3",
   "duration": 101.097878,
   "parent": {
-    "name": "HELLFROG",
-    "path": "HELLFROG.yyp",
+    "name": "bgm",
+    "path": "folders/Sounds/bgm.yy",
   },
   "resourceVersion": "1.0",
   "name": "a_bgmGrenade",
