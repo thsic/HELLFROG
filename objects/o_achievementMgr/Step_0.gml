@@ -72,6 +72,8 @@ for(var i=0; i<_achievement_num; i++){
 			and instance_exists(o_clearGameScene)){
 				global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY, ACHIEVEMENT_PARAM.DRAWDESCRIPTION] = true;
 				array_push(_get_achievement_list, i);
+				global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_HELLMODE, ACHIEVEMENT_PARAM.DRAWDESCRIPTION] = true;
+				global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.DRAWDESCRIPTION] = true;
 			}
 		break
 		case ACHIEVEMENT_NAME.CLEAR_VERYHARD:
@@ -83,8 +85,6 @@ for(var i=0; i<_achievement_num; i++){
 		break
 		case ACHIEVEMENT_NAME.FIND_HELLMODE:
 			if(global.assist_mode == -1){
-				global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_HELLMODE, ACHIEVEMENT_PARAM.DRAWDESCRIPTION] = true;
-				global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.DRAWDESCRIPTION] = true;
 				array_push(_get_achievement_list, i);
 			}
 		break

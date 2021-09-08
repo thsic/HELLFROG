@@ -351,16 +351,28 @@ case Menustate.AssistMode:
 		
 		var _scale_number = array_length(_var);
 		var _one_scale_pixel_size = _w/(_scale_number-1);
+		draw_set_color(assist_mode_bar_color_top);
 		
 		if(_assist_level[i] > 0){//アシストレベルが0のときは描画しない
 			if(_assist_level[i] = 3){//アシストレベルが最大の時は色が変わる
 				draw_set_color(assist_mode_max_level_color);
 			}
-			else{
-				draw_set_color(assist_mode_bar_color_top);
+
+			if(grab_bar-9 != i){
+				draw_rectangle(_x, _y-_bar_h/2, _x+_one_scale_pixel_size*_assist_level[i], _y+_bar_h/2, false);
 			}
 			
-			draw_rectangle(_x, _y-_bar_h/2, _x+_one_scale_pixel_size*_assist_level[i], _y+_bar_h/2, false);
+			
+		}
+		
+		//なめらかにバーをスライドする
+		if(grab_bar-9 == i){
+			if(global.vmouse_x < _x){
+				draw_set_color(hell_mode_bar_color_top)
+			}
+			var _hell_bar_x = _x - hell_mode_pixel;
+			var _bar_w = clamp(global.vmouse_x, _hell_bar_x, _x+_one_scale_pixel_size*3);
+			draw_rectangle(_x, _y-_bar_h/2, _bar_w, _y+_bar_h/2, false);
 		}
 		
 		draw_set_halign(fa_middle);
@@ -480,10 +492,10 @@ case Menustate.AssistMode:
 		else{
 			//ヘルモードじゃないときは薄くバーを描画
 			if(room != r_title){
-				draw_set_alpha(0.115);
+				draw_set_alpha(0.14);
 			}
 			else{
-				draw_set_alpha(0.07);
+				draw_set_alpha(0.09);
 			}
 			var _hell_bar_x = _x - hell_mode_pixel;
 			

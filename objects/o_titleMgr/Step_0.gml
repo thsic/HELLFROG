@@ -38,7 +38,7 @@ case TITLESCREEN.SETLANGUAGE:
 	and on_mouse_button != -1){
 		pressed_button = on_mouse_button;
 		now_screen = TITLESCREEN.MAIN;
-		save_config();
+		se_play(a_buttonClick, 0.7, 1);
 	}
 	
 	switch(pressed_button){
@@ -46,16 +46,23 @@ case TITLESCREEN.SETLANGUAGE:
 		global.language_setting_done = true;
 		global.language = language.English;
 		pressed_button = -1;
+		save_config();
 	break
 	case TITLENAME.LANGUAGE_JP:
 		global.language_setting_done = true;
 		global.language = language.Japanese;
 		pressed_button = -1;
+		save_config();
 	break
 	}
 	
 break
 case TITLESCREEN.MAIN:
+	//bgm
+	if(global.now_bgm != a_bgmWind03){
+		bgm_play(a_bgmWind03, 0.5, true);
+	}
+	
 	//ボタン設定
 	
 	title_put_onmouse_param(TITLESCREEN.MAIN);
@@ -120,6 +127,38 @@ case TITLESCREEN.MAIN:
 	
 	if(fade_time > 0){
 		fade_time--;
+	}
+	
+	//ヘルモードヒント
+	//ゲーム全体で取得可能な実績の数の取得
+	var _achievement_num = ds_grid_width(global.achievement_param);
+	var _achievement_acquired_num = 0;
+	for(var j=0; j<_achievement_num; j++){
+		if(global.achievement_param[# j, ACHIEVEMENT_PARAM.ENABLE]){
+			if(global.achievement_param[# j, ACHIEVEMENT_PARAM.ACQUIRED]){
+				_achievement_acquired_num++;
+			}
+		}
+	}
+					
+	var _hell_rate = 0;
+	if(_achievement_acquired_num > 5){
+		_hell_rate = 0.0005;
+	}
+	if(_achievement_acquired_num > 6){
+		_hell_rate = 0.002;
+	}
+	if(_achievement_acquired_num > 7){
+		_hell_rate = 0.005;
+	}
+					
+	if(_hell_rate != 0
+	and random(1) < _hell_rate
+	and draw_hell_menu_time < 15){
+		draw_hell_menu_time = 15;
+	}
+	if(draw_hell_menu_time > 0){
+		draw_hell_menu_time--;
 	}
 	
 	//deleteキー+A or C or Gでそれぞれデータ削除

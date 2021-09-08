@@ -21,6 +21,7 @@ function data_set_knockback(argument0, argument1, argument2, argument3, argument
 		Hook,
 		HookSmall,
 		Empty,
+		Spike,
 	}
 
 	enum eK_param{

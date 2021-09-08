@@ -12,7 +12,8 @@ function data_player_parameter_default() {
 	data_set_knockback(eK_type.Empty, 0, 1, 0, 0, 0);
 	data_set_knockback(eK_type.Hook, 6, 0.05, 0.93, 3, 0.18);
 	data_set_knockback(eK_type.HookSmall, 2, 0.04, 0.95, 0, 0.25);
-
+	data_set_knockback(eK_type.Spike, 9, 0.09, 0.9, 7, 0.15);
+	
 	data_set_hookshot(eHK_type.normal_hook, 100, 30, 10, 7, 1, 24, 36, 1, 10, 2, 200);
 
 	data_set_player_hp(ePHP_type.normal_hp, 100, 30, 16, 8, 4, 2, 45);//lifestealRatioは現在いじっても意味ない

@@ -105,8 +105,7 @@ else{
 	now_screen = TITLESCREEN.SETLANGUAGE;
 }
 
-//bgm
-bgm_play(a_bgmWind03, 0.5, true);
+
 bgm_fadeout_enable = false;
 
 fade_time = 180;
@@ -116,6 +115,27 @@ fadein_time = 60;
 fadein_time_base = 60
 
 pressed_button = -1;
+
+//ヘルモード描画
+draw_hell_menu_time = 0;
+
+var _achievement_num = ds_grid_width(global.achievement_param);
+var _achievement_acquired_num = 0;
+for(var j=0; j<_achievement_num; j++){
+	if(global.achievement_param[# j, ACHIEVEMENT_PARAM.ENABLE]){
+		if(global.achievement_param[# j, ACHIEVEMENT_PARAM.ACQUIRED]){
+			_achievement_acquired_num++;
+		}
+	}
+}
+if(_achievement_acquired_num > 6){
+	draw_hell_menu_time = 90;
+}
+if(_achievement_acquired_num > 7){
+	draw_hell_menu_time = 120;
+}
+
+
 
 //パーティクル
 pt_type = part_type_create()

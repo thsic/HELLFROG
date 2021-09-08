@@ -4,7 +4,7 @@ if(room == r_void){
 
 ds_out_of_screen_enemy = ds_grid_create(8, 100);
 ds_direction_arrow = ds_grid_create(8, 15);
-detect_length = 500;
+detect_length = 800;
 detect_draw_time_default = 30;
 popup_damage = 0;
 popup_time = 0;

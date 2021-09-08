@@ -74,9 +74,29 @@ case gamestate.stagestart:
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.BlueAura, i, _enemy_blueaura);
 		ds_grid_set(ds_enemy_default_position, EnemyDefaultPosition.HardOnly, i, _enemy_hardonly);
 		
-		if(_enemy_id.object_index != o_hookPole
-		and _enemy_id.soul_enemy == true){
-			_floor_enemy_num++;
+		if(room != r_stage14){
+			//敵が魂を持っている
+			if(_enemy_id.object_index != o_hookPole
+			and _enemy_id.soul_enemy == true){
+			
+				//敵がハード限定の敵でない or 難易度がハード
+				if(global.difficulty == Difficulty.VeryHard
+				or !_enemy_hardonly)
+				_floor_enemy_num++;
+			}
+		}
+		else{
+			//r_stage14のみ処理が違う
+			if(global.difficulty == Difficulty.VeryHard){
+				if(_enemy_hardonly){
+					_floor_enemy_num++;
+				}
+			}
+			else{
+				if(!_enemy_hardonly){
+					_floor_enemy_num++;
+				}
+			}
 		}
 	}
 	

@@ -5,6 +5,8 @@ h_speed = 0;
 v_speed = 0;
 finded_player = false;
 
+check_difficulty = false;
+
 max_hp = hp;
 
 collision_size_for_hook = 0;

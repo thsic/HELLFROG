@@ -1,8 +1,8 @@
 	//こぴぺした
 if(!global.gamestop
 and draw_power_bar_enable){
-	var _bar_width = global.camera_width/2;
-	var _bar_height = global.camera_height/32;
+	var _bar_width = global.camera_width*0.66;
+	var _bar_height = global.camera_height/24;
 
 	var _bar_under_color = 0;
 	var _bar_color_charged = o_uiMgr.charge_bar_charged_color;

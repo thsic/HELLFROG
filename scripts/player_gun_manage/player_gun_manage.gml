@@ -5,7 +5,13 @@ function player_gun_manage(){
 		gun_charge_start();
 	}
 	else{
-		gun_cooldown--;
+		//サプレッション中はリロードも遅く
+		if(supp_point <= 0){
+			gun_cooldown--;
+		}
+		else{
+			gun_cooldown -= 0.33;
+		}
 	}
 	
 	if(gun_charge_enable == true){

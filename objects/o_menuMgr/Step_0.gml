@@ -371,7 +371,7 @@ if(room != r_title){
 			var _var = button_param[# grab_bar, ButtonParam.Variable];
 			var _scale_number = array_length(_var)-1;
 			var _one_scale_pixel_size = _w/_scale_number;
-		
+			
 			var _mouse_pos = clamp(global.vmouse_x - (_x - _w/2), 0, _w);
 		
 			change_hell_mode_ratio();

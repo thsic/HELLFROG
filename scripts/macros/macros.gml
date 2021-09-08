@@ -10,7 +10,7 @@ function macros() {
 #macro OPPOSITEKEY_POWER_FOR_INERTIA 10
 
 #macro FIRST_ROOM r_title
-#macro FIRST_STAGE r_stage14
+#macro FIRST_STAGE r_tutorial2
 
 //敵
 #macro SCRIPT_ASSASSIN_BRINK enemy_assassin_blink
@@ -36,7 +36,7 @@ function macros() {
 #macro AUDIO_SIMUL_DECAY_DEFAULT 0.66
 #macro CURSE_POINT_LIMIT 180
 #macro SUPP_POINT_LIMIT 20
-#macro SUPP_GUN_CHARGE_MAG 0.25
+#macro SUPP_GUN_CHARGE_MAG 0.15
 #macro LAVA_DAMAGE 0.66
 #macro LAVA_TICKS_PER_SECOND 15
 

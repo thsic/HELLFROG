@@ -4,3 +4,5 @@ if(crystal_num == -1){
 	instance_destroy();
 	
 }
+
+pair_wall = instance_create_layer(x, y, "MapObject", o_normalWall);

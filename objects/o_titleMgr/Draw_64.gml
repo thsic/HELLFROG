@@ -7,7 +7,6 @@ case TITLESCREEN.SETLANGUAGE:
 	draw_set_color(c_black);
 	draw_rectangle(0, 0, room_width, room_height, false);
 	
-	
 	draw_set_alpha(1);
 	draw_set_font(fo_menu);
 	draw_set_halign(fa_middle);
@@ -107,6 +106,18 @@ case TITLESCREEN.MAIN:
 						var _text_color = text_color2;
 					}
 				break
+				case 0:
+					
+					if(draw_hell_menu_time > 0
+					and !global.achievement_param[# ACHIEVEMENT_NAME.FIND_HELLMODE, ACHIEVEMENT_PARAM.ACQUIRED]){
+						_text = "HELLMODE"
+						
+						if(!_on_mouse){
+							var _text_color = hellmode_color;
+						}
+					}
+					
+				break
 				}
 			}
 
@@ -159,7 +170,6 @@ case TITLESCREEN.DIFFICULTY:
 		var _text = "難易度選択"
 	}
 	draw_text(room_width/2, 2, _text);
-	
 	
 	for(var i=0; i<_button_num; i++){
 		if(title_param[# i, TITLEPARAM.SCREEN] == TITLESCREEN.DIFFICULTY){

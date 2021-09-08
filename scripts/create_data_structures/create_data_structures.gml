@@ -1,7 +1,7 @@
 function create_data_structures() {
 	//ds_gridの作成と
 	global.ds_player_bullet = ds_grid_create(5, 15);
-	global.ds_player_knockback = ds_grid_create(5, 15);
+	global.ds_player_knockback = ds_grid_create(8, 15);
 	global.ds_player_hook = ds_grid_create(5, 15);
 	global.ds_player_gun = ds_grid_create(5, 20);
 	global.ds_player_hp = ds_grid_create(5, 15);
