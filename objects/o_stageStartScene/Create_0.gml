@@ -43,7 +43,10 @@ repeat(20){
 	part_system_layer(_psys, "MapObject");
 		
 	part_particles_create(_psys, o_player.x, o_player.y+8, _ptype, 1);
+	
 }
+part_type_destroy(_ptype);
+part_system_destroy(_psys);
 
 var _stage_num = global.now_stage_param[STAGEPARAM.STAGENUM];
 if(_stage_num <= 1){

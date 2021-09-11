@@ -20,6 +20,13 @@ function draw_difficulty(){
 	draw_set_valign(fa_bottom);
 	
 	draw_set_font(fo_kagurazaka12);
-	draw_text(global.camera_width-64, global.camera_height-16, _difficulty);
+	
+	if(global.draw_time_enable){
+		var _x = global.camera_width-64;
+	}
+	else{
+		var _x = global.camera_width-16;
+	}
+	draw_text(_x, global.camera_height-16, _difficulty);
 	
 }

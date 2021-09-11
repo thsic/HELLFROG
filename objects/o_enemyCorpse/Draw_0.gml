@@ -34,4 +34,7 @@ if(life_time = 10){
 	part_type_speed(_pt_type, 1.2, 1.6, -0.04, 0.0015);
 	part_type_direction(_pt_type, 0, 360, 0, 0);
 	part_particles_create(_pt_sys, blast_x, blast_y, _pt_type, 10);
+	
+	part_type_destroy(_pt_type);
+	part_system_destroy(_pt_sys);
 }

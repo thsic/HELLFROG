@@ -12,7 +12,16 @@ var _do_spawn = false;
 if(is_in_place(_l, _t, _r, _b, o_player.x, o_player.y)){
 	if(spawn_count <= 0){
 		spawn_count = spawn_span;
-		_do_spawn = true;
+		
+		//敵の数が多すぎると出現しない
+		var _enemy_num = instance_number(o_enemy);
+		
+		if(_enemy_num < spawn_limit){
+			_do_spawn = true;
+		}
+		
+		
+		
 	}
 	else{
 		spawn_count--;

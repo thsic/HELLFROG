@@ -110,7 +110,8 @@ case GAMECLEARSCENE.TIMER:
 	var _text3 = get_timer_string(global.time_second, global.time_milisecond);
 	var _text1_y = global.camera_height/10*4;
 	var _text2_y = global.camera_height/5*4;
-	var _text3_y = global.camera_height/5*4+32;
+	var _text3_y = global.camera_height/5*4+16;
+	var _text4_y = global.camera_height/5*4-32;
 	
 	draw_set_color(text_color3);
 	draw_set_halign(fa_middle);
@@ -122,6 +123,37 @@ case GAMECLEARSCENE.TIMER:
 	draw_set_font(fo_ending12);
 	draw_text(global.camera_width/2, _text2_y, _text2);
 	draw_text(global.camera_width/2, _text3_y, _text3);
+	
+	//難易度等表示
+	var _diff_text = "";
+	var _color = diff_color1;
+	var _veryhard = false;
+	if(global.difficulty == Difficulty.VeryHard){
+		_diff_text += " VERYHARD ";
+		_veryhard = true;
+	}
+	
+	
+	if(global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_HELLMODE, ACHIEVEMENT_PARAM.GETTABLE]){
+		_diff_text += " HELLMODE ";
+		if(_veryhard){
+			_color = diff_color2;
+		}
+	}
+	if(global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.GETTABLE]){
+		_diff_text = " TRUEHELL ";
+		_color = diff_color3;
+		
+	}
+	
+	if(global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY, ACHIEVEMENT_PARAM.GETTABLE]){
+		_diff_text += " WITHOUT WASD "
+	}
+	
+	draw_set_color(_color);
+	draw_set_font(fo_ending12);
+	draw_text(global.camera_width/2, _text4_y, _diff_text);
+	
 break
 }
 

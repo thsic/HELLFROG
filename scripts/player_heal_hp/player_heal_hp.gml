@@ -30,4 +30,7 @@ function player_heal_hp(_heal_point, _effect_number){
 		part_particles_create(_part_system, _x, _y, _part, 1);
 	}
 	
+	part_type_destroy(_part);
+	part_system_destroy(_part_system);
+	
 }

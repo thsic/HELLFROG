@@ -94,8 +94,23 @@
 		_description = string_replace(_description, "@", chr(13));
 		_description = string_replace(_description, "@", chr(13));
 		
+		
 		draw_text(_description_x, _description_y, _description);
-
+		
+		//実績取得済みならありがとうメッセージ表示
+		if(_achievement_id == ACHIEVEMENT_NAME.GET_ALL_ACHIEVEMENT
+		and global.achievement_param[# ACHIEVEMENT_NAME.GET_ALL_ACHIEVEMENT, ACHIEVEMENT_PARAM.ACQUIRED]){
+			if(global.language == language.English){
+				var _hidden_text = global.achievement_param[# ACHIEVEMENT_NAME.GET_ALL_ACHIEVEMENT, ACHIEVEMENT_PARAM.HIDDEN_DESCRIPTION_EN]
+			}
+			else{
+				var _hidden_text = global.achievement_param[# ACHIEVEMENT_NAME.GET_ALL_ACHIEVEMENT, ACHIEVEMENT_PARAM.HIDDEN_DESCRIPTION_JP]
+			}
+			_hidden_text = string_replace(_hidden_text, "@", chr(13));
+			draw_set_color(c_white)
+			draw_text(_description_x, _description_y+8, _hidden_text);
+		}
+		
 		draw_set_default();
 	}
 }

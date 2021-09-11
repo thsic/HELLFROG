@@ -84,5 +84,8 @@ and !collision_destroy){
 	var _y = start_pos_y + lengthdir_y(trail_num*_trail_diff, direction);
 	part_particles_create(_pt_sys, _x, _y, _pt_type, 1);
 	trail_num++;
+	
+	part_type_destroy(_pt_type);
+	part_system_destroy(_pt_sys);
 }
 
