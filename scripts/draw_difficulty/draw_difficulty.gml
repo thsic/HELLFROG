@@ -21,11 +21,11 @@ function draw_difficulty(){
 	
 	draw_set_font(fo_kagurazaka12);
 	
-	if(global.draw_time_enable){
+	if(global.timer_enable){
 		var _x = global.camera_width-64;
 	}
 	else{
-		var _x = global.camera_width-16;
+		var _x = global.camera_width-8;
 	}
 	draw_text(_x, global.camera_height-16, _difficulty);
 	

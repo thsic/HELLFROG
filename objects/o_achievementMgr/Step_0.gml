@@ -114,7 +114,8 @@ for(var i=0; i<_achievement_num; i++){
 			var _other_achievement_acquired = true;
 			for(var j=0; j<_achievement_num; j++){
 				if(global.achievement_param[# j, ACHIEVEMENT_PARAM.ENABLE]){
-					if(!global.achievement_param[# j, ACHIEVEMENT_PARAM.ACQUIRED]){
+					if(!global.achievement_param[# j, ACHIEVEMENT_PARAM.ACQUIRED]
+					and j != ACHIEVEMENT_NAME.GET_ALL_ACHIEVEMENT){
 						//取得可能な実績を取得していない場合はfalse
 						var _other_achievement_acquired = false;
 					}

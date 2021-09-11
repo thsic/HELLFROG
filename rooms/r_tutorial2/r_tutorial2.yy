@@ -193,7 +193,6 @@
         {"properties":[
             {"propertyId":{"name":"crystal_num","path":"objects/o_crystal/o_crystal.yy",},"objectId":{"name":"o_crystal","path":"objects/o_crystal/o_crystal.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"o_crystal","path":"objects/o_crystal/o_crystal.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2192.0,"y":416.0,"resourceVersion":"1.0","name":"inst_1ED0C85F","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"o_spike","path":"objects/o_spike/o_spike.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":5.0,"scaleY":3.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1760.0,"y":288.0,"resourceVersion":"1.0","name":"inst_1E391692","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_spike","path":"objects/o_spike/o_spike.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":5.0,"scaleY":3.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1968.0,"y":208.0,"resourceVersion":"1.0","name":"inst_34E975BC","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"o_spike","path":"objects/o_spike/o_spike.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":5.0,"scaleY":3.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":2128.0,"y":288.0,"resourceVersion":"1.0","name":"inst_6D5E10A7","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
@@ -1231,7 +1230,6 @@
     {"name":"inst_6602226E","path":"rooms/r_tutorial2/r_tutorial2.yy",},
     {"name":"inst_2CC84CFB","path":"rooms/r_tutorial2/r_tutorial2.yy",},
     {"name":"inst_1ED0C85F","path":"rooms/r_tutorial2/r_tutorial2.yy",},
-    {"name":"inst_1E391692","path":"rooms/r_tutorial2/r_tutorial2.yy",},
     {"name":"inst_34E975BC","path":"rooms/r_tutorial2/r_tutorial2.yy",},
     {"name":"inst_6D5E10A7","path":"rooms/r_tutorial2/r_tutorial2.yy",},
     {"name":"inst_6CAFAC09","path":"rooms/r_tutorial2/r_tutorial2.yy",},

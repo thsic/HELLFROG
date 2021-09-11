@@ -38,5 +38,8 @@ function player_dust_manage(){
 		
 		part_particles_create(_psys, x, y+8, _ptype, 1);
 		
+		part_type_destroy(_ptype);
+		part_system_destroy(_psys);
+		
 	}
 }

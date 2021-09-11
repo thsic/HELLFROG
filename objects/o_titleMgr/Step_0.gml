@@ -185,7 +185,8 @@ case TITLESCREEN.DIFFICULTY:
 	title_put_onmouse_param(TITLESCREEN.DIFFICULTY);
 	
 	if(mouse_check_button_pressed(global.shotgun_button)
-	and on_mouse_button != -1){
+	and on_mouse_button != -1
+	and pressed_button == -1){
 		pressed_button = on_mouse_button;
 		se_play(a_buttonClick, 0.7, 1);
 	}

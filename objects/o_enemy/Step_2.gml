@@ -13,14 +13,14 @@ if(!check_difficulty){
 	//ハードモード限定の敵ならノーマルでは消す
 	if(global.difficulty == Difficulty.Normal
 	and hard_only_enemy == true){
-		enemy_dead(id, false);	
+		//enemy_dead(id, false);
+		instance_destroy();
 	}
 
 	//ステージ14では特別仕様でハード限定の敵以外は消す
 	if(room == r_stage14
 	and global.difficulty == Difficulty.VeryHard
 	and hard_only_enemy == false){
-		//instance_destroy();
-		enemy_dead(id, false);
+		instance_destroy();
 	}
 }
