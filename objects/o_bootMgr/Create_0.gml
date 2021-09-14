@@ -56,6 +56,26 @@ for(var i=0; i<_achievement_num; i++){
 	global.achievement_param[# i, ACHIEVEMENT_PARAM.GETTABLE] = true;
 }
 
+
+if(!file_exists("hint.txt")){
+	var _file = file_text_open_write("hint.txt");
+	var _text = array_create(0);
+	_text[0] = "!!FROG HINT!!";
+	_text[1] = "When you kill an enemy, your power is immediately maxed out.";
+	_text[2] = "When the tongue hits an enemy or a wall, your power is immediately maxed out.";
+	_text[3] = "--------------------------------------";
+	_text[4] = "!!フロッグ ヒント!!";
+	_text[5] = "敵を殺すと、即座にパワーが最大になります。";
+	_text[6] = "舌を敵または壁に当てると、即座にパワーが最大になります";
+	
+	
+	for(var i=0; i<array_length(_text); i++){
+		file_text_write_string(_file, _text[i]);
+		file_text_writeln(_file);
+	}
+	file_text_close(_file);
+}
+
 room_goto(FIRST_ROOM);
 
 enum language{

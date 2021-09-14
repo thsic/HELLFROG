@@ -183,9 +183,7 @@ function enemy_state_manage() {
 	case EnemyState.Idle:
 	case EnemyState.WaitForMovement:
 		if(homing_player == true){
-			if(used_blink){
-				enemy_homing_player();//ホーミングプレイヤーの場合は常に移動
-			}
+			enemy_homing_player();//ホーミングプレイヤーの場合は常に移動
 		}
 		break;
 	}

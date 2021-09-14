@@ -34,3 +34,4 @@ if(state == EnemyState.Stun){
 	//var _uniform = shader_get_uniform(sh_enemy, "saturation")
 	//shader_set_uniform_f(_uniform, 0.3);
 }
+

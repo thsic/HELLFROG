@@ -87,14 +87,17 @@ case gamestate.stagestart:
 		}
 		else{
 			//r_stage14のみ処理が違う
-			if(global.difficulty == Difficulty.VeryHard){
-				if(_enemy_hardonly){
-					_floor_enemy_num++;
+			if(_enemy_id.object_index != o_hookPole
+			and _enemy_id.soul_enemy == true){
+				if(global.difficulty == Difficulty.VeryHard){
+					if(_enemy_hardonly){
+						_floor_enemy_num++;
+					}
 				}
-			}
-			else{
-				if(!_enemy_hardonly){
-					_floor_enemy_num++;
+				else{
+					if(!_enemy_hardonly){
+						_floor_enemy_num++;
+					}
 				}
 			}
 		}

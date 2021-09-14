@@ -371,7 +371,13 @@ case Menustate.AssistMode:
 				draw_set_color(hell_mode_bar_color_top)
 			}
 			var _hell_bar_x = _x - hell_mode_pixel;
-			var _bar_w = clamp(global.vmouse_x, _hell_bar_x, _x+_one_scale_pixel_size*3);
+			if(global.assist_mode != -1){
+				var _bar_w = clamp(global.vmouse_x, _hell_bar_x, _x+_one_scale_pixel_size*3);
+			}
+			else{
+				var _bar_w = clamp(global.vmouse_x, _hell_bar_x, _x);
+			}
+			
 			draw_rectangle(_x, _y-_bar_h/2, _bar_w, _y+_bar_h/2, false);
 		}
 		
@@ -492,10 +498,10 @@ case Menustate.AssistMode:
 		else{
 			//ヘルモードじゃないときは薄くバーを描画
 			if(room != r_title){
-				draw_set_alpha(0.14);
+				draw_set_alpha(0.26);
 			}
 			else{
-				draw_set_alpha(0.09);
+				draw_set_alpha(0.2);
 			}
 			var _hell_bar_x = _x - hell_mode_pixel;
 			

@@ -120,7 +120,7 @@ case GAMECLEARSCENE.TIMER:
 	draw_text(global.camera_width/2, _text1_y, _text1);
 	
 	draw_set_color(text_color2);
-	draw_set_font(fo_ending12);
+	draw_set_font(fo_maruMonica);
 	draw_text(global.camera_width/2, _text2_y, _text2);
 	draw_text(global.camera_width/2, _text3_y, _text3);
 	
@@ -151,7 +151,7 @@ case GAMECLEARSCENE.TIMER:
 	}
 	
 	draw_set_color(_color);
-	draw_set_font(fo_ending12);
+	draw_set_font(fo_dougenzaka16);
 	draw_text(global.camera_width/2, _text4_y, _diff_text);
 	
 break

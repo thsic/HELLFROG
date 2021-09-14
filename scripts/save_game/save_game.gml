@@ -13,8 +13,9 @@ function save_game(){
 		gettable_truehell : global.achievement_param[# ACHIEVEMENT_NAME.ALLCLEAR_TRUEHELLMODE, ACHIEVEMENT_PARAM.GETTABLE],
 		gettable_no_movekey_clear : global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_NO_MOVEKEY, ACHIEVEMENT_PARAM.GETTABLE],
 		used_super_assistmode : global.used_super_assistmode,
+		true_hell : global.true_hell,
 		
-		lic : "セーブファイルの暗号化を解いちゃうなんて！？！！？",
+		lic : "セーブファイルの暗号化を解いちゃうなんて！！！！",
 	}
 	
 	array_push(_savedata, _save_entity);

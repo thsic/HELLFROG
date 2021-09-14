@@ -11,5 +11,15 @@ function start_game(){
 		global.achievement_param[# i, ACHIEVEMENT_PARAM.GETTABLE] = true;
 	}
 	
+	if(global.hell_enemy_damage_enable == true
+	and global.hell_dot_damage_enable == true
+	and global.hell_player_damage_enable = true){
+		//すべてオンの時はtrue hell 状態にする
+		global.true_hell = true;
+	}
+	else{
+		global.true_hell = false;
+	}
+	
 	room_goto(FIRST_STAGE);
 }

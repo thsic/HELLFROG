@@ -29,6 +29,10 @@ function player_draw_hp_mini(){
 	if(global.player_hp <= 0){
 		_text_color = hp_color3;
 	}
+	else if(global.player_hp <= 10
+	and floor(global.game_time/8) mod 2 == 0){
+		_text_color = hp_color3;
+	}
 	
 	draw_set_font(fo_hpUi);
 	draw_set_halign(fa_middle);

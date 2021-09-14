@@ -269,7 +269,7 @@ if(room != r_title){
 				_x -= hell_mode_pixel;
 			}
 		
-			if(is_in_place(_x, _y, _x+_bw, _y+_bh, global.vmouse_x, global.vmouse_y)){
+			if(is_in_place(_x, _y-_bh/2, _x+_bw, _y+_bh*1.5, global.vmouse_x, global.vmouse_y)){
 				var _on_cursor = true;
 				_on_cursor_button = _button_name[i];
 			}
@@ -625,7 +625,7 @@ else{
 					_x -= hell_mode_pixel;
 				}
 		
-				if(is_in_place(_x, _y, _x+_bw, _y+_bh, global.vmouse_x, global.vmouse_y)){
+				if(is_in_place(_x, _y-_bh/2, _x+_bw, _y+_bh*1.5, global.vmouse_x, global.vmouse_y)){
 					var _on_cursor = true;
 					_on_cursor_button = _button_name[i];
 				}

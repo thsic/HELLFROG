@@ -1,5 +1,6 @@
 
-if(break_enable){
+if(break_enable
+and !global.gamestop){
 
 	
 	if(!dust_setting_enable){

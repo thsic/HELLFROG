@@ -21,6 +21,7 @@ function load_game(_change_room){
 		global.time_second = _load_entity.time_second;
 		global.death_count = _load_entity.death_count;
 		global.difficulty = _load_entity.difficulty;
+		global.true_hell = _load_entity.true_hell;
 		
 		//実績関連
 		global.achievement_param[# ACHIEVEMENT_NAME.CLEAR_HELLMODE, ACHIEVEMENT_PARAM.GETTABLE] = _load_entity.gettable_hellmode_clear;

@@ -84,7 +84,7 @@ switch(state){
 	case EnemyState.Invincible:
 		if(walk_sprite != noone){
 			_sprite = walk_sprite;
-			_alpha = 0.5;
+			_alpha = 0.25;
 			//出現時は点滅する
 			/*var _flash_time = 1;
 			var _t = life_time mod (2*_flash_time);
