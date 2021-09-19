@@ -3,6 +3,8 @@ set_window_size(WINDOW_SIZE_MAGNIFICATION)
 instance_create_layer(0, 0, "Instances", o_debugMgr);
 instance_create_layer(0, 0, "Instances", o_soundMgr);
 instance_create_layer(0, 0, "Instances", o_achievementMgr);
+//instance_create_layer(0, 0, "Instances", o_ssMgr);
+
 text();
 stage_param();
 put_stage_param();

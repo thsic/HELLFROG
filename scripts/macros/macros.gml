@@ -9,7 +9,7 @@ function macros() {
 
 #macro OPPOSITEKEY_POWER_FOR_INERTIA 10
 
-#macro FIRST_ROOM r_title
+#macro FIRST_ROOM r_banner
 #macro FIRST_STAGE r_tutorial
 
 //敵
