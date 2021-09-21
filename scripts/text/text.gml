@@ -65,7 +65,7 @@ global.ds_text[# TEXT.EFFECT_SLOW, language.English] =				"SLOW";
 global.ds_text[# TEXT.EFFECT_CURSE, language.English] =				"INCOMING DAMAGE";
 global.ds_text[# TEXT.EFFECT_SUPP, language.English] =				"SUPPRASSION";
 
-global.ds_text[# TEXT.EFFECT_SLOW, language.Japanese] =				"スロウ";
+global.ds_text[# TEXT.EFFECT_SLOW, language.Japanese] =				"スロー";
 global.ds_text[# TEXT.EFFECT_CURSE, language.Japanese] =			"被ダメージ";
 global.ds_text[# TEXT.EFFECT_SUPP, language.Japanese] =				"サプレッション";
 
